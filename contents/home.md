@@ -5,10 +5,11 @@ welcome to my homepage!
 I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX.
 
 #### Email  
+
 <code>1010969261@qq.com</code>  
 
 #### Education  
-**XX University**, Master of XX (XX – XX)  
+**Central South University**, undergraduate of Energy and Engineer collage (2023 – 2027)  
 • GPA: XX/XX  
 
 **XX University**, Exchange student <br>  
