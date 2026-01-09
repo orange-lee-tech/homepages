@@ -1,14 +1,11 @@
-[![XX](https://img.shields.io/badge/XX-github-blue?logo=github)](https://github.com/XX)
+[![GitHub](https://img.shields.io/badge/orange--lee--tech-github-blue?logo=github)](https://github.com/orange-lee-tech)
+
 welcome to my homepage!
 
 I'm currently pursuing a Master's degree in XX at the Department of XX, XX University, XX.
 
 #### Email  
 <code>1010969261@qq.com</code>  
-
-<code>8205230624@csu.edu.cn</code> 
-
-<code>orangelee30@gmail.com</code>
 
 #### Education  
 **XX University**, Master of XX (XX – XX)  
