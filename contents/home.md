@@ -9,7 +9,7 @@ I'm currently pursuing a Master's degree in XX at the Department of XX, XX Unive
 <code>1010969261@qq.com</code>  
 
 #### Education  
-**Central South University**, undergraduate of Energy and Engineer collage (2023 – 2027)  
+**Central South University**,   School of Energy Science and Engineering,undergraduate of Energy and Power Engineering(2023 – 2027)  
 • GPA: XX/XX  
 
 **XX University**, Exchange student <br>  
