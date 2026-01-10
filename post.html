@@ -33,59 +33,70 @@
   </main>
 
   <script>
-    function getParam(name){
-      const url = new URL(window.location.href);
-      return url.searchParams.get(name);
+  function getParam(name){
+    const url = new URL(window.location.href);
+    return url.searchParams.get(name);
+  }
+
+  function safePath(p){
+    // 基础安全：拒绝路径穿越、绝对路径
+    if(!p) return "";
+    if(p.includes("..") || p.startsWith("/") || p.startsWith("\\") ) return "";
+    return p;
+  }
+
+  function inferDateFromFilename(path){
+    const m = String(path).match(/(\d{4}-\d{2}-\d{2})/);
+    return m ? m[1] : "";
+  }
+
+  function splitFrontMatter(md){
+    // 兼容 \n / \r\n；并把 front matter 从正文剥离
+    const re = /^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/;
+    const m = md.match(re);
+    if(!m) return { fm: null, body: md };
+    let fm = null;
+    try{ fm = jsyaml.load(m[1]); }catch(e){}
+    return { fm, body: md.slice(m[0].length) };
+  }
+
+  async function loadMarkdown(path){
+    // encodeURI：兼容中文文件名；保留 / 不被编码
+    const url = encodeURI(path) + "?v=" + Date.now();
+    const res = await fetch(url, { cache: "no-store" });
+    if(!res.ok) throw new Error("Failed to load markdown: " + res.status);
+    return await res.text();
+  }
+
+  (async () => {
+    const raw = getParam("f");
+    const f = safePath(raw);
+    const bodyEl = document.getElementById("post-body");
+
+    if(!f){
+      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html'>列表页</a> 进入。</div>";
+      return;
     }
 
-    function inferDateFromFilename(path){
-      const m = String(path).match(/(\d{4}-\d{2}-\d{2})/);
-      return m ? m[1] : "";
+    try{
+      const md = await loadMarkdown(f);
+
+      const { fm, body } = splitFrontMatter(md);
+
+      const title = fm?.title ? String(fm.title) : "";
+      const date  = fm?.date  ? String(fm.date)  : (inferDateFromFilename(f) || "");
+
+      document.getElementById("post-title").textContent = title || "动态";
+      document.getElementById("post-meta").textContent = date ? ("日期：" + date) : "";
+
+      bodyEl.innerHTML = marked.parse(body);
+
+    }catch(err){
+      console.error(err);
+      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>文章加载失败：请检查文件路径是否存在、文件名大小写是否一致。</div>";
     }
+  })();
+</script>
 
-    async function loadMarkdown(path){
-      const res = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
-      if(!res.ok) throw new Error("Failed to load markdown: " + res.status);
-      return await res.text();
-    }
-
-    (async () => {
-      const f = getParam("f");
-      const body = document.getElementById("post-body");
-
-      if(!f){
-        body.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>缺少参数 <code>?f=</code>，请从 <a href='posts.html'>列表页</a> 进入。</div>";
-        return;
-      }
-
-      try{
-        const md = await loadMarkdown(f);
-
-        let title = "";
-        let date = inferDateFromFilename(f);
-
-        if(md.startsWith("---")){
-          const end = md.indexOf("\n---", 3);
-          if(end !== -1){
-            const fmText = md.slice(3, end + 1);
-            try{
-              const fm = jsyaml.load(fmText);
-              if(fm && fm.title) title = String(fm.title);
-              if(fm && fm.date) date = String(fm.date);
-            }catch(e){}
-          }
-        }
-
-        document.getElementById("post-title").textContent = title || "动态";
-        document.getElementById("post-meta").textContent = date ? ("日期：" + date) : "";
-
-        body.innerHTML = marked.parse(md);
-
-      }catch(err){
-        console.error(err);
-        body.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>文章加载失败：请检查文件路径是否存在、文件名大小写是否一致。</div>";
-      }
-    })();
-  </script>
 </body>
 </html>
