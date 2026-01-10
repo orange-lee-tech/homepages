@@ -157,3 +157,25 @@ section .main-body{
 }
 .carousel-btn:hover{ background: rgba(255,255,255,1); }
 
+/* ===== Force carousel visible ===== */
+#show-track.carousel-track{
+  min-height: 170px;
+  align-items: center;
+}
+
+#show-track .carousel-item img{
+  display: block;
+  width: 240px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#show{
+  position: relative;
+  z-index: 2;
+}
+
+#show-track{
+  position: relative;
+  z-index: 3;
+}
