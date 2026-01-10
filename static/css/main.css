@@ -307,3 +307,49 @@ section .main-body{
     --person-shift-x: 140px;
   }
 }
+/* =========================================================
+   DESIGN：三张堆叠轮播（复用 PERSON 的参数）
+   ========================================================= */
+#design-track{
+  position: relative;
+  min-height: calc(var(--person-img-max-h) + var(--person-top) + var(--person-extra));
+}
+#design-track .carousel-item-single{
+  display: none;
+  position: absolute;
+  top: var(--person-top);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform .28s ease, opacity .28s ease;
+}
+#design-track .carousel-item-single.prev,
+#design-track .carousel-item-single.active,
+#design-track .carousel-item-single.next{
+  display: block;
+}
+#design-track .carousel-item-single.active{
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+#design-track .carousel-item-single.prev{
+  z-index: 2;
+  opacity: var(--person-side-opacity);
+  transform: translateX(calc(-50% - var(--person-shift-x))) scale(var(--person-scale-side));
+}
+#design-track .carousel-item-single.next{
+  z-index: 2;
+  opacity: var(--person-side-opacity);
+  transform: translateX(calc(-50% + var(--person-shift-x))) scale(var(--person-scale-side));
+}
+#design-track .carousel-item-single img{
+  display: block;
+  max-width: min(900px, 92vw);
+  max-height: var(--person-img-max-h);
+  width: auto;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  margin: 0 auto;
+  object-fit: contain;
+}

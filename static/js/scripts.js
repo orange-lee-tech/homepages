@@ -172,6 +172,13 @@ window.addEventListener('DOMContentLoaded', event => {
                 files: yml['person-images'] || [],
                 intervalMs: 3000   // 生活照建议慢一点，想关闭就 0
             });
+            initCarouselSingle({
+  trackId: 'design-track',
+  imgDir: encodeURI('static/assets/平面设计/'),
+  files: yml['design-images'] || [],
+  intervalMs: 2600
+});
+
         })
         .catch(error => console.log(error));
 

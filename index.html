@@ -83,36 +83,32 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">主页</a>
-                    </li>
+  <li class="nav-item"><a class="nav-link me-lg-3" href="#page-top">主页</a></li>
+  <li class="nav-item"><a class="nav-link me-lg-3" href="#home">现状</a></li>
 
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#home">现状</a>
-                    </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
+       data-bs-toggle="dropdown" aria-expanded="false">图片</a>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item" href="#show">show</a></li>
+      <li><a class="dropdown-item" href="#design">平面设计</a></li>
+      <li><a class="dropdown-item" href="#person">person</a></li>
+    </ul>
+  </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">科研竞赛</a>
-                    </li>
+  <li class="nav-item"><a class="nav-link me-lg-3" href="#publications">科研竞赛</a></li>
+  <li class="nav-item"><a class="nav-link me-lg-3" href="#experience">工作经历</a></li>
 
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#experience">工作经历</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        获奖简报
-                        </a>
-                <ul class="dropdown-menu dropdown-menu-end">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
+       data-bs-toggle="dropdown" aria-expanded="false">获奖简报</a>
+    <ul class="dropdown-menu dropdown-menu-end">
       <li><a class="dropdown-item" href="#awards-hs">高中简报</a></li>
       <li><a class="dropdown-item" href="#awards-ug">本科简报</a></li>
     </ul>
   </li>
 
-  <li class="nav-item">
-    <a class="nav-link me-lg-3" href="posts.html">即时动态</a>
-  </li>
+  <li class="nav-item"><a class="nav-link me-lg-3" href="posts.html">即时动态</a></li>
 </ul>
 
             </div>
@@ -136,6 +132,19 @@
         </div>
     </div>
     <!-- Photo -->
+
+
+    <!-- Home -->
+    <section class="bg-gradient-primary-to-secondary-light" id="home">
+        <div class="container px-5">
+            <header>
+                <h2 id="home-subtitle"> </h2>
+                <!-- <span class="bi bi-list"></span> -->
+            </header>
+            <div class="main-body" id="home-md"></div>
+        </div>
+    </section>
+    <!-- Home -->
 <!-- Show Carousel -->
 <section class="bg-gradient-primary-to-secondary-light" id="show">
   <div class="container px-5">
@@ -152,33 +161,7 @@
 </section>
 <!-- Show Carousel -->
 
-    <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light" id="home">
-        <div class="container px-5">
-            <header>
-                <h2 id="home-subtitle"> </h2>
-                <!-- <span class="bi bi-list"></span> -->
-            </header>
-            <div class="main-body" id="home-md"></div>
-        </div>
-    </section>
-    <!-- Home -->
 
-<!-- Person Carousel -->
-<section class="bg-gradient-primary-to-secondary-gray" id="person">
-  <div class="container px-5">
-    <header>
-      <h2 id="person-subtitle"><i class="bi bi-camera"></i>&nbsp;PERSON</h2>
-    </header>
-
-    <div class="carousel-row">
-      <button class="carousel-btn" data-action="prev" data-target="person-track" aria-label="Previous">‹</button>
-      <div class="carousel-track" id="person-track"></div>
-      <button class="carousel-btn" data-action="next" data-target="person-track" aria-label="Next">›</button>
-    </div>
-  </div>
-</section>
-<!-- Person Carousel -->
 
     <!-- Awards -->
     <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
@@ -202,6 +185,21 @@
         </div>
     </section>
     <!-- Experience -->
+<!-- Graphic Design Carousel -->
+<section class="bg-gradient-primary-to-secondary-light" id="design">
+  <div class="container px-5">
+    <header>
+      <h2 id="design-subtitle"><i class="bi bi-palette"></i>&nbsp;平面设计</h2>
+    </header>
+
+    <div class="carousel-row">
+      <button class="carousel-btn" data-action="prev" data-target="design-track" aria-label="Previous">‹</button>
+      <div class="carousel-track" id="design-track"></div>
+      <button class="carousel-btn" data-action="next" data-target="design-track" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+<!-- Graphic Design Carousel -->
 
     <!-- Publications -->
     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
@@ -214,7 +212,21 @@
         </div>
     </section>
     <!-- Publications  -->
-    
+    <!-- Person Carousel -->
+<section class="bg-gradient-primary-to-secondary-gray" id="person">
+  <div class="container px-5">
+    <header>
+      <h2 id="person-subtitle"><i class="bi bi-camera"></i>&nbsp;PERSON</h2>
+    </header>
+
+    <div class="carousel-row">
+      <button class="carousel-btn" data-action="prev" data-target="person-track" aria-label="Previous">‹</button>
+      <div class="carousel-track" id="person-track"></div>
+      <button class="carousel-btn" data-action="next" data-target="person-track" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+<!-- Person Carousel -->
 
     <!-- Footer-->
     <footer class="bg-bottom text-center py-5">

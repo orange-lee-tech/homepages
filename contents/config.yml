@@ -5,6 +5,9 @@ home-subtitle: '<i class="bi bi-house-fill"></i>&nbsp;主页'
 awards-subtitle: '<i class="bi bi-award-fill"></i>&nbsp;获奖简报'
 experience-subtitle: '<i class="bi bi-briefcase-fill"></i>&nbsp;工作经历'
 publications-subtitle: '<i class="bi bi-file-text-fill"></i>&nbsp;科研与竞赛'
+show-subtitle: '<i class="bi bi-stars"></i>&nbsp;show'
+design-subtitle: '<i class="bi bi-palette"></i>&nbsp;平面设计'
+person-subtitle: '<i class="bi bi-camera"></i>&nbsp;person'
 
 copyright-text: '&copy; Yourname 2023-2025. All Rights Reserved.'
 show-images:
@@ -23,6 +26,27 @@ person-images:
   - image12.jpg
   - image13.jpg
   - image14.jpg
+design-images:
+  - work1.png
+  - work2.png
+  - work3.png
+  - work4.png
+  - work5.jpg
+  - work6.png
+  - work7.png
+  - work8.png
+  - work9.png
+  - work10.png
+  - work11.png
+  - work12.png
+  - work13.jpg
+  - work14.png
+  - work15.png
+  - work16.png
+  - work17.jpg
+  - work18.jpg
+  - work19.jpg
+
 posts:
   - title: "主页更新"
     date: "2026-01-08"
