@@ -33,6 +33,17 @@
   </main>
 
   <script>
+  function getLang(){
+    const url = new URL(window.location.href);
+    const q = url.searchParams.get('lang');
+    if(q === 'zh' || q === 'en'){
+      localStorage.setItem('lang', q);
+      return q;
+    }
+    const saved = localStorage.getItem('lang');
+    return (saved === 'en') ? 'en' : 'zh';
+  }
+
   function getParam(name){
     const url = new URL(window.location.href);
     return url.searchParams.get(name);
@@ -40,8 +51,7 @@
 
   function safePath(p){
     if(!p) return "";
-    // 防止 ?f=../ 或绝对路径
-    if (p.includes("..") || p.startsWith("/") || p.startsWith("\\") ) return "";
+    if(p.includes("..") || p.startsWith("/") || p.startsWith("\\")) return "";
     return p;
   }
 
@@ -52,17 +62,13 @@
 
   function formatDate(v){
     if(!v) return "";
-    // js-yaml 可能把 2026-01-09 解析成 Date 对象
-    if (v instanceof Date && !isNaN(v.getTime())){
-      return v.toISOString().slice(0,10);
-    }
+    if(v instanceof Date && !isNaN(v.getTime())) return v.toISOString().slice(0,10);
     const s = String(v).trim();
     const m = s.match(/\d{4}-\d{2}-\d{2}/);
     return m ? m[0] : s;
   }
 
   function splitFrontMatter(md){
-    // 兼容 \n / \r\n；并把 front matter 从正文剥离
     const re = /^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/;
     const m = md.match(re);
     if(!m) return { fm: null, body: md };
@@ -72,7 +78,6 @@
   }
 
   async function loadMarkdown(path){
-    // encodeURI：更稳地支持中文文件名
     const url = encodeURI(path) + "?v=" + Date.now();
     const res = await fetch(url, { cache: "no-store" });
     if(!res.ok) throw new Error("Failed to load markdown: " + res.status);
@@ -80,39 +85,48 @@
   }
 
   (async () => {
+    const lang = getLang();
+    document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
+
+    // 顶部返回链接带 lang
+    document.querySelectorAll('a[href="posts.html"]').forEach(a => a.href = "posts.html?lang=" + lang);
+    document.querySelectorAll('a[href^="index.html"]').forEach(a => {
+      const u = new URL(a.getAttribute('href'), window.location.href);
+      u.searchParams.set('lang', lang);
+      a.setAttribute('href', u.pathname + u.search + u.hash);
+    });
+
     const raw = getParam("f");
     const f = safePath(raw);
     const bodyEl = document.getElementById("post-body");
 
     if(!f){
-      bodyEl.innerHTML =
-        "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html'>列表页</a> 进入。</div>";
+      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html?lang=" + lang + "'>列表页</a> 进入。</div>";
       return;
     }
 
     try{
-      // 让 post 页的 markdown 渲染行为和 index 一致
       marked.use({ mangle: false, headerIds: false });
 
       const md = await loadMarkdown(f);
       const { fm, body } = splitFrontMatter(md);
 
-      const title = (fm?.title ? String(fm.title) : "") || "动态";
+      const title = (fm?.title ? String(fm.title) : "") || (lang === 'en' ? "Post" : "动态");
       const date  = formatDate(fm?.date) || inferDateFromFilename(f);
 
       document.getElementById("post-title").textContent = title;
       document.getElementById("post-meta").textContent = date ? ("日期：" + date) : "";
-      document.title = title + " | 动态";
+      document.title = title;
 
       bodyEl.innerHTML = marked.parse(body);
 
     }catch(err){
       console.error(err);
-      bodyEl.innerHTML =
-        "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>文章加载失败：请确认文件存在且路径正确（例如 <code>posts/xxx.md</code>）。</div>";
+      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>文章加载失败：请检查文件路径是否存在、文件名大小写是否一致。</div>";
     }
   })();
 </script>
+
 
 
 </body>

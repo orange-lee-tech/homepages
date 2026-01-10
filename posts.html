@@ -37,74 +37,95 @@
   </main>
 
   <script>
-    const CONFIG_URL = "contents/config.yml";
+  function getLang(){
+    const url = new URL(window.location.href);
+    const q = url.searchParams.get('lang');
+    if(q === 'zh' || q === 'en'){
+      localStorage.setItem('lang', q);
+      return q;
+    }
+    const saved = localStorage.getItem('lang');
+    return (saved === 'en') ? 'en' : 'zh';
+  }
 
-    function escHtml(s){
-      return String(s ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;")
-        .replaceAll('"',"&quot;")
-        .replaceAll("'","&#39;");
+  function escHtml(s){
+    return String(s ?? "")
+      .replaceAll("&","&amp;")
+      .replaceAll("<","&lt;")
+      .replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;")
+      .replaceAll("'","&#39;");
+  }
+
+  async function loadYaml(url){
+    const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
+    if(!res.ok) throw new Error("Failed to load config: " + res.status);
+    const text = await res.text();
+    return jsyaml.load(text);
+  }
+
+  function normalizePosts(posts){
+    if(!Array.isArray(posts)) return [];
+    return posts
+      .filter(p => p && p.file)
+      .map(p => ({ title: p.title || p.file, date: p.date || "", file: p.file }));
+  }
+
+  function renderPosts(posts, lang){
+    const el = document.getElementById("posts-list");
+    if(!el) return;
+
+    const emptyMsg = (lang === 'en')
+      ? "No posts yet. Please configure <code>posts:</code> in <code>contents/config.en.yml</code>."
+      : "暂无动态。请在 <code>contents/config.zh.yml</code> 里配置 <code>posts:</code> 列表。";
+
+    if(posts.length === 0){
+      el.innerHTML = `<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>${emptyMsg}</div>`;
+      return;
     }
 
-    async function loadYaml(url){
-      const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
-      if(!res.ok) throw new Error("Failed to load config: " + res.status);
-      const text = await res.text();
-      return jsyaml.load(text);
-    }
+    const sorted = [...posts].sort((a,b) => (b.date||"").localeCompare(a.date||""));
 
-    function normalizePosts(posts){
-      if(!Array.isArray(posts)) return [];
-      return posts
-        .filter(p => p && p.file)
-        .map(p => ({
-          title: p.title || p.file,
-          date: p.date || "",
-          file: p.file
-        }));
-    }
-
-    function renderPosts(posts){
-      const el = document.getElementById("posts-list");
-      if(!el) return;
-
-      if(posts.length === 0){
-        el.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>暂无动态。请在 <code>contents/config.yml</code> 里配置 <code>posts:</code> 列表。</div>";
-        return;
-      }
-
-      const sorted = [...posts].sort((a,b) => (b.date||"").localeCompare(a.date||""));
-
-      el.innerHTML = sorted.map(p => {
-        const href = "post.html?f=" + encodeURIComponent(p.file);
-        return `
-          <div style="padding:14px 16px;margin:10px 0;border:1px solid #eee;border-radius:14px;">
-            <div style="font-size:0.95rem;opacity:.7;margin-bottom:6px;">
-              ${escHtml(p.date || "—")}
-            </div>
-            <div style="font-size:1.15rem;font-weight:650;line-height:1.4;">
-              <a href="${href}" style="text-decoration:none;color:var(--h-title-color);">
-                ${escHtml(p.title)}
-              </a>
-            </div>
+    el.innerHTML = sorted.map(p => {
+      const href = "post.html?lang=" + encodeURIComponent(lang) + "&f=" + encodeURIComponent(p.file);
+      return `
+        <div style="padding:14px 16px;margin:10px 0;border:1px solid #eee;border-radius:14px;">
+          <div style="font-size:0.95rem;opacity:.7;margin-bottom:6px;">
+            ${escHtml(p.date || "—")}
           </div>
-        `;
-      }).join("");
-    }
+          <div style="font-size:1.15rem;font-weight:650;line-height:1.4;">
+            <a href="${href}" style="text-decoration:none;color:var(--h-title-color);">
+              ${escHtml(p.title)}
+            </a>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
 
-    (async () => {
-      try{
-        const yml = await loadYaml(CONFIG_URL);
-        const posts = normalizePosts(yml["posts"]);
-        renderPosts(posts);
-      }catch(err){
-        console.error(err);
-        const el = document.getElementById("posts-list");
-        if(el) el.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>配置加载失败：请检查 <code>contents/config.yml</code> 路径与 YAML 语法。</div>";
-      }
-    })();
-  </script>
+  (async () => {
+    const lang = getLang();
+
+    // 顶部链接也带 lang
+    document.querySelectorAll('a[href^="index.html"]').forEach(a=>{
+      const u = new URL(a.getAttribute('href'), window.location.href);
+      u.searchParams.set('lang', lang);
+      a.setAttribute('href', u.pathname + u.search + u.hash);
+    });
+
+    const CONFIG_URL = "contents/config." + lang + ".yml";
+
+    try{
+      const yml = await loadYaml(CONFIG_URL);
+      const posts = normalizePosts(yml["posts"]);
+      renderPosts(posts, lang);
+    }catch(err){
+      console.error(err);
+      const el = document.getElementById("posts-list");
+      if(el) el.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>配置加载失败：请检查 config 文件路径与 YAML 语法。</div>";
+    }
+  })();
+</script>
+
 </body>
 </html>

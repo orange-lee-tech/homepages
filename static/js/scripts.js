@@ -145,56 +145,94 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 
-    // Yaml
-    fetch(content_dir + config_file)
-        .then(response => response.text())
-        .then(text => {
-            const yml = jsyaml.load(text);
-            Object.keys(yml).forEach(key => {
-                try {
-                    document.getElementById(key).innerHTML = yml[key];
-                } catch {
-                    console.log("Unknown id and value: " + key + "," + yml[key].toString())
-                }
+    const content_dir = 'contents/';
+const section_names = ['home', 'about', 'interests', 'publications', 'experience', 'awards'];
 
-            })
-            console.log('[yml] show-images =', yml['show-images']);
-            // --- Render Show carousel ---
-            initCarouselSingle({
-                trackId: 'show-track',
-                imgDir: 'static/assets/show/',
-                files: yml['show-images'] || [],
-                intervalMs: 2500   // 想关闭自动轮播就改成 0
-            }); 
-            initCarouselSingle({
-                trackId: 'person-track',
-                imgDir: 'static/assets/person/',
-                files: yml['person-images'] || [],
-                intervalMs: 3000   // 生活照建议慢一点，想关闭就 0
-            });
-            initCarouselSingle({
-  trackId: 'design-track',
-  imgDir: encodeURI('static/assets/平面设计/'),
-  files: yml['design-images'] || [],
-  intervalMs: 2600
-});
+function getLang(){
+  const url = new URL(window.location.href);
+  const q = url.searchParams.get('lang');
+  if(q === 'zh' || q === 'en'){
+    localStorage.setItem('lang', q);
+    return q;
+  }
+  const saved = localStorage.getItem('lang');
+  return (saved === 'en') ? 'en' : 'zh';
+}
 
-        })
-        .catch(error => console.log(error));
+function withLang(href, lang){
+  const u = new URL(href, window.location.href);
+  u.searchParams.set('lang', lang);
+  return u.pathname + u.search + u.hash;
+}
 
-    // Marked
-    marked.use({ mangle: false, headerIds: false })
-    section_names.forEach((name, idx) => {
-        fetch(content_dir + name + '.md')
-            .then(response => response.text())
-            .then(markdown => {
-                const html = marked.parse(markdown);
-                document.getElementById(name + '-md').innerHTML = html;
-            }).then(() => {
-                // MathJax
-                MathJax.typeset();
-            })
-            .catch(error => console.log(error));
+function patchCrossPageLinks(lang){
+  // 让站内跳转保持语言（posts / index）
+  document.querySelectorAll('a[href^="posts.html"]').forEach(a => {
+    a.setAttribute('href', withLang(a.getAttribute('href'), lang));
+  });
+  document.querySelectorAll('a[href^="index.html"]').forEach(a => {
+    a.setAttribute('href', withLang(a.getAttribute('href'), lang));
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const lang = getLang();
+  document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
+
+  patchCrossPageLinks(lang);
+
+  // ====== 1) Load YAML by lang ======
+  const config_file = `config.${lang}.yml`;
+  fetch(content_dir + config_file + '?v=' + Date.now(), { cache: 'no-store' })
+    .then(r => r.text())
+    .then(text => {
+      const yml = jsyaml.load(text) || {};
+
+      // 把 yml 的 key 注入到同名 id（标题/副标题等）
+      Object.keys(yml).forEach(key => {
+        const el = document.getElementById(key);
+        if(el) el.innerHTML = yml[key];
+      });
+
+      // 轮播（两套语言共用同一组图片也没问题）
+      initCarouselSingle({
+        trackId: 'show-track',
+        imgDir: 'static/assets/show/',
+        files: yml['show-images'] || [],
+        intervalMs: 2500
+      });
+
+      initCarouselSingle({
+        trackId: 'person-track',
+        imgDir: 'static/assets/person/',
+        files: yml['person-images'] || [],
+        intervalMs: 3000
+      });
+
+      // 如果你有 design 轮播（平面设计）
+      initCarouselSingle({
+        trackId: 'design-track',
+        imgDir: encodeURI('static/assets/平面设计/'),
+        files: yml['design-images'] || [],
+        intervalMs: 2600
+      });
     })
+    .catch(err => console.error('[yml] load failed:', err));
 
+  // ====== 2) Load Markdown by lang ======
+  marked.use({ mangle: false, headerIds: false });
+
+  section_names.forEach(name => {
+    const url = `${content_dir}${lang}/${name}.md?v=${Date.now()}`;
+    fetch(url, { cache: 'no-store' })
+      .then(r => r.text())
+      .then(md => {
+        const html = marked.parse(md);
+        const el = document.getElementById(name + '-md');
+        if(el) el.innerHTML = html;
+      })
+      .then(() => { if(window.MathJax) MathJax.typeset(); })
+      .catch(err => console.error('[md] load failed:', name, err));
+  });
 });
+
