@@ -109,4 +109,51 @@ section .main-body{
     }
 }
 
+/* --- Carousel Row (Show/Person) --- */
+.carousel-row{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carousel-track{
+  flex: 1;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 6px 2px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;   /* IE/Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+.carousel-track::-webkit-scrollbar{ display:none; }
+
+.carousel-item{
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.carousel-item img{
+  width: 240px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+
+.carousel-btn{
+  border: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.85);
+  color: #0b3d91;
+  font-size: 22px;
+  line-height: 38px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+.carousel-btn:hover{ background: rgba(255,255,255,1); }
 

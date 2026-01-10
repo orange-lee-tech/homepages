@@ -3,6 +3,44 @@ const config_file = 'config.yml'
 const section_names = ['home', 'awards', 'experience', 'publications'];
 
 
+function initCarousel({ trackId, imgDir, files, intervalMs }) {
+    const track = document.getElementById(trackId);
+    if (!track || !files || files.length === 0) return;
+
+    // build DOM
+    track.innerHTML = files.map(f => `
+    <div class="carousel-item">
+      <img src="${imgDir}${encodeURIComponent(f)}" alt="">
+    </div>
+  `).join('');
+
+    const step = () => {
+        const max = track.scrollWidth - track.clientWidth;
+        if (max <= 0) return;
+        const next = Math.min(track.scrollLeft + track.clientWidth, max);
+        track.scrollLeft = (next >= max) ? 0 : next;
+    };
+
+    // auto slide
+    let timer = setInterval(step, intervalMs);
+
+    // buttons
+    document.querySelectorAll(`.carousel-btn[data-target="${trackId}"]`).forEach(btn => {
+        btn.addEventListener('click', () => {
+            clearInterval(timer);
+            const dir = btn.getAttribute('data-action');
+            const max = track.scrollWidth - track.clientWidth;
+            if (dir === 'prev') {
+                track.scrollLeft = Math.max(track.scrollLeft - track.clientWidth, 0);
+            } else {
+                track.scrollLeft = (track.scrollLeft >= max) ? 0 : Math.min(track.scrollLeft + track.clientWidth, max);
+            }
+            timer = setInterval(step, intervalMs);
+        });
+    });
+}
+
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -41,6 +79,13 @@ window.addEventListener('DOMContentLoaded', event => {
                 }
 
             })
+            // --- Render Show carousel ---
+            initCarousel({
+                trackId: 'show-track',
+                imgDir: 'static/assets/show/',
+                files: yml['show-images'] || [],
+                intervalMs: 2500
+            });
         })
         .catch(error => console.log(error));
 
@@ -60,4 +105,4 @@ window.addEventListener('DOMContentLoaded', event => {
             .catch(error => console.log(error));
     })
 
-}); 
+});
