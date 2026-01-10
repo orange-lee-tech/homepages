@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>即时动态 | Updates</title>
+
+  <!-- Site CSS (reuse your existing styles) -->
+  <link rel="stylesheet" href="static/css/main.css?v=posts1" />
+
+  <!-- Bootstrap Icons (optional) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <!-- Markdown + YAML parser -->
+  <script src="static/js/marked.min.js"></script>
+  <script src="static/js/js-yaml.min.js"></script>
+</head>
+
+<body id="page-top">
+  <header class="header">
+    <div class="container px-4 py-3 d-flex align-items-center justify-content-between">
+      <a href="index.html" style="text-decoration:none;font-weight:700;color:#111;">Yourname</a>
+      <a href="index.html#page-top" style="text-decoration:none;">返回主页</a>
+    </div>
+  </header>
+
+  <main class="container px-4 py-5">
+    <h1 style="color:var(--h-title-color);font-size:2.2rem;margin-bottom:1rem;">
+      <i class="bi bi-clock-history"></i>&nbsp;即时动态
+    </h1>
+
+    <p style="opacity:.75;margin-bottom:1.25rem;">
+      仅展示标题与日期；点击标题进入全文。
+    </p>
+
+    <div id="posts-list"></div>
+  </main>
+
+  <script>
+    const CONFIG_URL = "contents/config.yml";
+
+    function escHtml(s){
+      return String(s ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#39;");
+    }
+
+    async function loadYaml(url){
+      const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
+      if(!res.ok) throw new Error("Failed to load config: " + res.status);
+      const text = await res.text();
+      return jsyaml.load(text);
+    }
+
+    function normalizePosts(posts){
+      if(!Array.isArray(posts)) return [];
+      return posts
+        .filter(p => p && p.file)
+        .map(p => ({
+          title: p.title || p.file,
+          date: p.date || "",
+          file: p.file
+        }));
+    }
+
+    function renderPosts(posts){
+      const el = document.getElementById("posts-list");
+      if(!el) return;
+
+      if(posts.length === 0){
+        el.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>暂无动态。请在 <code>contents/config.yml</code> 里配置 <code>posts:</code> 列表。</div>";
+        return;
+      }
+
+      const sorted = [...posts].sort((a,b) => (b.date||"").localeCompare(a.date||""));
+
+      el.innerHTML = sorted.map(p => {
+        const href = "post.html?f=" + encodeURIComponent(p.file);
+        return `
+          <div style="padding:14px 16px;margin:10px 0;border:1px solid #eee;border-radius:14px;">
+            <div style="font-size:0.95rem;opacity:.7;margin-bottom:6px;">
+              ${escHtml(p.date || "—")}
+            </div>
+            <div style="font-size:1.15rem;font-weight:650;line-height:1.4;">
+              <a href="${href}" style="text-decoration:none;color:var(--h-title-color);">
+                ${escHtml(p.title)}
+              </a>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    (async () => {
+      try{
+        const yml = await loadYaml(CONFIG_URL);
+        const posts = normalizePosts(yml["posts"]);
+        renderPosts(posts);
+      }catch(err){
+        console.error(err);
+        const el = document.getElementById("posts-list");
+        if(el) el.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>配置加载失败：请检查 <code>contents/config.yml</code> 路径与 YAML 语法。</div>";
+      }
+    })();
+  </script>
+</body>
+</html>

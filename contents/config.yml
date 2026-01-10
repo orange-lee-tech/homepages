@@ -19,3 +19,15 @@ person-images:
   - image12.jpg
   - image13.jpg
   - image14.jpg
+posts:
+  - title: "主页更新"
+    date: "2026-01-08"
+    file: "_posts/2026-01-08-homepage.md"
+
+  - title: "人工智能报考"
+    date: "2026-01-09"
+    file: "_posts/人工智能报考.md"
+
+  - title: "生成式人工智能工程师培训及认证"
+    date: "2026-01-10"
+    file: "_posts/生成式人工智能工程师培训及认证.md"
