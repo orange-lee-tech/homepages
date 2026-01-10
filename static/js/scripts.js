@@ -161,15 +161,19 @@ window.addEventListener('DOMContentLoaded', event => {
             console.log('[yml] show-images =', yml['show-images']);
             // --- Render Show carousel ---
             initCarouselSingle({
-  trackId: 'show-track',
-  imgDir: 'static/assets/show/',
-  files: yml['show-images'] || [],
-  intervalMs: 2500   // 想关闭自动轮播就改成 0
-});
-
+                trackId: 'show-track',
+                imgDir: 'static/assets/show/',
+                files: yml['show-images'] || [],
+                intervalMs: 2500   // 想关闭自动轮播就改成 0
+            }); 
+            initCarouselSingle({
+                trackId: 'person-track',
+                imgDir: 'static/assets/person/',
+                files: yml['person-images'] || [],
+                intervalMs: 3000   // 生活照建议慢一点，想关闭就 0
+            });
         })
         .catch(error => console.log(error));
-
 
     // Marked
     marked.use({ mangle: false, headerIds: false })
