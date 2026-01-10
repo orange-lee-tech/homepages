@@ -8,6 +8,8 @@ publications-subtitle: '<i class="bi bi-file-text-fill"></i>&nbsp;科研与竞�
 show-subtitle: '<i class="bi bi-stars"></i>&nbsp;show'
 design-subtitle: '<i class="bi bi-palette"></i>&nbsp;平面设计'
 person-subtitle: '<i class="bi bi-camera"></i>&nbsp;person'
+about-subtitle: '<i class="bi bi-person-badge"></i>&nbsp;自我介绍'
+interests-subtitle: '<i class="bi bi-compass"></i>&nbsp;兴趣方向'
 
 copyright-text: '&copy; Yourname 2023-2025. All Rights Reserved.'
 show-images:
