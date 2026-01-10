@@ -211,3 +211,11 @@ section .main-body{
     --show-shift-x: 140px; /* 窄屏降低左右偏移 */
   }
 }
+/* 手机端封面：使用专用裁剪图 background2.jpeg */
+@media (max-width: 991px){
+  .top-section{
+    background-image: url("static/assets/img/background2.jpeg") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
