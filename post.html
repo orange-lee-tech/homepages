@@ -39,15 +39,26 @@
   }
 
   function safePath(p){
-    // 基础安全：拒绝路径穿越、绝对路径
     if(!p) return "";
-    if(p.includes("..") || p.startsWith("/") || p.startsWith("\\") ) return "";
+    // 防止 ?f=../ 或绝对路径
+    if (p.includes("..") || p.startsWith("/") || p.startsWith("\\") ) return "";
     return p;
   }
 
   function inferDateFromFilename(path){
     const m = String(path).match(/(\d{4}-\d{2}-\d{2})/);
     return m ? m[1] : "";
+  }
+
+  function formatDate(v){
+    if(!v) return "";
+    // js-yaml 可能把 2026-01-09 解析成 Date 对象
+    if (v instanceof Date && !isNaN(v.getTime())){
+      return v.toISOString().slice(0,10);
+    }
+    const s = String(v).trim();
+    const m = s.match(/\d{4}-\d{2}-\d{2}/);
+    return m ? m[0] : s;
   }
 
   function splitFrontMatter(md){
@@ -61,7 +72,7 @@
   }
 
   async function loadMarkdown(path){
-    // encodeURI：兼容中文文件名；保留 / 不被编码
+    // encodeURI：更稳地支持中文文件名
     const url = encodeURI(path) + "?v=" + Date.now();
     const res = await fetch(url, { cache: "no-store" });
     if(!res.ok) throw new Error("Failed to load markdown: " + res.status);
@@ -74,29 +85,35 @@
     const bodyEl = document.getElementById("post-body");
 
     if(!f){
-      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html'>列表页</a> 进入。</div>";
+      bodyEl.innerHTML =
+        "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html'>列表页</a> 进入。</div>";
       return;
     }
 
     try{
-      const md = await loadMarkdown(f);
+      // 让 post 页的 markdown 渲染行为和 index 一致
+      marked.use({ mangle: false, headerIds: false });
 
+      const md = await loadMarkdown(f);
       const { fm, body } = splitFrontMatter(md);
 
-      const title = fm?.title ? String(fm.title) : "";
-      const date  = fm?.date  ? String(fm.date)  : (inferDateFromFilename(f) || "");
+      const title = (fm?.title ? String(fm.title) : "") || "动态";
+      const date  = formatDate(fm?.date) || inferDateFromFilename(f);
 
-      document.getElementById("post-title").textContent = title || "动态";
+      document.getElementById("post-title").textContent = title;
       document.getElementById("post-meta").textContent = date ? ("日期：" + date) : "";
+      document.title = title + " | 动态";
 
       bodyEl.innerHTML = marked.parse(body);
 
     }catch(err){
       console.error(err);
-      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>文章加载失败：请检查文件路径是否存在、文件名大小写是否一致。</div>";
+      bodyEl.innerHTML =
+        "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>文章加载失败：请确认文件存在且路径正确（例如 <code>posts/xxx.md</code>）。</div>";
     }
   })();
 </script>
+
 
 </body>
 </html>
