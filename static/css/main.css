@@ -353,3 +353,61 @@ section .main-body{
   margin: 0 auto;
   object-fit: contain;
 }
+/* =========================
+   Content v2: cards + grid
+   ========================= */
+.md-grid{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.md-card{
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+.md-card h3{
+  margin: 0 0 10px 0;
+  font-size: 1.05rem;
+}
+
+.md-card ul{
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.md-kpi{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.md-kpi .k{
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.07);
+  background: rgba(13,110,253,.04); /* bootstrap primary 的淡底 */
+}
+
+.md-kpi .k b{
+  display: block;
+  font-size: .95rem;
+}
+
+.md-kpi .k span{
+  display: block;
+  font-size: .9rem;
+  opacity: .8;
+}
+
+/* Mobile */
+@media (max-width: 992px){
+  .md-grid{ grid-template-columns: 1fr; }
+  .md-kpi{ grid-template-columns: 1fr; }
+}
