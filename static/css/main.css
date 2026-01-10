@@ -273,3 +273,63 @@ section .main-body{
   #show-track{ min-height: 420px; }
   #show-track .carousel-item-single img{ max-height: 360px; }
 }
+/* ===== SHOW (stacked) - force full image visible ===== */
+:root{
+  --showH: 420px;          /* 主图显示高度：你想更大就 460/520 */
+  --showTop: 60px;         /* 主图离容器顶部距离 */
+  --showShiftX: 260px;     /* 左右预告图横向偏移 */
+}
+
+#show-track{
+  position: relative !important;
+  overflow: visible !important;
+  min-height: calc(var(--showH) + var(--showTop) + 80px) !important;  /* 关键：留足空间 */
+}
+
+/* 三张叠放容器 */
+#show-track .carousel-item-single{
+  display: none;
+  position: absolute;
+  top: var(--showTop);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform .28s ease, opacity .28s ease;
+}
+
+/* prev/active/next 可见 */
+#show-track .carousel-item-single.prev,
+#show-track .carousel-item-single.active,
+#show-track .carousel-item-single.next{
+  display: block;
+}
+
+/* 主图 */
+#show-track .carousel-item-single.active{
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* 左右预告图：更小、更透明、在后面 */
+#show-track .carousel-item-single.prev{
+  z-index: 2;
+  opacity: .55;
+  transform: translateX(calc(-50% - var(--showShiftX))) scale(.82);
+}
+#show-track .carousel-item-single.next{
+  z-index: 2;
+  opacity: .55;
+  transform: translateX(calc(-50% + var(--showShiftX))) scale(.82);
+}
+
+/* 关键：固定展示框 + contain，保证“永远完整显示、不裁切” */
+#show-track .carousel-item-single img{
+  width: min(920px, 92vw);     /* 自适应，但有上限，防止撑爆屏幕 */
+  height: var(--showH);        /* 固定高度：保证完整可控 */
+  object-fit: contain;         /* 永远完整显示，不裁切 */
+  background: rgba(255,255,255,.0);
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  display: block;
+  margin: 0 auto;
+}
