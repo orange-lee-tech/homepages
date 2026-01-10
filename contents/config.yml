@@ -1,7 +1,11 @@
 title: orange-lee-tech's Homepage
-page-top-title: Yourname
+page-top-title: 李雨橙
 top-section-bg-text: Marching Forward 
-home-subtitle: 李雨橙&ensp;|&雨涟帘;orange-lee-tech
+home-subtitle: '<i class="bi bi-house-fill"></i>&nbsp;主页'
+awards-subtitle: '<i class="bi bi-award-fill"></i>&nbsp;获奖简报'
+experience-subtitle: '<i class="bi bi-briefcase-fill"></i>&nbsp;工作经历'
+publications-subtitle: '<i class="bi bi-file-text-fill"></i>&nbsp;科研与竞赛'
+
 copyright-text: '&copy; Yourname 2023-2025. All Rights Reserved.'
 show-images:
   - image1.jpg
