@@ -264,3 +264,12 @@ section .main-body{
   margin: 0 auto;
   object-fit: contain;          /* 尊重原图，不裁切 */
 }
+@media (min-width: 992px){
+  #show-track{ min-height: 520px; }
+  #show-track .carousel-item-single img{ max-height: 460px; }
+}
+
+@media (max-width: 991px){
+  #show-track{ min-height: 420px; }
+  #show-track .carousel-item-single img{ max-height: 360px; }
+}
