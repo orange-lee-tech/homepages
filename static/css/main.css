@@ -193,10 +193,6 @@ section .main-body{
   display: block !important;
 }
 /* ===== Single-item carousel (SHOW) ===== */
-#show-track{
-  display: block !important;   /* 覆盖之前的 flex 滚动方案 */
-  min-height: 220px;
-}
 
 #show-track .carousel-item-single{
   display: none;
@@ -217,7 +213,7 @@ section .main-body{
 /* ===== SHOW: stacked 3-item carousel (prev / active / next) ===== */
 #show-track{
   position: relative;
-  min-height: 360px;  /* 给绝对定位留高度 */
+  min-height: 720px;  /* 给绝对定位留高度 */
 }
 
 #show-track .carousel-item-single{
@@ -260,7 +256,7 @@ section .main-body{
 #show-track .carousel-item-single img{
   display: block;
   max-width: min(900px, 92vw);  /* 尊重原图宽高比例，给上限防止过大 */
-  max-height: 340px;            /* 让布局稳定，不会一张竖图把页面撑爆 */
+  max-height: 460px;            /* 让布局稳定，不会一张竖图把页面撑爆 */
   width: auto;
   height: auto;
   border-radius: 18px;
