@@ -16,9 +16,9 @@
        说明：图片本体大小不改，只扩容器高度，避免“下半截被裁”。
        你如果后续换更高的图片，可继续把 --show-img-max-h 调大。
     */
-    --show-img-max-h: 460px;   /* 主图最大高度（不改变图片，只是允许它完整显示） */
+    --show-img-max-h: 320px;   /* 主图最大高度（不改变图片，只是允许它完整显示） */
     --show-top: 10px;          /* 图片离 track 顶部的距离 */
-    --show-extra: 120px;       /* 额外留白：取“主图最大高度”级别，等效把容器高度翻倍 */
+    --show-extra: 40px;       /* 额外留白：取“主图最大高度”级别，等效把容器高度翻倍 */
     --show-shift-x: 260px;     /* 左右预告图水平偏移 */
     --show-scale-side: .82;    /* 左右预告图缩放比例 */
     --show-side-opacity: .55;  /* 左右预告图透明度 */
@@ -206,8 +206,8 @@ section .main-body{
 /* 响应式：窄屏略缩减上限高度与左右偏移 */
 @media (max-width: 991px){
   :root{
-    --show-img-max-h: 360px;
-    --show-extra: 90px;   /* 同步翻倍扩容 */
+    --show-img-max-h: 260px;
+    --show-extra: 30px;   /* 同步翻倍扩容 */
     --show-shift-x: 140px; /* 窄屏降低左右偏移 */
   }
 }
