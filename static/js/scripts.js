@@ -24,6 +24,61 @@ function withLang(href, lang){
   return u.pathname + u.search + u.hash;
 }
 
+
+function applyNavbarI18n(lang){
+  const dict = {
+    zh: {
+      "nav-menu": "MENU",
+      "nav-home": "主页",
+      "nav-home-top": "主页顶部",
+      "nav-home-now": "现状",
+      "nav-home-about": "自我介绍",
+      "nav-home-interests": "兴趣方向",
+      "nav-publications": "科研竞赛",
+      "nav-experience": "工作经历",
+      "nav-practice": "社会实践",
+      "nav-awards": "获奖简报",
+      "nav-awards-hs": "高中简报",
+      "nav-awards-ug": "本科简报",
+      "nav-posts": "即时动态",
+      "nav-gallery": "图片",
+      "nav-gallery-show": "show",
+      "nav-gallery-design": "平面设计",
+      "nav-gallery-person": "person",
+      "nav-lang": "语言",
+      "nav-lang-zh": "中文",
+      "nav-lang-en": "English"
+    },
+    en: {
+      "nav-menu": "MENU",
+      "nav-home": "Home",
+      "nav-home-top": "Top",
+      "nav-home-now": "Now",
+      "nav-home-about": "About",
+      "nav-home-interests": "Interests",
+      "nav-publications": "Research",
+      "nav-experience": "Experience",
+      "nav-practice": "Social Practice",
+      "nav-awards": "Awards",
+      "nav-awards-hs": "High School Brief",
+      "nav-awards-ug": "Undergraduate Brief",
+      "nav-posts": "Updates",
+      "nav-gallery": "Gallery",
+      "nav-gallery-show": "Show",
+      "nav-gallery-design": "Graphic Design",
+      "nav-gallery-person": "Person",
+      "nav-lang": "Language",
+      "nav-lang-zh": "中文",
+      "nav-lang-en": "English"
+    }
+  };
+  const map = dict[lang] || dict.zh;
+  Object.keys(map).forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.textContent = map[id];
+  });
+}
+
 function patchCrossPageLinks(lang){
   // Keep language when navigating across pages
   document.querySelectorAll('a[href^="posts.html"]').forEach(a => {
@@ -179,6 +234,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const lang = getLang();
   document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
   patchCrossPageLinks(lang);
+
+  applyNavbarI18n(lang);
 document.querySelectorAll('.lang-switch').forEach(a => {
   a.addEventListener('click', (e) => {
     e.preventDefault();

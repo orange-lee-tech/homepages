@@ -19,8 +19,8 @@
 <body id="page-top">
   <header class="header">
     <div class="container px-4 py-3 d-flex align-items-center justify-content-between">
-      <a id="back-home" href="index.html"><span id="back-home-text">Yourname</span></a>
-      <a href="index.html#page-top" style="text-decoration:none;">返回主页</a>
+      <a id="back-home" href="index.html"><span id="back-home-text"><span id="site-name">Yourname</span></span></a>
+      <a id="back-home-link" href="index.html#page-top" style="text-decoration:none;"><span id="back-home-link-text">返回主页</span></a>
     </div>
   </header>
 
@@ -30,7 +30,7 @@
     </span></h1>
 
     <p style="opacity:.75;margin-bottom:1.25rem;">
-      仅展示标题与日期；点击标题进入全文。
+      <span id="posts-page-desc">仅展示标题与日期；点击标题进入全文。</span>
     </p>
 
     <div id="posts-list"></div>
@@ -69,8 +69,8 @@ function setStaticTexts(lang){
   const descEl = document.getElementById("posts-page-desc");
   if(descEl) descEl.textContent = t.pageDesc;
 
-  const backTextEl = document.getElementById("back-home-text");
-  if(backTextEl) backTextEl.textContent = t.backHome;
+  const backLinkText = document.getElementById("back-home-link-text");
+  if(backLinkText) backLinkText.textContent = t.backHome;
 
   document.title = t.pageTitle;
 }
@@ -98,7 +98,19 @@ function normalizePostFile(file, lang){
 }
 
 async function loadYaml(url){
-  const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
+  const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" }
+
+
+function setSiteName(yml, lang){
+  // 优先从 config 读取；兼容不同 key 命名
+  const fromCfg =
+    (yml && (yml["site_name"] || yml["siteName"] || yml["page-top-title"] || yml["page_top_title"])) || "";
+  const fallback = (lang === "en") ? "LiYucheng" : "李雨橙";
+  const name = String(fromCfg || fallback);
+  const el = document.getElementById("site-name");
+  if(el) el.textContent = name;
+}
+);
   if(!res.ok) throw new Error("Failed to load config: " + res.status);
   const text = await res.text();
   return jsyaml.load(text);
@@ -160,13 +172,25 @@ function renderPosts(posts, lang){
     home.setAttribute('href', u.pathname + u.search + u.hash);
   }
 
-  const CONFIG_URL = "contents/config." + lang + ".yml";
+  
+
+  const homeLink = document.getElementById("back-home-link");
+  if(homeLink){
+    const u2 = new URL(homeLink.getAttribute('href') || "index.html#page-top", window.location.href);
+    u2.searchParams.set('lang', lang);
+    homeLink.setAttribute('href', u2.pathname + u2.search + u2.hash);
+  }
+const CONFIG_URL = "contents/config." + lang + ".yml";
 
   try{
     const yml = await loadYaml(CONFIG_URL);
-    const posts = normalizePosts(yml["posts"], lang);
+    
+      setSiteName(yml, lang);
+const posts = normalizePosts(yml["posts"], lang);
     renderPosts(posts, lang);
   }catch(err){
+      setSiteName(null, lang);
+
     console.error(err);
     const el = document.getElementById("posts-list");
     if(el) el.innerHTML =

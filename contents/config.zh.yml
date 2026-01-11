@@ -61,3 +61,28 @@ posts:
   - title: "生成式人工智能工程师培训及认证"
     date: "2026-01-10"
     file: "posts/生成式人工智能工程师培训及认证.md"
+nav-menu: MENU
+nav-home: 主页
+nav-home-top: 主页
+nav-home-now: 现状
+nav-home-about: 自我介绍
+nav-home-interests: 兴趣方向
+
+nav-publications: 科研竞赛
+nav-experience: 工作经历
+nav-practice: 社会实践
+
+nav-awards: 获奖简报
+nav-awards-hs: 高中简报
+nav-awards-ug: 本科简报
+
+nav-posts: 即时动态
+
+nav-gallery: 图片
+nav-gallery-show: show
+nav-gallery-design: 平面设计
+nav-gallery-person: person
+
+nav-lang: 语言
+nav-lang-zh: 中文
+nav-lang-en: English

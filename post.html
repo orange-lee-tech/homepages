@@ -15,10 +15,10 @@
 <body id="page-top">
   <header class="header">
     <div class="container px-4 py-3 d-flex align-items-center justify-content-between">
-      <a id="back-home" href="index.html"><span id="back-home-text">Yourname</span></a>
+      <a id="back-home" href="index.html"><span id="back-home-text"><span id="site-name">Yourname</span></span></a>
       <div style="display:flex;gap:14px;">
         <a id="back-list" href="posts.html"><span id="back-list-text">返回列表</span></a>
-        <a href="index.html#page-top" style="text-decoration:none;">主页</a>
+        <a id="home-link" href="index.html#page-top" style="text-decoration:none;"><span id="home-link-text">主页</span></a>
       </div>
     </div>
   </header>
@@ -46,7 +46,17 @@ function getLang(){
 
 function setStaticTexts(lang){
   const dict = {
-    zh: { backList: "返回列表", backHome: "返回主页" },
+    zh: { backList: "返回列表", home: "主页" },
+    en: { backList: "Back to List", home: "Home" }
+  };
+  const t = dict[lang] || dict.zh;
+
+  const bl = document.getElementById("back-list-text");
+  if(bl) bl.textContent = t.backList;
+
+  const hl = document.getElementById("home-link-text");
+  if(hl) hl.textContent = t.home;
+},
     en: { backList: "Back to List", backHome: "Back to Home" }
   };
   const t = dict[lang] || dict.zh;
@@ -98,7 +108,26 @@ function formatDate(v){
 function splitFrontMatter(md){
   const re = /^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/;
   const m = md.match(re);
-  if(!m) return { fm: null, body: md };
+  if(!m) return { fm: null, body: md }
+
+
+async function loadYaml(url){
+  const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
+  if(!res.ok) throw new Error("Failed to load config: " + res.status);
+  const text = await res.text();
+  return jsyaml.load(text);
+}
+
+function setSiteName(yml, lang){
+  const fromCfg =
+    (yml && (yml["site_name"] || yml["siteName"] || yml["page-top-title"] || yml["page_top_title"])) || "";
+  const fallback = (lang === "en") ? "LiYucheng" : "李雨橙";
+  const name = String(fromCfg || fallback);
+  const el = document.getElementById("site-name");
+  if(el) el.textContent = name;
+}
+
+;
   let fm = null;
   try{ fm = jsyaml.load(m[1]); }catch(e){}
   return { fm, body: md.slice(m[0].length) };
@@ -116,7 +145,16 @@ async function loadMarkdown(path){
   document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
   setStaticTexts(lang);
 
-  // 顶部返回链接带 lang
+  
+
+    const CONFIG_URL = "contents/config." + lang + ".yml";
+    try{
+      const yml = await loadYaml(CONFIG_URL);
+      setSiteName(yml, lang);
+    }catch(e){
+      setSiteName(null, lang);
+    }
+// 顶部返回链接带 lang
   const bl = document.getElementById("back-list");
   if(bl) bl.href = "posts.html?lang=" + encodeURIComponent(lang);
 
