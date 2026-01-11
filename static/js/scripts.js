@@ -1,5 +1,5 @@
 const content_dir = 'contents/';
-const section_names = ['home', 'about', 'interests', 'publications', 'experience', 'awards'];
+const section_names = ['home', 'about', 'interests', 'publications', 'experience', 'practice', 'awards'];
 
 /**
  * Language resolver:
