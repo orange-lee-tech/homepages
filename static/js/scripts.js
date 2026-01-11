@@ -179,6 +179,16 @@ window.addEventListener('DOMContentLoaded', () => {
   const lang = getLang();
   document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
   patchCrossPageLinks(lang);
+document.querySelectorAll('.lang-switch').forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = a.dataset.lang;
+    const u = new URL(window.location.href);
+    u.searchParams.set('lang', target);
+    localStorage.setItem('lang', target);
+    window.location.href = u.pathname + '?' + u.searchParams.toString() + window.location.hash;
+  });
+});
 
   // 1) Load YAML by lang
   const config_file = `config.${lang}.yml`;

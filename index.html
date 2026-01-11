@@ -73,50 +73,81 @@
 <body id="page-top">
     <!-- Navigation-->
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
-            <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-  <li class="nav-item"><a class="nav-link me-lg-3" href="#page-top">主页</a></li>
-  
-  <li class="nav-item"><a class="nav-link me-lg-3" href="#home">现状</a></li>
-<li class="nav-item"><a class="nav-link me-lg-3" href="#about">自我介绍</a></li>
-<li class="nav-item"><a class="nav-link me-lg-3" href="#interests">兴趣方向</a></li>
- </ul>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
-       data-bs-toggle="dropdown" aria-expanded="false">图片</a>
-    <ul class="dropdown-menu dropdown-menu-end">
-      <li><a class="dropdown-item" href="#show">show</a></li>
-      <li><a class="dropdown-item" href="#design">平面设计</a></li>
-      <li><a class="dropdown-item" href="#person">person</a></li>
-    </ul>
-  </li>
+  <div class="container px-5">
+    <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
 
-  <li class="nav-item"><a class="nav-link me-lg-3" href="#publications">科研竞赛</a></li>
-  <li class="nav-item"><a class="nav-link me-lg-3" href="#experience">工作经历</a></li>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      MENU
+      <i class="bi-list"></i>
+    </button>
 
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
-       data-bs-toggle="dropdown" aria-expanded="false">获奖简报</a>
-    <ul class="dropdown-menu dropdown-menu-end">
-      <li><a class="dropdown-item" href="#awards-hs">高中简报</a></li>
-      <li><a class="dropdown-item" href="#awards-ug">本科简报</a></li>
-    </ul>
-  </li>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
 
-  <li class="nav-item"><a class="nav-link me-lg-3" href="posts.html">即时动态</a></li>
-</ul>
+        <!-- 主页（下拉：现状/自我介绍/兴趣方向） -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            主页
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#page-top">主页顶部</a></li>
+            <li><a class="dropdown-item" href="#home">现状</a></li>
+            <li><a class="dropdown-item" href="#about">自我介绍</a></li>
+            <li><a class="dropdown-item" href="#interests">兴趣方向</a></li>
+          </ul>
+        </li>
 
-            </div>
-        </div>
-    </nav>
+        <!-- 其它主导航 -->
+        <li class="nav-item"><a class="nav-link me-lg-3" href="#publications">科研竞赛</a></li>
+        <li class="nav-item"><a class="nav-link me-lg-3" href="#experience">工作经历</a></li>
+
+        <!-- 获奖简报（下拉） -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            获奖简报
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#awards-hs">高中简报</a></li>
+            <li><a class="dropdown-item" href="#awards-ug">本科简报</a></li>
+          </ul>
+        </li>
+
+        <!-- 即时动态（跨页） -->
+        <li class="nav-item"><a class="nav-link me-lg-3" href="posts.html">即时动态</a></li>
+
+        <!-- 图片（倒数第二个） -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            图片
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#show">show</a></li>
+            <li><a class="dropdown-item" href="#design">平面设计</a></li>
+            <li><a class="dropdown-item" href="#person">person</a></li>
+          </ul>
+        </li>
+
+        <!-- 语言（最后一个） -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            语言
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item lang-switch" href="#" data-lang="zh">中文</a></li>
+            <li><a class="dropdown-item lang-switch" href="#" data-lang="en">English</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
     <!-- Top Section -->
     <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
@@ -197,19 +228,7 @@
     </section>
     <!-- Publications  -->
 
-    <!-- Awards -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
-        <div class="container px-5">
-            <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS </h2>
-            </header>
-            <div class="main-body" id="awards-md"></div>
-
-        </div>
-    </section>
-    <!-- Awards -->
-
-    <!-- Experience -->
+     <!-- Experience -->
     <section class="bg-gradient-primary-to-secondary-dark mt5 md5" id="experience">
         <div class="container px-5">
             <header>
@@ -219,6 +238,7 @@
         </div>
     </section>
     <!-- Experience -->
+
 <!-- Graphic Design Carousel -->
 <section class="bg-gradient-primary-to-secondary-light" id="design">
   <div class="container px-5">
@@ -234,6 +254,19 @@
   </div>
 </section>
 <!-- Graphic Design Carousel -->
+<!-- Awards -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
+        <div class="container px-5">
+            <header>
+                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS </h2>
+            </header>
+            <div class="main-body" id="awards-md"></div>
+
+        </div>
+    </section>
+    <!-- Awards -->
+   
+
 
     
     <!-- Person Carousel -->
