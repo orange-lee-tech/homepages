@@ -55,6 +55,21 @@
     return p;
   }
 
+  function normalizePostPath(path, lang){
+    let f = String(path || "").trim();
+    if(!f) return "";
+    // If bare filename, prefix posts/{lang}/
+    if(!f.includes("/")){
+      return `posts/${lang}/${f}`;
+    }
+    // Backward-compat: old links used posts/xxx.md
+    if(f.startsWith("posts/") && !f.startsWith("posts/zh/") && !f.startsWith("posts/en/")){
+      const rest = f.slice("posts/".length);
+      return `posts/${lang}/${rest}`;
+    }
+    return f;
+  }
+
   function inferDateFromFilename(path){
     const m = String(path).match(/(\d{4}-\d{2}-\d{2})/);
     return m ? m[1] : "";
@@ -97,11 +112,15 @@
     });
 
     const raw = getParam("f");
-    const f = safePath(raw);
+    const f = normalizePostPath(safePath(raw), lang);
     const bodyEl = document.getElementById("post-body");
 
     if(!f){
-      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html?lang=" + lang + "'>列表页</a> 进入。</div>";
+      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>" +
+        (lang === 'en'
+          ? "Missing or invalid <code>?f=</code>. Please enter from the <a href='posts.html?lang=" + lang + "'>posts list</a>."
+          : "缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html?lang=" + lang + "'>列表页</a> 进入。") +
+        "</div>";
       return;
     }
 
@@ -115,19 +134,20 @@
       const date  = formatDate(fm?.date) || inferDateFromFilename(f);
 
       document.getElementById("post-title").textContent = title;
-      document.getElementById("post-meta").textContent = date ? ("日期：" + date) : "";
+      document.getElementById("post-meta").textContent = date ? ((lang === 'en' ? "Date: " : "日期：") + date) : "";
       document.title = title;
 
       bodyEl.innerHTML = marked.parse(body);
 
     }catch(err){
       console.error(err);
-      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>文章加载失败：请检查文件路径是否存在、文件名大小写是否一致。</div>";
+      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>" +
+        (lang === 'en'
+          ? "Failed to load this post. Please check the file path and case sensitivity."
+          : "文章加载失败：请检查文件路径是否存在、文件名大小写是否一致。") +
+        "</div>";
     }
   })();
 </script>
-
-
-
 </body>
 </html>

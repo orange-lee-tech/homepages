@@ -57,6 +57,21 @@
       .replaceAll("'","&#39;");
   }
 
+  function normalizePostFile(file, lang){
+    let f = String(file || "").trim();
+    if(!f) return "";
+    // If config uses bare filename, prefix with posts/{lang}/
+    if(!f.includes("/")){
+      return `posts/${lang}/${f}`;
+    }
+    // Backward-compat: if old path is posts/xxx.md, insert lang segment
+    if(f.startsWith("posts/") && !f.startsWith("posts/zh/") && !f.startsWith("posts/en/")){
+      const rest = f.slice("posts/".length);
+      return `posts/${lang}/${rest}`;
+    }
+    return f;
+  }
+
   async function loadYaml(url){
     const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
     if(!res.ok) throw new Error("Failed to load config: " + res.status);
@@ -64,11 +79,15 @@
     return jsyaml.load(text);
   }
 
-  function normalizePosts(posts){
+  function normalizePosts(posts, lang){
     if(!Array.isArray(posts)) return [];
     return posts
       .filter(p => p && p.file)
-      .map(p => ({ title: p.title || p.file, date: p.date || "", file: p.file }));
+      .map(p => ({
+        title: p.title || p.file,
+        date: p.date || "",
+        file: normalizePostFile(p.file, lang)
+      }));
   }
 
   function renderPosts(posts, lang){
@@ -117,7 +136,7 @@
 
     try{
       const yml = await loadYaml(CONFIG_URL);
-      const posts = normalizePosts(yml["posts"]);
+      const posts = normalizePosts(yml["posts"], lang);
       renderPosts(posts, lang);
     }catch(err){
       console.error(err);
@@ -126,6 +145,5 @@
     }
   })();
 </script>
-
 </body>
 </html>
