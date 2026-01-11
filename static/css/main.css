@@ -10,7 +10,7 @@
 
 /* ---------- 全局变量（站点主色） ---------- */
 :root{
-    --h-title-color:#3948d2; /* 标题蓝 */
+    --h-title-color:#2F55FF; /* 一级标题：明亮蓝 */ /* 标题蓝 */
 
     /* ===== SHOW 轮播关键参数（只调这里即可） =====
        说明：图片本体大小不改，只扩容器高度，避免“下半截被裁”。
@@ -29,6 +29,9 @@
     --person-shift-x: 220px;
     --person-scale-side: .82;
     --person-side-opacity: .55;
+
+    --h-subtitle-color:#0B2F8A; /* 二级标题：深蓝 */
+    --h-text-color:#111111; /* 正文/其余标题：黑 */
 }
 
 /* ---------- 导航栏与页脚 ---------- */
@@ -67,6 +70,8 @@
 }
 
 /* ---------- 各 section 标题与正文排版 ---------- */
+section > .container > header > h2,
+section > .container > h2,
 section header h2{
     font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
                  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
@@ -79,6 +84,48 @@ section .main-body{
     font-size: 1.3rem;
     font-weight: 200;
     line-height: 2.4rem;
+}
+
+
+
+/* ---------- Markdown 内容：标题层级统一配色 ----------
+   规则：
+   - 一级标题（# / h1）：明亮蓝（--h-title-color）
+   - 二级标题（## / h2）：深蓝（--h-subtitle-color）
+   - 其余标题与正文：黑（--h-text-color）
+   说明：只作用于渲染容器（id 以 -md 结尾），不会影响导航/轮播等 UI
+------------------------------------------------------- */
+[id$="-md"]{ color: var(--h-text-color); }
+
+[id$="-md"] h1{
+  color: var(--h-title-color);
+    font-size: 1.17em; /* 采用 h3 的默认字号 */
+font-weight: 800;
+  margin-top: 1.25rem;
+  margin-bottom: .75rem;
+}
+
+[id$="-md"] h2{
+  color: var(--h-subtitle-color);
+    font-size: 1em; /* 采用 h4 的默认字号 */
+font-weight: 800;
+  margin-top: 1.15rem;
+  margin-bottom: .65rem;
+}
+
+[id$="-md"] h3,
+[id$="-md"] h4,
+[id$="-md"] h5,
+[id$="-md"] h6{
+  color: var(--h-text-color);
+  font-weight: 800;
+  margin-top: 1.05rem;
+  margin-bottom: .55rem;
+}
+
+[id$="-md"] p,
+[id$="-md"] li{
+  color: var(--h-text-color);
 }
 
 /* 背景渐变（浅色/灰色） */

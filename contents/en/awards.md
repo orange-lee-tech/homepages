@@ -1,6 +1,6 @@
 <span id="awards-hs"></span>
 
-#### High School Brief
+# High School Brief
 
 * 2022 Provincial | Outstanding Student Cadre | Yunnan Provincial Department of Education
 * 2022 Provincial | First Prize | The 36th China High School Chemistry Olympiad (Chinese Chemical Society)
@@ -11,7 +11,7 @@
 
 <span id="awards-ug"></span>
 
-#### Undergraduate Brief (Awards / Certificates)
+# Undergraduate Brief (Awards / Certificates)
 
 * 2025/06–2025/08/11｜National First Prize｜Deputy Project Lead｜The 18th China College Students’ Energy Conservation & Emission Reduction Social Practice and Science & Technology Competition
 * 2025/04/28–2025/08/28｜National Outstanding Paper｜Project Lead｜Shenzhen Cup Mathematical Modeling Challenge
