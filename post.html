@@ -15,9 +15,9 @@
 <body id="page-top">
   <header class="header">
     <div class="container px-4 py-3 d-flex align-items-center justify-content-between">
-      <a href="index.html" style="text-decoration:none;font-weight:700;color:#111;">Yourname</a>
+      <a id="back-home" href="index.html"><span id="back-home-text">Yourname</span></a>
       <div style="display:flex;gap:14px;">
-        <a href="posts.html" style="text-decoration:none;">返回列表</a>
+        <a id="back-list" href="posts.html"><span id="back-list-text">返回列表</span></a>
         <a href="index.html#page-top" style="text-decoration:none;">主页</a>
       </div>
     </div>
@@ -33,121 +33,138 @@
   </main>
 
   <script>
-  function getLang(){
-    const url = new URL(window.location.href);
-    const q = url.searchParams.get('lang');
-    if(q === 'zh' || q === 'en'){
-      localStorage.setItem('lang', q);
-      return q;
-    }
-    const saved = localStorage.getItem('lang');
-    return (saved === 'en') ? 'en' : 'zh';
+function getLang(){
+  const url = new URL(window.location.href);
+  const q = url.searchParams.get('lang');
+  if(q === 'zh' || q === 'en'){
+    localStorage.setItem('lang', q);
+    return q;
+  }
+  const saved = localStorage.getItem('lang');
+  return (saved === 'en') ? 'en' : 'zh';
+}
+
+function setStaticTexts(lang){
+  const dict = {
+    zh: { backList: "返回列表", backHome: "返回主页" },
+    en: { backList: "Back to List", backHome: "Back to Home" }
+  };
+  const t = dict[lang] || dict.zh;
+
+  const bl = document.getElementById("back-list-text");
+  if(bl) bl.textContent = t.backList;
+
+  const bh = document.getElementById("back-home-text");
+  if(bh) bh.textContent = t.backHome;
+}
+
+function getParam(name){
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name);
+}
+
+function safePath(p){
+  if(!p) return "";
+  if(p.includes("..") || p.startsWith("/") || p.startsWith("\\")) return "";
+  return p;
+}
+
+function normalizePostPath(path, lang){
+  let f = String(path || "").trim();
+  if(!f) return "";
+  if(!f.includes("/")){
+    return `posts/${lang}/${f}`;
+  }
+  if(f.startsWith("posts/") && !f.startsWith("posts/zh/") && !f.startsWith("posts/en/")){
+    const rest = f.slice("posts/".length);
+    return `posts/${lang}/${rest}`;
+  }
+  return f;
+}
+
+function inferDateFromFilename(path){
+  const m = String(path).match(/(\d{4}-\d{2}-\d{2})/);
+  return m ? m[1] : "";
+}
+
+function formatDate(v){
+  if(!v) return "";
+  if(v instanceof Date && !isNaN(v.getTime())) return v.toISOString().slice(0,10);
+  const s = String(v).trim();
+  const m = s.match(/\d{4}-\d{2}-\d{2}/);
+  return m ? m[0] : s;
+}
+
+function splitFrontMatter(md){
+  const re = /^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/;
+  const m = md.match(re);
+  if(!m) return { fm: null, body: md };
+  let fm = null;
+  try{ fm = jsyaml.load(m[1]); }catch(e){}
+  return { fm, body: md.slice(m[0].length) };
+}
+
+async function loadMarkdown(path){
+  const url = encodeURI(path) + "?v=" + Date.now();
+  const res = await fetch(url, { cache: "no-store" });
+  if(!res.ok) throw new Error("Failed to load markdown: " + res.status);
+  return await res.text();
+}
+
+(async () => {
+  const lang = getLang();
+  document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
+  setStaticTexts(lang);
+
+  // 顶部返回链接带 lang
+  const bl = document.getElementById("back-list");
+  if(bl) bl.href = "posts.html?lang=" + encodeURIComponent(lang);
+
+  const bh = document.getElementById("back-home");
+  if(bh){
+    const u = new URL(bh.getAttribute('href') || "index.html", window.location.href);
+    u.searchParams.set('lang', lang);
+    bh.setAttribute('href', u.pathname + u.search + u.hash);
   }
 
-  function getParam(name){
-    const url = new URL(window.location.href);
-    return url.searchParams.get(name);
+  const raw = getParam("f");
+  const f = normalizePostPath(safePath(raw), lang);
+  const bodyEl = document.getElementById("post-body");
+
+  if(!f){
+    bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>" +
+      (lang === 'en'
+        ? "Missing or invalid <code>?f=</code>. Please enter from the <a href='posts.html?lang=" + lang + "'>posts list</a>."
+        : "缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html?lang=" + lang + "'>列表页</a> 进入。") +
+      "</div>";
+    return;
   }
 
-  function safePath(p){
-    if(!p) return "";
-    if(p.includes("..") || p.startsWith("/") || p.startsWith("\\")) return "";
-    return p;
+  try{
+    marked.use({ mangle: false, headerIds: false });
+
+    const md = await loadMarkdown(f);
+    const { fm, body } = splitFrontMatter(md);
+
+    const fallbackTitle = (lang === 'en') ? "Post" : "动态";
+    const title = (fm?.title ? String(fm.title) : "") || fallbackTitle;
+    const date  = formatDate(fm?.date) || inferDateFromFilename(f);
+
+    document.getElementById("post-title").textContent = title;
+    document.getElementById("post-meta").textContent = date ? ((lang === 'en' ? "Date: " : "日期：") + date) : "";
+    document.title = title;
+
+    bodyEl.innerHTML = marked.parse(body);
+
+  }catch(err){
+    console.error(err);
+    bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>" +
+      (lang === 'en'
+        ? "Failed to load this post. Please check the file path and case sensitivity."
+        : "文章加载失败：请检查文件路径是否存在、文件名大小写是否一致。") +
+      "</div>";
   }
-
-  function normalizePostPath(path, lang){
-    let f = String(path || "").trim();
-    if(!f) return "";
-    // If bare filename, prefix posts/{lang}/
-    if(!f.includes("/")){
-      return `posts/${lang}/${f}`;
-    }
-    // Backward-compat: old links used posts/xxx.md
-    if(f.startsWith("posts/") && !f.startsWith("posts/zh/") && !f.startsWith("posts/en/")){
-      const rest = f.slice("posts/".length);
-      return `posts/${lang}/${rest}`;
-    }
-    return f;
-  }
-
-  function inferDateFromFilename(path){
-    const m = String(path).match(/(\d{4}-\d{2}-\d{2})/);
-    return m ? m[1] : "";
-  }
-
-  function formatDate(v){
-    if(!v) return "";
-    if(v instanceof Date && !isNaN(v.getTime())) return v.toISOString().slice(0,10);
-    const s = String(v).trim();
-    const m = s.match(/\d{4}-\d{2}-\d{2}/);
-    return m ? m[0] : s;
-  }
-
-  function splitFrontMatter(md){
-    const re = /^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/;
-    const m = md.match(re);
-    if(!m) return { fm: null, body: md };
-    let fm = null;
-    try{ fm = jsyaml.load(m[1]); }catch(e){}
-    return { fm, body: md.slice(m[0].length) };
-  }
-
-  async function loadMarkdown(path){
-    const url = encodeURI(path) + "?v=" + Date.now();
-    const res = await fetch(url, { cache: "no-store" });
-    if(!res.ok) throw new Error("Failed to load markdown: " + res.status);
-    return await res.text();
-  }
-
-  (async () => {
-    const lang = getLang();
-    document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
-
-    // 顶部返回链接带 lang
-    document.querySelectorAll('a[href="posts.html"]').forEach(a => a.href = "posts.html?lang=" + lang);
-    document.querySelectorAll('a[href^="index.html"]').forEach(a => {
-      const u = new URL(a.getAttribute('href'), window.location.href);
-      u.searchParams.set('lang', lang);
-      a.setAttribute('href', u.pathname + u.search + u.hash);
-    });
-
-    const raw = getParam("f");
-    const f = normalizePostPath(safePath(raw), lang);
-    const bodyEl = document.getElementById("post-body");
-
-    if(!f){
-      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>" +
-        (lang === 'en'
-          ? "Missing or invalid <code>?f=</code>. Please enter from the <a href='posts.html?lang=" + lang + "'>posts list</a>."
-          : "缺少或非法参数 <code>?f=</code>，请从 <a href='posts.html?lang=" + lang + "'>列表页</a> 进入。") +
-        "</div>";
-      return;
-    }
-
-    try{
-      marked.use({ mangle: false, headerIds: false });
-
-      const md = await loadMarkdown(f);
-      const { fm, body } = splitFrontMatter(md);
-
-      const title = (fm?.title ? String(fm.title) : "") || (lang === 'en' ? "Post" : "动态");
-      const date  = formatDate(fm?.date) || inferDateFromFilename(f);
-
-      document.getElementById("post-title").textContent = title;
-      document.getElementById("post-meta").textContent = date ? ((lang === 'en' ? "Date: " : "日期：") + date) : "";
-      document.title = title;
-
-      bodyEl.innerHTML = marked.parse(body);
-
-    }catch(err){
-      console.error(err);
-      bodyEl.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>" +
-        (lang === 'en'
-          ? "Failed to load this post. Please check the file path and case sensitivity."
-          : "文章加载失败：请检查文件路径是否存在、文件名大小写是否一致。") +
-        "</div>";
-    }
-  })();
+})();
 </script>
 </body>
 </html>

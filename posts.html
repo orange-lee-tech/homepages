@@ -19,15 +19,15 @@
 <body id="page-top">
   <header class="header">
     <div class="container px-4 py-3 d-flex align-items-center justify-content-between">
-      <a href="index.html" style="text-decoration:none;font-weight:700;color:#111;">Yourname</a>
+      <a id="back-home" href="index.html"><span id="back-home-text">Yourname</span></a>
       <a href="index.html#page-top" style="text-decoration:none;">返回主页</a>
     </div>
   </header>
 
   <main class="container px-4 py-5">
     <h1 style="color:var(--h-title-color);font-size:2.2rem;margin-bottom:1rem;">
-      <i class="bi bi-clock-history"></i>&nbsp;即时动态
-    </h1>
+      <i class="bi bi-clock-history"></i><span id="posts-page-title">&nbsp;即时动态
+    </span></h1>
 
     <p style="opacity:.75;margin-bottom:1.25rem;">
       仅展示标题与日期；点击标题进入全文。
@@ -37,113 +37,144 @@
   </main>
 
   <script>
-  function getLang(){
-    const url = new URL(window.location.href);
-    const q = url.searchParams.get('lang');
-    if(q === 'zh' || q === 'en'){
-      localStorage.setItem('lang', q);
-      return q;
+function getLang(){
+  const url = new URL(window.location.href);
+  const q = url.searchParams.get('lang');
+  if(q === 'zh' || q === 'en'){
+    localStorage.setItem('lang', q);
+    return q;
+  }
+  const saved = localStorage.getItem('lang');
+  return (saved === 'en') ? 'en' : 'zh';
+}
+
+function setStaticTexts(lang){
+  const dict = {
+    zh: {
+      pageTitle: "即时动态",
+      pageDesc: "仅展示标题与日期；点击标题进入全文。",
+      backHome: "返回主页"
+    },
+    en: {
+      pageTitle: "Updates",
+      pageDesc: "Only titles and dates are shown. Click a title to read the full post.",
+      backHome: "Back to Home"
     }
-    const saved = localStorage.getItem('lang');
-    return (saved === 'en') ? 'en' : 'zh';
+  };
+  const t = dict[lang] || dict.zh;
+
+  const titleEl = document.getElementById("posts-page-title");
+  if(titleEl) titleEl.textContent = t.pageTitle;
+
+  const descEl = document.getElementById("posts-page-desc");
+  if(descEl) descEl.textContent = t.pageDesc;
+
+  const backTextEl = document.getElementById("back-home-text");
+  if(backTextEl) backTextEl.textContent = t.backHome;
+
+  document.title = t.pageTitle;
+}
+
+function escHtml(s){
+  return String(s ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#39;");
+}
+
+function normalizePostFile(file, lang){
+  let f = String(file || "").trim();
+  if(!f) return "";
+  if(!f.includes("/")){
+    return `posts/${lang}/${f}`;
+  }
+  if(f.startsWith("posts/") && !f.startsWith("posts/zh/") && !f.startsWith("posts/en/")){
+    const rest = f.slice("posts/".length);
+    return `posts/${lang}/${rest}`;
+  }
+  return f;
+}
+
+async function loadYaml(url){
+  const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
+  if(!res.ok) throw new Error("Failed to load config: " + res.status);
+  const text = await res.text();
+  return jsyaml.load(text);
+}
+
+function normalizePosts(posts, lang){
+  if(!Array.isArray(posts)) return [];
+  return posts
+    .filter(p => p && p.file)
+    .map(p => ({
+      title: p.title || p.file,
+      date: p.date || "",
+      file: normalizePostFile(p.file, lang)
+    }));
+}
+
+function renderPosts(posts, lang){
+  const el = document.getElementById("posts-list");
+  if(!el) return;
+
+  const emptyMsg = (lang === 'en')
+    ? "No posts yet. Please configure <code>posts:</code> in <code>contents/config.en.yml</code>."
+    : "暂无动态。请在 <code>contents/config.zh.yml</code> 里配置 <code>posts:</code> 列表。";
+
+  if(posts.length === 0){
+    el.innerHTML = `<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>${emptyMsg}</div>`;
+    return;
   }
 
-  function escHtml(s){
-    return String(s ?? "")
-      .replaceAll("&","&amp;")
-      .replaceAll("<","&lt;")
-      .replaceAll(">","&gt;")
-      .replaceAll('"',"&quot;")
-      .replaceAll("'","&#39;");
-  }
+  const sorted = [...posts].sort((a,b) => (b.date||"").localeCompare(a.date||""));
 
-  function normalizePostFile(file, lang){
-    let f = String(file || "").trim();
-    if(!f) return "";
-    // If config uses bare filename, prefix with posts/{lang}/
-    if(!f.includes("/")){
-      return `posts/${lang}/${f}`;
-    }
-    // Backward-compat: if old path is posts/xxx.md, insert lang segment
-    if(f.startsWith("posts/") && !f.startsWith("posts/zh/") && !f.startsWith("posts/en/")){
-      const rest = f.slice("posts/".length);
-      return `posts/${lang}/${rest}`;
-    }
-    return f;
-  }
-
-  async function loadYaml(url){
-    const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
-    if(!res.ok) throw new Error("Failed to load config: " + res.status);
-    const text = await res.text();
-    return jsyaml.load(text);
-  }
-
-  function normalizePosts(posts, lang){
-    if(!Array.isArray(posts)) return [];
-    return posts
-      .filter(p => p && p.file)
-      .map(p => ({
-        title: p.title || p.file,
-        date: p.date || "",
-        file: normalizePostFile(p.file, lang)
-      }));
-  }
-
-  function renderPosts(posts, lang){
-    const el = document.getElementById("posts-list");
-    if(!el) return;
-
-    const emptyMsg = (lang === 'en')
-      ? "No posts yet. Please configure <code>posts:</code> in <code>contents/config.en.yml</code>."
-      : "暂无动态。请在 <code>contents/config.zh.yml</code> 里配置 <code>posts:</code> 列表。";
-
-    if(posts.length === 0){
-      el.innerHTML = `<div style='padding:1rem;border:1px solid #eee;border-radius:12px;'>${emptyMsg}</div>`;
-      return;
-    }
-
-    const sorted = [...posts].sort((a,b) => (b.date||"").localeCompare(a.date||""));
-
-    el.innerHTML = sorted.map(p => {
-      const href = "post.html?lang=" + encodeURIComponent(lang) + "&f=" + encodeURIComponent(p.file);
-      return `
-        <div style="padding:14px 16px;margin:10px 0;border:1px solid #eee;border-radius:14px;">
-          <div style="font-size:0.95rem;opacity:.7;margin-bottom:6px;">
-            ${escHtml(p.date || "—")}
-          </div>
-          <div style="font-size:1.15rem;font-weight:650;line-height:1.4;">
-            <a href="${href}" style="text-decoration:none;color:var(--h-title-color);">
-              ${escHtml(p.title)}
-            </a>
-          </div>
+  el.innerHTML = sorted.map(p => {
+    const href = "post.html?lang=" + encodeURIComponent(lang) + "&f=" + encodeURIComponent(p.file);
+    return `
+      <div style="padding:14px 16px;margin:10px 0;border:1px solid #eee;border-radius:14px;">
+        <div style="font-size:0.95rem;opacity:.7;margin-bottom:6px;">
+          ${escHtml(p.date || "—")}
         </div>
-      `;
-    }).join("");
+        <div style="font-size:1.15rem;font-weight:650;line-height:1.4;">
+          <a href="${href}" style="text-decoration:none;color:var(--h-title-color);">
+            ${escHtml(p.title)}
+          </a>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+(async () => {
+  const lang = getLang();
+  document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
+  setStaticTexts(lang);
+
+  // 顶部返回主页链接带 lang
+  const home = document.getElementById("back-home");
+  if(home){
+    const u = new URL(home.getAttribute('href') || "index.html", window.location.href);
+    u.searchParams.set('lang', lang);
+    home.setAttribute('href', u.pathname + u.search + u.hash);
   }
 
-  (async () => {
-    const lang = getLang();
+  const CONFIG_URL = "contents/config." + lang + ".yml";
 
-    // 顶部链接也带 lang
-    document.querySelectorAll('a[href^="index.html"]').forEach(a=>{
-      const u = new URL(a.getAttribute('href'), window.location.href);
-      u.searchParams.set('lang', lang);
-      a.setAttribute('href', u.pathname + u.search + u.hash);
-    });
-
-    const CONFIG_URL = "contents/config." + lang + ".yml";
-
-    try{
-      const yml = await loadYaml(CONFIG_URL);
-      const posts = normalizePosts(yml["posts"], lang);
-      renderPosts(posts, lang);
-    }catch(err){
-      console.error(err);
-      const el = document.getElementById("posts-list");
-      if(el) el.innerHTML = "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>配置加载失败：请检查 config 文件路径与 YAML 语法。</div>";
-    }
-  })();
+  try{
+    const yml = await loadYaml(CONFIG_URL);
+    const posts = normalizePosts(yml["posts"], lang);
+    renderPosts(posts, lang);
+  }catch(err){
+    console.error(err);
+    const el = document.getElementById("posts-list");
+    if(el) el.innerHTML =
+      "<div style='padding:1rem;border:1px solid #f3caca;border-radius:12px;color:#8a1f1f;'>" +
+      (lang === 'en' ? "Config load failed. Please check file path and YAML syntax." : "配置加载失败：请检查 config 文件路径与 YAML 语法。") +
+      "</div>";
+  }
+})();
 </script>
 </body>
 </html>
