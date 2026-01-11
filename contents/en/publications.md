@@ -2,41 +2,45 @@
 
 <div class="md-card">
 
-### 专利（可核验）
-- **202510469264.X（已授权）**｜一种基于氢冶金原理的可移动式钨资源回收装置  
-- **202510196241.6（在办）**｜超快高温速控一体机
+### Patents (Verifiable)
+
+* **202510469264.X (Granted)**｜A movable tungsten resource recycling device based on hydrogen metallurgy principles
+* **202510196241.6 (Pending)**｜An ultra-fast high-temperature rapid control all-in-one unit
 
 </div>
 
 <div class="md-card">
 
-### 面向不可压流体方程的物理约束增强神经算子
-<div class="card-meta">课题组组长｜2025/07/02–至今</div>
+### Physics-Constraint-Enhanced Neural Operator for Incompressible Fluid Equations
 
-- 指导教师：刘圣军（中南大学工程建模与科学计算研究所所长，博导）
-- 方法：Neural Chorin 时间推进神经算子（FNO 预测 + 控制体残差纠偏 + 不可压投影约束）
-- 进展：完成 1D Burgers 四模型对比；推进 2D 不可压 NS(HIT) 零样本分辨率泛化与消融证据链
-- 目标：寒假完成主体工作；目标期刊 JCP
+<div class="card-meta">Project Team Lead｜2025/07/02–Present</div>
 
-</div>
-
-<div class="md-card">
-
-### 新能源材料实验室
-<div class="card-meta">学生项目副主持｜2024/10–至今</div>
-
-- 方向：超级电容器纽扣电池
-- 工作：推进新电极材料研发与市场调研报告
+* Supervisor: Liu Shengjun (Hunan Provincial Distinguished Young Scholar; Director of the Institute of Engineering Modeling and Scientific Computing, Central South University; PhD Supervisor)
+* Method: Neural Chorin time-marching neural operator (FNO prediction + control-volume residual correction + incompressibility projection constraint)
+* Progress: completed four-model benchmarking on 1D Burgers; advancing a zero-shot resolution generalization and ablation evidence chain for 2D incompressible NS (HIT)
+* Goal: complete the main work during winter break; target journal: JCP
 
 </div>
 
 <div class="md-card">
 
-### 清洁低碳能源技术湖南省工程研究中心
-<div class="card-meta">学生项目主持｜2024/10–2025/08</div>
+### New Energy Materials Laboratory
 
-- 工作：设备说明书；SolidWorks 3D 建模用于 3D 打印；Origin 绘图与实验数据处理；赛事组织
-- 专利链路：申报号 **202510196241.6**；申请/授权链路中包含 **202510469264.X**
+<div class="card-meta">Deputy Student Project Lead｜2024/10–Present</div>
+
+* Focus: supercapacitor coin cells
+* Work: advancing new electrode material R&D and a market research report
+
+</div>
+
+<div class="md-card">
+
+### Hunan Provincial Engineering Research Center for Clean and Low-Carbon Energy Technology
+
+<div class="card-meta">Student Project Lead｜2024/10–2025/08</div>
+
+* Work: equipment manuals; SolidWorks 3D modeling for 3D printing; Origin plotting and experimental data processing; competition organization
+* Patent pipeline: application No. **202510196241.6**; the application/grant pipeline includes **202510469264.X**
 
 </div>
 

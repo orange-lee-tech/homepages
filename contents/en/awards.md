@@ -1,24 +1,33 @@
 <span id="awards-hs"></span>
-# 高中简报
-- 2022 省级 | 优秀学生干部 | 云南省教育厅
-- 2022 省级 | 一等 | 中国第36届高中化学奥林匹克竞赛（中国化学会）
-- 2022 省级 | 三等 | 中国第39届高中物理奥林匹克竞赛（中国物理学会）
-- 2021 省级 | 一等（NOI-CSP-J/S，C++）| 中国第39届高中计算机奥林匹克竞赛（中国计算机学会）
-- 2022 区级 | “突破者”奖学金 5000 元 | 西山区教育体育局
-- 2021 校级 | 学生会主席 | 昆明市第一中学西山学校第14届学生联合会
+
+#### High School Brief
+
+* 2022 Provincial | Outstanding Student Cadre | Yunnan Provincial Department of Education
+* 2022 Provincial | First Prize | The 36th China High School Chemistry Olympiad (Chinese Chemical Society)
+* 2022 Provincial | Third Prize | The 39th China High School Physics Olympiad (Chinese Physical Society)
+* 2021 Provincial | First Prize (NOI-CSP-J/S, C++) | The 39th China High School Informatics Olympiad (China Computer Federation)
+* 2022 District | “Trailblazer” Scholarship RMB 5,000 | Xishan District Education and Sports Bureau
+* 2021 School | Student Union President | 14th Student Union, Xishan School of Kunming No. 1 High School
 
 <span id="awards-ug"></span>
-# 本科简报（获奖 / 证书）
 
-- 2025/06–2025/08/11｜全国一等奖｜副主持｜中国第十八届大学生节能减排社会实践与科技作品竞赛
-- 2025/04/28–2025/08/28｜全国优秀论文｜主持｜深圳杯数学应用挑战赛
-- 2025/04/18–2025/04/21｜华中赛区三等奖｜主持｜MathorCup 数学应用挑战赛（第5届）
-- 2025/01/24–2025/01/28｜（国际级）S 奖｜主持｜Mathematical Contest In Modeling（MCM/COMAP）
-- 2025/05/01–2024/06/10｜校级一等奖｜成员｜第20届中南大学数模建模竞赛
-- 2025/2/07–2025/05/10｜湖南省二等奖｜成员｜湖南省第三届大学生节能减排社会实践与科技作品竞赛
-- 2024/10/07–2025/05/10｜湖南省二等奖｜成员｜湖南省第三届大学生节能减排社会实践与科技作品竞赛
-- 2024/05/01–2024/05/20｜校级一等奖｜主持｜第19届中南大学数模建模竞赛
-- 2024/11/01｜普通话水平测试二级乙等证书｜中国国家语言文字工作委员会
-- 2024/4-2025/11/9｜见习文员｜中南大学能源科学与工程学院学工办
-- 2023/12/20-2024/2/22｜实习｜平面设计师｜昆明上维设计品牌有限公司
-- 2023/2024/2025｜太阳慈善公益基金会（省民政厅4A级基金会）| 太阳学子
+#### Undergraduate Brief (Awards / Certificates)
+
+* 2025/06–2025/08/11｜National First Prize｜Deputy Project Lead｜The 18th China College Students’ Energy Conservation & Emission Reduction Social Practice and Science & Technology Competition
+* 2025/04/28–2025/08/28｜National Outstanding Paper｜Project Lead｜Shenzhen Cup Mathematical Modeling Challenge
+* 2025/04/18–2025/04/21｜Central China Regional Third Prize｜Project Lead｜MathorCup Mathematical Modeling Challenge (5th)
+* 2025/01/24–2025/01/28｜(International) S Award｜Project Lead｜Mathematical Contest In Modeling (MCM/COMAP)
+* 2025/05/01–2024/06/10｜University First Prize｜Member｜The 20th Central South University Mathematical Modeling Competition
+* 2025/2/07–2025/05/10｜Hunan Provincial Second Prize｜Member｜The 3rd Hunan Province College Students’ Energy Conservation & Emission Reduction Social Practice and Science & Technology Competition
+* 2024/10/07–2025/05/10｜Hunan Provincial Second Prize｜Member｜The 3rd Hunan Province College Students’ Energy Conservation & Emission Reduction Social Practice and Science & Technology Competition
+* 2024/05/01–2024/05/20｜University First Prize｜Project Lead｜The 19th Central South University Mathematical Modeling Competition
+* 2024/11/7|National Computer Rank Examination (NCRE) Level 2 Pass Certificate｜National Education Examinations Authority
+* 2024/11/01｜Putonghua Proficiency Test Level 2-B Certificate｜National Language Commission of the People’s Republic of China
+* 2024|4th Place, 10th Mountaineering Competition | Central South University Sports Committee
+* 2024|2nd Place, 11th Campus Marathon (Team) | Central South University Sports Committee
+* 2024/4-2025/11/9｜Clerk Intern｜Student Affairs Office, School of Energy Science and Engineering, Central South University
+* 2023/2024/2025｜Sun Charity Public Welfare Foundation (4A-rated foundation by the Provincial Department of Civil Affairs) | Sun Scholars
+* 2023/12|Cardiopulmonary Resuscitation (CPR+AED) Training Certificate|Changsha Red Cross
+* 2023/12|National Third Prize|People’s China Magazine, China Report Magazine
+* 2023/11|Peer Psychological Therapy Qualification Certificate|Haomo University Psychological Committee Member Platform
+* 2023/10|Outstanding Individual in Military Training|Central South University Military Training Leading Group

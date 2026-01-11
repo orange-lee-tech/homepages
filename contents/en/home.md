@@ -1,18 +1,19 @@
 [![GitHub](https://img.shields.io/badge/orange--lee--tech-github-blue?logo=github)](https://github.com/orange-lee-tech)
 
-欢迎来到我的个人主页！
+Welcome to my personal homepage! The navigation bar can help you quickly access my various public information, as well as switch languages.
 
-# 现状 
-- 近期主线：面向不可压流体方程的物理约束增强神经算子（Neural Chorin）研究与实验验证
-- 能力关键词：建模与实验闭环｜论文写作与制版（LaTeX）｜工程建模（SolidWorks）｜数据处理（Python/Origin）
-- 交付偏好：可复现、可解释、可展示（论文/专利/作品/答辩）
+# Current Status
 
+* Recent focus: research and experimental validation of physics-constraint-enhanced neural operators for incompressible fluid equations (Neural Chorin)
+* Capability keywords: modeling–experiment closed loop｜paper writing & typesetting (LaTeX)｜engineering modeling (SolidWorks)｜data processing (Python/Origin)
+* Delivery preference: reproducible, explainable, and presentable (papers/patents/works/defense)
 
-# 教育背景
+# Education Background
 
-- 本科在读：中南大学（985）｜能源动力与工程｜预计 2027 年毕业  
-- 本科交换：元智大学（TOP12）｜机械工程（英授）｜拟录取，2026 春季学期  
+* Undergraduate student: Central South University (985)｜Energy and Power Engineering｜Expected graduation in 2027
+* Undergraduate exchange: Yuan Ze University (TOP12)｜Mechanical Engineering (English-taught)｜Provisionally admitted, Spring 2026 semester
 
-# 联系方式
+# Contact
 
-- Email：1010969261@qq.com
+* Email: [1010969261@qq.com](mailto:1010969261@qq.com)
+

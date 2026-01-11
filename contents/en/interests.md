@@ -2,34 +2,34 @@
 
 <div class="md-card">
 
-### 研究方向（研究 × 工程）
+### Research Directions (Research × Engineering)
 
-- **物理约束机器学习**：守恒/不可压/投影约束，rollout 稳定性与误差累积控制  
-- **神经算子与时间推进器**：跨分辨率泛化、长时稳定、对比强基线  
-- **科学计算与数值诊断**：半谱/能谱/统计量口径一致，误差可量化、可定位
+* **Physics-constrained machine learning**: conservation/incompressibility/projection constraints; rollout stability and control of error accumulation
+* **Neural operators and time integrators**: cross-resolution generalization, long-horizon stability, benchmarking against strong baselines
+* **Scientific computing and numerical diagnostics**: consistent protocols for pseudo-spectral/energy spectrum/statistics; errors are quantifiable and traceable
 
-### 工程兴趣（做成可用）
+### Engineering Interests (Make It Usable)
 
-- 研究产物“产品化”：清晰入口、稳定体验、长期可维护  
-- 数据与实验治理：版本、目录、脚本、日志、图表全链条闭环  
-- 复现实验优先：能复现的结果才算结果
+* “Productizing” research outputs: clear entry points, stable user experience, long-term maintainability
+* Data and experiment governance: end-to-end closed loop across versions, directories, scripts, logs, and figures
+* Reproducibility first: results that cannot be reproduced are not results
 
 </div>
 
 <div class="md-card">
 
-### 下一步计划（补强清单）
+### Next-Step Plan (Strengthening Checklist)
 
-- **基线对齐**：与更强算子/约束方法做数值对比，统一评测口径  
-- **理论补强**：收敛性/误差界或可验证的数值证据支撑关键猜测  
-- **规模扩展**：2D→3D、分辨率更高、边界/外力设定更复杂  
-- **表达升级**：把“方法—证据—结论”压成 2 页可读的引言+图表故事线
+* **Baseline alignment**: numerical comparisons with stronger operators/constraint methods; unified evaluation protocols
+* **Theory reinforcement**: convergence/error bounds or verifiable numerical evidence to support key hypotheses
+* **Scaling up**: 2D → 3D, higher resolutions, more complex boundary/external forcing setups
+* **Communication upgrade**: compress “method—evidence—conclusion” into a readable 2-page introduction + figure-driven storyline
 
-### 长期能力栈（自我提升）
+### Long-Term Capability Stack (Self-Development)
 
-- 学术写作：结构化叙事、图表表达、读者友好  
-- 工程能力：可复现、可维护、可交付  
-- 系统思维：从需求到方案到验证，闭环推进
+* Academic writing: structured narrative, figure-driven communication, reader-friendly delivery
+* Engineering capability: reproducible, maintainable, deliverable
+* Systems thinking: closed-loop execution from requirements to solution to validation
 
 </div>
 

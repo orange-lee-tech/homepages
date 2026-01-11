@@ -1,6 +1,6 @@
 [![GitHub](https://img.shields.io/badge/orange--lee--tech-github-blue?logo=github)](https://github.com/orange-lee-tech)
 
-欢迎来到我的个人主页！
+欢迎来到我的个人主页！导航栏可以帮助你快速访问我的各类公开信息，以及语言切换。
 
 # 现状 
 - 近期主线：面向不可压流体方程的物理约束增强神经算子（Neural Chorin）研究与实验验证
