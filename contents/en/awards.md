@@ -6,7 +6,7 @@
 * 2022 Provincial | First Prize | The 36th China High School Chemistry Olympiad (Chinese Chemical Society)
 * 2022 Provincial | Third Prize | The 39th China High School Physics Olympiad (Chinese Physical Society)
 * 2021 Provincial | First Prize (NOI-CSP-J/S, C++) | The 39th China High School Informatics Olympiad (China Computer Federation)
-* 2022 District | “Trailblazer” Scholarship RMB 5,000 | Xishan District Education and Sports Bureau
+* 2022 District | “Trailblazer” Scholarship RMB 5,000 | Kunming Education and Sports Bureau
 * 2021 School | Student Union President | 14th Student Union, Xishan School of Kunming No. 1 High School
 
 <span id="awards-ug"></span>
