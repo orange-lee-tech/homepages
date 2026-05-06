@@ -7,10 +7,10 @@ const section_names = ['home', 'about', 'interests', 'publications', 'experience
  * 2) localStorage.lang
  * 3) default zh
  */
-function getLang(){
+function getLang() {
   const url = new URL(window.location.href);
   const q = url.searchParams.get('lang');
-  if(q === 'zh' || q === 'en' || q === 'chinese-traditional'){
+  if (q === 'zh' || q === 'en' || q === 'chinese-traditional') {
     localStorage.setItem('lang', q);
     return q;
   }
@@ -18,14 +18,14 @@ function getLang(){
   return (saved === 'en') ? 'en' : (saved === 'chinese-traditional') ? 'chinese-traditional' : 'zh';
 }
 
-function withLang(href, lang){
+function withLang(href, lang) {
   const u = new URL(href, window.location.href);
   u.searchParams.set('lang', lang);
   return u.pathname + u.search + u.hash;
 }
 
 
-function applyNavbarI18n(lang){
+function applyNavbarI18n(lang) {
   const dict = {
     zh: {
       "nav-menu": "MENU",
@@ -100,11 +100,11 @@ function applyNavbarI18n(lang){
   const map = dict[lang] || dict.zh;
   Object.keys(map).forEach(id => {
     const el = document.getElementById(id);
-    if(el) el.textContent = map[id];
+    if (el) el.textContent = map[id];
   });
 }
 
-function patchCrossPageLinks(lang){
+function patchCrossPageLinks(lang) {
   // Keep language when navigating across pages
   document.querySelectorAll('a[href^="posts.html"]').forEach(a => {
     a.setAttribute('href', withLang(a.getAttribute('href'), lang));
@@ -261,22 +261,22 @@ window.addEventListener('DOMContentLoaded', () => {
   patchCrossPageLinks(lang);
 
   applyNavbarI18n(lang);
-document.querySelectorAll('.lang-switch').forEach(a => {
-  a.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = a.dataset.lang;
-    const u = new URL(window.location.href);
-    u.searchParams.set('lang', target);
-    localStorage.setItem('lang', target);
-    window.location.href = u.pathname + '?' + u.searchParams.toString() + window.location.hash;
+  document.querySelectorAll('.lang-switch').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = a.dataset.lang;
+      const u = new URL(window.location.href);
+      u.searchParams.set('lang', target);
+      localStorage.setItem('lang', target);
+      window.location.href = u.pathname + '?' + u.searchParams.toString() + window.location.hash;
+    });
   });
-});
 
   // 1) Load YAML by lang
   const config_file = `config.${lang}.yml`;
   fetch(content_dir + config_file + '?v=' + Date.now(), { cache: 'no-store' })
     .then(r => {
-      if(!r.ok) throw new Error('Failed to load config: ' + r.status);
+      if (!r.ok) throw new Error('Failed to load config: ' + r.status);
       return r.text();
     })
     .then(text => {
@@ -285,7 +285,7 @@ document.querySelectorAll('.lang-switch').forEach(a => {
       // Inject all config keys into elements with matching ids
       Object.keys(yml).forEach(key => {
         const el = document.getElementById(key);
-        if(el) el.innerHTML = yml[key];
+        if (el) el.innerHTML = yml[key];
       });
 
       // Carousels (shared across languages)
@@ -320,15 +320,15 @@ document.querySelectorAll('.lang-switch').forEach(a => {
     const url = `${content_dir}${lang}/${name}.md?v=${Date.now()}`;
     fetch(url, { cache: 'no-store' })
       .then(r => {
-        if(!r.ok) throw new Error('Failed to load markdown: ' + r.status);
+        if (!r.ok) throw new Error('Failed to load markdown: ' + r.status);
         return r.text();
       })
       .then(md => {
         const html = marked.parse(md);
         const el = document.getElementById(name + '-md');
-        if(el) el.innerHTML = html;
+        if (el) el.innerHTML = html;
       })
-      .then(() => { if(window.MathJax) MathJax.typeset(); })
+      .then(() => { if (window.MathJax) MathJax.typeset(); })
       .catch(err => console.error('[md] load failed:', name, err));
   });
 });
