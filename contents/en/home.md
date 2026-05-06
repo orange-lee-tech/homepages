@@ -1,4 +1,4 @@
-[![GitHub](https://img.shields.io/badge/orange--lee--tech-github-blue?logo=github)](https://github.com/orange-lee-tech)
+[![GitHub](https://img.shields.io/badge/orange--lee--tech-github-blue?logo=github)](https://github.com/orange-lee-tech)Latest updates===2026.2.6
 
 Welcome to my personal homepage! The navigation bar can help you quickly access my various public information, as well as switch languages.
 
