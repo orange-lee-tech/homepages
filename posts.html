@@ -48,7 +48,10 @@
         return q;
       }
       const saved = localStorage.getItem('lang');
-      return (saved === 'en') ? 'en' : (saved === 'chinese-traditional') ? 'chinese-traditional' : 'zh';
+      if (saved === 'zh' || saved === 'en' || saved === 'chinese-traditional') {
+        return saved;
+      }
+      return 'chinese-traditional';
     }
 
     function setStaticTexts(lang) {
@@ -170,7 +173,7 @@
 
     (async () => {
       const lang = getLang();
-      document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
+      document.documentElement.lang = (lang === 'en') ? 'en' : (lang === 'chinese-traditional') ? 'zh-TW' : 'zh-CN';
       setStaticTexts(lang);
 
       // 顶部返回主页链接带 lang

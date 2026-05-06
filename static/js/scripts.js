@@ -3,9 +3,9 @@ const section_names = ['home', 'about', 'interests', 'publications', 'experience
 
 /**
  * Language resolver:
- * 1) URL param ?lang=zh|en
+ * 1) URL param ?lang=zh|en|chinese-traditional
  * 2) localStorage.lang
- * 3) default zh
+ * 3) default chinese-traditional
  */
 function getLang() {
   const url = new URL(window.location.href);
@@ -15,7 +15,10 @@ function getLang() {
     return q;
   }
   const saved = localStorage.getItem('lang');
-  return (saved === 'en') ? 'en' : (saved === 'chinese-traditional') ? 'chinese-traditional' : 'zh';
+  if (saved === 'zh' || saved === 'en' || saved === 'chinese-traditional') {
+    return saved;
+  }
+  return 'chinese-traditional';
 }
 
 function withLang(href, lang) {
@@ -257,7 +260,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // ===== i18n load =====
   const lang = getLang();
-  document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
+  document.documentElement.lang = (lang === 'en') ? 'en' : (lang === 'chinese-traditional') ? 'zh-TW' : 'zh-CN';
   patchCrossPageLinks(lang);
 
   applyNavbarI18n(lang);

@@ -43,7 +43,10 @@
         return q;
       }
       const saved = localStorage.getItem('lang');
-      return (saved === 'en') ? 'en' : (saved === 'chinese-traditional') ? 'chinese-traditional' : 'zh';
+      if (saved === 'zh' || saved === 'en' || saved === 'chinese-traditional') {
+        return saved;
+      }
+      return 'chinese-traditional';
     }
 
     function setStaticTexts(lang) {
@@ -59,17 +62,7 @@
 
       const hl = document.getElementById("home-link-text");
       if (hl) hl.textContent = t.home;
-    },
-    en: { backList: "Back to List", backHome: "Back to Home" }
-  };
-    const t = dict[lang] || dict.zh;
-
-    const bl = document.getElementById("back-list-text");
-    if (bl) bl.textContent = t.backList;
-
-    const bh = document.getElementById("back-home-text");
-    if (bh) bh.textContent = t.backHome;
-}
+    }
 
     function getParam(name) {
       const url = new URL(window.location.href);
@@ -111,29 +104,27 @@
     function splitFrontMatter(md) {
       const re = /^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n?/;
       const m = md.match(re);
-      if (!m) return { fm: null, body: md }
+      if (!m) return { fm: null, body: md };
 
-
-      async function loadYaml(url) {
-        const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
-        if (!res.ok) throw new Error("Failed to load config: " + res.status);
-        const text = await res.text();
-        return jsyaml.load(text);
-      }
-
-      function setSiteName(yml, lang) {
-        const fromCfg =
-          (yml && (yml["site_name"] || yml["siteName"] || yml["page-top-title"] || yml["page_top_title"])) || "";
-        const fallback = (lang === "en") ? "LiYucheng" : "李雨橙";
-        const name = String(fromCfg || fallback);
-        const el = document.getElementById("site-name");
-        if (el) el.textContent = name;
-      }
-
-      ;
       let fm = null;
       try { fm = jsyaml.load(m[1]); } catch (e) { }
       return { fm, body: md.slice(m[0].length) };
+    }
+
+    async function loadYaml(url) {
+      const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
+      if (!res.ok) throw new Error("Failed to load config: " + res.status);
+      const text = await res.text();
+      return jsyaml.load(text);
+    }
+
+    function setSiteName(yml, lang) {
+      const fromCfg =
+        (yml && (yml["site_name"] || yml["siteName"] || yml["page-top-title"] || yml["page_top_title"])) || "";
+      const fallback = (lang === "en") ? "LiYucheng" : "李雨橙";
+      const name = String(fromCfg || fallback);
+      const el = document.getElementById("site-name");
+      if (el) el.textContent = name;
     }
 
     async function loadMarkdown(path) {
@@ -145,7 +136,7 @@
 
     (async () => {
       const lang = getLang();
-      document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
+      document.documentElement.lang = (lang === 'en') ? 'en' : (lang === 'chinese-traditional') ? 'zh-TW' : 'zh-CN';
       setStaticTexts(lang);
 
 
