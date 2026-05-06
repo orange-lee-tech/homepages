@@ -116,6 +116,15 @@
       return yml;
     }
 
+    function setSiteName(yml, lang) {
+      const fromCfg =
+        (yml && (yml["site_name"] || yml["siteName"] || yml["page-top-title"] || yml["page_top_title"])) || "";
+      const fallback = (lang === 'en') ? 'LiYucheng' : '李雨橙';
+      const name = String(fromCfg || fallback);
+      const el = document.getElementById('site-name');
+      if (el) el.textContent = name;
+    }
+
     function normalizePosts(posts, lang) {
       if (!Array.isArray(posts)) return [];
       return posts
