@@ -10,12 +10,12 @@ const section_names = ['home', 'about', 'interests', 'publications', 'experience
 function getLang(){
   const url = new URL(window.location.href);
   const q = url.searchParams.get('lang');
-  if(q === 'zh' || q === 'en'){
+  if(q === 'zh' || q === 'en' || q === 'chinese-traditional'){
     localStorage.setItem('lang', q);
     return q;
   }
   const saved = localStorage.getItem('lang');
-  return (saved === 'en') ? 'en' : 'zh';
+  return (saved === 'en') ? 'en' : (saved === 'chinese-traditional') ? 'chinese-traditional' : 'zh';
 }
 
 function withLang(href, lang){
@@ -47,7 +47,8 @@ function applyNavbarI18n(lang){
       "nav-gallery-person": "person",
       "nav-lang": "语言",
       "nav-lang-zh": "中文",
-      "nav-lang-en": "English"
+      "nav-lang-en": "English",
+      "nav-lang-cht": "繁體中文"
     },
     en: {
       "nav-menu": "MENU",
@@ -69,7 +70,31 @@ function applyNavbarI18n(lang){
       "nav-gallery-person": "Person",
       "nav-lang": "Language",
       "nav-lang-zh": "中文",
-      "nav-lang-en": "English"
+      "nav-lang-en": "English",
+      "nav-lang-cht": "繁體中文"
+    },
+    "chinese-traditional": {
+      "nav-menu": "MENU",
+      "nav-home": "主頁",
+      "nav-home-top": "主頁頂部",
+      "nav-home-now": "現狀",
+      "nav-home-about": "自我介紹",
+      "nav-home-interests": "興趣方向",
+      "nav-publications": "科研競賽",
+      "nav-experience": "工作經歷",
+      "nav-practice": "社會實踐",
+      "nav-awards": "獲獎簡報",
+      "nav-awards-hs": "高中簡報",
+      "nav-awards-ug": "本科簡報",
+      "nav-posts": "即時動態",
+      "nav-gallery": "圖片",
+      "nav-gallery-show": "show",
+      "nav-gallery-design": "平面設計",
+      "nav-gallery-person": "person",
+      "nav-lang": "語言",
+      "nav-lang-zh": "中文",
+      "nav-lang-en": "English",
+      "nav-lang-cht": "繁體中文"
     }
   };
   const map = dict[lang] || dict.zh;

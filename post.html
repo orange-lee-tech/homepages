@@ -36,18 +36,19 @@
 function getLang(){
   const url = new URL(window.location.href);
   const q = url.searchParams.get('lang');
-  if(q === 'zh' || q === 'en'){
+  if(q === 'zh' || q === 'en' || q === 'chinese-traditional'){
     localStorage.setItem('lang', q);
     return q;
   }
   const saved = localStorage.getItem('lang');
-  return (saved === 'en') ? 'en' : 'zh';
+  return (saved === 'en') ? 'en' : (saved === 'chinese-traditional') ? 'chinese-traditional' : 'zh';
 }
 
 function setStaticTexts(lang){
   const dict = {
     zh: { backList: "返回列表", home: "主页" },
-    en: { backList: "Back to List", home: "Home" }
+    en: { backList: "Back to List", home: "Home" },
+    "chinese-traditional": { backList: "返回列表", home: "主頁" }
   };
   const t = dict[lang] || dict.zh;
 

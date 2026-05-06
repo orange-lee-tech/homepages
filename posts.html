@@ -40,12 +40,12 @@
 function getLang(){
   const url = new URL(window.location.href);
   const q = url.searchParams.get('lang');
-  if(q === 'zh' || q === 'en'){
+  if(q === 'zh' || q === 'en' || q === 'chinese-traditional'){
     localStorage.setItem('lang', q);
     return q;
   }
   const saved = localStorage.getItem('lang');
-  return (saved === 'en') ? 'en' : 'zh';
+  return (saved === 'en') ? 'en' : (saved === 'chinese-traditional') ? 'chinese-traditional' : 'zh';
 }
 
 function setStaticTexts(lang){
@@ -59,6 +59,11 @@ function setStaticTexts(lang){
       pageTitle: "Updates",
       pageDesc: "Only titles and dates are shown. Click a title to read the full post.",
       backHome: "Back to Home"
+    },
+    "chinese-traditional": {
+      pageTitle: "即時動態",
+      pageDesc: "僅展示標題與日期；點擊標題進入全文。",
+      backHome: "返回主頁"
     }
   };
   const t = dict[lang] || dict.zh;

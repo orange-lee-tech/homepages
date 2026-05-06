@@ -1,0 +1,88 @@
+title: orange-lee-tech's Homepage
+page-top-title: 李雨橙
+top-section-bg-text: Marching Forward 
+home-subtitle: '<i class="bi bi-house-fill"></i>&nbsp;主頁'
+awards-subtitle: '<i class="bi bi-award-fill"></i>&nbsp;獲獎簡報'
+experience-subtitle: '<i class="bi bi-briefcase-fill"></i>&nbsp;工作經歷'
+publications-subtitle: '<i class="bi bi-file-text-fill"></i>&nbsp;科研與競賽'
+show-subtitle: '<i class="bi bi-stars"></i>&nbsp;show'
+design-subtitle: '<i class="bi bi-palette"></i>&nbsp;平面設計'
+person-subtitle: '<i class="bi bi-camera"></i>&nbsp;person'
+about-subtitle: '<i class="bi bi-person-badge"></i>&nbsp;自我介紹'
+interests-subtitle: '<i class="bi bi-compass"></i>&nbsp;興趣方向'
+
+copyright-text: '&copy; Yourname 2023-2025. All Rights Reserved.'
+show-images:
+  - image1.jpg
+  - image2.jpg
+  - image3.jpg
+  - image4.jpg
+  - image5.jpg
+  - image6.jpg
+  - image7.jpg
+  - image8.jpg
+person-images:
+  - image9.jpg
+  - image10.jpg
+  - image11.jpg
+  - image12.jpg
+  - image13.jpg
+  - image14.jpg
+design-images:
+  - work1.png
+  - work2.png
+  - work3.png
+  - work4.png
+  - work5.jpg
+  - work6.png
+  - work7.png
+  - work8.png
+  - work9.png
+  - work10.png
+  - work11.png
+  - work12.png
+  - work13.jpg
+  - work14.png
+  - work15.png
+  - work16.png
+  - work17.jpg
+  - work18.jpg
+  - work19.jpg
+posts:
+  - title: "主頁更新"
+    date: "2026-01-08"
+    file: "posts/2026-01-08-homepage.md"
+
+  - title: "人工智能報考"
+    date: "2026-01-09"
+    file: "posts/人工智能报考.md"
+
+  - title: "生成式人工智能工程師培訓及認證"
+    date: "2026-01-10"
+    file: "posts/生成式人工智能工程师培训及认证.md"
+nav-menu: MENU
+nav-home: 主頁
+nav-home-top: 主頁
+nav-home-now: 現狀
+nav-home-about: 自我介紹
+nav-home-interests: 興趣方向
+
+nav-publications: 科研競賽
+nav-experience: 工作經歷
+nav-practice: 社會實踐
+
+nav-awards: 獲獎簡報
+nav-awards-hs: 高中簡報
+nav-awards-ug: 本科簡報
+
+nav-posts: 即時動態
+
+nav-gallery: 圖片
+nav-gallery-show: show
+nav-gallery-design: 平面設計
+nav-gallery-person: person
+
+nav-lang: 語言
+nav-lang-zh: 中文
+nav-lang-en: English
+nav-lang-cht: 繁體中文
