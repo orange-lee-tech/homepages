@@ -106,22 +106,14 @@
     }
 
     async function loadYaml(url) {
-      const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" }
-
-
-function setSiteName(yml, lang) {
-          // 优先从 config 读取；兼容不同 key 命名
-          const fromCfg =
-            (yml && (yml["site_name"] || yml["siteName"] || yml["page-top-title"] || yml["page_top_title"])) || "";
-          const fallback = (lang === "en") ? "LiYucheng" : "李雨橙";
-          const name = String(fromCfg || fallback);
-          const el = document.getElementById("site-name");
-          if (el) el.textContent = name;
-        }
-      );
+      const res = await fetch(url + "?v=" + Date.now(), { cache: "no-store" });
+      console.log('Fetching config from:', url, 'status:', res.status);
       if (!res.ok) throw new Error("Failed to load config: " + res.status);
       const text = await res.text();
-      return jsyaml.load(text);
+      console.log('Config text length:', text.length, 'first 200 chars:', text.substring(0, 200));
+      const yml = jsyaml.load(text);
+      console.log('Parsed yml:', yml);
+      return yml;
     }
 
     function normalizePosts(posts, lang) {
