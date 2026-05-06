@@ -192,9 +192,12 @@ function setSiteName(yml, lang) {
 
       try {
         const yml = await loadYaml(CONFIG_URL);
+        console.log('Loaded config for lang:', lang, 'yml:', yml);
+        console.log('posts from config:', yml["posts"]);
 
         setSiteName(yml, lang);
         const posts = normalizePosts(yml["posts"], lang);
+        console.log('normalized posts:', posts);
         renderPosts(posts, lang);
       } catch (err) {
         setSiteName(null, lang);

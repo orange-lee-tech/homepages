@@ -1,4 +1,5 @@
 [![GitHub](https://img.shields.io/badge/orange--lee--tech-github-blue?logo=github)](https://github.com/orange-lee-tech)
+Latest updates===2026.2.6
 
 欢迎来到我的个人主页！导航栏可以帮助你快速访问我的各类公开信息，以及语言切换。
 
