@@ -1,17 +1,17 @@
 title: orange-lee-tech's Homepage
-page-top-title: LiYucheng
+page-top-title: Li Yucheng
 top-section-bg-text: Marching Forward 
 home-subtitle: '<i class="bi bi-house-fill"></i>&nbsp;Home'
 awards-subtitle: '<i class="bi bi-award-fill"></i>&nbsp;Awards'
 experience-subtitle: '<i class="bi bi-briefcase-fill"></i>&nbsp;Experience'
 publications-subtitle: '<i class="bi bi-file-text-fill"></i>&nbsp;Research & Competitions'
-show-subtitle: '<i class="bi bi-stars"></i>&nbsp;show'
+show-subtitle: '<i class="bi bi-stars"></i>&nbsp;Show'
 design-subtitle: '<i class="bi bi-palette"></i>&nbsp;Graphic Design'
-person-subtitle: '<i class="bi bi-camera"></i>&nbsp;person'
+person-subtitle: '<i class="bi bi-camera"></i>&nbsp;Person'
 about-subtitle: '<i class="bi bi-person-badge"></i>&nbsp;About'
 interests-subtitle: '<i class="bi bi-compass"></i>&nbsp;Interests'
 
-copyright-text: '&copy; LiYucheng 2023-2025. All Rights Reserved.'
+copyright-text: '&copy; Li Yucheng 2023-2026. All Rights Reserved.'
 show-images:
   - image1.jpg
   - image2.jpg
@@ -50,17 +50,13 @@ design-images:
   - work19.jpg
 
 posts:
-  - title: "主页更新"
+  - title: "Homepage Update"
     date: "2026-01-08"
-    file: "posts/2026-01-08-homepage.md"
+    file: "2026-01-08-homepage.md"
 
-  - title: "人工智能报考"
+  - title: "Generative AI Engineer Training and Certification"
     date: "2026-01-09"
-    file: "posts/人工智能报考.md"
-
-  - title: "生成式人工智能工程师培训及认证"
-    date: "2026-01-10"
-    file: "posts/生成式人工智能工程师培训及认证.md"
+    file: "2026-01-09-generative-ai-engineer-certification.md"
 nav-menu: MENU
 nav-home: Home
 nav-home-top: Top
@@ -86,3 +82,4 @@ nav-gallery-person: Person
 nav-lang: Language
 nav-lang-zh: 中文
 nav-lang-en: English
+nav-lang-cht: 繁體中文
