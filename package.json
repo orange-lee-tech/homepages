@@ -1,0 +1,16 @@
+{
+  "name": "homepages-i18n-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "i18n": "node scripts/i18n-sync.mjs",
+    "i18n:traditional": "node scripts/i18n-sync.mjs --traditional-only"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "opencc-js": "^1.0.5"
+  }
+}
