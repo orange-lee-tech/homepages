@@ -11,7 +11,7 @@ person-subtitle: '<i class="bi bi-camera"></i>&nbsp;person'
 about-subtitle: '<i class="bi bi-person-badge"></i>&nbsp;自我介绍'
 interests-subtitle: '<i class="bi bi-compass"></i>&nbsp;兴趣方向'
 
-copyright-text: '&copy; Yourname 2023-2025. All Rights Reserved.'
+copyright-text: '&copy; 李雨橙 2023-2026. All Rights Reserved.'
 show-images:
   - image1.jpg
   - image2.jpg
@@ -52,15 +52,11 @@ design-images:
 posts:
   - title: "主页更新"
     date: "2026-01-08"
-    file: "posts/2026-01-08-homepage.md"
-
-  - title: "人工智能报考"
-    date: "2026-01-09"
-    file: "posts/人工智能报考.md"
+    file: "2026-01-08-homepage.md"
 
   - title: "生成式人工智能工程师培训及认证"
-    date: "2026-01-10"
-    file: "posts/生成式人工智能工程师培训及认证.md"
+    date: "2026-01-09"
+    file: "2026-01-09-generative-ai-engineer-certification.md"
 nav-menu: MENU
 nav-home: 主页
 nav-home-top: 主页
@@ -86,3 +82,4 @@ nav-gallery-person: person
 nav-lang: 语言
 nav-lang-zh: 中文
 nav-lang-en: English
+nav-lang-cht: 繁體中文
