@@ -1,0 +1,56 @@
+# i18n glossary for homepage translation
+# Maintain key terminology here to keep English output consistent.
+
+names:
+  李雨橙: Li Yucheng
+  orange-lee-tech: orange-lee-tech
+
+schools:
+  中南大学: Central South University
+  元智大学: Yuan Ze University
+  能源动力与工程: Energy and Power Engineering
+  机械工程: Mechanical Engineering
+
+research:
+  物理约束增强神经算子: physics-constraint-enhanced neural operator
+  物理约束机器学习: physics-constrained machine learning
+  不可压流体方程: incompressible fluid equations
+  不可压流体方程式: incompressible fluid equations
+  不可压投影约束: incompressibility projection constraint
+  神经算子: neural operator
+  时间推进神经算子: time-marching neural operator
+  Neural Chorin: Neural Chorin
+  FNO: FNO
+  Burgers: Burgers
+  Navier-Stokes: Navier-Stokes
+  NS: NS
+  HIT: HIT
+  JCP: Journal of Computational Physics
+
+skills:
+  LaTeX: LaTeX
+  SolidWorks: SolidWorks
+  Python: Python
+  Origin: Origin
+  Markdown: Markdown
+  GitHub: GitHub
+
+site_labels:
+  主页: Home
+  主頁: Home
+  现状: Current Status
+  現狀: Current Status
+  自我介绍: About
+  自我介紹: About
+  兴趣方向: Interests
+  興趣方向: Interests
+  科研与竞赛: Research & Competitions
+  科研與競賽: Research & Competitions
+  工作经历: Experience
+  工作經歷: Experience
+  社会实践: Social Practice
+  社會實踐: Social Practice
+  获奖简报: Awards
+  獲獎簡報: Awards
+  即时动态: Updates
+  即時動態: Updates
