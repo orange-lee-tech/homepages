@@ -1,17 +1,16 @@
 title: orange-lee-tech's Homepage
 page-top-title: Li Yucheng
-top-section-bg-text: Marching Forward 
-home-subtitle: '<i class="bi bi-house-fill"></i>&nbsp;Home'
-awards-subtitle: '<i class="bi bi-award-fill"></i>&nbsp;Awards'
-experience-subtitle: '<i class="bi bi-briefcase-fill"></i>&nbsp;Experience'
-publications-subtitle: '<i class="bi bi-file-text-fill"></i>&nbsp;Research & Competitions'
-show-subtitle: '<i class="bi bi-stars"></i>&nbsp;Show'
-design-subtitle: '<i class="bi bi-palette"></i>&nbsp;Graphic Design'
-person-subtitle: '<i class="bi bi-camera"></i>&nbsp;Person'
-about-subtitle: '<i class="bi bi-person-badge"></i>&nbsp;About'
-interests-subtitle: '<i class="bi bi-compass"></i>&nbsp;Interests'
-
-copyright-text: '&copy; Li Yucheng 2023-2026. All Rights Reserved.'
+top-section-bg-text: Marching Forward
+home-subtitle: <i class="bi bi-house-fill"></i>&nbsp;Home
+awards-subtitle: <i class="bi bi-award-fill"></i>&nbsp;Awards
+experience-subtitle: <i class="bi bi-briefcase-fill"></i>&nbsp;Experience
+publications-subtitle: <i class="bi bi-file-text-fill"></i>&nbsp;Research & Competitions
+show-subtitle: <i class="bi bi-stars"></i>&nbsp;Show
+design-subtitle: <i class="bi bi-palette"></i>&nbsp;Graphic Design
+person-subtitle: <i class="bi bi-camera"></i>&nbsp;Person
+about-subtitle: <i class="bi bi-person-badge"></i>&nbsp;About
+interests-subtitle: <i class="bi bi-compass"></i>&nbsp;Interests
+copyright-text: "&copy; Li Yucheng 2023-2026. All Rights Reserved."
 show-images:
   - image1.jpg
   - image2.jpg
@@ -48,37 +47,33 @@ design-images:
   - work17.jpg
   - work18.jpg
   - work19.jpg
-
 posts:
-  - title: "Homepage Update"
+  - title: LiYucheng's Homepage
     date: "2026-01-08"
-    file: "2026-01-08-homepage.md"
-
-  - title: "Generative AI Engineer Training and Certification"
-    date: "2026-01-09"
-    file: "2026-01-09-generative-ai-engineer-certification.md"
+    file: 2026-01-08-homepage.md
+  - title: Generative Artificial Intelligence Engineer Training and Certification
+    date: "2026-01-08"
+    file: 人工智能报考.md
+  - title: Generative Artificial Intelligence Engineer Training and Certification
+    date: "2026-01-08"
+    file: 生成式人工智能工程师培训及认证.md
 nav-menu: MENU
 nav-home: Home
 nav-home-top: Top
 nav-home-now: Now
 nav-home-about: About
 nav-home-interests: Interests
-
 nav-publications: Research
 nav-experience: Experience
 nav-practice: Social Practice
-
 nav-awards: Awards
 nav-awards-hs: High School Brief
 nav-awards-ug: Undergraduate Brief
-
 nav-posts: Updates
-
 nav-gallery: Gallery
 nav-gallery-show: Show
 nav-gallery-design: Graphic Design
 nav-gallery-person: Person
-
 nav-lang: Language
 nav-lang-zh: 中文
 nav-lang-en: English

@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "sourceLanguage": "zh",
+  "languages": [
+    "zh",
+    "chinese-traditional",
+    "en"
+  ],
+  "sections": [
+    "home",
+    "about",
+    "interests",
+    "publications",
+    "experience",
+    "practice",
+    "awards"
+  ],
+  "galleries": {
+    "show": {
+      "configKey": "show-images",
+      "directory": "static/assets/show",
+      "files": [
+        "image1.jpg",
+        "image2.jpg",
+        "image3.jpg",
+        "image4.jpg",
+        "image5.jpg",
+        "image6.jpg",
+        "image7.jpg",
+        "image8.jpg"
+      ]
+    },
+    "person": {
+      "configKey": "person-images",
+      "directory": "static/assets/person",
+      "files": [
+        "image9.jpg",
+        "image10.jpg",
+        "image11.jpg",
+        "image12.jpg",
+        "image13.jpg",
+        "image14.jpg"
+      ]
+    },
+    "design": {
+      "configKey": "design-images",
+      "directory": "static/assets/平面设计",
+      "files": [
+        "work1.png",
+        "work2.png",
+        "work3.png",
+        "work4.png",
+        "work5.jpg",
+        "work6.png",
+        "work7.png",
+        "work8.png",
+        "work9.png",
+        "work10.png",
+        "work11.png",
+        "work12.png",
+        "work13.jpg",
+        "work14.png",
+        "work15.png",
+        "work16.png",
+        "work17.jpg",
+        "work18.jpg",
+        "work19.jpg"
+      ]
+    }
+  },
+  "posts": {
+    "zh": [
+      {
+        "title": "生成式人工智能工程师培训及认证",
+        "date": "2026-01-09",
+        "file": "生成式人工智能工程师培训及认证.md"
+      },
+      {
+        "title": "李雨橙的个人主页",
+        "date": "2026-01-08",
+        "file": "2026-01-08-homepage.md"
+      },
+      {
+        "title": "生成式人工智能工程师培训及认证",
+        "date": "2026-01-08",
+        "file": "人工智能报考.md"
+      }
+    ],
+    "chinese-traditional": [
+      {
+        "title": "生成式人工智能工程師培訓及認證",
+        "date": "2026-01-09",
+        "file": "生成式人工智能工程师培训及认证.md"
+      },
+      {
+        "title": "李雨橙的個人主頁",
+        "date": "2026-01-08",
+        "file": "2026-01-08-homepage.md"
+      },
+      {
+        "title": "生成式人工智能工程師培訓及認證",
+        "date": "2026-01-08",
+        "file": "人工智能报考.md"
+      }
+    ],
+    "en": [
+      {
+        "title": "LiYucheng's Homepage",
+        "date": "2026-01-08",
+        "file": "2026-01-08-homepage.md"
+      },
+      {
+        "title": "Generative Artificial Intelligence Engineer Training and Certification",
+        "date": "2026-01-08",
+        "file": "人工智能报考.md"
+      },
+      {
+        "title": "Generative Artificial Intelligence Engineer Training and Certification",
+        "date": "2026-01-08",
+        "file": "生成式人工智能工程师培训及认证.md"
+      }
+    ]
+  }
+}
