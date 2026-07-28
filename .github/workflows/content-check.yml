@@ -25,13 +25,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       - name: Install dependencies
         run: npm install
 
-      - name: Validate generated content
+      - name: Build generated catalogs
+        run: npm run build
+
+      - name: Validate generated output
         run: npm run build:check
 
       - name: Validate repository content
         run: npm run check
+
+      - name: Ensure generated files are committed
+        run: git diff --exit-code
