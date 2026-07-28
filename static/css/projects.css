@@ -1,0 +1,167 @@
+.projects-shell {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.projects-page {
+  background: #fafafa;
+  color: #111;
+}
+
+.projects-header {
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.projects-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}
+
+.projects-brand {
+  font-weight: 800;
+  text-decoration: none;
+  color: #123;
+}
+
+.projects-nav,
+.projects-language {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.projects-nav a,
+.projects-language button {
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.projects-hero {
+  padding: 90px 0 50px;
+  background: linear-gradient(135deg, #eef4ff, #fff);
+}
+
+.projects-eyebrow {
+  color: #2f55ff;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.projects-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: 20px 0;
+}
+
+.projects-hero p {
+  max-width: 760px;
+  font-size: 1.2rem;
+}
+
+.projects-summary {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.projects-content {
+  padding: 50px 0;
+}
+
+.projects-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.project-filter {
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 999px;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+
+.project-filter.active {
+  border-color: #2f55ff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.06);
+}
+
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: .85rem;
+  color: #555;
+}
+
+.project-category,
+.project-status,
+.project-tags span {
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: #f2f4f8;
+}
+
+.project-card h2 {
+  margin-top: 18px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-links a {
+  color: #2f55ff;
+}
+
+.projects-footer {
+  padding: 30px 0;
+  background: #222;
+  color: white;
+}
+
+.projects-footer-links {
+  margin-left: 20px;
+}
+
+.projects-footer a {
+  color: white;
+  margin-right: 15px;
+}
+
+@media(max-width:700px){
+  .projects-header-inner {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+}
