@@ -1,15 +1,122 @@
 {
   "version": 1,
-  "generatedBy": "content/research.yml",
+  "page": {
+    "kind": "research",
+    "eyebrow": {
+      "zh": "科研资产",
+      "chinese-traditional": "科研資產",
+      "en": "RESEARCH ASSETS"
+    },
+    "title": {
+      "zh": "研究路径",
+      "chinese-traditional": "研究路徑",
+      "en": "Research Path"
+    },
+    "description": {
+      "zh": "记录研究问题、方法路线、实验标准与公开学术身份，强调可复现、可比较和可解释的证据链。",
+      "chinese-traditional": "記錄研究問題、方法路線、實驗標準與公開學術身分，強調可重複、可比較與可解釋的證據鏈。",
+      "en": "Research questions, methods, experimental standards, and public academic profiles organized around reproducible, comparable, and explainable evidence."
+    }
+  },
   "items": [
     {
       "id": "neural-chorin",
       "category": "research-topic",
       "status": "active",
       "updated": "2026-07",
-      "title": {"zh":"Neural Chorin：不可压流体神经算子","chinese-traditional":"Neural Chorin：不可壓流體神經算子","en":"Neural Chorin for Incompressible Flow"},
-      "summary": {"zh":"研究物理约束增强神经算子在不可压流体方程中的稳定性、泛化与可解释性。","chinese-traditional":"研究物理約束增強神經算子在不可壓流體方程式中的穩定性、泛化與可解釋性。","en":"Studying physics-constrained neural operators for incompressible flow."},
-      "tags":["Neural Operator","Fluid Mechanics","PDE"]
+      "title": {
+        "zh": "Neural Chorin：不可压流体神经算子",
+        "chinese-traditional": "Neural Chorin：不可壓流體神經算子",
+        "en": "Neural Chorin for Incompressible Flow"
+      },
+      "summary": {
+        "zh": "研究物理约束增强神经算子在不可压流体方程中的稳定性、泛化与可解释性，目标是建立可复现、可对比的论文级实验链路。",
+        "chinese-traditional": "研究物理約束增強神經算子在不可壓流體方程式中的穩定性、泛化與可解釋性，目標是建立可重複、可對比的論文級實驗鏈路。",
+        "en": "Studying stability, generalization, and interpretability of physics-constrained neural operators for incompressible flow through a reproducible paper-grade experimental pipeline."
+      },
+      "tags": [
+        "Neural Operator",
+        "Fluid Mechanics",
+        "PDE",
+        "Physics Constraints"
+      ],
+      "links": [
+        {
+          "label": {
+            "zh": "OpenReview 公开资料",
+            "chinese-traditional": "OpenReview 公開資料",
+            "en": "OpenReview profile"
+          },
+          "url": "https://openreview.net/profile?id=%7ELi_Yucheng1"
+        }
+      ]
+    },
+    {
+      "id": "evaluation-protocol",
+      "category": "methodology",
+      "status": "maintained",
+      "updated": "2026-07",
+      "title": {
+        "zh": "统一评价口径与基线体系",
+        "chinese-traditional": "統一評價口徑與基線體系",
+        "en": "Evaluation Protocol and Baselines"
+      },
+      "summary": {
+        "zh": "在比较模型之前固定数据划分、误差指标、推理成本与稳定性标准，避免因实验口径不一致产生误导性结论。",
+        "chinese-traditional": "在比較模型之前固定資料切分、誤差指標、推論成本與穩定性標準，避免因實驗口徑不一致產生誤導性結論。",
+        "en": "Fixing data splits, error metrics, inference cost, and stability criteria before model comparison to prevent misleading conclusions."
+      },
+      "tags": [
+        "Baseline",
+        "Metrics",
+        "Ablation",
+        "Reproducibility"
+      ]
+    },
+    {
+      "id": "experiment-evidence-chain",
+      "category": "methodology",
+      "status": "active",
+      "updated": "2026-07",
+      "title": {
+        "zh": "实验、消融与失败模式证据链",
+        "chinese-traditional": "實驗、消融與失敗模式證據鏈",
+        "en": "Experiments, Ablations, and Failure Modes"
+      },
+      "summary": {
+        "zh": "将实验结果、消融设计、可视化诊断和失败模式统一组织，使每个结论都能追溯到数据、代码与评价指标。",
+        "chinese-traditional": "將實驗結果、消融設計、視覺化診斷與失敗模式統一組織，使每個結論都能追溯到資料、程式碼與評價指標。",
+        "en": "Organizing results, ablations, visual diagnostics, and failure modes so every conclusion is traceable to data, code, and metrics."
+      },
+      "tags": [
+        "Experiment Design",
+        "Diagnostics",
+        "Failure Analysis"
+      ]
+    },
+    {
+      "id": "scientific-toolchain",
+      "category": "infrastructure",
+      "status": "developing",
+      "updated": "2026-07",
+      "title": {
+        "zh": "科研工程化工具链",
+        "chinese-traditional": "科研工程化工具鏈",
+        "en": "Scientific Engineering Toolchain"
+      },
+      "summary": {
+        "zh": "使用 Python、C++、自动化脚本、版本控制与结构化文档管理数据处理、模型训练、结果生成和论文素材。",
+        "chinese-traditional": "使用 Python、C++、自動化腳本、版本控制與結構化文件管理資料處理、模型訓練、結果產生與論文素材。",
+        "en": "Managing data processing, training, result generation, and paper assets with Python, C++, automation, version control, and structured documentation."
+      },
+      "tags": [
+        "Python",
+        "C++",
+        "Automation",
+        "Git",
+        "Scientific Computing"
+      ]
     }
-  ]
+  ],
+  "generatedBy": "content/research.yml"
 }
