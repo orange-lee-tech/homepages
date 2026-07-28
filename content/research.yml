@@ -1,0 +1,15 @@
+version: 1
+page:
+  kind: research
+  eyebrow:
+    zh: 科研资产
+    chinese-traditional: 科研資產
+    en: RESEARCH ASSETS
+  title:
+    zh: 研究路径
+    chinese-traditional: 研究路徑
+    en: Research Path
+  description:
+    zh: 记录研究问题、方法路线、实验标准与公开学术身份，强调可复现、可比较和可解释的证据链。
+    chinese-traditional: 記錄研究問題、方法路線、實驗標準與公開學術身分，強調可重複、可比較與可解釋的證據鏈。
+    en: Research questions, methods, experimental standards, and public academic profiles organized
