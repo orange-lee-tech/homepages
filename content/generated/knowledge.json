@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "generatedBy": "content/knowledge.yml",
+  "items": [
+    {
+      "id": "ai-engineering",
+      "category": "engineering",
+      "title": {"zh":"AI 工程体系","chinese-traditional":"AI 工程體系","en":"AI Engineering System"},
+      "summary": {"zh":"Agent Runtime、MCP、工具调用、记忆系统和本地模型部署实践。","chinese-traditional":"Agent Runtime、MCP、工具調用、記憶系統與本地模型部署實踐。","en":"Notes on agents, MCP, tools, memory and local models."},
+      "tags":["AI","Agent","MCP"]
+    },
+    {
+      "id":"software-engineering",
+      "category":"engineering",
+      "title":{"zh":"软件工程基础","chinese-traditional":"軟體工程基礎","en":"Software Engineering Fundamentals"},
+      "summary":{"zh":"Linux、C++、Python、数据库、Docker 与系统设计学习路线。","chinese-traditional":"Linux、C++、Python、資料庫、Docker 與系統設計學習路線。","en":"Learning path covering Linux, C++, Python, databases, Docker and system design."},
+      "tags":["Linux","C++","Python"]
+    }
+  ]
+}
