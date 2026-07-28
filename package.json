@@ -1,11 +1,13 @@
 {
   "name": "homepages-i18n-tools",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "i18n": "node scripts/i18n-sync.mjs",
-    "i18n:traditional": "node scripts/i18n-sync.mjs --traditional-only"
+    "i18n:traditional": "node scripts/i18n-sync.mjs --traditional-only",
+    "new-post": "node scripts/new-post.mjs",
+    "check": "node scripts/validate-content.mjs"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
