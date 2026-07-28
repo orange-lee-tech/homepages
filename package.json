@@ -1,15 +1,16 @@
 {
   "name": "homepages-i18n-tools",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/content-pipeline.mjs",
-    "build:check": "node scripts/content-pipeline.mjs --check",
+    "build": "node scripts/content-pipeline.mjs && node scripts/build-projects.mjs",
+    "build:check": "node scripts/content-pipeline.mjs --check && node scripts/build-projects.mjs",
     "i18n": "node scripts/i18n-sync.mjs",
     "i18n:traditional": "node scripts/i18n-sync.mjs --traditional-only",
     "new-post": "node scripts/new-post.mjs",
     "check": "node scripts/validate-content.mjs",
+    "check:projects": "node scripts/build-projects.mjs",
     "ci": "npm run build:check && npm run check"
   },
   "dependencies": {
