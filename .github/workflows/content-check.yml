@@ -1,0 +1,37 @@
+name: Content Quality Check
+
+on:
+  push:
+    branches:
+      - main
+      - refactor/content-maintenance
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  content-check:
+    name: Validate homepage content
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate generated content
+        run: npm run build:check
+
+      - name: Validate repository content
+        run: npm run check
