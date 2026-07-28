@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "generatedBy": "content/research.yml",
+  "items": [
+    {
+      "id": "neural-chorin",
+      "category": "research-topic",
+      "status": "active",
+      "updated": "2026-07",
+      "title": {"zh":"Neural Chorin：不可压流体神经算子","chinese-traditional":"Neural Chorin：不可壓流體神經算子","en":"Neural Chorin for Incompressible Flow"},
+      "summary": {"zh":"研究物理约束增强神经算子在不可压流体方程中的稳定性、泛化与可解释性。","chinese-traditional":"研究物理約束增強神經算子在不可壓流體方程式中的穩定性、泛化與可解釋性。","en":"Studying physics-constrained neural operators for incompressible flow."},
+      "tags":["Neural Operator","Fluid Mechanics","PDE"]
+    }
+  ]
+}
