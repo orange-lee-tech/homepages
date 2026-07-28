@@ -1,42 +1,254 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title id="title">orange-lee-tech Homepage</title>
-<link rel="icon" href="static/assets/favicon.ico" />
-<link rel="stylesheet" href="static/css/styles.css" />
-<link rel="stylesheet" href="static/css/main.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Li Yucheng's academic, engineering, and open-source portfolio" />
+  <meta name="author" content="Li Yucheng" />
+  <title id="title"></title>
+
+  <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+  <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
+  <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+  <link type="text/css" href="static/css/featured-projects.css?v=1" rel="stylesheet" />
+
+  <script>
+    MathJax = {
+      tex: {
+        packages: {},
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: false,
+        processEnvironments: true,
+        processRefs: true,
+        digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+        tags: 'all',
+        tagSide: 'right',
+        tagIndent: '0.8em',
+        useLabelIds: true,
+        maxMacros: 10000,
+        maxBuffer: 5 * 1024,
+        formatError: (jax, err) => jax.formatError(err)
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script type="text/javascript" id="MathJax-script-chtml" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body id="page-top">
-<nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-<div class="container px-5">
-<a id="page-top-title" class="navbar-brand fw-bold" href="#page-top">李雨橙</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"><span id="nav-menu">MENU</span></button>
-<div class="collapse navbar-collapse" id="navbarResponsive">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#home">主页</a></li>
-<li class="nav-item"><a class="nav-link" href="#publications">科研竞赛</a></li>
-<li class="nav-item"><a class="nav-link" href="#experience">工作经历</a></li>
-<li class="nav-item"><a class="nav-link" href="projects.html">项目资产</a></li>
-<li class="nav-item"><a class="nav-link" href="posts.html">即时动态</a></li>
-<li class="nav-item"><a class="nav-link" href="#gallery">图片</a></li>
-</ul>
-</div></div></nav>
-<section class="top-section" style="background-image:url('static/assets/img/background.jpeg')"><div class="container"><h2 id="top-section-bg-text" class="text-white">Marching Forward</h2></div></section>
-<div class="container px-5"><div id="avatar"><img src="static/assets/img/photo.png" class="shadow"></div></div>
-<section id="home" class="bg-gradient-primary-to-secondary-light"><div class="container px-5"><h2 id="home-subtitle"></h2><div id="home-md" class="main-body"></div></div></section>
-<section id="about" class="bg-light"><div class="container px-5"><h2 id="about-subtitle"></h2><div id="about-md"></div></div></section>
-<section id="interests" class="bg-light"><div class="container px-5"><h2 id="interests-subtitle"></h2><div id="interests-md"></div></div></section>
-<section id="publications"><div class="container px-5"><h2 id="publications-subtitle"></h2><div id="publications-md" class="main-body"></div></div></section>
-<section id="experience"><div class="container px-5"><h2 id="experience-subtitle"></h2><div id="experience-md" class="main-body"></div></div></section>
-<section id="practice"><div class="container px-5"><h2 id="practice-subtitle"></h2><div id="practice-md" class="main-body"></div></div></section>
-<section id="awards"><div class="container px-5"><h2 id="awards-subtitle"></h2><div id="awards-md" class="main-body"></div></div></section>
-<section id="gallery"><div class="container px-5"><h2>Gallery</h2><div class="carousel-track" id="show-track"></div><div class="carousel-track" id="person-track"></div><div class="carousel-track" id="design-track"></div></div></section>
-<footer class="bg-bottom text-center py-5"><div class="container"><div id="copyright-text"></div><a id="github-link" href="https://github.com/orange-lee-tech">Github</a></div></footer>
-<script src="static/js/bootstrap.bundle.min.js"></script>
-<script src="static/js/marked.min.js"></script>
-<script src="static/js/js-yaml.min.js"></script>
-<script src="static/js/scripts.js?v=lang_fix_1"></script>
-</body></html>
+  <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+    <div class="container px-5">
+      <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span id="nav-menu">MENU</span>
+        <i class="bi-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="nav-home">主页</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#page-top"><span id="nav-home-top">主页顶部</span></a></li>
+              <li><a class="dropdown-item" href="#home"><span id="nav-home-now">现状</span></a></li>
+              <li><a class="dropdown-item" href="#about"><span id="nav-home-about">自我介绍</span></a></li>
+              <li><a class="dropdown-item" href="#interests"><span id="nav-home-interests">兴趣方向</span></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#publications"><span id="nav-publications">科研竞赛</span></a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#experience"><span id="nav-experience">工作经历</span></a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" id="nav-projects-link" href="projects.html"><span id="nav-projects">项目资产</span></a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="nav-knowledge">研究与知识</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item portal-link" href="research.html"><span id="nav-research">研究路径</span></a></li>
+              <li><a class="dropdown-item portal-link" href="knowledge.html"><span id="nav-knowledge-base">知识库</span></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#practice"><span id="nav-practice">社会实践</span></a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="nav-awards">获奖简报</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#awards-hs"><span id="nav-awards-hs">高中简报</span></a></li>
+              <li><a class="dropdown-item" href="#awards-ug"><span id="nav-awards-ug">本科简报</span></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link me-lg-3" href="posts.html"><span id="nav-posts">即时动态</span></a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="nav-gallery">图片</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#show"><span id="nav-gallery-show">show</span></a></li>
+              <li><a class="dropdown-item" href="#design"><span id="nav-gallery-design">平面设计</span></a></li>
+              <li><a class="dropdown-item" href="#person"><span id="nav-gallery-person">person</span></a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-lg-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span id="nav-lang">语言</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item lang-switch" href="#" data-lang="zh"><span id="nav-lang-zh">中文</span></a></li>
+              <li><a class="dropdown-item lang-switch" href="#" data-lang="chinese-traditional"><span id="nav-lang-cht">繁體中文</span></a></li>
+              <li><a class="dropdown-item lang-switch" href="#" data-lang="en"><span id="nav-lang-en">English</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
+    <div class="top-section-content">
+      <div class="container px-5">
+        <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="container px-5">
+    <div id="avatar">
+      <img class="shadow" src="static/assets/img/photo.png" alt="Li Yucheng portrait" />
+    </div>
+  </div>
+
+  <section class="bg-gradient-primary-to-secondary-light" id="home">
+    <div class="container px-5">
+      <header><h2 id="home-subtitle"></h2></header>
+      <div class="main-body" id="home-md"></div>
+    </div>
+  </section>
+
+  <section class="bg-light" id="about">
+    <div class="container px-5">
+      <header><h2 id="about-subtitle"><i class="bi bi-person-badge"></i>&nbsp;自我介绍</h2></header>
+      <div id="about-md"></div>
+    </div>
+  </section>
+
+  <section class="bg-light" id="interests">
+    <div class="container px-5">
+      <header><h2 id="interests-subtitle"><i class="bi bi-compass"></i>&nbsp;兴趣方向</h2></header>
+      <div id="interests-md"></div>
+    </div>
+  </section>
+
+  <section class="featured-projects-section" id="featured-projects">
+    <div class="container px-5">
+      <header class="featured-projects-header">
+        <div>
+          <h2><i class="bi bi-grid-1x2-fill"></i>&nbsp;<span id="featured-projects-title-text">精选项目</span></h2>
+          <p id="featured-projects-description">持续维护的软件工程、科研探索与开源资产。</p>
+        </div>
+        <a id="featured-projects-all" class="featured-projects-all" href="projects.html">查看全部项目</a>
+      </header>
+      <div id="featured-projects-state" class="featured-projects-state">正在加载精选项目…</div>
+      <div id="featured-projects-grid" class="featured-projects-grid"></div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-primary-to-secondary-light" id="show">
+    <div class="container px-5">
+      <header><h2 id="show-subtitle"><i class="bi bi-stars"></i>&nbsp;SHOW</h2></header>
+      <div class="carousel-row">
+        <button class="carousel-btn" data-action="prev" data-target="show-track" aria-label="Previous">‹</button>
+        <div class="carousel-track" id="show-track"></div>
+        <button class="carousel-btn" data-action="next" data-target="show-track" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
+    <div class="container px-5">
+      <header><h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2></header>
+      <div class="main-body" id="publications-md"></div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-primary-to-secondary-dark mt5 md5" id="experience">
+    <div class="container px-5">
+      <header><h2 id="experience-subtitle"><i class="bi bi-briefcase-fill"></i> EXPERIENCE</h2></header>
+      <div class="main-body" id="experience-md"></div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-primary-to-secondary-light" id="design">
+    <div class="container px-5">
+      <header><h2 id="design-subtitle"><i class="bi bi-palette"></i>&nbsp;平面设计</h2></header>
+      <div class="carousel-row">
+        <button class="carousel-btn" data-action="prev" data-target="design-track" aria-label="Previous">‹</button>
+        <div class="carousel-track" id="design-track"></div>
+        <button class="carousel-btn" data-action="next" data-target="design-track" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="practice">
+    <div class="container px-5">
+      <header><h2 id="practice-subtitle"><i class="bi bi-people-fill"></i>&nbsp;社会实践</h2></header>
+      <div class="main-body" id="practice-md"></div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
+    <div class="container px-5">
+      <header><h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS</h2></header>
+      <div class="main-body" id="awards-md"></div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-primary-to-secondary-gray" id="person">
+    <div class="container px-5">
+      <header><h2 id="person-subtitle"><i class="bi bi-camera"></i>&nbsp;PERSON</h2></header>
+      <div class="carousel-row">
+        <button class="carousel-btn" data-action="prev" data-target="person-track" aria-label="Previous">‹</button>
+        <div class="carousel-track" id="person-track"></div>
+        <button class="carousel-btn" data-action="next" data-target="person-track" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-bottom text-center py-5">
+    <div class="container px-5">
+      <div class="text-white-50 small">
+        <div id="copyright-text" class="mb-2"></div>
+        <a id="github-link" href="https://github.com/orange-lee-tech">GitHub</a>
+        <span class="mx-1">&middot;</span>
+        <a id="openreview-link" href="https://openreview.net/profile?id=%7ELi_Yucheng1">OpenReview</a>
+        <span class="mx-1">&middot;</span>
+        <a id="license-link" href="https://github.com/orange-lee-tech/LYC_homepages/blob/main/LICENSE">License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="static/js/marked.min.js"></script>
+  <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
+  <script type="text/javascript" src="static/js/scripts.js?v=asset_portal_1"></script>
+  <script type="text/javascript" src="static/js/featured-projects.js?v=1"></script>
+</body>
+
+</html>
