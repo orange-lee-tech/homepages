@@ -1,0 +1,116 @@
+version: 1
+
+page:
+  title:
+    zh: 项目与研究资产
+    chinese-traditional: 專案與研究資產
+    en: Projects & Research
+  description:
+    zh: 汇总长期维护的软件工程、科研探索、开源作品与公开学术身份。内容由单一 YAML 数据源驱动，可持续扩展。
+    chinese-traditional: 彙總長期維護的軟體工程、科研探索、開源作品與公開學術身分。內容由單一 YAML 資料來源驅動，可持續擴充。
+    en: A growing catalog of maintained software, research explorations, open-source work, and public academic profiles, driven by a single YAML source.
+
+items:
+  - id: desktop-ai-runtime
+    category: engineering
+    status: active
+    featured: true
+    updated: 2026-07
+    title:
+      zh: 桌面 AI Agent Runtime
+      chinese-traditional: 桌面 AI Agent Runtime
+      en: Desktop AI Agent Runtime
+    summary:
+      zh: 基于 Electron、Vite 与 React 构建的本地桌面 AI 应用，重点完善 Agent Runtime、Tool Runtime、MCP、Skill、记忆、流式回复和稳定性测试。
+      chinese-traditional: 基於 Electron、Vite 與 React 建構的本機桌面 AI 應用，重點完善 Agent Runtime、Tool Runtime、MCP、Skill、記憶、串流回覆與穩定性測試。
+      en: A local desktop AI application built with Electron, Vite, and React, focused on agent and tool runtimes, MCP, skills, memory, streaming responses, and reliability testing.
+    tags: [Electron, React, Agent Runtime, MCP, Playwright]
+
+  - id: ielts-learning-assistant
+    category: engineering
+    status: active
+    featured: true
+    updated: 2026-07
+    title:
+      zh: IELTS Learning Assistant
+      chinese-traditional: IELTS Learning Assistant
+      en: IELTS Learning Assistant
+    summary:
+      zh: 面向雅思机考平台的浏览器扩展，用于自由笔记、错因复盘、生词积累、句子收藏、标签管理与 Markdown 导出。
+      chinese-traditional: 面向雅思機考平台的瀏覽器擴充功能，用於自由筆記、錯因複盤、生詞累積、句子收藏、標籤管理與 Markdown 匯出。
+      en: A browser extension for IELTS computer-based practice, supporting notes, mistake review, vocabulary collection, sentence capture, tags, and Markdown export.
+    tags: [Browser Extension, Edge, IELTS, Knowledge Management]
+    links:
+      - label:
+          zh: GitHub 仓库
+          chinese-traditional: GitHub 儲存庫
+          en: GitHub repository
+        url: https://github.com/orange-lee-tech/ielts-learning-assistant
+
+  - id: homepage-renovation
+    category: opensource
+    status: active
+    featured: true
+    updated: 2026-07
+    title:
+      zh: 个人主页维护体系翻新
+      chinese-traditional: 個人主頁維護體系翻新
+      en: Personal Homepage Maintenance Renovation
+    summary:
+      zh: 将静态个人主页升级为内容优先的长期资产门户，加入文章生成、繁体同步、图片扫描、内容校验、CI 与数据驱动项目目录。
+      chinese-traditional: 將靜態個人主頁升級為內容優先的長期資產入口，加入文章產生、繁體同步、圖片掃描、內容驗證、CI 與資料驅動專案目錄。
+      en: Evolving a static homepage into a content-first long-term asset portal with post generation, Traditional Chinese sync, image discovery, validation, CI, and a data-driven project catalog.
+    tags: [GitHub Pages, Markdown, YAML, Content Pipeline, CI]
+    links:
+      - label:
+          zh: 当前仓库
+          chinese-traditional: 目前儲存庫
+          en: Current repository
+        url: https://github.com/orange-lee-tech/LYC_homepages
+
+  - id: neural-chorin
+    category: research
+    status: research
+    featured: true
+    updated: 2026-07
+    title:
+      zh: Neural Chorin 研究主线
+      chinese-traditional: Neural Chorin 研究主線
+      en: Neural Chorin Research Track
+    summary:
+      zh: 面向不可压流体方程的物理约束增强神经算子研究，强调统一评价口径、可复现实验、消融设计、失败模式与工程证据链。
+      chinese-traditional: 面向不可壓流體方程式的物理約束增強神經算子研究，強調統一評價口徑、可重複實驗、消融設計、失敗模式與工程證據鏈。
+      en: Research on physics-constraint-enhanced neural operators for incompressible flow, emphasizing consistent evaluation, reproducible experiments, ablations, failure modes, and engineering evidence.
+    tags: [Neural Operator, Fluid Mechanics, Scientific Computing, Reproducibility]
+    links:
+      - label:
+          zh: OpenReview 公开资料
+          chinese-traditional: OpenReview 公開資料
+          en: OpenReview public profile
+        url: https://openreview.net/profile?id=%7ELi_Yucheng1
+
+  - id: public-profiles
+    category: profile
+    status: maintained
+    featured: false
+    updated: 2026-07
+    title:
+      zh: 公开技术与学术身份
+      chinese-traditional: 公開技術與學術身分
+      en: Public Technical and Academic Profiles
+    summary:
+      zh: 集中维护 GitHub 开源活动与 OpenReview 学术身份入口，作为公开成果、项目代码和后续论文记录的统一索引。
+      chinese-traditional: 集中維護 GitHub 開源活動與 OpenReview 學術身分入口，作為公開成果、專案程式碼與後續論文紀錄的統一索引。
+      en: Central entry points for GitHub open-source activity and the OpenReview academic identity, forming a unified index for public work, code, and future papers.
+    tags: [GitHub, OpenReview, Public Profile]
+    links:
+      - label:
+          zh: GitHub 主页
+          chinese-traditional: GitHub 主頁
+          en: GitHub profile
+        url: https://github.com/orange-lee-tech
+      - label:
+          zh: OpenReview 主页
+          chinese-traditional: OpenReview 主頁
+          en: OpenReview profile
+        url: https://openreview.net/profile?id=%7ELi_Yucheng1
