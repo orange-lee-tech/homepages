@@ -1,0 +1,28 @@
+sourceLanguage: zh
+languages:
+  - zh
+  - chinese-traditional
+  - en
+
+sections:
+  - home
+  - about
+  - interests
+  - publications
+  - experience
+  - practice
+  - awards
+
+galleries:
+  show:
+    directory: static/assets/show
+    configKey: show-images
+  person:
+    directory: static/assets/person
+    configKey: person-images
+  design:
+    directory: static/assets/平面设计
+    configKey: design-images
+
+posts:
+  directory: posts
