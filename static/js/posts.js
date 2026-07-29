@@ -1,151 +1,27 @@
 (() => {
-  const LANGUAGES = ['zh', 'chinese-traditional', 'en'];
-  const HTML_LANG = { zh: 'zh-CN', 'chinese-traditional': 'zh-Hant', en: 'en' };
-  const COPY = {
-    zh: {
-      eyebrow: '即时动态', title: '即时动态', description: '这里仅展示标题与日期；打开条目进入全文。',
-      home: '主页', projects: '项目', research: '研究', knowledge: '知识',
-      loading: '正在加载动态…', empty: '当前没有公开动态。', error: '动态配置加载失败。'
-    },
-    'chinese-traditional': {
-      eyebrow: '即時動態', title: '即時動態', description: '此處僅展示標題與日期；開啟條目進入全文。',
-      home: '主頁', projects: '專案', research: '研究', knowledge: '知識',
-      loading: '正在載入動態…', empty: '目前沒有公開動態。', error: '動態設定載入失敗。'
-    },
-    en: {
-      eyebrow: 'Update Log', title: 'Updates', description: 'Titles and dates are shown here. Open an entry to read the full record.',
-      home: 'Home', projects: 'Projects', research: 'Research', knowledge: 'Knowledge',
-      loading: 'Loading updates…', empty: 'No public updates yet.', error: 'Update configuration failed to load.'
-    }
+  const LANGUAGES=['zh','chinese-traditional','en'];
+  const HTML_LANG={zh:'zh-CN','chinese-traditional':'zh-Hant',en:'en'};
+  const COPY={
+    zh:{eyebrow:'即时动态',title:'即时动态',description:'以卡片索引项目记录、学习笔记与阶段性复盘。',home:'主页',projects:'项目',research:'研究',knowledge:'知识',updates:'动态',gallery:'影像',loading:'正在加载动态…',empty:'当前没有公开动态。',error:'动态配置加载失败。',open:'阅读全文',fallback:'打开条目查看完整记录。'},
+    'chinese-traditional':{eyebrow:'即時動態',title:'即時動態',description:'以卡片索引專案記錄、學習筆記與階段性複盤。',home:'主頁',projects:'專案',research:'研究',knowledge:'知識',updates:'動態',gallery:'影像',loading:'正在載入動態…',empty:'目前沒有公開動態。',error:'動態設定載入失敗。',open:'閱讀全文',fallback:'開啟條目查看完整記錄。'},
+    en:{eyebrow:'Update Log',title:'Updates',description:'Card-based index of project records, learning notes, and periodic reflections.',home:'Home',projects:'Projects',research:'Research',knowledge:'Knowledge',updates:'Updates',gallery:'Gallery',loading:'Loading updates…',empty:'No public updates yet.',error:'Update configuration failed to load.',open:'Read record',fallback:'Open the entry to read the complete record.'}
   };
+  let language='chinese-traditional';
+  const $=(selector,root=document)=>root.querySelector(selector); const $$=(selector,root=document)=>[...root.querySelectorAll(selector)];
+  function currentLanguage(){const q=new URL(location.href).searchParams.get('lang'); if(LANGUAGES.includes(q))return q; const saved=localStorage.getItem('lang'); return LANGUAGES.includes(saved)?saved:'chinese-traditional';}
+  function escapeHtml(value){return String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');}
+  function withLanguage(target){const raw=String(target||'');if(!raw||/^(https?:|mailto:)/i.test(raw))return raw;const url=new URL(raw,location.href);url.searchParams.set('lang',language);return `${url.pathname.replace(/^\//,'')}${url.search}${url.hash}`;}
+  function normalizePostPath(value){let path=String(value||'').trim();if(!path)return'';if(!path.includes('/'))return`posts/${language}/${path}`;if(path.startsWith('posts/')){const segments=path.split('/');if(segments.length===2)return`posts/${language}/${segments[1]}`;if(!LANGUAGES.includes(segments[1]))return`posts/${language}/${segments.slice(1).join('/')}`;}return path;}
+  function setState(message,isError=false){const state=$('#archive-state');state.textContent=message;state.classList.toggle('is-error',isError);}
+  function stripFrontMatter(markdown){return String(markdown||'').replace(/^---\s*\r?\n[\s\S]*?\r?\n---\s*\r?\n?/,'');}
+  function excerpt(markdown){return stripFrontMatter(markdown).replace(/```[\s\S]*?```/g,' ').replace(/!\[[^\]]*\]\([^)]*\)/g,' ').replace(/\[([^\]]+)\]\([^)]*\)/g,'$1').replace(/^#{1,6}\s+/gm,'').replace(/^[-*>]\s+/gm,'').replace(/[*_`~]/g,'').replace(/\s+/g,' ').trim().slice(0,170);}
 
-  let language = 'chinese-traditional';
+  function renderChrome(homepage){const copy=COPY[language];document.documentElement.lang=HTML_LANG[language];document.title=`${copy.title} · Li Yucheng`;$('#posts-brand').textContent=homepage?.chrome?.brand?.[language]||homepage?.chrome?.brand?.zh||'Graphite Archive';$('#posts-home').textContent=copy.home;$('#posts-projects').textContent=copy.projects;$('#posts-research').textContent=copy.research;$('#posts-knowledge').textContent=copy.knowledge;$('#posts-posts').textContent=copy.updates;$('#posts-gallery').textContent=copy.gallery;$('#posts-eyebrow').textContent=copy.eyebrow;$('#posts-title').textContent=copy.title;$('#posts-description').textContent=copy.description;$$('[data-preserve-lang]').forEach((link)=>{link.href=withLanguage(link.getAttribute('href'));});$$('.subpage-language button').forEach((button)=>{const active=button.dataset.language===language;button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active));});}
 
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  async function enrich(post){try{const response=await fetch(encodeURI(post.file),{cache:'no-cache'});if(!response.ok)return{...post,excerpt:COPY[language].fallback};const markdown=await response.text();return{...post,excerpt:excerpt(markdown)||COPY[language].fallback};}catch{return{...post,excerpt:COPY[language].fallback};}}
 
-  function currentLanguage() {
-    const requested = new URL(window.location.href).searchParams.get('lang');
-    if (LANGUAGES.includes(requested)) return requested;
-    const saved = localStorage.getItem('lang');
-    return LANGUAGES.includes(saved) ? saved : 'chinese-traditional';
-  }
+  async function renderPosts(posts){const normalized=(Array.isArray(posts)?posts:[]).filter((post)=>post&&post.file).map((post)=>({title:post.title||post.file,date:post.date||'—',file:normalizePostPath(post.file)})).sort((a,b)=>String(b.date).localeCompare(String(a.date)));if(!normalized.length){$('#posts-list').innerHTML=`<p>${escapeHtml(COPY[language].empty)}</p>`;return;}const enriched=await Promise.all(normalized.map(enrich));$('#posts-list').innerHTML=enriched.map((post,index)=>{const href=`post.html?lang=${encodeURIComponent(language)}&f=${encodeURIComponent(post.file)}`;return `<a class="post-card" href="${escapeHtml(href)}"><time>${escapeHtml(post.date)}</time><h2>${escapeHtml(post.title)}</h2><p>${escapeHtml(post.excerpt)}</p><span class="post-card-arrow">${escapeHtml(COPY[language].open)} · ${String(index+1).padStart(2,'0')} ↗</span></a>`;}).join('');}
 
-  function escapeHtml(value) {
-    return String(value ?? '')
-      .replaceAll('&', '&amp;')
-      .replaceAll('<', '&lt;')
-      .replaceAll('>', '&gt;')
-      .replaceAll('"', '&quot;')
-      .replaceAll("'", '&#39;');
-  }
-
-  function withLanguage(target) {
-    const raw = String(target || '');
-    if (!raw || /^(https?:|mailto:)/i.test(raw)) return raw;
-    const url = new URL(raw, window.location.href);
-    url.searchParams.set('lang', language);
-    return `${url.pathname.replace(/^\//, '')}${url.search}${url.hash}`;
-  }
-
-  function normalizePostPath(value) {
-    let path = String(value || '').trim();
-    if (!path) return '';
-    if (!path.includes('/')) return `posts/${language}/${path}`;
-    if (path.startsWith('posts/')) {
-      const segments = path.split('/');
-      if (segments.length === 2) return `posts/${language}/${segments[1]}`;
-      if (!LANGUAGES.includes(segments[1])) return `posts/${language}/${segments.slice(1).join('/')}`;
-    }
-    return path;
-  }
-
-  function setState(message, isError = false) {
-    const state = $('#archive-state');
-    state.textContent = message;
-    state.classList.toggle('is-error', isError);
-    state.classList.toggle('is-hidden', !message);
-  }
-
-  function renderChrome(homepage) {
-    const copy = COPY[language];
-    document.documentElement.lang = HTML_LANG[language];
-    document.title = `${copy.title} · Li Yucheng`;
-    $('#posts-brand').textContent = homepage?.chrome?.brand?.[language] || homepage?.chrome?.brand?.zh || 'Graphite Archive';
-    $('#posts-home').textContent = copy.home;
-    $('#posts-projects').textContent = copy.projects;
-    $('#posts-research').textContent = copy.research;
-    $('#posts-knowledge').textContent = copy.knowledge;
-    $('#posts-eyebrow').textContent = copy.eyebrow;
-    $('#posts-title').textContent = copy.title;
-    $('#posts-description').textContent = copy.description;
-
-    $$('[data-preserve-lang]').forEach((link) => {
-      link.href = withLanguage(link.getAttribute('href'));
-    });
-
-    $$('.archive-language button').forEach((button) => {
-      const active = button.dataset.language === language;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
-  }
-
-  function renderPosts(posts) {
-    const normalized = (Array.isArray(posts) ? posts : [])
-      .filter((post) => post && post.file)
-      .map((post) => ({
-        title: post.title || post.file,
-        date: post.date || '—',
-        file: normalizePostPath(post.file)
-      }))
-      .sort((a, b) => String(b.date).localeCompare(String(a.date)));
-
-    if (!normalized.length) {
-      $('#posts-list').innerHTML = `<p class="evidence-empty">${escapeHtml(COPY[language].empty)}</p>`;
-      return;
-    }
-
-    $('#posts-list').innerHTML = normalized.map((post) => {
-      const href = `post.html?lang=${encodeURIComponent(language)}&f=${encodeURIComponent(post.file)}`;
-      return `
-        <article class="post-list-item">
-          <time>${escapeHtml(post.date)}</time>
-          <a href="${escapeHtml(href)}">${escapeHtml(post.title)}</a>
-        </article>`;
-    }).join('');
-  }
-
-  async function init() {
-    language = currentLanguage();
-    setState(COPY[language].loading);
-    try {
-      const [configResponse, homepageResponse] = await Promise.all([
-        fetch(`contents/config.${language}.yml`, { cache: 'no-cache' }),
-        fetch('content/generated/homepage.json', { cache: 'no-cache' })
-      ]);
-      if (!configResponse.ok || !homepageResponse.ok) throw new Error('Cannot load update configuration');
-      const [configText, homepage] = await Promise.all([configResponse.text(), homepageResponse.json()]);
-      const config = jsyaml.load(configText) || {};
-      renderChrome(homepage);
-      renderPosts(config.posts);
-      setState('');
-
-      $$('.archive-language button').forEach((button) => {
-        button.addEventListener('click', () => {
-          const nextLanguage = button.dataset.language;
-          if (!LANGUAGES.includes(nextLanguage)) return;
-          localStorage.setItem('lang', nextLanguage);
-          const url = new URL(window.location.href);
-          url.searchParams.set('lang', nextLanguage);
-          window.location.href = url.href;
-        });
-      });
-    } catch (error) {
-      console.error(error);
-      setState(COPY[language].error, true);
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', init);
+  async function init(){language=currentLanguage();setState(COPY[language].loading);try{const[configResponse,homepageResponse]=await Promise.all([fetch(`contents/config.${language}.yml`,{cache:'no-cache'}),fetch('content/generated/homepage.json',{cache:'no-cache'})]);if(!configResponse.ok||!homepageResponse.ok)throw new Error('Cannot load update configuration');const[configText,homepage]=await Promise.all([configResponse.text(),homepageResponse.json()]);const config=jsyaml.load(configText)||{};renderChrome(homepage);await renderPosts(config.posts);setState('');$$('.subpage-language button').forEach((button)=>button.addEventListener('click',()=>{const nextLanguage=button.dataset.language;if(!LANGUAGES.includes(nextLanguage))return;localStorage.setItem('lang',nextLanguage);const url=new URL(location.href);url.searchParams.set('lang',nextLanguage);location.href=url.href;}));}catch(error){console.error(error);setState(COPY[language].error,true);}}
+  document.addEventListener('DOMContentLoaded',init);
 })();

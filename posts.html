@@ -7,20 +7,22 @@
   <meta name="author" content="Li Yucheng" />
   <title>Updates · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
-  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-1" />
+  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-3" />
   <script src="static/js/js-yaml.min.js"></script>
 </head>
-<body class="archive-page">
-  <header class="archive-nav">
-    <div class="archive-shell archive-nav-inner">
-      <a class="archive-brand" id="posts-brand" href="index.html" data-preserve-lang>Graphite Archive</a>
-      <nav class="archive-nav-links" aria-label="Updates navigation">
+<body class="archive-page archive-subpage">
+  <header class="subpage-chrome">
+    <div class="subpage-shell subpage-chrome-inner">
+      <a id="posts-brand" class="subpage-brand" href="index.html" data-preserve-lang>Graphite Archive</a>
+      <nav class="subpage-nav" aria-label="Archive navigation">
         <a id="posts-home" href="index.html" data-preserve-lang>Home</a>
         <a id="posts-projects" href="projects.html" data-preserve-lang>Projects</a>
         <a id="posts-research" href="research.html" data-preserve-lang>Research</a>
         <a id="posts-knowledge" href="knowledge.html" data-preserve-lang>Knowledge</a>
+        <a id="posts-posts" aria-current="page" href="posts.html" data-preserve-lang>Updates</a>
+        <a id="posts-gallery" href="gallery.html" data-preserve-lang>Gallery</a>
       </nav>
-      <div class="archive-language" aria-label="Language selector">
+      <div class="subpage-language" aria-label="Language selector">
         <button type="button" data-language="zh" aria-pressed="false">简</button>
         <button type="button" data-language="chinese-traditional" aria-pressed="true">繁</button>
         <button type="button" data-language="en" aria-pressed="false">EN</button>
@@ -28,23 +30,26 @@
     </div>
   </header>
 
-  <main class="archive-document">
-    <header class="archive-document-header">
-      <p class="archive-eyebrow" id="posts-eyebrow">UPDATE LOG</p>
-      <h1 id="posts-title">Updates</h1>
-      <p id="posts-description">Titles and dates are shown here. Open an entry to read the full record.</p>
-    </header>
-    <p class="archive-state" id="archive-state" role="status" aria-live="polite">Loading updates…</p>
-    <section class="post-list" id="posts-list" aria-live="polite"></section>
+  <main class="subpage-main">
+    <div class="subpage-shell">
+      <section class="subpage-hero" aria-labelledby="posts-title">
+        <div>
+          <p class="subpage-eyebrow" id="posts-eyebrow">UPDATE LOG</p>
+          <h1 id="posts-title">Updates</h1>
+        </div>
+        <p id="posts-description" class="subpage-description"></p>
+      </section>
+      <p class="subpage-status" id="archive-state" role="status" aria-live="polite">Loading updates…</p>
+      <section class="post-card-grid" id="posts-list" aria-live="polite"></section>
+    </div>
   </main>
 
-  <footer class="archive-footer">
-    <div class="archive-shell archive-footer-inner">
-      <span>© Li Yucheng 2023–2026 · Update Log</span>
-      <span><a href="index.html" data-preserve-lang>Graphite Archive</a></span>
+  <footer class="subpage-footer">
+    <div class="subpage-shell subpage-footer-inner">
+      <span>© Li Yucheng 2023–2026 · Graphite Archive</span>
+      <span><a href="https://github.com/orange-lee-tech" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://openreview.net/profile?id=%7EYucheng_Li13" target="_blank" rel="noopener noreferrer">OpenReview</a></span>
     </div>
   </footer>
-
-  <script src="static/js/posts.js?v=graphite-archive-1"></script>
+  <script src="static/js/posts.js?v=graphite-archive-3"></script>
 </body>
 </html>

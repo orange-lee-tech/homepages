@@ -3,42 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Li Yucheng update detail" />
+  <meta name="description" content="Li Yucheng archive record" />
   <meta name="author" content="Li Yucheng" />
   <title>Post · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
-  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-1" />
+  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-3" />
   <script src="static/js/marked.min.js"></script>
   <script src="static/js/js-yaml.min.js"></script>
 </head>
-<body class="archive-page">
-  <header class="archive-nav">
-    <div class="archive-shell archive-nav-inner">
-      <a class="archive-brand" id="post-brand" href="index.html" data-preserve-lang>Graphite Archive</a>
-      <nav class="archive-nav-links" aria-label="Post navigation">
-        <a id="post-list-link" href="posts.html" data-preserve-lang>Updates</a>
-        <a id="post-home-link" href="index.html" data-preserve-lang>Home</a>
+<body class="archive-page archive-subpage">
+  <header class="subpage-chrome">
+    <div class="subpage-shell subpage-chrome-inner">
+      <a id="post-brand" class="subpage-brand" href="index.html" data-preserve-lang>Graphite Archive</a>
+      <nav class="subpage-nav" aria-label="Archive navigation">
+        <a id="post-home" href="index.html" data-preserve-lang>Home</a>
+        <a id="post-projects" href="projects.html" data-preserve-lang>Projects</a>
+        <a id="post-research" href="research.html" data-preserve-lang>Research</a>
+        <a id="post-knowledge" href="knowledge.html" data-preserve-lang>Knowledge</a>
+        <a id="post-posts" aria-current="page" href="posts.html" data-preserve-lang>Updates</a>
+        <a id="post-gallery" href="gallery.html" data-preserve-lang>Gallery</a>
       </nav>
+      <div class="subpage-language" aria-label="Language selector">
+        <button type="button" data-language="zh" aria-pressed="false">简</button>
+        <button type="button" data-language="chinese-traditional" aria-pressed="true">繁</button>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
     </div>
   </header>
 
-  <main class="archive-document">
-    <header class="archive-document-header">
-      <p class="archive-eyebrow" id="post-eyebrow">UPDATE RECORD</p>
-      <h1 id="post-title">Post</h1>
-      <p class="post-meta" id="post-meta"></p>
-    </header>
-    <p class="archive-state" id="archive-state" role="status" aria-live="polite">Loading record…</p>
-    <article class="post-body" id="post-body"></article>
+  <main class="subpage-main">
+    <div class="reading-shell">
+      <article class="reading-paper">
+        <header class="reading-paper-header">
+          <p class="subpage-eyebrow" id="post-eyebrow">UPDATE RECORD</p>
+          <h1 id="post-title">Post</h1>
+          <p class="post-meta" id="post-meta"></p>
+        </header>
+        <p class="subpage-status" id="archive-state" role="status" aria-live="polite">Loading record…</p>
+        <div class="post-body" id="post-body"></div>
+      </article>
+    </div>
   </main>
 
-  <footer class="archive-footer">
-    <div class="archive-shell archive-footer-inner">
-      <span>© Li Yucheng 2023–2026 · Update Record</span>
-      <span><a id="post-footer-list" href="posts.html" data-preserve-lang>Back to updates</a></span>
+  <footer class="subpage-footer">
+    <div class="subpage-shell subpage-footer-inner">
+      <span>© Li Yucheng 2023–2026 · Graphite Archive</span>
+      <span><a href="https://github.com/orange-lee-tech" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://openreview.net/profile?id=%7EYucheng_Li13" target="_blank" rel="noopener noreferrer">OpenReview</a></span>
     </div>
   </footer>
-
-  <script src="static/js/post.js?v=graphite-archive-1"></script>
+  <script src="static/js/post.js?v=graphite-archive-3"></script>
 </body>
 </html>
