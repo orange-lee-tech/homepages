@@ -1,4 +1,23 @@
-version: 1
+version: 2
+updated: "2026-07-29"
+chrome:
+  brand:
+    zh: 石墨数字档案馆
+    chinese-traditional: 石墨數位檔案館
+    en: Graphite Archive
+  sections:
+    profile:
+      zh: 身份控制台
+      chinese-traditional: 身分控制台
+      en: Profile
+    timeline:
+      zh: 能力时间线
+      chinese-traditional: 能力時間線
+      en: Timeline
+    archive:
+      zh: 资产门户
+      chinese-traditional: 資產入口
+      en: Archive
 profile:
   name: Li Yucheng
   chineseName: 李雨橙
@@ -8,12 +27,21 @@ profile:
     en: Engineer · Researcher · Builder
   thesis:
     zh: 连接能源工程、工程仿真、AI 系统与数字资产建设，把学习过程转化为可复用、可验证、可长期维护的成果。
-    chinese-traditional: 連接能源工程、工程仿真、AI 系統與數位資產建設，把學習過程轉化為可複用、可驗證、可長期維護的成果。
-    en: Connecting energy engineering, simulation, AI systems, and digital assets into reusable and verifiable outcomes.
+    chinese-traditional: 連接能源工程、工程模擬、AI 系統與數位資產建設，把學習過程轉化為可複用、可驗證、可長期維護的成果。
+    en: Connecting energy engineering, simulation, AI systems, and digital assets into reusable, verifiable, and maintainable outcomes.
   status:
     zh: 中南大学能源与动力工程本科生；2026 年完成元智大学机械工程学系交换学习。
     chinese-traditional: 中南大學能源與動力工程本科生；2026 年完成元智大學機械工程學系交換學習。
-    en: Undergraduate student in Energy and Power Engineering; completed exchange study in Mechanical Engineering at Yuan Ze University in 2026.
+    en: Undergraduate in Energy and Power Engineering; completed a 2026 exchange in Mechanical Engineering at Yuan Ze University.
+  phase:
+    zh: 本科阶段 · 科研与工程资产持续建设
+    chinese-traditional: 本科階段 · 科研與工程資產持續建設
+    en: Undergraduate stage · building research and engineering assets
+  focus:
+    zh: 能源动力、工程仿真、AI Agent 工程与全栈开发
+    chinese-traditional: 能源動力、工程模擬、AI Agent 工程與全端開發
+    en: Energy systems, simulation, AI agent engineering, and full-stack development
+  build: PROFILE BUILD 2026.07
   ports:
     - id: github
       label: GitHub
@@ -25,94 +53,273 @@ profile:
       label: Email
       url: mailto:1010969261@qq.com
     - id: wechat
-      label: 微信公众号
+      label:
+        zh: 微信公众号
+        chinese-traditional: 微信公眾號
+        en: WeChat Official Account
       pending: true
     - id: maimai
-      label: 脉脉
+      label:
+        zh: 脉脉
+        chinese-traditional: 脈脈
+        en: Maimai
       pending: true
 scale:
   - level: 1
-    zh: 接触了解
-    en: Initial understanding
+    label: { zh: 接触了解, chinese-traditional: 接觸了解, en: Initial understanding }
   - level: 2
-    zh: 系统学习
-    en: Structured learning
+    label: { zh: 系统学习, chinese-traditional: 系統學習, en: Structured learning }
   - level: 3
-    zh: 独立实践
-    en: Independent practice
+    label: { zh: 独立实践, chinese-traditional: 獨立實踐, en: Independent practice }
   - level: 4
-    zh: 完整成果
-    en: Complete outcome
+    label: { zh: 完整成果, chinese-traditional: 完整成果, en: Complete outcome }
   - level: 5
-    zh: 生产运用
-    en: Production use
+    label: { zh: 生产运用, chinese-traditional: 生產運用, en: Production use }
 radar:
   defaultYear: 2026
+  currentYear: 2026
   years:
     - year: 2024
       primary: collaboration
+      snapshot:
+        zh: 从团队协作与视觉表达进入工程实践。
+        chinese-traditional: 從團隊協作與視覺表達進入工程實踐。
+        en: Entered engineering practice through collaboration and visual communication.
       capabilities:
         - id: collaboration
-          name: 团队协作
+          name: { zh: 团队协作, chinese-traditional: 團隊協作, en: Collaboration }
           level: 3
         - id: wps
-          name: WPS 三件套
+          name: { zh: WPS 三件套, chinese-traditional: WPS 三件套, en: Office Productivity }
           level: 4
         - id: academic-graphic-design
-          name: 平面设计
+          name: { zh: 平面设计, chinese-traditional: 平面設計, en: Graphic Design }
           level: 4
         - id: latex
-          name: LaTeX 排版
+          name: { zh: LaTeX 排版, chinese-traditional: LaTeX 排版, en: LaTeX Typesetting }
           level: 3
         - id: solidworks
-          name: SolidWorks 仿真
+          name: { zh: SolidWorks 仿真, chinese-traditional: SolidWorks 模擬, en: SolidWorks Simulation }
           level: 1
     - year: 2025
       primary: collaboration
+      snapshot:
+        zh: 团队交付与完整成果并行增长。
+        chinese-traditional: 團隊交付與完整成果並行增長。
+        en: Team delivery and complete outcomes advanced together.
       capabilities:
         - id: collaboration
-          name: 团队协作
+          name: { zh: 团队协作, chinese-traditional: 團隊協作, en: Collaboration }
           level: 4
         - id: full-stack
-          name: 全栈开发
+          name: { zh: 全栈开发, chinese-traditional: 全端開發, en: Full-stack Development }
           level: 2
         - id: academic-graphic-design
-          name: 平面设计
+          name: { zh: 平面设计, chinese-traditional: 平面設計, en: Graphic Design }
           level: 5
         - id: latex
-          name: LaTeX 排版
+          name: { zh: LaTeX 排版, chinese-traditional: LaTeX 排版, en: LaTeX Typesetting }
           level: 4
         - id: solidworks
-          name: SolidWorks 仿真
+          name: { zh: SolidWorks 仿真, chinese-traditional: SolidWorks 模擬, en: SolidWorks Simulation }
           level: 4
     - year: 2026
       primary: energy-power
+      snapshot:
+        zh: 专业主线与软件工程能力汇合。
+        chinese-traditional: 專業主線與軟體工程能力匯合。
+        en: The engineering major and software practice converged.
       capabilities:
         - id: energy-power
-          name: 能源与动力
+          name: { zh: 能源与动力, chinese-traditional: 能源與動力, en: Energy & Power }
           level: 4
         - id: ansys
-          name: ANSYS 仿真
+          name: { zh: ANSYS 仿真, chinese-traditional: ANSYS 模擬, en: ANSYS Simulation }
           level: 4
         - id: ai-agent
-          name: AI Agent 工程
+          name: { zh: AI Agent 工程, chinese-traditional: AI Agent 工程, en: AI Agent Engineering }
           level: 3
         - id: full-stack
-          name: 全栈开发
+          name: { zh: 全栈开发, chinese-traditional: 全端開發, en: Full-stack Development }
           level: 5
         - id: reading-notes
-          name: 读书笔记
+          name: { zh: 读书笔记, chinese-traditional: 讀書筆記, en: Reading Notes }
           level: 4
+timeline:
+  heading: { zh: 能力形成时间线, chinese-traditional: 能力形成時間線, en: Capability Formation Timeline }
+  description:
+    zh: 以真实经历、项目和成果解释能力如何形成，而不是展示抽象成长百分比。
+    chinese-traditional: 以真實經歷、專案與成果解釋能力如何形成，而不是展示抽象成長百分比。
+    en: Factual experiences, projects, and outcomes explain how capabilities formed—without artificial growth percentages.
+  events:
+    - id: graphic-design-internship
+      year: 2024
+      date: 2023-12—2024-02
+      type: milestone
+      title: { zh: 平面设计实习完成, chinese-traditional: 平面設計實習完成, en: Graphic design internship }
+      summary:
+        zh: 在昆明上维设计品牌有限公司参与需求对接与交付，在职完成 4 份作品，累计作品 14 个。
+        chinese-traditional: 在昆明上維設計品牌有限公司參與需求對接與交付，在職完成 4 份作品，累計作品 14 個。
+        en: Worked on client communication and delivery at Kunming Shangwei Design, completing four internship works and fourteen works in total.
+      capabilityIds: [academic-graphic-design, collaboration]
+      target: capabilities.html#academic-graphic-design
+    - id: student-office
+      year: 2024
+      date: 2024-04
+      type: progress
+      title: { zh: 学工办协作体系, chinese-traditional: 學工辦協作體系, en: Student office collaboration }
+      summary:
+        zh: 对接教务、综合办与辅导员，参与微信运营、档案与就业信息协同。
+        chinese-traditional: 對接教務、綜合辦與輔導員，參與微信營運、檔案與就業資訊協同。
+        en: Coordinated academic affairs, student records, WeChat operations, and employment information.
+      capabilityIds: [collaboration, wps]
+      target: capabilities.html#collaboration
+    - id: clean-energy-project
+      year: 2024
+      date: 2024-10
+      type: milestone
+      title: { zh: 清洁低碳能源项目启动, chinese-traditional: 清潔低碳能源專案啟動, en: Clean-energy engineering project }
+      summary:
+        zh: 担任学生项目主持，推进设备说明书、SolidWorks 建模、3D 打印与实验数据处理。
+        chinese-traditional: 擔任學生專案主持，推進設備說明書、SolidWorks 建模、3D 列印與實驗數據處理。
+        en: Led student work on equipment documentation, SolidWorks modeling, 3D printing, and experiment data processing.
+      capabilityIds: [solidworks, collaboration, energy-power]
+      target: research.html
+    - id: modeling-results
+      year: 2025
+      date: 2025-01—08
+      type: milestone
+      title: { zh: 数学建模成果链, chinese-traditional: 數學建模成果鏈, en: Mathematical modeling outcomes }
+      summary:
+        zh: 获 MCM/COMAP 国际 S 奖、MathorCup 华中赛区三等奖与深圳杯全国优秀论文。
+        chinese-traditional: 獲 MCM/COMAP 國際 S 獎、MathorCup 華中賽區三等獎與深圳杯全國優秀論文。
+        en: Earned an MCM/COMAP S Award, a MathorCup regional third prize, and a Shenzhen Cup national outstanding paper.
+      capabilityIds: [collaboration, latex]
+      target: archive.html#honors
+    - id: energy-competition
+      year: 2025
+      date: 2025-06—08
+      type: milestone
+      title: { zh: 节能减排竞赛全国一等奖, chinese-traditional: 節能減排競賽全國一等獎, en: National first prize in energy competition }
+      summary:
+        zh: 作为项目副主持参与第十八届全国大学生节能减排社会实践与科技竞赛。
+        chinese-traditional: 作為專案副主持參與第十八屆全國大學生節能減排社會實踐與科技競賽。
+        en: Contributed as deputy project lead to the 18th national university energy conservation and emission reduction competition.
+      capabilityIds: [collaboration, energy-power]
+      target: archive.html#honors
+    - id: solidworks-outcome
+      year: 2025
+      date: 2025-08
+      type: progress
+      title: { zh: 工程建模形成完整成果, chinese-traditional: 工程建模形成完整成果, en: Complete engineering modeling outcome }
+      summary:
+        zh: 将三维建模、设备表达与专利链路整合到完整项目交付中。
+        chinese-traditional: 將三維建模、設備表達與專利鏈路整合到完整專案交付中。
+        en: Integrated 3D modeling, equipment communication, and patent records into a complete project delivery.
+      capabilityIds: [solidworks, collaboration]
+      target: capabilities.html#solidworks
+    - id: yuan-ze-exchange
+      year: 2026
+      date: 2026-02-22—06-30
+      type: milestone
+      title: { zh: 元智大学机械工程学系交换, chinese-traditional: 元智大學機械工程學系交換, en: Yuan Ze University exchange }
+      summary:
+        zh: 完成 128 天交换，修读微积分（二）、工程经济、机率与统计，共 9 学分。
+        chinese-traditional: 完成 128 天交換，修讀微積分（二）、工程經濟、機率與統計，共 9 學分。
+        en: Completed a 128-day exchange with nine credits in Calculus II, Engineering Economy, and Probability and Statistics.
+      capabilityIds: [energy-power, reading-notes]
+      target: archive.html#interests
+    - id: reading-system
+      year: 2026
+      date: "2026-06-08"
+      type: progress
+      title: { zh: 工程与财务阅读体系, chinese-traditional: 工程與財務閱讀體系, en: Engineering and finance reading system }
+      summary:
+        zh: 确定《工程经济》《实验设计与分析》《热交换设计》《财务管理》四本专业书的长期学习计划。
+        chinese-traditional: 確定《工程經濟》《實驗設計與分析》《熱交換設計》《財務管理》四本專業書的長期學習計畫。
+        en: Established a long-term study plan around engineering economy, experimental design, heat exchanger design, and financial management.
+      capabilityIds: [reading-notes, energy-power]
+      target: capabilities.html#reading-notes
+    - id: software-assets
+      year: 2026
+      date: 2026-07
+      type: milestone
+      title: { zh: 软件资产连续交付, chinese-traditional: 軟體資產連續交付, en: Continuous software asset delivery }
+      summary:
+        zh: 持续开发桌面 AI Agent Runtime、IELTS 浏览器扩展与个人主页内容维护体系。
+        chinese-traditional: 持續開發桌面 AI Agent Runtime、IELTS 瀏覽器擴充功能與個人主頁內容維護體系。
+        en: Continued development of a desktop AI agent runtime, an IELTS browser extension, and the homepage content system.
+      capabilityIds: [ai-agent, full-stack]
+      target: projects.html
+    - id: brfc-submission
+      year: 2026
+      date: 2026-07
+      type: milestone
+      title: { zh: BRFC 投稿 AAAI 2027, chinese-traditional: BRFC 投稿 AAAI 2027, en: BRFC submitted to AAAI 2027 }
+      summary:
+        zh: OpenReview 记录论文投稿；作者顺序为 Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu，Yucheng Li 位列第四。
+        chinese-traditional: OpenReview 記錄論文投稿；作者順序為 Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu，Yucheng Li 位列第四。
+        en: OpenReview records the submission by Jinlong Li, Fengyi Zhang, Yongjie Hu, Yucheng Li, and Shengjun Liu; Yucheng Li is the fourth author.
+      capabilityIds: [energy-power, latex]
+      target: research.html
 portals:
   - id: collaboration
-    title: 协作网络
-    target: experience.html
+    title: { zh: 协作网络, chinese-traditional: 協作網絡, en: Collaboration Network }
+    description: { zh: 项目组织、学生工作、社会实践与长期协同交付。, chinese-traditional: 專案組織、學生工作、社會實踐與長期協同交付。, en: Project organization, student work, public service, and long-term collaborative delivery. }
+    count: { zh: 组织 · 沟通 · 交付, chinese-traditional: 組織 · 溝通 · 交付, en: Organize · Communicate · Deliver }
+    updated: 2026-07
+    target: archive.html#collaboration
+    visual: network
+    terms:
+      - { text: 团队协作, en: Collaboration, x: 48, y: 44, size: core }
+      - { text: 项目主持, en: Project Lead, x: 20, y: 23, size: main }
+      - { text: 学工办, en: Student Office, x: 70, y: 18, size: main }
+      - { text: 志愿服务, en: Volunteering, x: 18, y: 71, size: support }
+      - { text: 公开表达, en: Public Communication, x: 70, y: 70, size: support }
+      - { text: 交付, en: Delivery, x: 52, y: 83, size: echo }
+      - { text: 协作, en: Teamwork, x: 78, y: 46, size: echo }
   - id: interests
-    title: 兴趣图谱
-    target: knowledge.html
+    title: { zh: 兴趣图谱, chinese-traditional: 興趣圖譜, en: Interest Map }
+    description: { zh: 从能源工程延伸到科学计算、AI 系统与工程经济判断。, chinese-traditional: 從能源工程延伸到科學計算、AI 系統與工程經濟判斷。, en: From energy engineering to scientific computing, AI systems, and engineering-economy judgment. }
+    count: { zh: 工程 · 计算 · 系统, chinese-traditional: 工程 · 計算 · 系統, en: Engineering · Computing · Systems }
+    updated: 2026-07
+    target: archive.html#interests
+    visual: orbit
+    terms:
+      - { text: 能源动力, en: Energy & Power, x: 48, y: 45, size: core }
+      - { text: 科学计算, en: Scientific Computing, x: 21, y: 24, size: main }
+      - { text: AI Agent, en: AI Agent, x: 72, y: 20, size: main }
+      - { text: 工程经济, en: Engineering Economy, x: 18, y: 72, size: support }
+      - { text: 神经算子, en: Neural Operators, x: 69, y: 73, size: support }
+      - { text: 仿真, en: Simulation, x: 79, y: 48, size: echo }
+      - { text: 能源, en: Energy, x: 47, y: 83, size: echo }
   - id: knowledge
-    title: 知识系统
+    title: { zh: 知识系统, chinese-traditional: 知識系統, en: Knowledge System }
+    description: { zh: 技术笔记、读书记录、实验方法和可复用工程经验。, chinese-traditional: 技術筆記、讀書記錄、實驗方法與可複用工程經驗。, en: Technical notes, reading records, experimental methods, and reusable engineering experience. }
+    count: { zh: 记录 · 连接 · 复用, chinese-traditional: 記錄 · 連接 · 複用, en: Record · Connect · Reuse }
+    updated: 2026-07
     target: knowledge.html
+    visual: hierarchy
+    terms:
+      - { text: 知识资产, en: Knowledge Assets, x: 47, y: 42, size: core }
+      - { text: 读书笔记, en: Reading Notes, x: 18, y: 22, size: main }
+      - { text: 工程方法, en: Engineering Methods, x: 69, y: 20, size: main }
+      - { text: 实验设计, en: Experiment Design, x: 19, y: 70, size: support }
+      - { text: 可复现, en: Reproducibility, x: 68, y: 72, size: support }
+      - { text: 索引, en: Index, x: 77, y: 46, size: echo }
+      - { text: 复用, en: Reuse, x: 46, y: 83, size: echo }
   - id: honors
-    title: 荣誉档案
-    target: awards.html
+    title: { zh: 荣誉档案, chinese-traditional: 榮譽檔案, en: Honors Archive }
+    description: { zh: 竞赛、证书、专利与社会实践记录，按事实归档。, chinese-traditional: 競賽、證書、專利與社會實踐記錄，按事實歸檔。, en: Competitions, certificates, patents, and public-service records, archived factually. }
+    count: { zh: 竞赛 · 专利 · 证书, chinese-traditional: 競賽 · 專利 · 證書, en: Awards · Patents · Certificates }
+    updated: 2026-07
+    target: archive.html#honors
+    visual: stamp
+    terms:
+      - { text: 全国一等奖, en: National First Prize, x: 45, y: 42, size: core }
+      - { text: 专利, en: Patents, x: 18, y: 21, size: main }
+      - { text: 数学建模, en: Modeling, x: 69, y: 19, size: main }
+      - { text: 志愿服务, en: Volunteering, x: 18, y: 71, size: support }
+      - { text: 证书, en: Certificates, x: 70, y: 72, size: support }
+      - { text: 2025, en: '2025', x: 78, y: 46, size: echo }
+      - { text: ARCHIVE, en: ARCHIVE, x: 46, y: 83, size: echo }
