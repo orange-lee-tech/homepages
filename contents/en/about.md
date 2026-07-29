@@ -4,19 +4,19 @@
 
 # About Me
 
-With Energy and Power Engineering as my foundation, I apply scientific computing, machine learning, and software engineering to real problems. I focus less on listing tools and more on building clear problems, reliable experiments, and maintainable outcomes.
+With Energy and Power Engineering as my academic foundation, I apply scientific computing, machine learning, and software engineering to real problems. Rather than listing tools, I focus on clear questions, reliable experiments, and outcomes that can be maintained over time.
 
-# What I Work On
+# Current Record
 
-- **Research exploration**: experiments around incompressible flow, neural operators, and physics constraints
-- **Engineering practice**: desktop AI runtimes, browser extensions, and content maintenance tools
-- **Public communication**: organizing projects, research, and knowledge through GitHub, OpenReview, and this website
+- **Paper submission**: “BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates” submitted to AAAI 2027. Author order: Jinlong Li, Fengyi Zhang, Yongjie Hu, Yucheng Li, and Shengjun Liu; Yucheng Li is the fourth author
+- **Exchange study**: completed a 128-day exchange in the Department of Mechanical Engineering at Yuan Ze University from February 22 to June 30, 2026
+- **Engineering practice**: ongoing development of a desktop AI runtime, browser extensions, and content-maintenance tools
 
 # Verifiable Work
 
-- Contributed to 2 patent outcomes, including one granted patent
-- Experience with national-level competitions, mathematical modeling, and research projects
-- Maintain public code, experiment records, and technical documentation
+- Contributed to two patent outcomes, including one granted patent
+- Experience with a national first-prize project, mathematical modeling, and research projects
+- Ongoing maintenance of public code, experiment records, and technical writing
 
 </div>
 
@@ -25,18 +25,17 @@ With Energy and Power Engineering as my foundation, I apply scientific computing
 # Capability Structure
 
 <div class="md-kpi">
-  <div class="k"><b>Scientific Computing</b><span>Numerical methods｜PDE｜error and stability</span></div>
-  <div class="k"><b>AI Engineering</b><span>Agent｜Tool Runtime｜MCP｜local models</span></div>
-  <div class="k"><b>Software Engineering</b><span>Python｜C++｜Web｜automation and testing</span></div>
-  <div class="k"><b>Technical Communication</b><span>paper narrative｜figures｜documentation</span></div>
+  <div class="k"><b>Scientific Computing</b><span>numerical methods｜PDEs｜error and stability</span></div>
+  <div class="k"><b>AI Engineering</b><span>agents｜tool runtime｜MCP｜local models</span></div>
+  <div class="k"><b>Software Engineering</b><span>Python｜C++｜web｜automation and testing</span></div>
+  <div class="k"><b>Technical Communication</b><span>paper narratives｜figures｜documentation and presentations</span></div>
 </div>
 
-# Working Principles
+# Yuan Ze University Exchange
 
-- Define problems, evaluation protocols, and delivery boundaries first
-- Support conclusions with data, code, and documentation
-- Record failure modes to keep iteration traceable
-- Deliver usable versions first, then improve continuously
+During the exchange, I completed Calculus II, Engineering Economics, and Probability and Statistics for a total of nine credits. I also used Python visualizations to study concepts including gradients, tangent planes, and vector fields. Engineering Economics expanded my thinking from technical feasibility to cost, cash flow, risk, and equipment replacement decisions.
+
+On June 8, 2026, I selected four professional books—Engineering Economics, Design and Analysis of Experiments, Heat Transfer Design, and Fundamentals of Financial Management—to strengthen engineering-economic judgment, experiment planning, heat-exchanger design, and corporate-finance analysis.
 
 </div>
 
