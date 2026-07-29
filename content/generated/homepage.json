@@ -264,7 +264,7 @@
               "chinese-traditional": "能源與動力",
               "en": "Energy & Power"
             },
-            "level": 4
+            "level": 2
           },
           {
             "id": "ansys",
@@ -380,7 +380,7 @@
           "collaboration",
           "energy-power"
         ],
-        "target": "research.html"
+        "target": "learning.html#research"
       },
       {
         "id": "modeling-results",
@@ -401,7 +401,7 @@
           "collaboration",
           "latex"
         ],
-        "target": "archive.html#honors"
+        "target": "capabilities.html#honors"
       },
       {
         "id": "energy-competition",
@@ -422,7 +422,7 @@
           "collaboration",
           "energy-power"
         ],
-        "target": "archive.html#honors"
+        "target": "capabilities.html#honors"
       },
       {
         "id": "solidworks-outcome",
@@ -464,7 +464,7 @@
           "energy-power",
           "reading-notes"
         ],
-        "target": "archive.html#interests"
+        "target": "learning.html#interests"
       },
       {
         "id": "reading-system",
@@ -527,7 +527,7 @@
           "energy-power",
           "latex"
         ],
-        "target": "research.html"
+        "target": "learning.html#research"
       }
     ]
   },
@@ -553,7 +553,7 @@
         "en": "Organize · Communicate · Deliver"
       },
       "updated": "2026-07",
-      "target": "archive.html#collaboration",
+      "target": "projects.html#collaboration",
       "visual": "network",
       "terms": [
         {
@@ -627,7 +627,7 @@
         "en": "Engineering · Computing · Systems"
       },
       "updated": "2026-07",
-      "target": "archive.html#interests",
+      "target": "learning.html#interests",
       "visual": "orbit",
       "terms": [
         {
@@ -702,7 +702,7 @@
         "en": "Record · Connect · Reuse"
       },
       "updated": "2026-07",
-      "target": "knowledge.html",
+      "target": "learning.html#knowledge",
       "visual": "hierarchy",
       "terms": [
         {
@@ -778,7 +778,7 @@
         "en": "Awards · Patents · Certificates"
       },
       "updated": "2026-07",
-      "target": "archive.html#honors",
+      "target": "capabilities.html#honors",
       "visual": "stamp",
       "terms": [
         {

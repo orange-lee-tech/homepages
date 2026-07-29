@@ -20,7 +20,7 @@ items:
       chinese-traditional: 能源動力工程基礎、熱工問題理解及相關工程實踐能力。
       en: Foundations in energy and power engineering, thermal problems, and related engineering practice.
     levels:
-      - { year: 2026, level: 4, primary: true }
+      - { year: 2026, level: 2, primary: true }
     tools: [Engineering Economy, Thermal Sciences, Experiment Design]
     evidence:
       - text:
@@ -31,7 +31,7 @@ items:
           zh: 2026 年元智大学机械工程学系交换，完成 9 学分课程。
           chinese-traditional: 2026 年元智大學機械工程學系交換，完成 9 學分課程。
           en: Completed nine credits during a 2026 exchange in Mechanical Engineering at Yuan Ze University.
-        target: archive.html#interests
+        target: learning.html#interests
   - id: ansys
     title: { zh: ANSYS 仿真, chinese-traditional: ANSYS 模擬, en: ANSYS Simulation }
     definition:
@@ -92,7 +92,7 @@ items:
           zh: 2026 年 6 月确定《工程经济》《实验设计与分析》《热交换设计》《财务管理》四本专业书的长期学习计划。
           chinese-traditional: 2026 年 6 月確定《工程經濟》《實驗設計與分析》《熱交換設計》《財務管理》四本專業書的長期學習計畫。
           en: Established a long-term study plan around four books on engineering economy, experimental design, heat exchanger design, and financial management in June 2026.
-        target: archive.html#interests
+        target: learning.html#interests
   - id: latex
     title: { zh: LaTeX 排版, chinese-traditional: LaTeX 排版, en: LaTeX Typesetting }
     definition:
@@ -123,7 +123,7 @@ items:
           zh: 清洁低碳能源项目中承担设备说明书、SolidWorks 建模与 3D 打印相关工作。
           chinese-traditional: 清潔低碳能源專案中承擔設備說明書、SolidWorks 建模與 3D 列印相關工作。
           en: Worked on equipment documentation, SolidWorks modeling, and 3D printing in a clean-energy project.
-        target: research.html
+        target: learning.html#research
   - id: collaboration
     title: { zh: 团队协作, chinese-traditional: 團隊協作, en: Collaboration }
     definition:
@@ -139,12 +139,12 @@ items:
           zh: 学工办期间对接教务、综合办与辅导员，参与微信运营、档案与就业信息协同。
           chinese-traditional: 學工辦期間對接教務、綜合辦與輔導員，參與微信營運、檔案與就業資訊協同。
           en: Coordinated academic affairs, student records, WeChat operations, and employment information in the student office.
-        target: archive.html#collaboration
+        target: projects.html#collaboration
       - text:
           zh: 作为学生项目主持或副主持参与工程项目与全国竞赛。
           chinese-traditional: 作為學生專案主持或副主持參與工程專案與全國競賽。
           en: Participated in engineering projects and national competitions as student lead or deputy lead.
-        target: archive.html#collaboration
+        target: projects.html#collaboration
   - id: wps
     title: { zh: WPS 三件套, chinese-traditional: WPS 三件套, en: Office Productivity }
     definition:
@@ -159,7 +159,7 @@ items:
           zh: 学生工作与项目管理中持续承担文档、档案、信息表与展示材料制作。
           chinese-traditional: 學生工作與專案管理中持續承擔文件、檔案、資訊表與展示材料製作。
           en: Produced documents, records, information sheets, and presentation materials for student work and projects.
-        target: archive.html#collaboration
+        target: projects.html#collaboration
   - id: academic-graphic-design
     title: { zh: 平面设计, chinese-traditional: 平面設計, en: Graphic Design }
     definition:
@@ -175,4 +175,4 @@ items:
           zh: 在昆明上维设计品牌有限公司实习期间参与需求对接与交付，在职完成 4 份作品，累计作品 14 个。
           chinese-traditional: 在昆明上維設計品牌有限公司實習期間參與需求對接與交付，在職完成 4 份作品，累計作品 14 個。
           en: Participated in client communication and delivery during a design internship, completing four internship works and fourteen works in total.
-        target: archive.html#collaboration
+        target: projects.html#collaboration

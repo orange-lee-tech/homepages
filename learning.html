@@ -8,7 +8,8 @@
   <title>Learning · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
   <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-3" />
-  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-1" />
+  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-3" />
+  <script src="static/js/marked.min.js"></script>
 </head>
 <body class="archive-page archive-subpage" data-archive-page="learning">
   <header data-archive-chrome></header>
@@ -19,6 +20,7 @@
           <p class="subpage-eyebrow" id="learning-eyebrow">LEARNING</p>
           <h1 id="learning-title">学习</h1>
           <nav class="anchor-index" aria-label="Learning sections">
+            <a href="#interests" id="learning-interests-link">兴趣与探索</a>
             <a href="#research" id="learning-research-link">研究记录</a>
             <a href="#knowledge" id="learning-knowledge-link">知识系统</a>
           </nav>
@@ -30,6 +32,19 @@
       </section>
 
       <p id="learning-state" class="subpage-status" role="status" aria-live="polite"></p>
+
+      <section class="learning-section" id="interests" aria-labelledby="interests-title">
+        <header class="section-heading">
+          <div>
+            <p class="section-label" id="interests-label">01 / INTERESTS</p>
+            <h2 id="interests-title">兴趣与探索</h2>
+          </div>
+          <p id="interests-description"></p>
+        </header>
+        <article class="archive-detail-section learning-interest-card">
+          <div id="interests-content" class="archive-markdown"></div>
+        </article>
+      </section>
 
       <section class="learning-section" id="research" aria-labelledby="research-title">
         <header class="section-heading">
@@ -56,6 +71,6 @@
   </main>
   <footer data-archive-footer></footer>
   <script src="static/js/archive-chrome.js?v=archive-ia-1"></script>
-  <script src="static/js/learning.js?v=archive-ia-1"></script>
+  <script src="static/js/learning.js?v=archive-ia-3"></script>
 </body>
 </html>

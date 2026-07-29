@@ -5,11 +5,13 @@
       title: '动态',
       eyebrow: '动态',
       value: '记录正在发生的学习、生活与作品，让文字和影像共同保存变化，而不是只留下最后的结果。',
-      note: '文档保留思考与方法，影像保留现场与质感；两种记录交替出现，共同构成连续的个人时间流。',
+      note: '影像集中保存现场与质感，文字保留思考与方法；两者共同构成持续更新的个人时间流。',
       imagesLink: '图片动态',
       documentsLink: '文档动态',
       loading: '正在加载动态…',
       error: '动态加载失败。',
+      imagesTitle: '影像动态',
+      imagesDescription: '活动、个人交流与平面设计作品集中呈现，以连续影像轨道保留不同阶段的现场。',
       activitiesTitle: '活动与阶段现场',
       activitiesDescription: '项目、交流与阶段性经历的现场记录。',
       documentsTitle: '文字记录',
@@ -20,18 +22,20 @@
       designDescription: '以视觉作品记录表达能力与审美实践的形成。',
       read: '阅读全文',
       fallback: '打开记录查看完整内容。',
-      help: '轨道会缓慢播放；悬停、聚焦或拖动时暂停，点击图片可放大。',
+      help: '轨道会持续缓慢移动；拖动后停留在所选位置，点击轮播之外的区域恢复自动播放，点击图片可放大。',
       close: '关闭'
     },
     'chinese-traditional': {
       title: '動態',
       eyebrow: '動態',
       value: '記錄正在發生的學習、生活與作品，讓文字和影像共同保存變化，而不是只留下最後的結果。',
-      note: '文檔保留思考與方法，影像保留現場與質感；兩種記錄交替出現，共同構成連續的個人時間流。',
+      note: '影像集中保存現場與質感，文字保留思考與方法；兩者共同構成持續更新的個人時間流。',
       imagesLink: '圖片動態',
       documentsLink: '文檔動態',
       loading: '正在載入動態…',
       error: '動態載入失敗。',
+      imagesTitle: '影像動態',
+      imagesDescription: '活動、個人交流與平面設計作品集中呈現，以連續影像軌道保留不同階段的現場。',
       activitiesTitle: '活動與階段現場',
       activitiesDescription: '專案、交流與階段性經歷的現場記錄。',
       documentsTitle: '文字記錄',
@@ -42,18 +46,20 @@
       designDescription: '以視覺作品記錄表達能力與審美實踐的形成。',
       read: '閱讀全文',
       fallback: '開啟記錄查看完整內容。',
-      help: '軌道會緩慢播放；懸停、聚焦或拖動時暫停，點擊圖片可放大。',
+      help: '軌道會持續緩慢移動；拖動後停留在所選位置，點擊輪播之外的區域恢復自動播放，點擊圖片可放大。',
       close: '關閉'
     },
     en: {
       title: 'Updates',
       eyebrow: 'Updates',
       value: 'Record learning, life, and work while they are happening, so words and images preserve change instead of only the final result.',
-      note: 'Documents retain reasoning and method; images retain place and texture. Alternating both creates a continuous personal timeline.',
+      note: 'Images preserve place and texture together; writing retains reasoning and method. Both form a continuously updated personal timeline.',
       imagesLink: 'Image updates',
       documentsLink: 'Written updates',
       loading: 'Loading updates…',
       error: 'Updates failed to load.',
+      imagesTitle: 'Image Updates',
+      imagesDescription: 'Activities, personal exchanges, and design work are gathered into continuous visual tracks that preserve each stage.',
       activitiesTitle: 'Activities & Milestones',
       activitiesDescription: 'On-site records of projects, exchanges, and formative stages.',
       documentsTitle: 'Written Records',
@@ -64,7 +70,7 @@
       designDescription: 'Visual records of how communication and design practice developed.',
       read: 'Read record',
       fallback: 'Open the record to read the complete entry.',
-      help: 'Tracks move slowly. Hover, focus, or drag to pause; select an image to enlarge it.',
+      help: 'Tracks move continuously at a restrained pace. After dragging, they stay where you leave them; click outside the carousel to resume. Select an image to enlarge it.',
       close: 'Close'
     }
   };
@@ -124,91 +130,181 @@
     return `${directory}${encodeURIComponent(String(file))}`;
   }
 
-  function mediaItems(collection) {
+  function mediaSequence(collection, clone = false) {
     const items = collection.files.map((file, index) => {
       const src = imageUrl(collection.directory, file);
       const caption = `${collection.title} ${index + 1}`;
-      return `<button type="button" class="media-item${collection.design ? ' is-design' : ''}" data-media-src="${esc(src)}" data-media-caption="${esc(caption)}"><img src="${esc(src)}" alt="${esc(caption)}" loading="lazy" decoding="async"></button>`;
+      return `<button type="button" class="media-item${collection.design ? ' is-design' : ''}" data-media-src="${esc(src)}" data-media-caption="${esc(caption)}"${clone ? ' tabindex="-1"' : ''}><img src="${esc(src)}" alt="${clone ? '' : esc(caption)}" loading="lazy" decoding="async" draggable="false"></button>`;
     }).join('');
-    return items + items;
+    return `<div class="media-sequence"${clone ? ' aria-hidden="true"' : ''}>${items}</div>`;
   }
 
-  function mediaBlock(collection, index) {
+  function mediaRow(collection, index) {
     return `
-      <section class="update-block is-dark" id="${index === 0 ? 'images' : esc(collection.id)}">
-        <header class="update-block-header">
+      <section class="media-row" data-media-row="${esc(collection.id)}">
+        <header class="media-row-header">
+          <span class="media-row-index">${String(index + 1).padStart(2, '0')}</span>
           <div>
-            <p class="section-label">${String(index + 1).padStart(2, '0')} / IMAGE</p>
-            <h2>${esc(collection.title)}</h2>
+            <h3>${esc(collection.title)}</h3>
+            <p>${esc(collection.description)}</p>
           </div>
-          <p class="update-block-description">${esc(collection.description)}</p>
         </header>
         <div class="media-viewport" tabindex="0" aria-label="${esc(collection.title)}">
-          <div class="media-track">${mediaItems(collection)}</div>
+          <div class="media-track">${mediaSequence(collection, true)}${mediaSequence(collection)}${mediaSequence(collection, true)}</div>
         </div>
-        <p class="media-help">${esc(COPY[ArchiveChrome.language].help)}</p>
+      </section>`;
+  }
+
+  function mediaArchiveBlock(collections) {
+    const copy = COPY[ArchiveChrome.language];
+    return `
+      <section class="media-archive-section" id="images">
+        <header class="media-archive-header">
+          <div>
+            <p class="section-label">IMAGE STREAM</p>
+            <h2>${esc(copy.imagesTitle)}</h2>
+          </div>
+          <p>${esc(copy.imagesDescription)}</p>
+        </header>
+        <div class="media-rows">
+          ${collections.map(mediaRow).join('')}
+        </div>
+        <p class="media-help">${esc(copy.help)}</p>
       </section>`;
   }
 
   function initTrack(viewport) {
     const track = $('.media-track', viewport);
-    const originalCount = track.children.length / 2;
-    [...track.children].slice(originalCount).forEach((item) => {
-      item.setAttribute('aria-hidden', 'true');
-      item.tabIndex = -1;
-    });
+    const firstSequence = $('.media-sequence', track);
+    const dialog = $('#media-dialog');
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    let paused = false;
+    let positioned = false;
+    let manuallyPaused = false;
+    let focusPaused = false;
     let dragging = false;
+    let moved = false;
+    let suppressClick = false;
     let startX = 0;
     let startScroll = 0;
     let last = performance.now();
     let visible = true;
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const setManualPause = (value) => {
+      manuallyPaused = value;
+      viewport.classList.toggle('is-manually-paused', value);
+    };
+
+    const loopSpan = () => {
+      const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '0') || 0;
+      return firstSequence.scrollWidth + gap;
+    };
+
+    const normalizePosition = () => {
+      const span = loopSpan();
+      if (!span) return;
+      while (viewport.scrollLeft >= span * 2) viewport.scrollLeft -= span;
+      while (viewport.scrollLeft < span) viewport.scrollLeft += span;
+    };
+
+    const positionAtMiddleCopy = () => {
+      const span = loopSpan();
+      if (!span) return;
+      viewport.scrollLeft = span;
+      positioned = true;
+      last = performance.now();
+    };
+
+    requestAnimationFrame(positionAtMiddleCopy);
+    const resizeObserver = new ResizeObserver(() => {
+      if (!positioned) positionAtMiddleCopy();
+      else normalizePosition();
+    });
+    resizeObserver.observe(viewport);
+
     const observer = new IntersectionObserver((entries) => {
       visible = entries[0]?.isIntersecting ?? true;
-    }, { threshold: .05 });
+    }, { threshold: .04 });
     observer.observe(viewport);
 
     function frame(now) {
-      const dt = Math.min(40, now - last);
+      const delta = Math.min(48, now - last);
       last = now;
-      if (!reduce && !paused && !dragging && visible && viewport.scrollWidth > viewport.clientWidth) {
-        viewport.scrollLeft += dt * .022;
-        const half = track.scrollWidth / 2;
-        if (viewport.scrollLeft >= half) viewport.scrollLeft -= half;
+      if (positioned && !reduceMotion && !manuallyPaused && !focusPaused && !dragging && visible) {
+        viewport.scrollLeft += delta * 0.018;
+        normalizePosition();
       }
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
 
-    viewport.addEventListener('mouseenter', () => { paused = true; });
-    viewport.addEventListener('mouseleave', () => { paused = false; });
-    viewport.addEventListener('focusin', () => { paused = true; });
-    viewport.addEventListener('focusout', () => { paused = false; });
     viewport.addEventListener('pointerdown', (event) => {
+      if (event.button !== undefined && event.button !== 0) return;
       dragging = true;
-      paused = true;
+      moved = false;
+      suppressClick = false;
       startX = event.clientX;
       startScroll = viewport.scrollLeft;
-      viewport.setPointerCapture(event.pointerId);
+      setManualPause(true);
+      viewport.classList.add('is-dragging');
+      viewport.setPointerCapture?.(event.pointerId);
     });
+
     viewport.addEventListener('pointermove', (event) => {
-      if (dragging) viewport.scrollLeft = startScroll - (event.clientX - startX);
+      if (!dragging) return;
+      const distance = event.clientX - startX;
+      if (Math.abs(distance) > 5) moved = true;
+      viewport.scrollLeft = startScroll - distance;
     });
-    const end = (event) => {
+
+    const finishDrag = (event) => {
+      if (!dragging) return;
       dragging = false;
-      paused = false;
-      if (viewport.hasPointerCapture?.(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+      suppressClick = moved;
+      viewport.classList.remove('is-dragging');
+      if (viewport.hasPointerCapture?.(event.pointerId)) {
+        viewport.releasePointerCapture(event.pointerId);
+      }
+      normalizePosition();
     };
-    viewport.addEventListener('pointerup', end);
-    viewport.addEventListener('pointercancel', end);
+
+    viewport.addEventListener('pointerup', finishDrag);
+    viewport.addEventListener('pointercancel', finishDrag);
+
+    viewport.addEventListener('click', (event) => {
+      if (!suppressClick) return;
+      event.preventDefault();
+      event.stopPropagation();
+      suppressClick = false;
+    }, true);
+
+    viewport.addEventListener('focusin', () => {
+      focusPaused = true;
+    });
+
+    viewport.addEventListener('focusout', (event) => {
+      if (!viewport.contains(event.relatedTarget)) focusPaused = false;
+    });
+
+    viewport.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      setManualPause(true);
+      viewport.scrollLeft += event.key === 'ArrowRight' ? 140 : -140;
+      normalizePosition();
+    });
+
+    document.addEventListener('pointerdown', (event) => {
+      if (viewport.contains(event.target) || dialog?.contains(event.target)) return;
+      setManualPause(false);
+    }, true);
   }
 
   function initDialog() {
     const dialog = $('#media-dialog');
     const image = $('#media-dialog-image');
     const caption = $('#media-dialog-caption');
+
     $('#updates-stream').addEventListener('click', (event) => {
       const button = event.target.closest('[data-media-src]');
       if (!button) return;
@@ -217,6 +313,7 @@
       caption.textContent = button.dataset.mediaCaption || '';
       dialog.showModal();
     });
+
     $('#media-dialog-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', (event) => {
       if (event.target === dialog) dialog.close();
@@ -256,10 +353,10 @@
     ].filter((item) => item.files.length);
 
     const documentBlock = `
-      <section class="update-block" id="documents">
+      <section class="update-block documents-block" id="documents">
         <header class="update-block-header">
           <div>
-            <p class="section-label">02 / DOCUMENTS</p>
+            <p class="section-label">DOCUMENTS</p>
             <h2>${esc(copy.documentsTitle)}</h2>
           </div>
           <p class="update-block-description">${esc(copy.documentsDescription)}</p>
@@ -272,11 +369,7 @@
         </div>
       </section>`;
 
-    const blocks = [];
-    if (collections[0]) blocks.push(mediaBlock(collections[0], 0));
-    blocks.push(documentBlock);
-    collections.slice(1).forEach((collection, index) => blocks.push(mediaBlock(collection, index + 2)));
-    $('#updates-stream').innerHTML = blocks.join('');
+    $('#updates-stream').innerHTML = `${mediaArchiveBlock(collections)}${documentBlock}`;
     $$('.media-viewport').forEach(initTrack);
     initDialog();
   }

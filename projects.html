@@ -8,7 +8,8 @@
   <title>Projects · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
   <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-3" />
-  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-1" />
+  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-3" />
+  <script src="static/js/marked.min.js"></script>
 </head>
 <body class="archive-page archive-subpage" data-archive-page="projects">
   <header data-archive-chrome></header>
@@ -28,13 +29,38 @@
           <p class="page-catalog-note" id="projects-catalog-note"></p>
         </div>
       </section>
-      <div id="projects-filters" class="catalog-toolbar" role="group" aria-label="Project category filters"></div>
-      <p id="projects-status" class="subpage-status" role="status"></p>
-      <section id="projects-grid" class="projects-grid" aria-live="polite"></section>
+      <nav class="anchor-index" aria-label="Project sections">
+        <a href="#project-assets" id="projects-assets-link">成果资产</a>
+        <a href="#collaboration" id="projects-collaboration-link">协作与实践</a>
+      </nav>
+
+      <section class="project-section" id="project-assets" aria-labelledby="project-assets-title">
+        <header class="section-heading">
+          <div>
+            <p class="section-label" id="project-assets-label">01 / PROJECTS</p>
+            <h2 id="project-assets-title">成果资产</h2>
+          </div>
+          <p id="project-assets-description"></p>
+        </header>
+        <div id="projects-filters" class="catalog-toolbar" role="group" aria-label="Project category filters"></div>
+        <p id="projects-status" class="subpage-status" role="status"></p>
+        <section id="projects-grid" class="projects-grid" aria-live="polite"></section>
+      </section>
+
+      <section class="project-section" id="collaboration" aria-labelledby="collaboration-title">
+        <header class="section-heading">
+          <div>
+            <p class="section-label" id="collaboration-label">02 / COLLABORATION</p>
+            <h2 id="collaboration-title">协作与实践</h2>
+          </div>
+          <p id="collaboration-description"></p>
+        </header>
+        <div id="collaboration-grid" class="context-card-grid" aria-live="polite"></div>
+      </section>
     </div>
   </main>
   <footer data-archive-footer></footer>
   <script src="static/js/archive-chrome.js?v=archive-ia-1"></script>
-  <script src="static/js/projects.js?v=archive-ia-1"></script>
+  <script src="static/js/projects.js?v=archive-ia-3"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@
       "levels": [
         {
           "year": 2026,
-          "level": 4,
+          "level": 2,
           "primary": true
         }
       ],
@@ -56,7 +56,7 @@
             "chinese-traditional": "2026 年元智大學機械工程學系交換，完成 9 學分課程。",
             "en": "Completed nine credits during a 2026 exchange in Mechanical Engineering at Yuan Ze University."
           },
-          "target": "archive.html#interests"
+          "target": "learning.html#interests"
         }
       ]
     },
@@ -204,7 +204,7 @@
             "chinese-traditional": "2026 年 6 月確定《工程經濟》《實驗設計與分析》《熱交換設計》《財務管理》四本專業書的長期學習計畫。",
             "en": "Established a long-term study plan around four books on engineering economy, experimental design, heat exchanger design, and financial management in June 2026."
           },
-          "target": "archive.html#interests"
+          "target": "learning.html#interests"
         }
       ]
     },
@@ -280,7 +280,7 @@
             "chinese-traditional": "清潔低碳能源專案中承擔設備說明書、SolidWorks 建模與 3D 列印相關工作。",
             "en": "Worked on equipment documentation, SolidWorks modeling, and 3D printing in a clean-energy project."
           },
-          "target": "research.html"
+          "target": "learning.html#research"
         }
       ]
     },
@@ -320,7 +320,7 @@
             "chinese-traditional": "學工辦期間對接教務、綜合辦與輔導員，參與微信營運、檔案與就業資訊協同。",
             "en": "Coordinated academic affairs, student records, WeChat operations, and employment information in the student office."
           },
-          "target": "archive.html#collaboration"
+          "target": "projects.html#collaboration"
         },
         {
           "text": {
@@ -328,7 +328,7 @@
             "chinese-traditional": "作為學生專案主持或副主持參與工程專案與全國競賽。",
             "en": "Participated in engineering projects and national competitions as student lead or deputy lead."
           },
-          "target": "archive.html#collaboration"
+          "target": "projects.html#collaboration"
         }
       ]
     },
@@ -363,7 +363,7 @@
             "chinese-traditional": "學生工作與專案管理中持續承擔文件、檔案、資訊表與展示材料製作。",
             "en": "Produced documents, records, information sheets, and presentation materials for student work and projects."
           },
-          "target": "archive.html#collaboration"
+          "target": "projects.html#collaboration"
         }
       ]
     },
@@ -403,7 +403,7 @@
             "chinese-traditional": "在昆明上維設計品牌有限公司實習期間參與需求對接與交付，在職完成 4 份作品，累計作品 14 個。",
             "en": "Participated in client communication and delivery during a design internship, completing four internship works and fourteen works in total."
           },
-          "target": "archive.html#collaboration"
+          "target": "projects.html#collaboration"
         }
       ]
     }

@@ -132,7 +132,7 @@ radar:
       capabilities:
         - id: energy-power
           name: { zh: 能源与动力, chinese-traditional: 能源與動力, en: Energy & Power }
-          level: 4
+          level: 2
         - id: ansys
           name: { zh: ANSYS 仿真, chinese-traditional: ANSYS 模擬, en: ANSYS Simulation }
           level: 4
@@ -184,7 +184,7 @@ timeline:
         chinese-traditional: 擔任學生專案主持，推進設備說明書、SolidWorks 建模、3D 列印與實驗數據處理。
         en: Led student work on equipment documentation, SolidWorks modeling, 3D printing, and experiment data processing.
       capabilityIds: [solidworks, collaboration, energy-power]
-      target: research.html
+      target: learning.html#research
     - id: modeling-results
       year: 2025
       date: 2025-01—08
@@ -195,7 +195,7 @@ timeline:
         chinese-traditional: 獲 MCM/COMAP 國際 S 獎、MathorCup 華中賽區三等獎與深圳杯全國優秀論文。
         en: Earned an MCM/COMAP S Award, a MathorCup regional third prize, and a Shenzhen Cup national outstanding paper.
       capabilityIds: [collaboration, latex]
-      target: archive.html#honors
+      target: capabilities.html#honors
     - id: energy-competition
       year: 2025
       date: 2025-06—08
@@ -206,7 +206,7 @@ timeline:
         chinese-traditional: 作為專案副主持參與第十八屆全國大學生節能減排社會實踐與科技競賽。
         en: Contributed as deputy project lead to the 18th national university energy conservation and emission reduction competition.
       capabilityIds: [collaboration, energy-power]
-      target: archive.html#honors
+      target: capabilities.html#honors
     - id: solidworks-outcome
       year: 2025
       date: 2025-08
@@ -228,7 +228,7 @@ timeline:
         chinese-traditional: 完成 128 天交換，修讀微積分（二）、工程經濟、機率與統計，共 9 學分。
         en: Completed a 128-day exchange with nine credits in Calculus II, Engineering Economy, and Probability and Statistics.
       capabilityIds: [energy-power, reading-notes]
-      target: archive.html#interests
+      target: learning.html#interests
     - id: reading-system
       year: 2026
       date: "2026-06-08"
@@ -261,14 +261,14 @@ timeline:
         chinese-traditional: OpenReview 記錄論文投稿；作者順序為 Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu，Yucheng Li 位列第四。
         en: OpenReview records the submission by Jinlong Li, Fengyi Zhang, Yongjie Hu, Yucheng Li, and Shengjun Liu; Yucheng Li is the fourth author.
       capabilityIds: [energy-power, latex]
-      target: research.html
+      target: learning.html#research
 portals:
   - id: collaboration
     title: { zh: 协作网络, chinese-traditional: 協作網絡, en: Collaboration Network }
     description: { zh: 项目组织、学生工作、社会实践与长期协同交付。, chinese-traditional: 專案組織、學生工作、社會實踐與長期協同交付。, en: Project organization, student work, public service, and long-term collaborative delivery. }
     count: { zh: 组织 · 沟通 · 交付, chinese-traditional: 組織 · 溝通 · 交付, en: Organize · Communicate · Deliver }
     updated: 2026-07
-    target: archive.html#collaboration
+    target: projects.html#collaboration
     visual: network
     terms:
       - { text: 团队协作, en: Collaboration, x: 48, y: 44, size: core }
@@ -283,7 +283,7 @@ portals:
     description: { zh: 从能源工程延伸到科学计算、AI 系统与工程经济判断。, chinese-traditional: 從能源工程延伸到科學計算、AI 系統與工程經濟判斷。, en: From energy engineering to scientific computing, AI systems, and engineering-economy judgment. }
     count: { zh: 工程 · 计算 · 系统, chinese-traditional: 工程 · 計算 · 系統, en: Engineering · Computing · Systems }
     updated: 2026-07
-    target: archive.html#interests
+    target: learning.html#interests
     visual: orbit
     terms:
       - { text: 能源动力, en: Energy & Power, x: 48, y: 45, size: core }
@@ -298,7 +298,7 @@ portals:
     description: { zh: 技术笔记、读书记录、实验方法和可复用工程经验。, chinese-traditional: 技術筆記、讀書記錄、實驗方法與可複用工程經驗。, en: Technical notes, reading records, experimental methods, and reusable engineering experience. }
     count: { zh: 记录 · 连接 · 复用, chinese-traditional: 記錄 · 連接 · 複用, en: Record · Connect · Reuse }
     updated: 2026-07
-    target: knowledge.html
+    target: learning.html#knowledge
     visual: hierarchy
     terms:
       - { text: 知识资产, en: Knowledge Assets, x: 47, y: 42, size: core }
@@ -313,7 +313,7 @@ portals:
     description: { zh: 竞赛、证书、专利与社会实践记录，按事实归档。, chinese-traditional: 競賽、證書、專利與社會實踐記錄，按事實歸檔。, en: Competitions, certificates, patents, and public-service records, archived factually. }
     count: { zh: 竞赛 · 专利 · 证书, chinese-traditional: 競賽 · 專利 · 證書, en: Awards · Patents · Certificates }
     updated: 2026-07
-    target: archive.html#honors
+    target: capabilities.html#honors
     visual: stamp
     terms:
       - { text: 全国一等奖, en: National First Prize, x: 45, y: 42, size: core }

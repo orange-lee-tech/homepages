@@ -4,12 +4,16 @@
       eyebrow: '学习',
       title: '学习',
       value: '把好奇心训练成可验证的理解，把短期输入沉淀为长期可复用的知识。终身学习不是不断收藏，而是持续求证、连接与实践。',
-      note: '研究回答“如何求证”，知识系统回答“如何保存与复用”；两者共同构成持续成长的方法。',
+      note: '兴趣决定探索方向，研究回答“如何求证”，知识系统回答“如何保存与复用”；三者共同构成持续成长的方法。',
+      interestsLink: '兴趣与探索',
       researchLink: '研究记录',
       knowledgeLink: '知识系统',
-      researchLabel: '01 / 研究记录',
+      interestsLabel: '01 / 兴趣与探索',
+      interestsTitle: '兴趣与探索',
+      interestsDescription: '兴趣不是静态标签，而是主动选择长期投入、持续追问并愿意承担学习成本的方向。',
+      researchLabel: '02 / 研究记录',
       researchTitle: '研究记录',
-      knowledgeLabel: '02 / 知识系统',
+      knowledgeLabel: '03 / 知识系统',
       knowledgeTitle: '知识系统',
       loading: '正在加载学习档案…',
       error: '学习档案加载失败。'
@@ -18,12 +22,16 @@
       eyebrow: '學習',
       title: '學習',
       value: '把好奇心訓練成可驗證的理解，把短期輸入沉澱為長期可複用的知識。終身學習不是不斷收藏，而是持續求證、連接與實踐。',
-      note: '研究回答「如何求證」，知識系統回答「如何保存與複用」；兩者共同構成持續成長的方法。',
+      note: '興趣決定探索方向，研究回答「如何求證」，知識系統回答「如何保存與複用」；三者共同構成持續成長的方法。',
+      interestsLink: '興趣與探索',
       researchLink: '研究記錄',
       knowledgeLink: '知識系統',
-      researchLabel: '01 / 研究記錄',
+      interestsLabel: '01 / 興趣與探索',
+      interestsTitle: '興趣與探索',
+      interestsDescription: '興趣不是靜態標籤，而是主動選擇長期投入、持續追問並願意承擔學習成本的方向。',
+      researchLabel: '02 / 研究記錄',
       researchTitle: '研究記錄',
-      knowledgeLabel: '02 / 知識系統',
+      knowledgeLabel: '03 / 知識系統',
       knowledgeTitle: '知識系統',
       loading: '正在載入學習檔案…',
       error: '學習檔案載入失敗。'
@@ -32,12 +40,16 @@
       eyebrow: 'Learning',
       title: 'Learning',
       value: 'Train curiosity into verifiable understanding, and turn short-term input into reusable long-term knowledge. Lifelong learning is sustained inquiry, connection, and practice—not endless collection.',
-      note: 'Research asks how to verify; the knowledge system asks how to preserve and reuse. Together they form a durable learning method.',
+      note: 'Interests choose where to explore, research asks how to verify, and the knowledge system asks how to preserve and reuse. Together they form a durable learning method.',
+      interestsLink: 'Interests & exploration',
       researchLink: 'Research records',
       knowledgeLink: 'Knowledge system',
-      researchLabel: '01 / RESEARCH',
+      interestsLabel: '01 / INTERESTS',
+      interestsTitle: 'Interests & Exploration',
+      interestsDescription: 'An interest is not a static label. It is a direction chosen for sustained effort, continued questioning, and real learning cost.',
+      researchLabel: '02 / RESEARCH',
       researchTitle: 'Research Records',
-      knowledgeLabel: '02 / KNOWLEDGE',
+      knowledgeLabel: '03 / KNOWLEDGE',
       knowledgeTitle: 'Knowledge System',
       loading: 'Loading learning archive…',
       error: 'Learning archive failed to load.'
@@ -52,6 +64,12 @@
     const state = $('#learning-state');
     state.textContent = message;
     state.classList.toggle('is-error', isError);
+  }
+
+  async function fetchMarkdown(section) {
+    const response = await fetch(`contents/${ArchiveChrome.language}/${section}.md`, { cache: 'no-cache' });
+    if (!response.ok) throw new Error(`Cannot load ${section} (${response.status})`);
+    return response.text();
   }
 
   function renderResearch(data) {
@@ -99,8 +117,12 @@
     $('#learning-title').textContent = copy.title;
     $('#learning-value').textContent = copy.value;
     $('#learning-note').textContent = copy.note;
+    $('#learning-interests-link').textContent = copy.interestsLink;
     $('#learning-research-link').textContent = copy.researchLink;
     $('#learning-knowledge-link').textContent = copy.knowledgeLink;
+    $('#interests-label').textContent = copy.interestsLabel;
+    $('#interests-title').textContent = copy.interestsTitle;
+    $('#interests-description').textContent = copy.interestsDescription;
     $('#research-label').textContent = copy.researchLabel;
     $('#research-title').textContent = copy.researchTitle;
     $('#knowledge-label').textContent = copy.knowledgeLabel;
@@ -108,12 +130,14 @@
     setState(copy.loading);
 
     try {
-      const [researchResponse, knowledgeResponse] = await Promise.all([
+      const [interestsMarkdown, researchResponse, knowledgeResponse] = await Promise.all([
+        fetchMarkdown('interests'),
         fetch('content/generated/research.json', { cache: 'no-cache' }),
         fetch('content/generated/knowledge.json', { cache: 'no-cache' })
       ]);
       if (!researchResponse.ok || !knowledgeResponse.ok) throw new Error('Learning data unavailable');
       const [research, knowledge] = await Promise.all([researchResponse.json(), knowledgeResponse.json()]);
+      $('#interests-content').innerHTML = marked.parse(interestsMarkdown);
       renderResearch(research);
       renderKnowledge(knowledge);
       setState('');

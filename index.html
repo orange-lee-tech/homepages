@@ -7,8 +7,8 @@
   <meta name="author" content="Li Yucheng" />
   <title>Graphite Archive · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
-  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-2" />
-  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-1" />
+  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-4" />
+  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-2" />
 </head>
 <body class="archive-page">
   <header class="archive-chrome">
@@ -43,13 +43,11 @@
   <main>
     <section class="archive-screen profile-screen" id="profile" aria-labelledby="profile-section-title">
       <div class="archive-shell">
-        <header class="screen-intro">
-          <p class="screen-kicker" id="profile-kicker">01 / PROFILE</p>
-          <div>
-            <h1 id="profile-section-title">当前档案</h1>
-            <p id="profile-section-description">当前身份、能力配置与公开入口。</p>
-          </div>
-        </header>
+        <div class="archive-visually-hidden">
+          <p id="profile-kicker">01 / PROFILE</p>
+          <h1 id="profile-section-title">当前档案</h1>
+          <p id="profile-section-description">当前身份、能力配置与公开入口。</p>
+        </div>
 
         <div class="profile-grid">
           <article class="instrument-card identity-card">
@@ -108,13 +106,11 @@
 
     <section class="archive-screen timeline-screen" id="timeline" aria-labelledby="timeline-title">
       <div class="archive-shell">
-        <header class="screen-intro">
-          <p class="screen-kicker" id="timeline-kicker">02 / TIMELINE</p>
-          <div>
-            <h2 id="timeline-title">形成轨迹</h2>
-            <p id="timeline-description"></p>
-          </div>
-        </header>
+        <div class="archive-visually-hidden">
+          <p id="timeline-kicker">02 / TIMELINE</p>
+          <h2 id="timeline-title">形成轨迹</h2>
+          <p id="timeline-description"></p>
+        </div>
 
         <div class="timeline-board" id="timeline-list" aria-live="polite"></div>
         <p class="timeline-link-message" id="timeline-link-message" aria-live="polite"></p>
@@ -123,13 +119,11 @@
 
     <section class="archive-screen portal-screen" id="archive" aria-labelledby="archive-title">
       <div class="archive-shell">
-        <header class="screen-intro portal-intro">
-          <p class="screen-kicker" id="archive-kicker">03 / ARCHIVE</p>
-          <div>
-            <h2 id="archive-title">档案入口</h2>
-            <p id="archive-description">四个入口，连接完整个人内容世界。</p>
-          </div>
-        </header>
+        <div class="archive-visually-hidden">
+          <p id="archive-kicker">03 / ARCHIVE</p>
+          <h2 id="archive-title">档案入口</h2>
+          <p id="archive-description">四个入口，连接完整个人内容世界。</p>
+        </div>
         <div class="portal-grid" id="archive-portals"></div>
       </div>
     </section>

@@ -8,7 +8,11 @@
       error: '能力档案加载失败。',
       noEvidence: '暂无可公开核验的细化证据；保留为空，不以推断或包装代替事实。',
       level: '等级',
-      primary: '主线 ◆'
+      primary: '主线 ◆',
+      honorsIndex: '荣誉与证据',
+      honorsLabel: '荣誉 / 证据',
+      honorsTitle: '荣誉与证据',
+      honorsDescription: '荣誉不是能力本身，而是某些阶段性成果被外部规则认可后的记录；它应当回到能力形成和实际行动的证据链中。'
     },
     'chinese-traditional': {
       title: '能力',
@@ -18,7 +22,11 @@
       error: '能力檔案載入失敗。',
       noEvidence: '暫無可公開核驗的細化證據；保留為空，不以推斷或包裝代替事實。',
       level: '等級',
-      primary: '主線 ◆'
+      primary: '主線 ◆',
+      honorsIndex: '榮譽與證據',
+      honorsLabel: '榮譽 / 證據',
+      honorsTitle: '榮譽與證據',
+      honorsDescription: '榮譽不是能力本身，而是某些階段性成果被外部規則認可後的記錄；它應回到能力形成與實際行動的證據鏈中。'
     },
     en: {
       title: 'Capabilities',
@@ -28,7 +36,11 @@
       error: 'Capability archive failed to load.',
       noEvidence: 'Detailed evidence remains empty until a verifiable public record is available.',
       level: 'LEVEL',
-      primary: 'PRIMARY ◆'
+      primary: 'PRIMARY ◆',
+      honorsIndex: 'Honors & evidence',
+      honorsLabel: 'HONORS / EVIDENCE',
+      honorsTitle: 'Honors & Evidence',
+      honorsDescription: 'An honor is not the capability itself. It records when a stage outcome was recognized by an external standard and belongs inside the evidence chain of action and formation.'
     }
   };
   const $ = (selector) => document.querySelector(selector);
@@ -41,17 +53,30 @@
     state.classList.toggle('is-error', isError);
   }
 
-  function render(data) {
+  async function fetchAwards() {
+    const response = await fetch(`contents/${ArchiveChrome.language}/awards.md`, { cache: 'no-cache' });
+    if (!response.ok) throw new Error(`Awards HTTP ${response.status}`);
+    return response.text();
+  }
+
+  function render(data, awardsMarkdown) {
     const copy = COPY[ArchiveChrome.language];
     document.title = `${copy.title} · Li Yucheng`;
     $('#capability-eyebrow').textContent = copy.eyebrow;
     $('#capability-title').textContent = copy.title;
     $('#capability-value').textContent = copy.value;
     $('#capability-description').textContent = text(data.page?.description);
+    $('#honors-label').textContent = copy.honorsLabel;
+    $('#honors-title').textContent = copy.honorsTitle;
+    $('#honors-description').textContent = copy.honorsDescription;
+    $('#honors-content').innerHTML = marked.parse(awardsMarkdown);
 
-    $('#capability-index').innerHTML = (data.items || []).map((item) =>
-      `<a href="#${esc(item.id)}">${esc(text(item.title))}</a>`
-    ).join('');
+    $('#capability-index').innerHTML = [
+      ...(data.items || []).map((item) =>
+        `<a href="#${esc(item.id)}">${esc(text(item.title))}</a>`
+      ),
+      `<a href="#honors">${esc(copy.honorsIndex)}</a>`
+    ].join('');
 
     $('#capability-list').innerHTML = (data.items || []).map((item, index) => {
       const levels = (item.levels || []).map((entry) =>
@@ -85,9 +110,12 @@
     const copy = COPY[ArchiveChrome.language];
     setState(copy.loading);
     try {
-      const response = await fetch('content/generated/capabilities.json', { cache: 'no-cache' });
+      const [response, awardsMarkdown] = await Promise.all([
+        fetch('content/generated/capabilities.json', { cache: 'no-cache' }),
+        fetchAwards()
+      ]);
       if (!response.ok) throw new Error(`Capabilities HTTP ${response.status}`);
-      render(await response.json());
+      render(await response.json(), awardsMarkdown);
       setState('');
     } catch (error) {
       console.error(error);
