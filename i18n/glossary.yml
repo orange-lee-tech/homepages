@@ -9,23 +9,16 @@ schools:
   中南大学: Central South University
   元智大学: Yuan Ze University
   能源动力与工程: Energy and Power Engineering
-  机械工程: Mechanical Engineering
+  机械工程学系: Department of Mechanical Engineering
 
 research:
-  物理约束增强神经算子: physics-constraint-enhanced neural operator
-  物理约束机器学习: physics-constrained machine learning
-  不可压流体方程: incompressible fluid equations
-  不可压流体方程式: incompressible fluid equations
-  不可压投影约束: incompressibility projection constraint
-  神经算子: neural operator
-  时间推进神经算子: time-marching neural operator
-  Neural Chorin: Neural Chorin
-  FNO: FNO
-  Burgers: Burgers
-  Navier-Stokes: Navier-Stokes
-  NS: NS
-  HIT: HIT
-  JCP: Journal of Computational Physics
+  科学计算: scientific computing
+  神经偏微分方程代理模型: neural PDE surrogate
+  约束满足: constraint satisfaction
+  有界残差可行性修正: Bounded Residual Feasibility Correction
+  BRFC: BRFC
+  AAAI 2027: AAAI 2027
+  OpenReview: OpenReview
 
 skills:
   LaTeX: LaTeX
