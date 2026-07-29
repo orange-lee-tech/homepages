@@ -542,7 +542,10 @@
       "description": {
         "zh": "项目组织、学生工作、社会实践与长期协同交付。",
         "chinese-traditional": "專案組織、學生工作、社會實踐與長期協同交付。",
-        "en": "Project organization, student work, public service, and long-term collaborative delivery."
+        "en": "Project organization",
+        "student work": null,
+        "public service": null,
+        "and long-term collaborative delivery.": null
       },
       "count": {
         "zh": "组织 · 沟通 · 交付",
@@ -614,7 +617,9 @@
       "description": {
         "zh": "从能源工程延伸到科学计算、AI 系统与工程经济判断。",
         "chinese-traditional": "從能源工程延伸到科學計算、AI 系統與工程經濟判斷。",
-        "en": "From energy engineering to scientific computing, AI systems, and engineering-economy judgment."
+        "en": "From energy engineering to scientific computing",
+        "AI systems": null,
+        "and engineering-economy judgment.": null
       },
       "count": {
         "zh": "工程 · 计算 · 系统",
@@ -686,7 +691,10 @@
       "description": {
         "zh": "技术笔记、读书记录、实验方法和可复用工程经验。",
         "chinese-traditional": "技術筆記、讀書記錄、實驗方法與可複用工程經驗。",
-        "en": "Technical notes, reading records, experimental methods, and reusable engineering experience."
+        "en": "Technical notes",
+        "reading records": null,
+        "experimental methods": null,
+        "and reusable engineering experience.": null
       },
       "count": {
         "zh": "记录 · 连接 · 复用",
@@ -758,7 +766,11 @@
       "description": {
         "zh": "竞赛、证书、专利与社会实践记录，按事实归档。",
         "chinese-traditional": "競賽、證書、專利與社會實踐記錄，按事實歸檔。",
-        "en": "Competitions, certificates, patents, and public-service records, archived factually."
+        "en": "Competitions",
+        "certificates": null,
+        "patents": null,
+        "and public-service records": null,
+        "archived factually.": null
       },
       "count": {
         "zh": "竞赛 · 专利 · 证书",
