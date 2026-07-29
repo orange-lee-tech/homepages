@@ -1,99 +1,171 @@
-const PROJECT_LANG_KEY = 'projects-lang';
-
-function getProjectLang() {
-  const url = new URL(window.location.href);
-  const lang = url.searchParams.get('lang');
-  if (['zh', 'en', 'chinese-traditional'].includes(lang)) {
-    localStorage.setItem(PROJECT_LANG_KEY, lang);
-    return lang;
-  }
-  return localStorage.getItem(PROJECT_LANG_KEY) || localStorage.getItem('lang') || 'zh';
-}
-
-function withLang(href, lang) {
-  const url = new URL(href, window.location.href);
-  url.searchParams.set('lang', lang);
-  return url.pathname + url.search + url.hash;
-}
-
-const text = (value, lang) => {
-  if (typeof value === 'string') return value;
-  return value?.[lang] || value?.zh || '';
-};
-
-function renderProjects(data, lang) {
-  const items = data.items || [];
-  const grid = document.getElementById('projects-grid');
-  const filters = document.getElementById('projects-filters');
-  const status = document.getElementById('projects-status');
-  const count = document.getElementById('projects-count');
-
-  count.textContent = items.length;
-
-  const categories = ['all', ...new Set(items.map(item => item.category))];
-  const categoryLabels = {
+(() => {
+  const LANGUAGES = ['zh', 'chinese-traditional', 'en'];
+  const HTML_LANG = { zh: 'zh-CN', 'chinese-traditional': 'zh-Hant', en: 'en' };
+  const CATEGORY_LABELS = {
     all: { zh: '全部', 'chinese-traditional': '全部', en: 'All' },
     engineering: { zh: '工程', 'chinese-traditional': '工程', en: 'Engineering' },
     research: { zh: '研究', 'chinese-traditional': '研究', en: 'Research' },
     opensource: { zh: '开源', 'chinese-traditional': '開源', en: 'Open Source' },
     profile: { zh: '身份', 'chinese-traditional': '身分', en: 'Profile' }
   };
+  const CHROME = {
+    zh: {
+      home: '主页', research: '研究', knowledge: '知识', updates: '动态',
+      eyebrow: '项目资产', count: '项资产', source: '由单一数据源持续维护。',
+      loading: '正在加载项目数据…', error: '项目数据加载失败。'
+    },
+    'chinese-traditional': {
+      home: '主頁', research: '研究', knowledge: '知識', updates: '動態',
+      eyebrow: '專案資產', count: '項資產', source: '由單一資料來源持續維護。',
+      loading: '正在載入專案資料…', error: '專案資料載入失敗。'
+    },
+    en: {
+      home: 'Home', research: 'Research', knowledge: 'Knowledge', updates: 'Updates',
+      eyebrow: 'Project Assets', count: 'assets', source: 'Generated from a single maintained data source.',
+      loading: 'Loading project data…', error: 'Project data failed to load.'
+    }
+  };
 
-  let active = 'all';
+  let language = 'chinese-traditional';
 
-  function draw() {
-    const visible = active === 'all' ? items : items.filter(item => item.category === active);
-    grid.innerHTML = visible.map(item => `
-      <article class="project-card">
-        <div class="project-card-top">
-          <span class="project-category">${text(categoryLabels[item.category] || item.category, lang)}</span>
-          <span class="project-status">${item.status || ''}</span>
-        </div>
-        <h2>${text(item.title, lang)}</h2>
-        <p>${text(item.summary, lang)}</p>
-        <div class="project-tags">${(item.tags || []).map(tag => `<span>${tag}</span>`).join('')}</div>
-        <div class="project-links">
-          ${(item.links || []).map(link => `<a target="_blank" rel="noopener" href="${link.url}">${text(link.label, lang)}</a>`).join('')}
-        </div>
-      </article>
-    `).join('');
-    status.textContent = `${visible.length} / ${items.length}`;
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  function currentLanguage() {
+    const requested = new URL(window.location.href).searchParams.get('lang');
+    if (LANGUAGES.includes(requested)) return requested;
+    const saved = localStorage.getItem('lang');
+    return LANGUAGES.includes(saved) ? saved : 'chinese-traditional';
   }
 
-  filters.innerHTML = categories.map(category =>
-    `<button class="project-filter ${category === active ? 'active' : ''}" data-category="${category}">${text(categoryLabels[category] || category, lang)}</button>`
-  ).join('');
+  function localized(value) {
+    if (typeof value === 'string' || typeof value === 'number') return String(value);
+    return value?.[language] || value?.zh || value?.en || '';
+  }
 
-  filters.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', () => {
+  function escapeHtml(value) {
+    return String(value ?? '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+  }
+
+  function withLanguage(target) {
+    const raw = String(target || '');
+    if (!raw || /^(https?:|mailto:)/i.test(raw)) return raw;
+    const url = new URL(raw, window.location.href);
+    url.searchParams.set('lang', language);
+    return `${url.pathname.replace(/^\//, '')}${url.search}${url.hash}`;
+  }
+
+  function safeExternalUrl(value) {
+    try {
+      const url = new URL(String(value));
+      return ['http:', 'https:'].includes(url.protocol) ? url.href : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function renderChrome(homepage) {
+    const copy = CHROME[language];
+    document.documentElement.lang = HTML_LANG[language];
+    $('#projects-site-name').textContent = localized(homepage.chrome.brand);
+    $('#projects-home-link').textContent = copy.home;
+    $('#projects-research-link').textContent = copy.research;
+    $('#projects-knowledge-link').textContent = copy.knowledge;
+    $('#projects-posts-link').textContent = copy.updates;
+    $('#projects-eyebrow').textContent = copy.eyebrow;
+    $('#projects-count-label').textContent = copy.count;
+    $('#projects-source-note').textContent = copy.source;
+    $('#projects-status').textContent = copy.loading;
+
+    $$('[data-preserve-lang]').forEach((link) => {
+      link.href = withLanguage(link.getAttribute('href'));
+    });
+
+    $$('.projects-language button').forEach((button) => {
+      button.classList.toggle('is-active', button.dataset.lang === language);
+    });
+  }
+
+  function renderProjects(data) {
+    const items = Array.isArray(data.items) ? data.items : [];
+    const categories = ['all', ...new Set(items.map((item) => item.category).filter(Boolean))];
+    let active = 'all';
+
+    $('#projects-count').textContent = String(items.length);
+    document.title = `${localized(data.page?.title) || 'Projects'} · Li Yucheng`;
+    $('#projects-title').textContent = localized(data.page?.title);
+    $('#projects-description').textContent = localized(data.page?.description);
+
+    function draw() {
+      const visible = active === 'all' ? items : items.filter((item) => item.category === active);
+      $('#projects-grid').innerHTML = visible.map((item) => {
+        const links = (item.links || []).map((link) => {
+          const href = safeExternalUrl(link.url);
+          if (!href) return '';
+          return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(localized(link.label))} ↗</a>`;
+        }).join('');
+        return `
+          <article class="project-card">
+            <div class="project-card-top">
+              <span class="project-category">${escapeHtml(localized(CATEGORY_LABELS[item.category] || item.category))}</span>
+              <span class="project-status">${escapeHtml(item.status || '')}</span>
+            </div>
+            <h2>${escapeHtml(localized(item.title))}</h2>
+            <p>${escapeHtml(localized(item.summary))}</p>
+            <div class="project-tags">${(item.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join('')}</div>
+            <div class="project-links">${links}</div>
+          </article>`;
+      }).join('');
+      $('#projects-status').textContent = `${visible.length} / ${items.length}`;
+    }
+
+    $('#projects-filters').innerHTML = categories.map((category) =>
+      `<button type="button" class="project-filter${category === active ? ' active' : ''}" data-category="${escapeHtml(category)}">${escapeHtml(localized(CATEGORY_LABELS[category] || category))}</button>`
+    ).join('');
+
+    $('#projects-filters').addEventListener('click', (event) => {
+      const button = event.target.closest('button[data-category]');
+      if (!button) return;
       active = button.dataset.category;
-      filters.querySelectorAll('button').forEach(item => item.classList.toggle('active', item === button));
+      $$('#projects-filters button').forEach((candidate) => candidate.classList.toggle('active', candidate === button));
       draw();
     });
-  });
 
-  draw();
-}
+    draw();
+  }
 
-async function initProjects() {
-  const lang = getProjectLang();
-  document.querySelectorAll('[data-lang]').forEach(button => {
-    button.addEventListener('click', () => {
-      localStorage.setItem('lang', button.dataset.lang);
-      window.location.href = withLang('projects.html', button.dataset.lang);
-    });
-  });
+  async function init() {
+    language = currentLanguage();
+    try {
+      const [projectResponse, homepageResponse] = await Promise.all([
+        fetch('content/generated/projects.json', { cache: 'no-cache' }),
+        fetch('content/generated/homepage.json', { cache: 'no-cache' })
+      ]);
+      if (!projectResponse.ok || !homepageResponse.ok) throw new Error('Cannot load project assets');
+      const [projects, homepage] = await Promise.all([projectResponse.json(), homepageResponse.json()]);
+      renderChrome(homepage);
+      renderProjects(projects);
 
-  const response = await fetch('content/generated/projects.json?v=' + Date.now());
-  const data = await response.json();
-  const page = data.page || {};
+      $$('.projects-language button').forEach((button) => {
+        button.addEventListener('click', () => {
+          const nextLanguage = button.dataset.lang;
+          if (!LANGUAGES.includes(nextLanguage)) return;
+          localStorage.setItem('lang', nextLanguage);
+          const url = new URL(window.location.href);
+          url.searchParams.set('lang', nextLanguage);
+          window.location.href = url.href;
+        });
+      });
+    } catch (error) {
+      console.error(error);
+      $('#projects-status').textContent = CHROME[language].error;
+    }
+  }
 
-  document.getElementById('projects-title').textContent = text(page.title, lang);
-  document.getElementById('projects-description').textContent = text(page.description, lang);
-  renderProjects(data, lang);
-}
-
-initProjects().catch(error => {
-  console.error(error);
-  document.getElementById('projects-status').textContent = 'Failed to load projects.';
-});
+  document.addEventListener('DOMContentLoaded', init);
+})();

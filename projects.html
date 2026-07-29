@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Li Yucheng's software, research, and open-source project portfolio" />
   <meta name="author" content="Li Yucheng" />
-  <title>项目与研究资产 | Projects & Research</title>
-
+  <title>Projects · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="static/css/main.css?v=projects1" />
-  <link rel="stylesheet" href="static/css/projects.css?v=projects1" />
+  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-1" />
 </head>
-<body class="projects-page">
+<body class="archive-page projects-page">
   <header class="projects-header">
     <div class="projects-shell projects-header-inner">
-      <a id="projects-site-name" class="projects-brand" href="index.html">李雨橙</a>
+      <a id="projects-site-name" class="projects-brand" href="index.html" data-preserve-lang>Graphite Archive</a>
       <nav class="projects-nav" aria-label="Project page navigation">
-        <a id="projects-home-link" href="index.html#page-top">主页</a>
-        <a id="projects-posts-link" href="posts.html">即时动态</a>
+        <a id="projects-home-link" href="index.html" data-preserve-lang>Home</a>
+        <a id="projects-research-link" href="research.html" data-preserve-lang>Research</a>
+        <a id="projects-knowledge-link" href="knowledge.html" data-preserve-lang>Knowledge</a>
+        <a id="projects-posts-link" href="posts.html" data-preserve-lang>Updates</a>
         <div class="projects-language" aria-label="Language selector">
-          <button type="button" data-lang="zh">中文</button>
-          <button type="button" data-lang="chinese-traditional">繁體</button>
+          <button type="button" data-lang="zh">简</button>
+          <button type="button" data-lang="chinese-traditional">繁</button>
           <button type="button" data-lang="en">EN</button>
         </div>
       </nav>
@@ -31,12 +30,12 @@
   <main>
     <section class="projects-hero">
       <div class="projects-shell">
-        <div class="projects-eyebrow"><i class="bi bi-grid-1x2-fill"></i><span id="projects-eyebrow">PORTFOLIO</span></div>
-        <h1 id="projects-title">项目与研究资产</h1>
-        <p id="projects-description">汇总长期维护的软件工程、科研探索、开源作品与公开学术身份。</p>
+        <p class="projects-eyebrow" id="projects-eyebrow">PROJECT ASSETS</p>
+        <h1 id="projects-title">Projects and Research Assets</h1>
+        <p id="projects-description">Maintained software engineering, research exploration, open-source work, and public academic identities.</p>
         <div class="projects-summary" aria-live="polite">
-          <span><strong id="projects-count">0</strong><span id="projects-count-label">项资产</span></span>
-          <span id="projects-source-note">由单一数据源持续维护</span>
+          <span><strong id="projects-count">0</strong> <span id="projects-count-label">assets</span></span>
+          <span id="projects-source-note">Generated from a single maintained data source.</span>
         </div>
       </div>
     </section>
@@ -44,7 +43,7 @@
     <section class="projects-content">
       <div class="projects-shell">
         <div id="projects-filters" class="projects-filters" role="group" aria-label="Project category filters"></div>
-        <div id="projects-status" class="projects-status" role="status">正在加载项目数据…</div>
+        <p id="projects-status" class="projects-status" role="status">Loading project data…</p>
         <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
       </div>
     </section>
@@ -52,14 +51,14 @@
 
   <footer class="projects-footer">
     <div class="projects-shell">
-      <span>&copy; Li Yucheng 2023-2026</span>
+      <span>© Li Yucheng 2023–2026</span>
       <span class="projects-footer-links">
-        <a href="https://github.com/orange-lee-tech">GitHub</a>
-        <a href="https://openreview.net/profile?id=%7ELi_Yucheng1">OpenReview</a>
+        <a href="https://github.com/orange-lee-tech" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://openreview.net/profile?id=%7EYucheng_Li13" target="_blank" rel="noopener noreferrer">OpenReview</a>
       </span>
     </div>
   </footer>
 
-  <script src="static/js/projects.js?v=projects1"></script>
+  <script src="static/js/projects.js?v=graphite-archive-1"></script>
 </body>
 </html>
