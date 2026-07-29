@@ -1,0 +1,102 @@
+version: 1
+items:
+  - id: energy-power
+    title:
+      zh: 能源与动力
+      chinese-traditional: 能源與動力
+      en: Energy and Power Engineering
+    definition:
+      zh: 能源动力工程基础与相关工程实践能力。
+      chinese-traditional: 能源動力工程基礎與相關工程實踐能力。
+      en: Foundations and engineering practice in energy and power systems.
+    evidence: []
+  - id: ansys
+    title:
+      zh: ANSYS 仿真
+      chinese-traditional: ANSYS 仿真
+      en: ANSYS Simulation
+    definition:
+      zh: 工程数值仿真能力。
+      chinese-traditional: 工程數值仿真能力。
+      en: Engineering numerical simulation capability.
+    evidence: []
+  - id: ai-agent
+    title:
+      zh: AI Agent 工程
+      chinese-traditional: AI Agent 工程
+      en: AI Agent Engineering
+    definition:
+      zh: Agent Runtime、工具调用、MCP 与本地 AI 系统实践。
+      chinese-traditional: Agent Runtime、工具調用、MCP 與本地 AI 系統實踐。
+      en: Practice with agent runtimes, tools, MCP, and local AI systems.
+    evidence: []
+  - id: full-stack
+    title:
+      zh: 全栈开发
+      chinese-traditional: 全棧開發
+      en: Full-stack Development
+    definition:
+      zh: 软件系统、Web 与工程工具开发能力。
+      chinese-traditional: 軟體系統、Web 與工程工具開發能力。
+      en: Software systems, web, and engineering tool development.
+    evidence: []
+  - id: reading-notes
+    title:
+      zh: 读书笔记
+      chinese-traditional: 讀書筆記
+      en: Reading Notes
+    definition:
+      zh: 长期知识整理与方法论沉淀。
+      chinese-traditional: 長期知識整理與方法論沉澱。
+      en: Long-term knowledge organization and methodology building.
+    evidence: []
+  - id: latex
+    title:
+      zh: LaTeX 排版
+      chinese-traditional: LaTeX 排版
+      en: LaTeX Typesetting
+    definition:
+      zh: 科研文档与论文排版能力。
+      chinese-traditional: 科研文件與論文排版能力。
+      en: Academic document and paper typesetting.
+    evidence: []
+  - id: solidworks
+    title:
+      zh: SolidWorks 仿真
+      chinese-traditional: SolidWorks 仿真
+      en: SolidWorks Simulation
+    definition:
+      zh: 三维建模与工程设计实践。
+      chinese-traditional: 三維建模與工程設計實踐。
+      en: 3D modeling and engineering design practice.
+    evidence: []
+  - id: collaboration
+    title:
+      zh: 团队协作
+      chinese-traditional: 團隊協作
+      en: Collaboration
+    definition:
+      zh: 团队组织、沟通与交付能力。
+      chinese-traditional: 團隊組織、溝通與交付能力。
+      en: Team organization, communication, and delivery.
+    evidence: []
+  - id: wps
+    title:
+      zh: WPS 三件套
+      chinese-traditional: WPS 三件套
+      en: Office Productivity
+    definition:
+      zh: 文档、表格和演示工具能力。
+      chinese-traditional: 文件、表格和簡報工具能力。
+      en: Document, spreadsheet, and presentation skills.
+    evidence: []
+  - id: academic-graphic-design
+    title:
+      zh: 平面设计
+      chinese-traditional: 平面設計
+      en: Graphic Design
+    definition:
+      zh: 视觉表达与设计交付能力。
+      chinese-traditional: 視覺表達與設計交付能力。
+      en: Visual communication and design delivery.
+    evidence: []
