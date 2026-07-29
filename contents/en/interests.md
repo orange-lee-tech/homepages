@@ -2,34 +2,27 @@
 
 <div class="md-card">
 
-# Research Directions (Research × Engineering)
+# Research Interests
 
-* **Physics-constrained machine learning**: conservation/incompressibility/projection constraints; rollout stability and control of error accumulation
-* **Neural operators and time integrators**: cross-resolution generalization, long-horizon stability, benchmarking against strong baselines
-* **Scientific computing and numerical diagnostics**: consistent protocols for pseudo-spectral/energy spectrum/statistics; errors are quantifiable and traceable
+* **Physics-constrained machine learning**: conservation constraints, incompressibility, projection methods, and rollout stability
+* **Neural operators and scientific computing**: generalization across resolutions, time evolution, and numerical diagnostics
+* **Reproducible research methods**: consistent evaluation protocols, baselines, and failure analysis
 
-# Engineering Interests (Make It Usable)
+# Engineering Interests
 
-* “Productizing” research outputs: clear entry points, stable user experience, long-term maintainability
-* Data and experiment governance: end-to-end closed loop across versions, directories, scripts, logs, and figures
-* Reproducibility first: results that cannot be reproduced are not results
+* **AI infrastructure**: Agent Runtime, Tool Runtime, MCP, local models, and knowledge systems
+* **Research engineering**: connecting data, code, logs, figures, and documentation into a complete workflow
+* **Product-oriented development**: transforming ideas into stable, maintainable, usable tools
 
 </div>
 
 <div class="md-card">
 
-# Next-Step Plan (Strengthening Checklist)
+# Long-Term Focus
 
-* **Baseline alignment**: numerical comparisons with stronger operators/constraint methods; unified evaluation protocols
-* **Theory reinforcement**: convergence/error bounds or verifiable numerical evidence to support key hypotheses
-* **Scaling up**: 2D → 3D, higher resolutions, more complex boundary/external forcing setups
-* **Communication upgrade**: compress “method—evidence—conclusion” into a readable 2-page introduction + figure-driven storyline
-
-# Long-Term Capability Stack (Self-Development)
-
-* Academic writing: structured narrative, figure-driven communication, reader-friendly delivery
-* Engineering capability: reproducible, maintainable, deliverable
-* Systems thinking: closed-loop execution from requirements to solution to validation
+* Academic communication: structured narratives from methods to evidence to conclusions
+* Engineering capability: reproducible, maintainable, deliverable systems
+* Systems thinking: closed-loop execution from requirements to solutions and validation
 
 </div>
 
