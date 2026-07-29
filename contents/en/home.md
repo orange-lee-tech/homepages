@@ -1,12 +1,12 @@
 # Current Profile
 
 - Undergraduate in Energy and Power Engineering at Central South University, expected to graduate in 2027
-- Exchange study in Mechanical Engineering at Yuan Ze University in Spring 2026
+- Completed a Spring 2026 exchange in the Department of Mechanical Engineering at Yuan Ze University
 - Interested in scientific computing, AI engineering, and reproducible research
 
 # Current Tracks
 
-- **Research**: physics-constrained neural operators for stability, generalization, and interpretability in incompressible-flow problems
+- **Paper**: AAAI 2027 submission, “BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates”; Yucheng Li is the fourth author
 - **Engineering**: desktop AI runtimes, browser extensions, and maintainable personal knowledge assets
 - **Communication**: turning research, code, and process into verifiable, readable, and continuously maintained public work
 
