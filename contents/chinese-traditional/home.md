@@ -7,8 +7,8 @@
 # 當前主線
 
 - **論文**：AAAI 2027 投稿《BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates》，Yucheng Li 位列第四作者
-- **工程**：開發桌面 AI Runtime、瀏覽器擴充功能與長期可維護的個人知識資產
-- **表達**：將研究、程式碼和過程整理為可驗證、可閱讀、可持續更新的公開成果
+- **工程**：開發桌面 AI Runtime、瀏覽器擴展與長期可維護的個人知識資產
+- **表達**：將研究、代碼和過程整理為可驗證、可閱讀、可持續更新的公開成果
 
 # 工作偏好
 
