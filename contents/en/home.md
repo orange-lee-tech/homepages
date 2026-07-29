@@ -1,19 +1,19 @@
-[![GitHub](https://img.shields.io/badge/orange--lee--tech-github-blue?logo=github)](https://github.com/orange-lee-tech)Latest updates===2026.2.6
+# Current Profile
 
-Welcome to my personal homepage! The navigation bar can help you quickly access my various public information, as well as switch languages.
+- Undergraduate in Energy and Power Engineering at Central South University, expected to graduate in 2027
+- Exchange study in Mechanical Engineering at Yuan Ze University in Spring 2026
+- Interested in scientific computing, AI engineering, and reproducible research
 
-# Current Status
+# Current Tracks
 
-* Recent focus: research and experimental validation of physics-constraint-enhanced neural operators for incompressible fluid equations (Neural Chorin)
-* Capability keywords: modeling–experiment closed loop｜paper writing & typesetting (LaTeX)｜engineering modeling (SolidWorks)｜data processing (Python/Origin)
-* Delivery preference: reproducible, explainable, and presentable (papers/patents/works/defense)
+- **Research**: physics-constrained neural operators for stability, generalization, and interpretability in incompressible-flow problems
+- **Engineering**: desktop AI runtimes, browser extensions, and maintainable personal knowledge assets
+- **Communication**: turning research, code, and process into verifiable, readable, and continuously maintained public work
 
-# Education Background
+# Working Principles
 
-* Undergraduate student: Central South University (985)｜Energy and Power Engineering｜Expected graduation in 2027
-* Undergraduate exchange: Yuan Ze University (TOP12)｜Mechanical Engineering (English-taught)｜Provisionally admitted, Spring 2026 semester
+Reproducible｜Maintainable｜Deliverable
 
 # Contact
 
-* Email: [1010969261@qq.com](mailto:1010969261@qq.com)
-
+Email: [1010969261@qq.com](mailto:1010969261@qq.com)
