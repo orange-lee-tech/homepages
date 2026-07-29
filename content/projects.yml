@@ -66,7 +66,7 @@ items:
           zh: 当前仓库
           chinese-traditional: 目前儲存庫
           en: Current repository
-        url: https://github.com/orange-lee-tech/LYC_homepages
+        url: https://github.com/orange-lee-tech/homepages
 
   - id: neural-chorin
     category: research
