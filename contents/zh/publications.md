@@ -3,20 +3,20 @@
 <div class="md-card">
 
 # 专利（可核验）
-- **202510469264.X**（已授权）｜一种基于氢冶金原理的可移动式钨资源回收装置  
+- **202510469264.X**（已授权）｜一种基于氢冶金原理的可移动式钨资源回收装置
 - **202510196241.6**（在办）｜超快高温速控一体机
 
 </div>
 
 <div class="md-card">
 
-# 面向不可压流体方程的物理约束增强神经算子
-<div class="card-meta">课题组组长｜2025/07/02–至今</div>
+# BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates
+<div class="card-meta">AAAI 2027 投稿｜Yucheng Li（第四作者）</div>
 
-- 指导教师：刘圣军（湖南省杰青，中南大学工程建模与科学计算研究所所长，博导）
-- 方法：Neural Chorin 时间推进神经算子（FNO 预测 + 控制体残差纠偏 + 不可压投影约束）
-- 进展：完成 1D Burgers 四模型对比；推进 2D 不可压 NS(HIT) 零样本分辨率泛化与消融证据链
-- 目标：寒假完成主体工作；目标期刊 JCP
+- 投稿去向：AAAI 2027
+- 作者顺序：Jinlong Li（第一作者）、Fengyi Zhang（第二作者）、Yongjie Hu（第三作者）、Yucheng Li（第四作者）、Shengjun Liu（第五作者）
+- 状态：OpenReview 已记录投稿及 2026-07-28 修订
+- 公开页面：[OpenReview](https://openreview.net/forum?id=nN8DoQbMno)
 
 </div>
 
