@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+SC:wght@400;500;600;700&display=swap');
+
+:root {
+  --graphite: #090d12;
+  --panel: #0f1620;
+  --panel-rise: #151f2b;
+  --line: #263342;
+  --text: #f3f6f8;
+  --muted: #aab5c2;
+  --ice: #78d6e8;
+  --brass: #c5a166;
+  --green: #79c99e;
+}
+
+.archive-page {
+  margin: 0;
+  background: var(--graphite);
+  color: var(--text);
+  font-family: 'IBM Plex Sans SC', sans-serif;
+}
+
+.archive-shell {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.archive-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(9,13,18,.86);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.archive-nav-inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.archive-brand,
+.archive-nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.archive-section {
+  padding: 64px 0;
+}
+
+.archive-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px;
+}
+
+.archive-status {
+  color: var(--green);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.archive-portals {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.radar-wrap {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.radar-svg {
+  width: min(100%, 440px);
+  height: auto;
+}
+
+.radar-label {
+  fill: var(--text);
+  cursor:pointer;
+  font-size:14px;
+}
+
+.year-switch {
+  display:flex;
+  gap:12px;
+}
+
+.year-switch button {
+  min-height:44px;
+  padding:0 16px;
+  background:transparent;
+  color:var(--muted);
+  border:1px solid var(--line);
+  border-radius:12px;
+}
+
+.year-switch button.active {
+  border-color:var(--ice);
+  color:var(--ice);
+}
+
+@media(max-width:900px){
+  .archive-grid,.archive-portals{grid-template-columns:1fr}
+  .archive-shell{width:min(100% - 28px,1240px)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important}
+}
