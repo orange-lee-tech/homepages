@@ -1,80 +1,56 @@
-name: Finish Approved Content Refactor
+name: Content and Build Check
 
 on:
   push:
     branches:
       - main
+  pull_request:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: content-check-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  migrate:
-    if: "${{ github.event.head_commit.message == 'chore: finish approved content refactor' }}"
+  validate:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+          cache-dependency-path: package.json
 
       - name: Install dependencies
         run: npm install --no-package-lock
 
-      - name: Create validated commits
+      - name: Generate content outputs
+        run: npm run build
+
+      - name: Verify generated outputs
+        run: npm run build:check
+
+      - name: Validate content
+        run: npm run check
+
+      - name: Check whitespace errors
+        run: git diff --check
+
+      - name: Reject dependency artifacts
         shell: bash
-        env:
-          BOOTSTRAP_SHA: ${{ github.sha }}
         run: |
-          set -euo pipefail
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          validate_repo() {
-            npm run build
-            npm run build:check
-            npm run check
-            git diff --check
+          if git status --short | grep -E '(^|[[:space:]])node_modules/|package-lock\.json$'; then
+            echo "Forbidden dependency artifact detected."
             git status --short
-            if git status --short | grep -E '(^|[[:space:]])node_modules/|package-lock\.json$'; then
-              echo "Forbidden dependency artifact detected."
-              exit 1
-            fi
-          }
-
-          write_files() {
-            FILE_MAP="$1" python3 -c 'import base64,json,os,pathlib; files=json.loads(os.environ["FILE_MAP"]); [(pathlib.Path(p).parent.mkdir(parents=True,exist_ok=True), pathlib.Path(p).write_bytes(base64.b64decode(v)), print("wrote "+p)) for p,v in files.items()]'
-          }
-
-          echo "Commit 3/4: clarify content boundaries"
-          git show "${BOOTSTRAP_SHA}^:.github/workflows/content-check.yml" > .github/workflows/content-check.yml
-          write_files '{"contents/zh/about.md":"PGRpdiBjbGFzcz0ibWQtZ3JpZCI+Cgo8ZGl2IGNsYXNzPSJtZC1jYXJkIj4KCiMg5YWz5LqO5oiRCgrmiJHku6Xog73mupDkuI7liqjlipvlt6XnqIvkuLrkuJPkuJrln7rnoYDvvIzlsIbnrJHlraborqHnrpfjgIHmnLrlmajlrabkuaDlkozova/ku7blt6XnqIvnlKjkuo7nnJ/lrp7pl67popjjgILnm7jmr5TnvZfnrpfkuIDkuKrlt6XlhbflkI3np7DvvIzmiJHmm7TlhbPms6jog73lkKblvaLmiJDmuIXmmbDnmoTpl67popjjgIHlj6/pnaDnmoTlrp7pqozvvIzku6Xlj4rlj6/ku6Xplb/mnJ/nu7TmiqTnmoTmiJDmnpzjgIIKCiMg5oiR5Zyo5YGa55qE5LqLCgotICoq56eR56CU5o6i57SiKirvvJrlm7Tnu5XkuI3lj6/ljovmtYHkvZPjgIHnpZ7nu4/nrpflrZDkuI7niannkIbnuqbmnZ/lvIDlsZXlrp7pqowKLSAqKuW3peeoi+Wunui3tSoq77ya5byA5Y+R5qGM6Z2iIEFJIFJ1bnRpbWXjgIHmtY/op4jlmajmianlsZXkuI7lhoXlrrnnu7TmiqTlt6XlhbcKLSAqKuWFrOW8gOihqOi+vioq77ya6YCa6L+HIEdpdEh1YuOAgU9wZW5SZXZpZXcg5ZKM5Liq5Lq65Li76aG157uE57uH6aG555uu44CB56CU56m25LiO55+l6K+G6K6w5b2VCgojIOWPr+mqjOivgeaIkOaenAoKLSDlj4LkuI7lvaLmiJAgMiDpobnkuJPliKnmiJDmnpzvvIzlhbbkuK0gMSDpobnlt7LmjojmnYMKLSDlhbfmnInlhajlm73kuIDnrYnlpZbjgIHmlbDlrablu7rmqKHkuI7np5HnoJTpobnnm67nu4/ljoYKLSDmjIHnu63nu7TmiqTlhazlvIDku6PnoIHjgIHlrp7pqozorrDlvZXlkozmioDmnK/mlofnq6AKCjwvZGl2PgoKPGRpdiBjbGFzcz0ibWQtY2FyZCI+CgojIOiDveWKm+e7k+aehAoKPGRpdiBjbGFzcz0ibWQta3BpIj4KICA8ZGl2IGNsYXNzPSJrIj48Yj7np5HlraborqHnrpc8L2I+PHNwYW4+5pWw5YC85pa55rOV772cUERF772c6K+v5beu5LiO56iz5a6a5oCnPC9zcGFuPjwvZGl2PgogIDxkaXYgY2xhc3M9ImsiPjxiPkFJIOW3peeoizwvYj48c3Bhbj5BZ2VudO+9nFRvb2wgUnVudGltZe+9nE1DUO+9nOacrOWcsOaooeWeizwvc3Bhbj48L2Rpdj4KICA8ZGl2IGNsYXNzPSJrIj48Yj7ova/ku7blt6XnqIs8L2I+PHNwYW4+UHl0aG9u772cQysr772cV2Vi772c6Ieq5Yqo5YyW5LiO5rWL6K+VPC9zcGFuPjwvZGl2PgogIDxkaXYgY2xhc3M9ImsiPjxiPuaKgOacr+ihqOi+vjwvYj48c3Bhbj7orrrmloflj5nkuovvvZzlm77ooajvvZzmlofmoaPkuI7msYfmiqU8L3NwYW4+PC9kaXY+CjwvZGl2PgoKIyDlt6XkvZzljp/liJkKCi0g5YWI5piO56Gu6Zeu6aKY44CB6K+E5Lu35Y+j5b6E5ZKM5Lqk5LuY6L6555WMCi0g55So5pWw5o2u44CB5Luj56CB5ZKM5paH5qGj5pSv5pKR57uT6K66Ci0g6K6w5b2V5aSx6LSl5qih5byP77yM6K6p6L+t5Luj6L+H56iL5Y+v5Lul6L+95rqvCi0g5LyY5YWI5a6M5oiQ5Y+v55So54mI5pys77yM5YaN5oyB57ut5pS56L+bCgo8L2Rpdj4KCjwvZGl2Pgo=","contents/en/about.md":"PGRpdiBjbGFzcz0ibWQtZ3JpZCI+Cgo8ZGl2IGNsYXNzPSJtZC1jYXJkIj4KCiMgQWJvdXQgTWUKCldpdGggRW5lcmd5IGFuZCBQb3dlciBFbmdpbmVlcmluZyBhcyBteSBhY2FkZW1pYyBmb3VuZGF0aW9uLCBJIGFwcGx5IHNjaWVudGlmaWMgY29tcHV0aW5nLCBtYWNoaW5lIGxlYXJuaW5nLCBhbmQgc29mdHdhcmUgZW5naW5lZXJpbmcgdG8gcmVhbCBwcm9ibGVtcy4gUmF0aGVyIHRoYW4gbGlzdGluZyB0b29scywgSSBmb2N1cyBvbiBmb3JtaW5nIGNsZWFyIHF1ZXN0aW9ucywgcmVsaWFibGUgZXhwZXJpbWVudHMsIGFuZCBvdXRjb21lcyB0aGF0IGNhbiBiZSBtYWludGFpbmVkIG92ZXIgdGltZS4KCiMgV2hhdCBJIFdvcmsgT24KCi0gKipSZXNlYXJjaCBleHBsb3JhdGlvbioqOiBleHBlcmltZW50cyBhcm91bmQgaW5jb21wcmVzc2libGUgZmxvdywgbmV1cmFsIG9wZXJhdG9ycywgYW5kIHBoeXNpY3MgY29uc3RyYWludHMKLSAqKkVuZ2luZWVyaW5nIHByYWN0aWNlKio6IGRlc2t0b3AgQUkgcnVudGltZXMsIGJyb3dzZXIgZXh0ZW5zaW9ucywgYW5kIGNvbnRlbnQtbWFpbnRlbmFuY2UgdG9vbHMKLSAqKlB1YmxpYyBjb21tdW5pY2F0aW9uKio6IG9yZ2FuaXppbmcgcHJvamVjdHMsIHJlc2VhcmNoLCBhbmQga25vd2xlZGdlIHRocm91Z2ggR2l0SHViLCBPcGVuUmV2aWV3LCBhbmQgdGhpcyB3ZWJzaXRlCgojIFZlcmlmaWFibGUgV29yawoKLSBDb250cmlidXRlZCB0byB0d28gcGF0ZW50IG91dGNvbWVzLCBpbmNsdWRpbmcgb25lIGdyYW50ZWQgcGF0ZW50Ci0gRXhwZXJpZW5jZSB3aXRoIGEgbmF0aW9uYWwgZmlyc3QtcHJpemUgcHJvamVjdCwgbWF0aGVtYXRpY2FsIG1vZGVsaW5nLCBhbmQgcmVzZWFyY2ggcHJvamVjdHMKLSBPbmdvaW5nIG1haW50ZW5hbmNlIG9mIHB1YmxpYyBjb2RlLCBleHBlcmltZW50IHJlY29yZHMsIGFuZCB0ZWNobmljYWwgd3JpdGluZwoKPC9kaXY+Cgo8ZGl2IGNsYXNzPSJtZC1jYXJkIj4KCiMgQ2FwYWJpbGl0eSBTdHJ1Y3R1cmUKCjxkaXYgY2xhc3M9Im1kLWtwaSI+CiAgPGRpdiBjbGFzcz0iayI+PGI+U2NpZW50aWZpYyBDb21wdXRpbmc8L2I+PHNwYW4+bnVtZXJpY2FsIG1ldGhvZHPvvZxQREVz772cZXJyb3IgYW5kIHN0YWJpbGl0eTwvc3Bhbj48L2Rpdj4KICA8ZGl2IGNsYXNzPSJrIj48Yj5BSSBFbmdpbmVlcmluZzwvYj48c3Bhbj5hZ2VudHPvvZx0b29sIHJ1bnRpbmXvvZxNQ1DvvZxsb2NhbCBtb2RlbHM8L3NwYW4+PC9kaXY+CiAgPGRpdiBjbGFzcz0iayI+PGI+U29mdHdhcmUgRW5naW5lZXJpbmc8L2I+PHNwYW4+UHl0aG9u772cQysr772cd2VifGF1dG9tYXRpb24gYW5kIHRlc3Rpbmc8L3NwYW4+PC9kaXY+CiAgPGRpdiBjbGFzcz0iayI+PGI+VGVjaG5pY2FsIENvbW11bmljYXRpb248L2I+PHNwYW4+cGFwZXIgbmFycmF0aXZl772cZmlndXJlc++9nGRvY3VtZW50YXRpb24gYW5kIHByZXNlbnRhdGlvbnM8L3NwYW4+PC9kaXY+CjwvZGl2PgoKIyBXb3JraW5nIFByaW5jaXBsZXMKCi0gRGVmaW5lIHRoZSBwcm9ibGVtLCBldmFsdWF0aW9uIHByb3RvY29sLCBhbmQgZGVsaXZlcnkgYm91bmRhcnkgZmlyc3QKLSBTdXBwb3J0IGNvbmNsdXNpb25zIHdpdGggZGF0YSwgY29kZSwgYW5kIGRvY3VtZW50YXRpb24KLSBSZWNvcmQgZmFpbHVyZSBtb2RlcyBzbyBpdGVyYXRpb24gcmVtYWlucyB0cmFjZWFibGUKLSBEZWxpdmVyIGEgdXNhYmxlIHZlcnNpb24gZmlyc3QsIHRoZW4gaW1wcm92ZSBpdCBjb250aW51b3VzbHkKCjwvZGl2PgoKPC9kaXY+Cg==","contents/zh/interests.md":"PGRpdiBjbGFzcz0ibWQtZ3JpZCI+Cgo8ZGl2IGNsYXNzPSJtZC1jYXJkIj4KCiMg56CU56m25YW06LajCgotICoq54mp55CG57qm5p2f5py65Zmo5a2m5LmgKirvvJrlsIblrpjmgZLjgIHkuI3lj6/ljovlkozmnZXlvbHmnaHku7bkuKrlhaXmqKHlnovkuI7or4Tku7cKLSAqKuelnue7j+eul+WtkCoq77ya5YWz5rOo6Leo5YiG6L6o546H5rOb5YyW44CB6ZW/5pe26YCA6L+b5ZKM6K+v5beu57Sv56evCi0gKirmnKnlraborqHnrpcqKu+8mumAmui/h+WAvOWAvOiviuOAgeiDveiwseWSjOe7n+iuoeS4h+eQhuino+aooeWei+ihqOS4ugoKPC9kaXY+Cgo8ZGl2IGNsYXNzPSJtZC1jYXJkIj4KCiMg5bel56iL5YW06LajCgotICoqQUkg5bqU55So5Z+656GA6K6+5pa9KirvvJpBZ2VudCBSdW50aW1l44CB5bel5YW36LCD55So44CBTUNQ44CB6K6w5b+G5LiO5pys5Zyw5qih5Z6LCi0gKirmnKnlraborqHlt6XnqIvljJYqKu+8muaJk+mAmuaVsOaNruOAgeiEmuacrO+8jOaXpeW/l+OAgeWbvueahOWSjOaWh+aho+S4i+eahOWFqOmTvuadqQotICoq6L275YeP5Lqn5ZOB5byA5Y+RKirovJrliqDlhbfljZfnmoTnl5vngrnlgZrmiJDlj6/lronoo4XjgIHlj6/mtYvor5XjgIHlj6/nu7TmiqTnmoTlt6XlhbcKCiMg5oyB57ut6L+95ZeuCgrnu5Pmnpzog73lkKblpI3njrDvvJ/or6/lt67og73lkKblrprkvY3vvJ/lt6Xlhbfor73lkKblh7TmiJDvvJ/or7vogIXog73lkKb快速理解？
-
-</div>
-
-</div>
-","contents/en/interests.md":"PGRpdiBjbGFzcz0ibWQtZ3JpZCI+Cgo8ZGl2IGNsYXNzPSJtZC1jYXJkIj4KCiMgUmVzZWFyY2ggSW50ZXJlc3RzCgotICoqUGh5c2ljcy1jb25zdHJhaW5lZCBtYWNoaW5lIGxlYXJuaW5nKio6IGluY29ycG9yYXRpbmcgY29uc2VydmF0aW9uLCBpbmNvbXByZXNzaWJpbGl0eSwgYW5kIHByb2plY3Rpb24gY29uZGl0aW9ucyBpbnRvIG1vZGVscyBhbmQgZXZhbHVhdGlvbgotICoqTmV1cmFsIG9wZXJhdG9ycyoqOiBjcm9zcy1yZXNvbHV0aW9uIGdlbmVyYWxpemF0aW9uLCBsb25nLWhvcml6b24gcm9sbG91dCwgYW5kIGFjY3VtdWxhdGVkIGVycm9yCi0gKipTY2llbnRpZmljIGNvbXB1dGluZyoqOiB1c2luZyBudW1lcmljYWwgZGlhZ25vc3RpY3MsIGVuZXJneSBzcGVjdHJhLCBhbmQgc3RhdGlzdGljcyB0byB1bmRlcnN0YW5kIG1vZGVsIGJlaGF2aW9yCgo8L2Rpdj4KCjxkaXYgY2xhc3M9Im1kLWNhcmQiPgoKIyBFbmdpbmVlcmluZyBJbnRlcmVzdHMKCi0gKipBSSBhcHBsaWNhdGlvbiBpbmZyYXN0cnVjdHVyZSoqOiBhZ2VudCBydW50aW1lcywgdG9vbCBjYWxsaW5nLCBNQ1AsIG1lbW9yeSwgYW5kIGxvY2FsIG1vZGVscwotICoqUmVzZWFyY2ggZW5naW5lZXJpbmcqKjogY29ubmVjdGluZyBkYXRhLCBzY3JpcHRzLCBsb2dzLCBmaWd1cmVzLCBhbmQgZG9jdW1lbnRhdGlvbgotICoqTGlnaHR3ZWlnaHQgcHJvZHVjdCBkZXZlbG9wbWVudCoqOiB0dXJuaW5nIGNvbmNyZXRlIHBhaW4gcG9pbnRzIGludG8gaW5zdGFsbGFibGUsIHRlc3RhYmxlLCBhbmQgbWFpbnRhaW5hYmxlIHRvb2xzCgojIFF1ZXN0aW9ucyBJIEtlZXAgQXNraW5nCgpDYW4gdGhlIHJlc3VsdCBiZSByZXByb2R1Y2VkPyBDYW4gdGhlIGVycm9yIGJlIGxvY2F0ZWQ/IENhbiB0aGUgdG9vbCBiZSBtYWludGFpbmVkPyBDYW4gYSByZWFkZXIgdW5kZXJzdGFuZCB0aGUgd29yayBxdWlja2x5PwoKPC9kaXY+Cgo8L2Rpdj4K","content/projects.yml":"dmVyc2lvbjogMQoKcGFnZToKICB0aXRsZToKICAgIHpoOiDpobnnm67otYTkuqcKICAgIGNoaW5lc2UtdHJhZGl0aW9uYWw6IOWwiOahiOizh+eUogogICAgZW46IFByb2plY3RzCiAgZGVzY3JpcHRpb246CiAgICB6aDog5rGH5oC75oyB57ut57u05oqk55qE6L2v5Lu244CB5rWP6KeI5Zmo5omp5bGV5LiO5byA5rqQ5bel56iL44CC5q+P5Liq6aG555uu5by66LCD5piO56Gu6Zeu6aKY44CB5Y+v55So54mI5pys5ZKM6ZW/5pyf57u05oqk44CCCiAgICBjaGluZXNlLXRyYWRpdGlvbmFsOiDlva彙?","content/research.yml":"dmVyc2lvbjogMQoKcGFnZToKICBraW5kOiByZXNlYXJjaAogIGV5ZWJyb3c6CiAgICB6aDog56eR56CU6LWE5LqnCiAgICBjaGluZXNlLXRyYWRpdGlvbmFsOiDnp5HnoJTos4fnlKIKICAgIGVuOiBSRVNFQVJDSCBBU1NFVFMKICB0aXRsZToKICAgIHpoOiDnoJTnqbboo6/nvoQKICAgIGNoaW5lc2UtdHJhZGl0aW9uYWw6IOeglOeptui3r+WvpQogICAgZW46IFJlc2VhcmNoIFBhdGgKICBkZXNjcmlwdGlvbjoKICAgIHpoOiDku6XkuIDkuKrnnJ/lrp7noJTnqbnpn67popjkuLrkuLvnur/vvIzpm4bkuK3lkYjnjrDnoJTnqbnpn67popjjgIHlrp7pqozmlrnms5XjgIHor4Hmja7moIflh4bkuI7ku43lvoXlm57nrZTnmoTpl67popjjgIIKICAgIGNoaW5lc2UtdHJhZGl0aW9uYWw6IOS7peS4gOS6i+e9nW?"}'
-          validate_repo
-          git add -A
-          git commit --amend -m "content: clarify profile and research boundaries"
-
-          remote_sha="$(git ls-remote origin refs/heads/main | cut -f1)"
-          if [ "$remote_sha" != "$BOOTSTRAP_SHA" ]; then
-            echo "main moved during migration; refusing to rewrite."
             exit 1
           fi
-          git push --force-with-lease=refs/heads/main:"$BOOTSTRAP_SHA" origin HEAD:main
 
-          echo "Commit 4/4: reorganize achievements"
-          write_files '{"contents/zh/awards.md":"PHNwYW4gaWQ9ImF3YXJkcy11ZyI+PC9zcGFuPgoKIyDmnKznp5HpmLbmrrXvvJrnq57otZvkuI7ojaPoqokKCi0gMjAyNS8wNuKAkzIwMjUvMDjvvZzlhajlm73kuIDnrYnlpZbvvZzlia/kuLvmjIHvvZznrKzljYHlhavlsYrlhajlm73lpKflrabnlJ/oioLog73lh4/mjpLnpL7kvJrlrp7ot7XkuI7np5HmioPnq57otZsKLSAyMDI1LzA04oCTMjAyNS8wOO+9nOWFqOWbveS8mOengOiuuuaWh++9nOS4u+aMge+9nOa3seWcs+adr+aVsOWtpuW7uuaooeaMkeaImOi1mwotIDIwMjUvMDTvvZzljY7kuK3otZvljLrkuInnrYnlpZbvvZzkuLvmjIHvvZznrKzkupTlsYogTWF0aG9yQ3VwIOaVsOWtpuW6lOeUqOaMkeaImOi1mwotIDIwMjUvMDHvvZzlm73pmYUgUyDlpZbvvZzkuLvmjIHvvZznvo7lm73lpKflrabnlJ/mlbDlrablu7rmqKHnq57otZvvvIhNQ00vQ09NQVDvvIkKLSAyMDI1772c5qCh57qn5LiA562J5aWW772c5oiQ5ZGY772c56ys5LqM5Y2B5bGK5Lit5Y2X5aSn5a2m5pWw5a2m5bu65qih56ue6LWbCi0gMjAyNC8xMOKAkzIwMjUvMDXvvZzmuZbljZfnnIHkuoznrYnlpZbvvZzmiJDlkZjvvZznrKzkuInlsYrmubbljZfnnIHlpKflrabnlJ/oioLog73lh4/mjpLnpL7kvJrlrp7ot7XkuI7np5HmioPnq57otZsKLSAyMDI0LzA1772c5qCh57qn5LiA562J5aWW772c5Li75oyB772c56ys5Y2B5Lmd5bGK5Lit5Y2X5aSn5a2m5pWw5a2m5bu65qih56ue6LWbCi0gMjAyNO+9nOesrOWbm+WQje+9nOS4reWNl+Wkp+WtpuesrOWNgeWxiueZu+WxseaDiei1mwotIDIwMjTvvZzlm6LkvZPnrKzkuozlkI3vvZzkuK3ljZflpKflrabnrKzljYHkuIDlsYrmqKHlm63pqazmi4nmnZ4KLSAyMDIzLzEy772c5YWo5Zu95LiJ562J5aWW772c5Lq65rCR5Lit5Zu95p2C5b+X56S+44CB5Lit5Zu95oql6YGT5p2C5b+X56S+Ci0gMjAyMy8xMO+9nOWGq+iusOWFiOi/m+S4quS6uu+9nOS4reWNl+Wkp+WtpgoKIyDor4HkuaYKCi0gMjAyNC8xMe+9nOWFqOWbveiuoeeul+acuuetiee6p+iAg+ivleS6jOe6p+WQiOagvOivgeS5pgotIDIwMjQvMTHvvZzmma7pgJror53msLTlubPmtYvor5XkuoznuqfkuZnnuYdor4HkuaYKLSAyMDIzLzEy772c5b+D6IK65aSN6IuP77yIQ1BSK0FFRO+8ieWfueiureivgeS5pgotIDIwMjMvMTHvvZzmnIvovaDlv4PnkIborIXlr7zmgqDog73ln7norq3lkIjmoLzor4HkuaYKCiA8c3BhbiBpZD0iYXdhcmRzLWhzIj48L3NwYW4+CgojIOaXqeacn+e7j+WOhu+8iOeyvumAie+8iQoKLSAyMDIy772c55yB57qn5LyY56eA5a2m55Sf5bmy6YOo772c5LqR5Y2X55yB5pWZ6IKy5Y6FCi0gMjAyMu+9nOecgee6p+S4gOetieWllu+9nOesrOS4ieWNgeWFreWxiuWFqOWbveS4reWtpueUn+WMluWtpuWlpeael+WMueWFi+ernui1mwotIDIwMjLvvZznnIHnuqfkuInnrYnlpZbvvZznrKzkuInljYHkuZ3lsYrlhajlm73kuK3lrabnlJ/niannkIblpaXmnpfljLnlhYvnq57otZsKLSAyMDIx772c55yB57qn5LiA562J5aWW772cTk9JLUNTUC1KL1PvvIhDKyvvvIkKLSAyMDIy772c4oCc56qB56C06ICF4oCd5aWW5a2m6YeRIDUwMDAg5YWD772c5piG5piO5biC5pWZ6IKy5L2T6IKy5bGACi0gMjAyMe+9nOWtpueUn+S8muS4u+W4re+9nOaYhuaYjuW4guesrOS4gOS4reWtpuilv+WxseWtpuagoeesrOWNgeWbm+WxiuWtpueUn+iBlOWQiOS8mgo=","contents/en/awards.md":"PHNwYW4gaWQ9ImF3YXJkcy11ZyI+PC9zcGFuPgoKIyBVbmRlcmdyYWR1YXRlIENvbXBldGl0aW9ucyBhbmQgSG9ub3JzCgotIDIwMjUvMDbigJMyMDI1LzA4772cTmF0aW9uYWwgRmlyc3QgUHJpemXvvZxEZXB1dHkgUHJvamVjdCBMZWFk772cMTh0aCBDaGluYSBDb2xsZWdlIFN0dWRlbnRz4oCZIEVuZXJneSBDb25zZXJ2YXRpb24gYW5kIEVtaXNzaW9uIFJlZHVjdGlvbiBDb21wZXRpdGlvbgotIDIwMjUvMDTigJMyMDI1LzA4772cTmF0aW9uYWwgT3V0c3RhbmRpbmcgUGFwZXLvvZxQcm9qZWN0IExlYWTvvZxTaGVuemhlbiBDdXAgTWF0aGVtYXRpY2FsIE1vZGVsaW5nIENoYWxsZW5nZQotIDIwMjUvMDTvvZxDZW50cmFsIENoaW5hIFJlZ2lvbmFsIFRoaXJkIFByaXpl772cUHJvamVjdCBMZWFk772cNXRoIE1hdGhvckN1cCBNYXRoZW1hdGljYWwgQXBwbGljYXRpb24gQ2hhbGxlbmdlCi0gMjAyNS8wMe+9nEludGVybmF0aW9uYWwgUyBBd2FyZO+9nFByb2plY3QgTGVhZO+9nE1hdGhlbWF0aWNhbCBDb250ZXN0IGluIE1vZGVsaW5nIChNQ00vQ09NQVApCi0gMjAyNe+9nFVuaXZlcnNpdHkgRmlyc3QgUHJpemXvvZxNZW1iZXLvvZwyMHRoIENlbnRyYWwgU291dGggVW5pdmVyc2l0eSBNYXRoZW1hdGljYWwgTW9kZWxpbmcgQ29tcGV0aXRpb24KLSAyMDI0LzEw4oCTMjAyNS8wNe+9nEh1bmFuIFByb3ZpbmNpYWwgU2Vjb25kIFByaXpl772cTWVtYmVy772cM3JkIEh1bmFuIENvbGxlZ2UgU3R1ZGVudHPigJkgRW5lcmd5IENvbnNlcnZhdGlvbiBhbmQgRW1pc3Npb24gUmVkdWN0aW9uIENvbXBldGl0aW9uCi0gMjAyNC8wNe+9nFVuaXZlcnNpdHkgRmlyc3QgUHJpemXvvZxQcm9qZWN0IExlYWTvvZwxOXRoIENlbnRyYWwgU291dGggVW5pdmVyc2l0eSBNYXRoZW1hdGljYWwgTW9kZWxpbmcgQ29tcGV0aXRpb24KLSAyMDI0772cRm91cnRoIFBsYWNl772cMTB0aCBDZW50cmFsIFNvdXRoIFVuaXZlcnNpdHkgTW91bnRhaW5lZXJpbmcgQ29tcGV0aXRpb24KLSAyMDI0772cVGVhbSBTZWNvbmQgUGxhY2XvvZwxMXRoIENlbnRyYWwgU291dGggVW5pdmVyc2l0eSBDYW1wdXMgTWFyYXRob24KLSAyMDIzLzEy772cTmF0aW9uYWwgVGhpcmQgUHJpemXvvZxQZW9wbGXigJlzIENoaW5hIE1hZ2F6aW5lIGFuZCBDaGluYSBSZXBvcnQgTWFnYXppbmUKLSAyMDIzLzEw772cT3V0c3RhbmRpbmcgSW5kaXZpZHVhbCBpbiBNaWxpdGFyeSBUcmFpbmluZ++9nENlbnRyYWwgU291dGggVW5pdmVyc2l0eQoKIyBDZXJ0aWZpY2F0ZXMKCi0gMjAyNC8xMe+9nE5hdGlvbmFsIENvbXB1dGVyIFJhbmsgRXhhbWluYXRpb24gTGV2ZWwgMiBDZXJ0aWZpY2F0ZQotIDIwMjQvMTHvvZxQdXRvbmdodWEgUHJvZmljaWVuY3kgVGVzdCBMZXZlbCAyLUIgQ2VydGlmaWNhdGUKLSAyMDIzLzEy772cQ1BSIGFuZCBBRUQgVHJhaW5pbmcgQ2VydGlmaWNhdGUKLSAyMDIzLzEx772cUGVlciBQc3ljaG9sb2dpY2FsIFN1cHBvcnQgU2tpbGxzIFRyYWluaW5nIENlcnRpZmljYXRlCgo8c3BhbiBpZD0iYXdhcmRzLWhzIj48L3NwYW4+CgojIEVhcmxpZXIgSGlnaGxpZ2h0cwoKLSAyMDIy772cUHJvdmluY2lhbCBPdXRzdGFuZGluZyBTdHVkZW50IENhZHJl772cWXVubmFuIFByb3ZpbmNpYWwgRGVwYXJ0bWVudCBvZiBFZHVjYXRpb24KLSAyMDIy772cUHJvdmluY2lhbCBGaXJzdCBQcml6Ze+9nDM2dGggQ2hpbmEgSGlnaCBTY2hvb2wgQ2hlbWlzdHJ5IE9seW1waWFkCi0gMjAyMu+9nFByb3ZpbmNpYWwgVGhpcmQgUHJpemXvvZwzOXRoIENoaW5hIEhpZ2ggU2Nob29sIFBoeXNpY3MgT2x5bXBpYWQKLSAyMDIx772cUHJvdmluY2lhbCBGaXJzdCBQcml6Ze+9nE5PSS1DU1AtSi9TIChDKyspCi0gMjAyMu+9nOKAnFRyYWlsYmxhemVy4oCdIFNjaG9sYXJzaGlwLCBSTUIgNSwwMDDvvZxLdW5taW5nIEVkdWNhdGlvbiBhbmQgU3BvcnRzIEJ1cmVhdQotIDIwMjHvvZxTdHVkZW50IFVuaW9uIFByZXNpZGVudO+9nDE0dGggU3R1ZGVudCBVbmlvbiwgWGlzaGFuIFNjaG9vbCBvZiBLdW5taW5nIE5vLiAxIEhpZ2ggU2Nob29sCg=="}'
-          validate_repo
-          git add -A
-          git commit -m "content: reorganize achievements and certificates"
-          git push origin HEAD:main
+      - name: Ensure generated files are committed
+        run: git diff --exit-code
