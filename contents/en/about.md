@@ -2,40 +2,41 @@
 
 <div class="md-card">
 
-# Research Positioning
+# About Me
 
-I pursue a **“reproducible experiments + engineering deployment”** research path: combining scientific computing with machine learning, prioritizing the **stability, generalization, and interpretability** challenges in real physical systems.
+With Energy and Power Engineering as my foundation, I apply scientific computing, machine learning, and software engineering to real problems. I focus less on listing tools and more on building clear problems, reliable experiments, and maintainable outcomes.
 
-# Current Focus (What I’m Working On)
+# What I Work On
 
-* Direction: physics-constraint-enhanced neural operators (Neural Operator / Physics-constraint / Projection)
-* Goal: build an evidence chain that is “reproducible, comparable, and explainable” (experiments + ablations + failure modes)
-* Outputs: paper-grade experimental results (plots/metrics/code structure) + a demo that can be showcased
+- **Research exploration**: experiments around incompressible flow, neural operators, and physics constraints
+- **Engineering practice**: desktop AI runtimes, browser extensions, and content maintenance tools
+- **Public communication**: organizing projects, research, and knowledge through GitHub, OpenReview, and this website
 
-# Value I Bring (Collaboration Perspective)
+# Verifiable Work
 
-* Turn ideas into deliverables: data, comparisons, conclusions, and an entry point for reproduction
-* Turn engineering into evidence: clear metric definitions, debuggable errors, and cadence-driven iteration
-* Turn communication into assets: writing/presentations tailored to reviewers and readers—no jargon stacking
+- Contributed to 2 patent outcomes, including one granted patent
+- Experience with national-level competitions, mathematical modeling, and research projects
+- Maintain public code, experiment records, and technical documentation
 
 </div>
 
 <div class="md-card">
 
-# Skill Stack (What I’m Strengthening)
+# Capability Structure
 
 <div class="md-kpi">
-  <div class="k"><b>Research Methods</b><span>baseline alignment｜ablation design｜consistent evaluation protocol</span></div>
-  <div class="k"><b>Engineering Implementation</b><span>code governance｜reproducible experiments｜automated outputs</span></div>
-  <div class="k"><b>Scientific Computing</b><span>PDE/diagnostics｜error evaluation｜stability awareness</span></div>
-  <div class="k"><b>Communication</b><span>paper narrative｜figure presentation｜technical reporting</span></div>
+  <div class="k"><b>Scientific Computing</b><span>Numerical methods｜PDE｜error and stability</span></div>
+  <div class="k"><b>AI Engineering</b><span>Agent｜Tool Runtime｜MCP｜local models</span></div>
+  <div class="k"><b>Software Engineering</b><span>Python｜C++｜Web｜automation and testing</span></div>
+  <div class="k"><b>Technical Communication</b><span>paper narrative｜figures｜documentation</span></div>
 </div>
 
-# How I Work
+# Working Principles
 
-* First lock down the **evaluation protocol**, then discuss model superiority
-* Results must be explainable: failure modes must also yield conclusions
-* Delivery first: documentation, directory structure, and scripts as a complete package
+- Define problems, evaluation protocols, and delivery boundaries first
+- Support conclusions with data, code, and documentation
+- Record failure modes to keep iteration traceable
+- Deliver usable versions first, then improve continuously
 
 </div>
 
