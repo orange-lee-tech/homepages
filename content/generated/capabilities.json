@@ -1,0 +1,412 @@
+{
+  "version": 2,
+  "page": {
+    "eyebrow": {
+      "zh": "能力档案",
+      "chinese-traditional": "能力檔案",
+      "en": "Capability Archive"
+    },
+    "title": {
+      "zh": "能力定义与证据",
+      "chinese-traditional": "能力定義與證據",
+      "en": "Capability Definitions and Evidence"
+    },
+    "description": {
+      "zh": "雷达图是年度快照；这里记录每项能力的定义、形成时间与可公开核验的事实。",
+      "chinese-traditional": "雷達圖是年度快照；此處記錄每項能力的定義、形成時間與可公開核驗的事實。",
+      "en": "The radar is a yearly snapshot. This archive records definitions, formation history, and publicly verifiable evidence."
+    }
+  },
+  "items": [
+    {
+      "id": "energy-power",
+      "title": {
+        "zh": "能源与动力",
+        "chinese-traditional": "能源與動力",
+        "en": "Energy and Power Engineering"
+      },
+      "definition": {
+        "zh": "能源动力工程基础、热工问题理解及相关工程实践能力。",
+        "chinese-traditional": "能源動力工程基礎、熱工問題理解及相關工程實踐能力。",
+        "en": "Foundations in energy and power engineering, thermal problems, and related engineering practice."
+      },
+      "levels": [
+        {
+          "year": 2026,
+          "level": 4,
+          "primary": true
+        }
+      ],
+      "tools": [
+        "Engineering Economy",
+        "Thermal Sciences",
+        "Experiment Design"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "中南大学能源与动力工程本科阶段学习。",
+            "chinese-traditional": "中南大學能源與動力工程本科階段學習。",
+            "en": "Undergraduate study in Energy and Power Engineering at Central South University."
+          }
+        },
+        {
+          "text": {
+            "zh": "2026 年元智大学机械工程学系交换，完成 9 学分课程。",
+            "chinese-traditional": "2026 年元智大學機械工程學系交換，完成 9 學分課程。",
+            "en": "Completed nine credits during a 2026 exchange in Mechanical Engineering at Yuan Ze University."
+          },
+          "target": "archive.html#interests"
+        }
+      ]
+    },
+    {
+      "id": "ansys",
+      "title": {
+        "zh": "ANSYS 仿真",
+        "chinese-traditional": "ANSYS 模擬",
+        "en": "ANSYS Simulation"
+      },
+      "definition": {
+        "zh": "使用数值仿真工具理解工程边界条件、模型设置与结果解释。",
+        "chinese-traditional": "使用數值模擬工具理解工程邊界條件、模型設定與結果解釋。",
+        "en": "Using numerical simulation tools to reason about boundary conditions, model setup, and result interpretation."
+      },
+      "levels": [
+        {
+          "year": 2026,
+          "level": 4,
+          "primary": false
+        }
+      ],
+      "tools": [
+        "ANSYS"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "ai-agent",
+      "title": {
+        "zh": "AI Agent 工程",
+        "chinese-traditional": "AI Agent 工程",
+        "en": "AI Agent Engineering"
+      },
+      "definition": {
+        "zh": "Agent Runtime、工具调用、MCP、Skill、记忆与本地 AI 系统的工程化实践。",
+        "chinese-traditional": "Agent Runtime、工具調用、MCP、Skill、記憶與本地 AI 系統的工程化實踐。",
+        "en": "Engineering practice across agent runtimes, tool calls, MCP, skills, memory, and local AI systems."
+      },
+      "levels": [
+        {
+          "year": 2026,
+          "level": 3,
+          "primary": false
+        }
+      ],
+      "tools": [
+        "Electron",
+        "React",
+        "MCP",
+        "Ollama",
+        "Playwright"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "持续开发桌面 AI Agent Runtime，覆盖工具运行、MCP、Skill、记忆与 Electron 测试。",
+            "chinese-traditional": "持續開發桌面 AI Agent Runtime，涵蓋工具執行、MCP、Skill、記憶與 Electron 測試。",
+            "en": "Ongoing development of a desktop AI agent runtime covering tools, MCP, skills, memory, and Electron testing."
+          },
+          "target": "projects.html"
+        }
+      ]
+    },
+    {
+      "id": "full-stack",
+      "title": {
+        "zh": "全栈开发",
+        "chinese-traditional": "全端開發",
+        "en": "Full-stack Development"
+      },
+      "definition": {
+        "zh": "从界面、运行时、内容管线到部署与维护的软件系统构建能力。",
+        "chinese-traditional": "從介面、執行環境、內容管線到部署與維護的軟體系統構建能力。",
+        "en": "Building software systems across interfaces, runtimes, content pipelines, deployment, and maintenance."
+      },
+      "levels": [
+        {
+          "year": 2025,
+          "level": 2,
+          "primary": false
+        },
+        {
+          "year": 2026,
+          "level": 5,
+          "primary": false
+        }
+      ],
+      "tools": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Electron",
+        "Node.js",
+        "GitHub Actions"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "开发 IELTS Learning Assistant 浏览器扩展。",
+            "chinese-traditional": "開發 IELTS Learning Assistant 瀏覽器擴充功能。",
+            "en": "Developed the IELTS Learning Assistant browser extension."
+          },
+          "target": "projects.html"
+        },
+        {
+          "text": {
+            "zh": "建立个人主页 YAML 内容源、生成管线与 GitHub Pages 发布体系。",
+            "chinese-traditional": "建立個人主頁 YAML 內容來源、生成管線與 GitHub Pages 發布體系。",
+            "en": "Built the homepage YAML sources, generation pipeline, and GitHub Pages publishing workflow."
+          },
+          "target": "projects.html"
+        }
+      ]
+    },
+    {
+      "id": "reading-notes",
+      "title": {
+        "zh": "读书笔记",
+        "chinese-traditional": "讀書筆記",
+        "en": "Reading Notes"
+      },
+      "definition": {
+        "zh": "围绕工程、实验设计、财务判断与方法论进行长期知识整理。",
+        "chinese-traditional": "圍繞工程、實驗設計、財務判斷與方法論進行長期知識整理。",
+        "en": "Long-term knowledge organization around engineering, experiment design, financial judgment, and methodology."
+      },
+      "levels": [
+        {
+          "year": 2026,
+          "level": 4,
+          "primary": false
+        }
+      ],
+      "tools": [
+        "Markdown",
+        "Knowledge Base",
+        "Reading Plans"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "2026 年 6 月确定《工程经济》《实验设计与分析》《热交换设计》《财务管理》四本专业书的长期学习计划。",
+            "chinese-traditional": "2026 年 6 月確定《工程經濟》《實驗設計與分析》《熱交換設計》《財務管理》四本專業書的長期學習計畫。",
+            "en": "Established a long-term study plan around four books on engineering economy, experimental design, heat exchanger design, and financial management in June 2026."
+          },
+          "target": "archive.html#interests"
+        }
+      ]
+    },
+    {
+      "id": "latex",
+      "title": {
+        "zh": "LaTeX 排版",
+        "chinese-traditional": "LaTeX 排版",
+        "en": "LaTeX Typesetting"
+      },
+      "definition": {
+        "zh": "科研文档、数学表达与论文材料的结构化排版能力。",
+        "chinese-traditional": "科研文件、數學表達與論文材料的結構化排版能力。",
+        "en": "Structured typesetting for research documents, mathematics, and paper materials."
+      },
+      "levels": [
+        {
+          "year": 2024,
+          "level": 3,
+          "primary": false
+        },
+        {
+          "year": 2025,
+          "level": 4,
+          "primary": false
+        }
+      ],
+      "tools": [
+        "LaTeX"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "数学建模与科研材料中持续使用 LaTeX 进行结构化表达。",
+            "chinese-traditional": "數學建模與科研材料中持續使用 LaTeX 進行結構化表達。",
+            "en": "Continued use of LaTeX for structured mathematical modeling and research materials."
+          }
+        }
+      ]
+    },
+    {
+      "id": "solidworks",
+      "title": {
+        "zh": "SolidWorks 仿真",
+        "chinese-traditional": "SolidWorks 模擬",
+        "en": "SolidWorks Simulation"
+      },
+      "definition": {
+        "zh": "三维建模、设备表达、3D 打印准备与工程设计沟通。",
+        "chinese-traditional": "三維建模、設備表達、3D 列印準備與工程設計溝通。",
+        "en": "3D modeling, equipment communication, 3D-print preparation, and engineering design."
+      },
+      "levels": [
+        {
+          "year": 2024,
+          "level": 1,
+          "primary": false
+        },
+        {
+          "year": 2025,
+          "level": 4,
+          "primary": false
+        }
+      ],
+      "tools": [
+        "SolidWorks",
+        "3D Printing"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "清洁低碳能源项目中承担设备说明书、SolidWorks 建模与 3D 打印相关工作。",
+            "chinese-traditional": "清潔低碳能源專案中承擔設備說明書、SolidWorks 建模與 3D 列印相關工作。",
+            "en": "Worked on equipment documentation, SolidWorks modeling, and 3D printing in a clean-energy project."
+          },
+          "target": "research.html"
+        }
+      ]
+    },
+    {
+      "id": "collaboration",
+      "title": {
+        "zh": "团队协作",
+        "chinese-traditional": "團隊協作",
+        "en": "Collaboration"
+      },
+      "definition": {
+        "zh": "团队组织、需求沟通、跨角色协同与结果交付能力。",
+        "chinese-traditional": "團隊組織、需求溝通、跨角色協同與結果交付能力。",
+        "en": "Team organization, requirement communication, cross-role coordination, and delivery."
+      },
+      "levels": [
+        {
+          "year": 2024,
+          "level": 3,
+          "primary": true
+        },
+        {
+          "year": 2025,
+          "level": 4,
+          "primary": true
+        }
+      ],
+      "tools": [
+        "Project Coordination",
+        "Documentation",
+        "Public Communication"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "学工办期间对接教务、综合办与辅导员，参与微信运营、档案与就业信息协同。",
+            "chinese-traditional": "學工辦期間對接教務、綜合辦與輔導員，參與微信營運、檔案與就業資訊協同。",
+            "en": "Coordinated academic affairs, student records, WeChat operations, and employment information in the student office."
+          },
+          "target": "archive.html#collaboration"
+        },
+        {
+          "text": {
+            "zh": "作为学生项目主持或副主持参与工程项目与全国竞赛。",
+            "chinese-traditional": "作為學生專案主持或副主持參與工程專案與全國競賽。",
+            "en": "Participated in engineering projects and national competitions as student lead or deputy lead."
+          },
+          "target": "archive.html#collaboration"
+        }
+      ]
+    },
+    {
+      "id": "wps",
+      "title": {
+        "zh": "WPS 三件套",
+        "chinese-traditional": "WPS 三件套",
+        "en": "Office Productivity"
+      },
+      "definition": {
+        "zh": "文档、表格、演示与日常协同材料的可靠制作能力。",
+        "chinese-traditional": "文件、試算表、簡報與日常協同材料的可靠製作能力。",
+        "en": "Reliable production of documents, spreadsheets, presentations, and operational materials."
+      },
+      "levels": [
+        {
+          "year": 2024,
+          "level": 4,
+          "primary": false
+        }
+      ],
+      "tools": [
+        "WPS Writer",
+        "WPS Spreadsheets",
+        "WPS Presentation"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "学生工作与项目管理中持续承担文档、档案、信息表与展示材料制作。",
+            "chinese-traditional": "學生工作與專案管理中持續承擔文件、檔案、資訊表與展示材料製作。",
+            "en": "Produced documents, records, information sheets, and presentation materials for student work and projects."
+          },
+          "target": "archive.html#collaboration"
+        }
+      ]
+    },
+    {
+      "id": "academic-graphic-design",
+      "title": {
+        "zh": "平面设计",
+        "chinese-traditional": "平面設計",
+        "en": "Graphic Design"
+      },
+      "definition": {
+        "zh": "需求理解、视觉表达、信息排版与设计交付能力。",
+        "chinese-traditional": "需求理解、視覺表達、資訊排版與設計交付能力。",
+        "en": "Requirement understanding, visual communication, information layout, and design delivery."
+      },
+      "levels": [
+        {
+          "year": 2024,
+          "level": 4,
+          "primary": false
+        },
+        {
+          "year": 2025,
+          "level": 5,
+          "primary": false
+        }
+      ],
+      "tools": [
+        "Photoshop",
+        "Illustrator",
+        "Layout"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "在昆明上维设计品牌有限公司实习期间参与需求对接与交付，在职完成 4 份作品，累计作品 14 个。",
+            "chinese-traditional": "在昆明上維設計品牌有限公司實習期間參與需求對接與交付，在職完成 4 份作品，累計作品 14 個。",
+            "en": "Participated in client communication and delivery during a design internship, completing four internship works and fourteen works in total."
+          },
+          "target": "archive.html#collaboration"
+        }
+      ]
+    }
+  ],
+  "generatedBy": "content/capabilities.yml"
+}
