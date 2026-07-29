@@ -7,54 +7,35 @@
   <meta name="author" content="Li Yucheng" />
   <title>Archive · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
-  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-1" />
+  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-3" />
+  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-1" />
   <script src="static/js/marked.min.js"></script>
 </head>
-<body class="archive-page">
-  <header class="archive-nav">
-    <div class="archive-shell archive-nav-inner">
-      <a class="archive-brand" id="detail-brand" href="index.html" data-preserve-lang>Graphite Archive</a>
-      <nav class="archive-nav-links" aria-label="Archive detail navigation">
-        <a id="detail-home" href="index.html" data-preserve-lang>Home</a>
-        <a id="detail-collaboration" href="#collaboration">Collaboration</a>
-        <a id="detail-interests" href="#interests">Interests</a>
-        <a id="detail-honors" href="#honors">Honors</a>
-        <a id="detail-capabilities" href="capabilities.html" data-preserve-lang>Capabilities</a>
-      </nav>
-      <div class="archive-language" aria-label="Language selector">
-        <button type="button" data-language="zh" aria-pressed="false">简</button>
-        <button type="button" data-language="chinese-traditional" aria-pressed="true">繁</button>
-        <button type="button" data-language="en" aria-pressed="false">EN</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="archive-subpage">
-    <div class="archive-shell">
-      <section class="archive-hero">
-        <p class="archive-eyebrow" id="detail-eyebrow">ARCHIVE PORTALS</p>
-        <h1 id="detail-title">Collaboration, Interests, and Honors</h1>
-        <p class="archive-description" id="detail-description">The homepage portals expand here into the existing factual content records.</p>
+<body class="archive-page archive-subpage" data-archive-page="">
+  <header data-archive-chrome></header>
+  <main class="subpage-main">
+    <div class="subpage-shell">
+      <section class="value-hero" aria-labelledby="detail-title">
+        <div>
+          <p class="subpage-eyebrow" id="detail-eyebrow">ARCHIVE</p>
+          <h1 id="detail-title">协作、兴趣与荣誉</h1>
+          <nav class="anchor-index" aria-label="Archive sections">
+            <a href="#collaboration" id="detail-collaboration">协作网络</a>
+            <a href="#interests" id="detail-interests">兴趣图谱</a>
+            <a href="#honors" id="detail-honors">荣誉档案</a>
+          </nav>
+        </div>
+        <div>
+          <p class="page-value-statement" id="detail-value"></p>
+          <p class="page-catalog-note" id="detail-description"></p>
+        </div>
       </section>
-
-      <p class="archive-state" id="archive-state" role="status" aria-live="polite">Loading archive content…</p>
+      <p class="subpage-status" id="archive-state" role="status" aria-live="polite"></p>
       <div class="archive-detail-grid" id="archive-detail-grid"></div>
     </div>
   </main>
-
-  <footer class="archive-footer">
-    <div class="archive-shell archive-footer-inner">
-      <span>© Li Yucheng 2023–2026 · Archive</span>
-      <span>
-        <a href="projects.html" data-preserve-lang>Projects</a>
-        ·
-        <a href="research.html" data-preserve-lang>Research</a>
-        ·
-        <a href="knowledge.html" data-preserve-lang>Knowledge</a>
-      </span>
-    </div>
-  </footer>
-
-  <script src="static/js/archive-page.js?v=graphite-archive-1"></script>
+  <footer data-archive-footer></footer>
+  <script src="static/js/archive-chrome.js?v=archive-ia-1"></script>
+  <script src="static/js/archive-page.js?v=archive-ia-1"></script>
 </body>
 </html>

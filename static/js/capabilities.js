@@ -1,154 +1,97 @@
 (() => {
-  const LANGUAGES = ['zh', 'chinese-traditional', 'en'];
-  const HTML_LANG = { zh: 'zh-CN', 'chinese-traditional': 'zh-Hant', en: 'en' };
-  let language = 'chinese-traditional';
-
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-
-  function currentLanguage() {
-    const requested = new URL(window.location.href).searchParams.get('lang');
-    if (LANGUAGES.includes(requested)) return requested;
-    const saved = localStorage.getItem('lang');
-    return LANGUAGES.includes(saved) ? saved : 'chinese-traditional';
-  }
-
-  function localized(value) {
-    if (typeof value === 'string' || typeof value === 'number') return String(value);
-    return value?.[language] || value?.zh || value?.en || '';
-  }
-
-  function escapeHtml(value) {
-    return String(value ?? '')
-      .replaceAll('&', '&amp;')
-      .replaceAll('<', '&lt;')
-      .replaceAll('>', '&gt;')
-      .replaceAll('"', '&quot;')
-      .replaceAll("'", '&#39;');
-  }
-
-  function withLanguage(target) {
-    const raw = String(target || '');
-    if (!raw || raw.startsWith('#') || /^(https?:|mailto:)/i.test(raw)) return raw;
-    const url = new URL(raw, window.location.href);
-    url.searchParams.set('lang', language);
-    return `${url.pathname.replace(/^\//, '')}${url.search}${url.hash}`;
-  }
-
-  function setText(id, value) {
-    const element = document.getElementById(id);
-    if (element) element.textContent = value;
-  }
+  const COPY = {
+    zh: {
+      title: '能力',
+      eyebrow: '能力',
+      value: '能力不是标签，而是由系统学习、独立实践、完整交付与持续维护共同构成的证据链。',
+      loading: '正在加载能力档案…',
+      error: '能力档案加载失败。',
+      noEvidence: '暂无可公开核验的细化证据；保留为空，不以推断或包装代替事实。',
+      level: '等级',
+      primary: '主线 ◆'
+    },
+    'chinese-traditional': {
+      title: '能力',
+      eyebrow: '能力',
+      value: '能力不是標籤，而是由系統學習、獨立實踐、完整交付與持續維護共同構成的證據鏈。',
+      loading: '正在載入能力檔案…',
+      error: '能力檔案載入失敗。',
+      noEvidence: '暫無可公開核驗的細化證據；保留為空，不以推斷或包裝代替事實。',
+      level: '等級',
+      primary: '主線 ◆'
+    },
+    en: {
+      title: 'Capabilities',
+      eyebrow: 'Capabilities',
+      value: 'Capability is not a label. It is an evidence chain built from structured learning, independent practice, complete delivery, and continued maintenance.',
+      loading: 'Loading capability archive…',
+      error: 'Capability archive failed to load.',
+      noEvidence: 'Detailed evidence remains empty until a verifiable public record is available.',
+      level: 'LEVEL',
+      primary: 'PRIMARY ◆'
+    }
+  };
+  const $ = (selector) => document.querySelector(selector);
+  const text = (value) => ArchiveChrome.localized(value);
+  const esc = (value) => ArchiveChrome.escapeHtml(value);
 
   function setState(message, isError = false) {
-    const element = $('#archive-state');
-    element.textContent = message;
-    element.classList.toggle('is-error', isError);
-    element.classList.toggle('is-hidden', !message);
+    const state = $('#archive-state');
+    state.textContent = message;
+    state.classList.toggle('is-error', isError);
   }
 
-  function renderChrome(homepage) {
-    document.documentElement.lang = HTML_LANG[language];
-    setText('capability-brand', localized(homepage.chrome.brand));
-    setText('capability-home', language === 'en' ? 'Home' : language === 'zh' ? '主页' : '主頁');
-    setText('capability-projects', language === 'en' ? 'Projects' : language === 'zh' ? '项目' : '專案');
-    setText('capability-research', language === 'en' ? 'Research' : '研究');
-    setText('capability-knowledge', language === 'en' ? 'Knowledge' : language === 'zh' ? '知识' : '知識');
-    setText('capability-back', language === 'en' ? '← Back to profile' : language === 'zh' ? '← 返回主页' : '← 返回主頁');
+  function render(data) {
+    const copy = COPY[ArchiveChrome.language];
+    document.title = `${copy.title} · Li Yucheng`;
+    $('#capability-eyebrow').textContent = copy.eyebrow;
+    $('#capability-title').textContent = copy.title;
+    $('#capability-value').textContent = copy.value;
+    $('#capability-description').textContent = text(data.page?.description);
 
-    $$('[data-preserve-lang]').forEach((link) => {
-      link.href = withLanguage(link.getAttribute('href'));
-    });
-
-    $$('.archive-language button').forEach((button) => {
-      const active = button.dataset.language === language;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
-  }
-
-  function renderPage(data) {
-    document.title = `${localized(data.page.title)} · Li Yucheng`;
-    setText('capability-eyebrow', localized(data.page.eyebrow));
-    setText('capability-title', localized(data.page.title));
-    setText('capability-description', localized(data.page.description));
-
-    $('#capability-index').innerHTML = data.items.map((item) =>
-      `<a href="#${escapeHtml(item.id)}">${escapeHtml(localized(item.title))}</a>`
+    $('#capability-index').innerHTML = (data.items || []).map((item) =>
+      `<a href="#${esc(item.id)}">${esc(text(item.title))}</a>`
     ).join('');
 
-    const noEvidence = language === 'en'
-      ? 'Detailed public evidence is intentionally left empty until a verifiable record is available.'
-      : language === 'zh'
-        ? '暂无可公开核验的细化证据；保留为空，不以推断或包装代替事实。'
-        : '暫無可公開核驗的細化證據；保留為空，不以推斷或包裝代替事實。';
-
-    $('#capability-list').innerHTML = data.items.map((item, index) => {
-      const levels = (item.levels || []).map((level) => `
-        <span class="level-chip${level.primary ? ' is-primary' : ''}">
-          ${level.year} · LEVEL ${level.level}${level.primary ? ' · PRIMARY ◆' : ''}
-        </span>
-      `).join('');
-
-      const tools = (item.tools || []).length
-        ? `<div class="level-history">${item.tools.map((tool) => `<span class="level-chip">${escapeHtml(tool)}</span>`).join('')}</div>`
-        : '';
-
+    $('#capability-list').innerHTML = (data.items || []).map((item, index) => {
+      const levels = (item.levels || []).map((entry) =>
+        `<span class="level-chip${entry.primary ? ' is-primary' : ''}">${esc(entry.year)} · ${esc(copy.level)} ${esc(entry.level)}${entry.primary ? ` · ${esc(copy.primary)}` : ''}</span>`
+      ).join('');
+      const tools = (item.tools || []).map((tool) => `<span class="level-chip">${esc(tool)}</span>`).join('');
       const evidence = (item.evidence || []).length
         ? `<ul class="evidence-list">${item.evidence.map((entry) => {
-            const text = escapeHtml(localized(entry.text));
-            return `<li>${entry.target ? `<a href="${escapeHtml(withLanguage(entry.target))}">${text}</a>` : text}</li>`;
+            const content = esc(text(entry.text));
+            return `<li>${entry.target ? `<a href="${esc(ArchiveChrome.withLanguage(entry.target))}">${content}</a>` : content}</li>`;
           }).join('')}</ul>`
-        : `<p class="evidence-empty">${escapeHtml(noEvidence)}</p>`;
+        : `<p class="evidence-empty">${esc(copy.noEvidence)}</p>`;
 
       return `
-        <article class="capability-entry" id="${escapeHtml(item.id)}">
+        <article class="capability-entry" id="${esc(item.id)}">
           <header>
-            <span class="capability-entry-id">${String(index + 1).padStart(2, '0')} / ${escapeHtml(item.id.toUpperCase())}</span>
-            <h2>${escapeHtml(localized(item.title))}</h2>
+            <span class="catalog-card-index">${String(index + 1).padStart(2, '0')} / ${esc(item.id.toUpperCase())}</span>
+            <h2>${esc(text(item.title))}</h2>
           </header>
           <div>
-            <p class="capability-definition">${escapeHtml(localized(item.definition))}</p>
-            <div class="level-history">${levels}</div>
-            ${tools}
+            <p class="capability-definition">${esc(text(item.definition))}</p>
+            ${levels ? `<div class="level-history">${levels}</div>` : ''}
+            ${tools ? `<div class="level-history">${tools}</div>` : ''}
             ${evidence}
           </div>
         </article>`;
     }).join('');
   }
 
-  function wireLanguage() {
-    $$('.archive-language button').forEach((button) => {
-      button.addEventListener('click', () => {
-        const nextLanguage = button.dataset.language;
-        if (!LANGUAGES.includes(nextLanguage)) return;
-        localStorage.setItem('lang', nextLanguage);
-        const url = new URL(window.location.href);
-        url.searchParams.set('lang', nextLanguage);
-        window.location.href = url.href;
-      });
-    });
-  }
-
   async function init() {
-    language = currentLanguage();
+    const copy = COPY[ArchiveChrome.language];
+    setState(copy.loading);
     try {
-      const [capabilityResponse, homepageResponse] = await Promise.all([
-        fetch('content/generated/capabilities.json', { cache: 'no-cache' }),
-        fetch('content/generated/homepage.json', { cache: 'no-cache' })
-      ]);
-      if (!capabilityResponse.ok || !homepageResponse.ok) throw new Error('Cannot load capability archive data');
-      const [capabilities, homepage] = await Promise.all([
-        capabilityResponse.json(),
-        homepageResponse.json()
-      ]);
-      renderChrome(homepage);
-      renderPage(capabilities);
-      wireLanguage();
+      const response = await fetch('content/generated/capabilities.json', { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`Capabilities HTTP ${response.status}`);
+      render(await response.json());
       setState('');
     } catch (error) {
       console.error(error);
-      setState(language === 'en' ? 'Capability archive failed to load.' : '能力档案加载失败。', true);
+      setState(copy.error, true);
     }
   }
 

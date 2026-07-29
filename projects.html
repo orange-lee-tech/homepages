@@ -3,57 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Li Yucheng's software, research, and open-source project portfolio" />
+  <meta name="description" content="Li Yucheng maintained engineering and software projects" />
   <meta name="author" content="Li Yucheng" />
   <title>Projects · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
   <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-3" />
+  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-1" />
 </head>
-<body class="archive-page archive-subpage projects-page">
-  <header class="subpage-chrome">
-    <div class="subpage-shell subpage-chrome-inner">
-      <a id="projects-site-name" class="subpage-brand" href="index.html" data-preserve-lang>Graphite Archive</a>
-      <nav class="subpage-nav" aria-label="Archive navigation">
-        <a id="projects-home" href="index.html" data-preserve-lang>Home</a>
-        <a id="projects-projects" aria-current="page" href="projects.html" data-preserve-lang>Projects</a>
-        <a id="projects-research" href="research.html" data-preserve-lang>Research</a>
-        <a id="projects-knowledge" href="knowledge.html" data-preserve-lang>Knowledge</a>
-        <a id="projects-posts" href="posts.html" data-preserve-lang>Updates</a>
-        <a id="projects-gallery" href="gallery.html" data-preserve-lang>Gallery</a>
-      </nav>
-      <div class="subpage-language" aria-label="Language selector">
-        <button type="button" data-lang="zh" aria-pressed="false">简</button>
-        <button type="button" data-lang="chinese-traditional" aria-pressed="true">繁</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-      </div>
-    </div>
-  </header>
-
+<body class="archive-page archive-subpage" data-archive-page="projects">
+  <header data-archive-chrome></header>
   <main class="subpage-main">
     <div class="subpage-shell">
-      <section class="subpage-hero" aria-labelledby="projects-title">
+      <section class="value-hero" aria-labelledby="projects-title">
         <div>
-          <p class="subpage-eyebrow" id="projects-eyebrow">PROJECT ASSETS</p>
-          <h1 id="projects-title">Projects</h1>
-          <div class="subpage-summary" aria-live="polite">
-            <span><strong id="projects-count">0</strong> <span id="projects-count-label">assets</span></span>
-            <span id="projects-source-note">Generated from a single maintained data source.</span>
+          <p class="subpage-eyebrow" id="projects-eyebrow">PROJECTS</p>
+          <h1 id="projects-title">项目</h1>
+          <div class="page-summary-row">
+            <span><strong id="projects-count">0</strong> <span id="projects-count-label">项资产</span></span>
+            <span id="projects-source-note"></span>
           </div>
         </div>
-        <p id="projects-description" class="subpage-description"></p>
+        <div>
+          <p class="page-value-statement" id="projects-value"></p>
+          <p class="page-catalog-note" id="projects-catalog-note"></p>
+        </div>
       </section>
       <div id="projects-filters" class="catalog-toolbar" role="group" aria-label="Project category filters"></div>
-      <p id="projects-status" class="subpage-status" role="status">Loading project data…</p>
+      <p id="projects-status" class="subpage-status" role="status"></p>
       <section id="projects-grid" class="projects-grid" aria-live="polite"></section>
     </div>
   </main>
-
-  <footer class="subpage-footer">
-    <div class="subpage-shell subpage-footer-inner">
-      <span>© Li Yucheng 2023–2026 · Graphite Archive</span>
-      <span><a href="https://github.com/orange-lee-tech" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://openreview.net/profile?id=%7EYucheng_Li13" target="_blank" rel="noopener noreferrer">OpenReview</a></span>
-    </div>
-  </footer>
-  <script src="static/js/projects.js?v=graphite-archive-3"></script>
+  <footer data-archive-footer></footer>
+  <script src="static/js/archive-chrome.js?v=archive-ia-1"></script>
+  <script src="static/js/projects.js?v=archive-ia-1"></script>
 </body>
 </html>

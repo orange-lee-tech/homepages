@@ -8,49 +8,27 @@
   <title>Post · Li Yucheng</title>
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
   <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-3" />
+  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-1" />
   <script src="static/js/marked.min.js"></script>
   <script src="static/js/js-yaml.min.js"></script>
 </head>
-<body class="archive-page archive-subpage">
-  <header class="subpage-chrome">
-    <div class="subpage-shell subpage-chrome-inner">
-      <a id="post-brand" class="subpage-brand" href="index.html" data-preserve-lang>Graphite Archive</a>
-      <nav class="subpage-nav" aria-label="Archive navigation">
-        <a id="post-home" href="index.html" data-preserve-lang>Home</a>
-        <a id="post-projects" href="projects.html" data-preserve-lang>Projects</a>
-        <a id="post-research" href="research.html" data-preserve-lang>Research</a>
-        <a id="post-knowledge" href="knowledge.html" data-preserve-lang>Knowledge</a>
-        <a id="post-posts" aria-current="page" href="posts.html" data-preserve-lang>Updates</a>
-        <a id="post-gallery" href="gallery.html" data-preserve-lang>Gallery</a>
-      </nav>
-      <div class="subpage-language" aria-label="Language selector">
-        <button type="button" data-language="zh" aria-pressed="false">简</button>
-        <button type="button" data-language="chinese-traditional" aria-pressed="true">繁</button>
-        <button type="button" data-language="en" aria-pressed="false">EN</button>
-      </div>
-    </div>
-  </header>
-
+<body class="archive-page archive-subpage" data-archive-page="updates">
+  <header data-archive-chrome></header>
   <main class="subpage-main">
     <div class="reading-shell">
       <article class="reading-paper">
         <header class="reading-paper-header">
           <p class="subpage-eyebrow" id="post-eyebrow">UPDATE RECORD</p>
-          <h1 id="post-title">Post</h1>
+          <h1 id="post-title">动态记录</h1>
           <p class="post-meta" id="post-meta"></p>
         </header>
-        <p class="subpage-status" id="archive-state" role="status" aria-live="polite">Loading record…</p>
+        <p class="subpage-status" id="archive-state" role="status" aria-live="polite"></p>
         <div class="post-body" id="post-body"></div>
       </article>
     </div>
   </main>
-
-  <footer class="subpage-footer">
-    <div class="subpage-shell subpage-footer-inner">
-      <span>© Li Yucheng 2023–2026 · Graphite Archive</span>
-      <span><a href="https://github.com/orange-lee-tech" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://openreview.net/profile?id=%7EYucheng_Li13" target="_blank" rel="noopener noreferrer">OpenReview</a></span>
-    </div>
-  </footer>
-  <script src="static/js/post.js?v=graphite-archive-3"></script>
+  <footer data-archive-footer></footer>
+  <script src="static/js/archive-chrome.js?v=archive-ia-1"></script>
+  <script src="static/js/post.js?v=archive-ia-1"></script>
 </body>
 </html>
