@@ -1,0 +1,118 @@
+version: 1
+profile:
+  name: Li Yucheng
+  chineseName: 李雨橙
+  role:
+    zh: 工程探索者 · 科研实践者 · 软件构建者
+    chinese-traditional: 工程探索者 · 科研實踐者 · 軟體構建者
+    en: Engineer · Researcher · Builder
+  thesis:
+    zh: 连接能源工程、工程仿真、AI 系统与数字资产建设，把学习过程转化为可复用、可验证、可长期维护的成果。
+    chinese-traditional: 連接能源工程、工程仿真、AI 系統與數位資產建設，把學習過程轉化為可複用、可驗證、可長期維護的成果。
+    en: Connecting energy engineering, simulation, AI systems, and digital assets into reusable and verifiable outcomes.
+  status:
+    zh: 中南大学能源与动力工程本科生；2026 年完成元智大学机械工程学系交换学习。
+    chinese-traditional: 中南大學能源與動力工程本科生；2026 年完成元智大學機械工程學系交換學習。
+    en: Undergraduate student in Energy and Power Engineering; completed exchange study in Mechanical Engineering at Yuan Ze University in 2026.
+  ports:
+    - id: github
+      label: GitHub
+      url: https://github.com/orange-lee-tech
+    - id: openreview
+      label: OpenReview
+      url: https://openreview.net/profile?id=%7EYucheng_Li13
+    - id: email
+      label: Email
+      url: mailto:1010969261@qq.com
+    - id: wechat
+      label: 微信公众号
+      pending: true
+    - id: maimai
+      label: 脉脉
+      pending: true
+scale:
+  - level: 1
+    zh: 接触了解
+    en: Initial understanding
+  - level: 2
+    zh: 系统学习
+    en: Structured learning
+  - level: 3
+    zh: 独立实践
+    en: Independent practice
+  - level: 4
+    zh: 完整成果
+    en: Complete outcome
+  - level: 5
+    zh: 生产运用
+    en: Production use
+radar:
+  defaultYear: 2026
+  years:
+    - year: 2024
+      primary: collaboration
+      capabilities:
+        - id: collaboration
+          name: 团队协作
+          level: 3
+        - id: wps
+          name: WPS 三件套
+          level: 4
+        - id: academic-graphic-design
+          name: 平面设计
+          level: 4
+        - id: latex
+          name: LaTeX 排版
+          level: 3
+        - id: solidworks
+          name: SolidWorks 仿真
+          level: 1
+    - year: 2025
+      primary: collaboration
+      capabilities:
+        - id: collaboration
+          name: 团队协作
+          level: 4
+        - id: full-stack
+          name: 全栈开发
+          level: 2
+        - id: academic-graphic-design
+          name: 平面设计
+          level: 5
+        - id: latex
+          name: LaTeX 排版
+          level: 4
+        - id: solidworks
+          name: SolidWorks 仿真
+          level: 4
+    - year: 2026
+      primary: energy-power
+      capabilities:
+        - id: energy-power
+          name: 能源与动力
+          level: 4
+        - id: ansys
+          name: ANSYS 仿真
+          level: 4
+        - id: ai-agent
+          name: AI Agent 工程
+          level: 3
+        - id: full-stack
+          name: 全栈开发
+          level: 5
+        - id: reading-notes
+          name: 读书笔记
+          level: 4
+portals:
+  - id: collaboration
+    title: 协作网络
+    target: experience.html
+  - id: interests
+    title: 兴趣图谱
+    target: knowledge.html
+  - id: knowledge
+    title: 知识系统
+    target: knowledge.html
+  - id: honors
+    title: 荣誉档案
+    target: awards.html
