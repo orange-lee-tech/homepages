@@ -171,7 +171,7 @@
     const base = /^https?:/i.test(window.location.href) ? window.location.href : 'https://archive.local/index.html';
     const url = new URL(raw, base);
     url.searchParams.set('lang', language);
-    return `${url.pathname.replace(/^\//, '')}${url.search}${url.hash}`;
+    return `${url.pathname}${url.search}${url.hash}`;
   }
 
   function setText(id, value) {

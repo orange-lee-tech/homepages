@@ -11,7 +11,8 @@
     const [path, hash] = routes[current.hash] || ['index.html', '#archive'];
     const destination = new URL(path, window.location.href);
     if (language) destination.searchParams.set('lang', language);
-    window.location.replace(`${destination.pathname.replace(/^\//, '')}${destination.search}${hash}`);
+    destination.hash = hash;
+    window.location.replace(destination.href);
   }
   document.addEventListener('DOMContentLoaded', redirect);
 })();

@@ -9,7 +9,7 @@
     current.searchParams.forEach((value, key) => {
       if (key !== 'lang' && !destination.searchParams.has(key)) destination.searchParams.set(key, value);
     });
-    window.location.replace(`${destination.pathname.replace(/^\//, '')}${destination.search}${destination.hash}`);
+    window.location.replace(destination.href);
   }
   document.addEventListener('DOMContentLoaded', redirect);
 })();

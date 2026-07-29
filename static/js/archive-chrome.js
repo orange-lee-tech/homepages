@@ -63,7 +63,7 @@
     if (!raw || raw.startsWith('#') || /^(https?:|mailto:|tel:)/i.test(raw)) return raw;
     const url = new URL(raw, window.location.href);
     url.searchParams.set('lang', language);
-    return `${url.pathname.replace(/^\//, '')}${url.search}${url.hash}`;
+    return `${url.pathname}${url.search}${url.hash}`;
   }
 
   function safeExternalUrl(value) {
