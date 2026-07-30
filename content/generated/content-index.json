@@ -71,6 +71,16 @@
   "posts": {
     "zh": [
       {
+        "title": "我用约2个人类小时，和 AI 完成了人生第一个浏览器插件",
+        "date": "2026-07-27",
+        "file": "2026-07-27-ielts-browser-extension.md"
+      },
+      {
+        "title": "我用约60个人类小时，和 AI 完成了一座企业官网",
+        "date": "2026-07-24",
+        "file": "2026-07-24-ai-enterprise-website.md"
+      },
+      {
         "title": "生成式人工智能工程师培训及认证",
         "date": "2026-01-09",
         "file": "生成式人工智能工程师培训及认证.md"
@@ -88,6 +98,16 @@
     ],
     "chinese-traditional": [
       {
+        "title": "我用約2個人類小時，和 AI 完成了人生第一個瀏覽器插件",
+        "date": "2026-07-27",
+        "file": "2026-07-27-ielts-browser-extension.md"
+      },
+      {
+        "title": "我用約60個人類小時，和 AI 完成了一座企業官網",
+        "date": "2026-07-24",
+        "file": "2026-07-24-ai-enterprise-website.md"
+      },
+      {
         "title": "生成式人工智能工程師培訓及認證",
         "date": "2026-01-09",
         "file": "生成式人工智能工程师培训及认证.md"
@@ -104,6 +124,16 @@
       }
     ],
     "en": [
+      {
+        "title": "I Built My First Browser Extension with AI in About Two Human Hours",
+        "date": "2026-07-27",
+        "file": "2026-07-27-ielts-browser-extension.md"
+      },
+      {
+        "title": "I Spent About 60 Human Hours Building a Corporate Website with AI",
+        "date": "2026-07-24",
+        "file": "2026-07-24-ai-enterprise-website.md"
+      },
       {
         "title": "LiYucheng's Homepage",
         "date": "2026-01-08",

@@ -48,6 +48,12 @@ design-images:
   - work18.jpg
   - work19.jpg
 posts:
+  - title: 我用约2个人类小时，和 AI 完成了人生第一个浏览器插件
+    date: "2026-07-27"
+    file: 2026-07-27-ielts-browser-extension.md
+  - title: 我用约60个人类小时，和 AI 完成了一座企业官网
+    date: "2026-07-24"
+    file: 2026-07-24-ai-enterprise-website.md
   - title: 生成式人工智能工程师培训及认证
     date: "2026-01-09"
     file: 生成式人工智能工程师培训及认证.md

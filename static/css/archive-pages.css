@@ -1076,3 +1076,128 @@ body.archive-subpage {
     transition: none !important;
   }
 }
+
+/* Rich post content */
+.post-lede {
+  margin: 0 0 30px;
+  color: var(--paper-muted, #5d6873);
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.75;
+}
+
+.post-body h2 {
+  margin: 58px 0 18px;
+  padding-top: 8px;
+  color: var(--paper-text, #16202a);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.24;
+}
+
+.post-body h3 {
+  margin: 36px 0 14px;
+  color: var(--paper-text, #16202a);
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.35;
+}
+
+.post-body p,
+.post-body ul,
+.post-body ol {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.post-body li + li {
+  margin-top: 8px;
+}
+
+.post-body blockquote {
+  margin: 30px 0;
+  padding: 20px 24px;
+  border-left: 4px solid var(--paper-brass, #8b5e2d);
+  border-radius: 0 12px 12px 0;
+  background: rgba(139, 94, 45, .08);
+  color: var(--paper-text, #16202a);
+  font-weight: 600;
+}
+
+.post-body blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.post-body table {
+  width: 100%;
+  margin: 28px 0 34px;
+  border-collapse: collapse;
+  border: 1px solid var(--paper-line, #d7d0c5);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.post-body th,
+.post-body td {
+  padding: 12px 14px;
+  border: 1px solid var(--paper-line, #d7d0c5);
+  text-align: left;
+  vertical-align: top;
+}
+
+.post-body th {
+  background: var(--paper-soft, #ece7de);
+  color: var(--paper-text, #16202a);
+  font-weight: 700;
+}
+
+.post-figure {
+  margin: 34px 0 42px;
+}
+
+.post-figure img {
+  width: 100%;
+  display: block;
+  background: var(--paper-soft, #ece7de);
+  box-shadow: 0 16px 34px rgba(34, 42, 49, .10);
+}
+
+.post-figure--portrait {
+  width: min(620px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.post-figure figcaption {
+  margin-top: 12px;
+  color: var(--paper-muted, #5d6873);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .post-body {
+    font-size: 16px;
+  }
+
+  .post-body h2 {
+    margin-top: 44px;
+  }
+
+  .post-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: normal;
+  }
+
+  .post-body th,
+  .post-body td {
+    min-width: 150px;
+    padding: 10px 12px;
+  }
+
+  .post-body blockquote {
+    margin: 24px 0;
+    padding: 16px 18px;
+  }
+}
+

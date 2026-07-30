@@ -48,6 +48,12 @@ design-images:
   - work18.jpg
   - work19.jpg
 posts:
+  - title: I Built My First Browser Extension with AI in About Two Human Hours
+    date: "2026-07-27"
+    file: 2026-07-27-ielts-browser-extension.md
+  - title: I Spent About 60 Human Hours Building a Corporate Website with AI
+    date: "2026-07-24"
+    file: 2026-07-24-ai-enterprise-website.md
   - title: LiYucheng's Homepage
     date: "2026-01-08"
     file: 2026-01-08-homepage.md

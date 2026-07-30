@@ -70,7 +70,15 @@
       document.title = `${title} · Li Yucheng`;
       $('#post-title').textContent = title;
       $('#post-meta').textContent = date ? `${copy.date}${date}` : '';
-      $('#post-body').innerHTML = marked.parse(body);
+      const postBody = $('#post-body');
+      postBody.innerHTML = marked.parse(body);
+
+      // postImageEnhancement: keep article media fast and layout-stable.
+      postBody.querySelectorAll('img').forEach((image, index) => {
+        if (!image.hasAttribute('loading')) image.loading = index === 0 ? 'eager' : 'lazy';
+        if (!image.hasAttribute('decoding')) image.decoding = 'async';
+      });
+
       setState('');
     } catch (error) {
       console.error(error);
