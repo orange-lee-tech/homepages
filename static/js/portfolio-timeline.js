@@ -14,6 +14,7 @@
   let records = [];
   let rendering = false;
   let observer;
+  let outsideClickBound = false;
 
   function language() {
     const requested = new URL(location.href).searchParams.get('lang');
@@ -89,8 +90,8 @@
     const period = esc(localized(event.period || event.timelineDate));
     const style = mobile ? `top:${position}px;left:56px;--lane:0` : `left:${position}%;--lane:${lane}`;
     return `<article class="timeline-event portfolio-timeline-event ${milestone ? 'is-milestone' : 'is-progress'} lane-${lane}${edge}"
-      style="${style}" data-year="${String(event.timelineDate).slice(0, 4)}" data-capabilities="${capabilities}"
-      role="button" tabindex="0" aria-label="${title}, ${period}">
+      style="${style}" data-record-id="${esc(event.id)}" data-year="${String(event.timelineDate).slice(0, 4)}" data-capabilities="${capabilities}"
+      role="button" tabindex="0" aria-expanded="false" aria-label="${title}, ${period}">
       <span class="event-node" aria-hidden="true"></span>
       <span class="event-label">${title}</span>
       <span class="event-detail" role="tooltip">
@@ -99,20 +100,33 @@
       </span>
     </article>`;
   }
+  function closeCard(card) {
+    card.classList.remove('is-open');
+    card.setAttribute('aria-expanded', 'false');
+  }
+  function closeAll(root, except = null) {
+    $$('.portfolio-timeline-event.is-open', root).forEach((card) => {
+      if (card !== except) closeCard(card);
+    });
+  }
+  function openCard(eventCard, root) {
+    closeAll(root, eventCard);
+    eventCard.classList.add('is-open');
+    eventCard.setAttribute('aria-expanded', 'true');
+
+    const year = eventCard.dataset.year;
+    const radar = $(`#year-switch button[data-year="${year}"]`);
+    if (radar) radar.click();
+    const message = $('#timeline-link-message');
+    if (message) {
+      message.textContent = `${COPY[language()].linked}: ${year}${eventCard.dataset.capabilities ? ` · ${eventCard.dataset.capabilities}` : ''}`;
+    }
+  }
   function bindEvents(root) {
     $$('.portfolio-timeline-event', root).forEach((eventCard) => {
       const activate = (event) => {
         if (event.target?.closest?.('a')) return;
-        const open = eventCard.classList.contains('is-open');
-        $$('.timeline-event.is-open', root).forEach((item) => item.classList.remove('is-open'));
-        eventCard.classList.toggle('is-open', !open);
-        if (!open) {
-          const year = eventCard.dataset.year;
-          const radar = $(`#year-switch button[data-year="${year}"]`);
-          if (radar) radar.click();
-          const message = $('#timeline-link-message');
-          if (message) message.textContent = `${COPY[language()].linked}: ${year}${eventCard.dataset.capabilities ? ` · ${eventCard.dataset.capabilities}` : ''}`;
-        }
+        openCard(eventCard, root);
       };
       eventCard.addEventListener('click', activate);
       eventCard.addEventListener('keydown', (event) => {
@@ -122,6 +136,15 @@
         }
       });
     });
+
+    if (!outsideClickBound) {
+      document.addEventListener('click', (event) => {
+        const currentRoot = $('#timeline-list');
+        if (!currentRoot || event.target?.closest?.('.portfolio-timeline-event')) return;
+        closeAll(currentRoot);
+      });
+      outsideClickBound = true;
+    }
   }
   function render() {
     const root = $('#timeline-list');
@@ -160,7 +183,7 @@
     queueMicrotask(() => { rendering = false; });
   }
   async function load() {
-    const response = await fetch(`content/generated/records.json?v=portfolio-3-${Date.now()}`, { cache: 'no-store' });
+    const response = await fetch(`content/generated/records.json?v=portfolio-4-${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) throw new Error(`records.json: ${response.status}`);
     records = (await response.json()).items || [];
     render();

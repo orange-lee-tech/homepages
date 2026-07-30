@@ -868,7 +868,7 @@
       "size": "standard",
       "featured": true,
       "timelineDate": "2023-09",
-      "timelineType": "milestone",
+      "timelineType": "progress",
       "title": {
         "zh": "中南大学能源与动力工程本科阶段",
         "en": "Undergraduate Study in Energy and Power Engineering at Central South University",
@@ -2615,7 +2615,7 @@
       "size": "standard",
       "featured": false,
       "timelineDate": "2026-01-08",
-      "timelineType": "milestone",
+      "timelineType": "progress",
       "title": {
         "zh": "个人主页维护体系翻新",
         "en": "Personal Homepage Maintenance Renovation",
@@ -2700,7 +2700,7 @@
       "size": "standard",
       "featured": false,
       "timelineDate": "2026-07-24",
-      "timelineType": "progress",
+      "timelineType": "milestone",
       "title": {
         "zh": "约 60 个人类小时完成企业官网",
         "en": "Corporate Website Built in About 60 Human Hours",
@@ -2739,6 +2739,111 @@
       "media": [],
       "links": [],
       "relatedPost": "2026-07-24-ai-enterprise-website.md"
+    },
+    {
+      "id": "imp-muon-thermal-internship",
+      "kind": "research",
+      "pages": [
+        "projects",
+        "learning",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2026-08-28",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "中国科学院近代物理研究所实习 8 周",
+        "en": "Eight-week Internship at the Institute of Modern Physics, CAS",
+        "chinese-traditional": "中國科學院近代物理研究所實習 8 周"
+      },
+      "period": {
+        "zh": "2026-07-06—2026-08-28（正在进行）",
+        "en": "2026-07-06—2026-08-28 (ongoing)",
+        "chinese-traditional": "2026-07-06—2026-08-28（正在進行）"
+      },
+      "role": {
+        "zh": "科研实习生",
+        "en": "Research intern",
+        "chinese-traditional": "科研實習生"
+      },
+      "summary": {
+        "zh": "在广东惠州中国科学院近代物理研究所开展八周科研实习，围绕缪子运输工程热工分析，使用 ANSYS Fluent 并依托超算集群开展模拟仿真；目前仍在实习中，阶段性校核表明，在所研究的物理耦合场参数组下安全裕度充足。",
+        "en": "Conducting an eight-week research internship at the Institute of Modern Physics in Huizhou, Guangdong, focused on thermal analysis for muon transport engineering using ANSYS Fluent on a supercomputing cluster; interim checks indicate adequate safety margins under the studied coupled-field parameter set.",
+        "chinese-traditional": "在廣東惠州中國科學院近代物理研究所開展八週科研實習，圍繞繆子運輸工程熱工分析，使用 ANSYS Fluent 並依託超算集群開展模擬仿真；目前仍在實習中，階段性校核表明，在所研究的物理耦合場參數組下安全裕度充足。"
+      },
+      "actions": [
+        {
+          "zh": "围绕缪子运输工程开展热工分析，整理边界条件、工况与校核参数。",
+          "en": "Conducted thermal analysis for muon transport engineering and organized boundary conditions, operating cases, and verification parameters.",
+          "chinese-traditional": "圍繞繆子運輸工程開展熱工分析，整理邊界條件、工況與校核參數。"
+        },
+        {
+          "zh": "使用 ANSYS Fluent 建立并运行数值模型，依托超算集群完成模拟仿真。",
+          "en": "Built and ran numerical models in ANSYS Fluent on a supercomputing cluster.",
+          "chinese-traditional": "使用 ANSYS Fluent 建立並運行數值模型，依託超算集群完成模擬仿真。"
+        },
+        {
+          "zh": "对物理耦合场参数组进行阶段性校核，并评估关键工况下的安全裕度。",
+          "en": "Performed interim checks across coupled-field parameter sets and assessed safety margins under key operating conditions.",
+          "chinese-traditional": "對物理耦合場參數組進行階段性校核，並評估關鍵工況下的安全裕度。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "当前阶段结果显示，在已校核的物理耦合场参数组下安全裕度充足。",
+          "en": "Current results indicate adequate safety margins under the verified coupled-field parameter set.",
+          "chinese-traditional": "當前階段結果顯示，在已校核的物理耦合場參數組下安全裕度充足。"
+        },
+        {
+          "zh": "形成 ANSYS Fluent、超算集群与工程热工分析相结合的科研实践。",
+          "en": "Built hands-on research experience combining ANSYS Fluent, high-performance computing, and engineering thermal analysis.",
+          "chinese-traditional": "形成 ANSYS Fluent、超算集群與工程熱工分析相結合的科研實踐。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "中科院近物所",
+          "en": "Institute of Modern Physics, CAS",
+          "chinese-traditional": "中科院近物所"
+        },
+        {
+          "zh": "缪子运输工程",
+          "en": "Muon Transport Engineering",
+          "chinese-traditional": "繆子運輸工程"
+        },
+        "ANSYS Fluent",
+        {
+          "zh": "超算集群",
+          "en": "Supercomputing Cluster",
+          "chinese-traditional": "超算集群"
+        },
+        {
+          "zh": "热工分析",
+          "en": "Thermal Analysis",
+          "chinese-traditional": "熱工分析"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "ansys"
+      ],
+      "target": "projects.html#record-imp-muon-thermal-internship",
+      "media": [],
+      "links": [],
+      "context": [
+        {
+          "zh": "实习地点为广东惠州，计划周期为 2026 年 7 月 6 日至 8 月 28 日，共八周。",
+          "en": "The internship is based in Huizhou, Guangdong, and is scheduled from July 6 to August 28, 2026, for eight weeks.",
+          "chinese-traditional": "實習地點為廣東惠州，計劃週期為 2026 年 7 月 6 日至 8 月 28 日，共八週。"
+        },
+        {
+          "zh": "时间线采用计划结束日期 2026 年 8 月 28 日作为成长轨迹时间戳；截至 2026 年 7 月 30 日，实习仍在进行。",
+          "en": "The timeline uses the planned completion date, August 28, 2026; as of July 30, 2026, the internship remains ongoing.",
+          "chinese-traditional": "時間線採用計劃結束日期 2026 年 8 月 28 日作為成長軌跡時間戳；截至 2026 年 7 月 30 日，實習仍在進行。"
+        }
+      ],
+      "displayPriority": 118
     },
     {
       "id": "ai-certification-post",
