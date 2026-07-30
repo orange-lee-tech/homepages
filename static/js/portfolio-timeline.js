@@ -1,9 +1,9 @@
 (() => {
   const LANGUAGES = ['zh', 'chinese-traditional', 'en'];
   const COPY = {
-    zh: { detail: '查看关联档案', linked: '关联记录' },
-    'chinese-traditional': { detail: '查看關聯檔案', linked: '關聯記錄' },
-    en: { detail: 'Open related record', linked: 'Linked record' }
+    zh: { detail: '查看完整卡片', linked: '关联记录' },
+    'chinese-traditional': { detail: '查看完整卡片', linked: '關聯記錄' },
+    en: { detail: 'Open full card', linked: 'Linked record' }
   };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -25,11 +25,13 @@
     } catch {}
     return 'chinese-traditional';
   }
+
   function localized(value) {
     const lang = language();
     if (typeof value === 'string' || typeof value === 'number') return String(value);
     return value?.[lang] || value?.zh || value?.en || '';
   }
+
   function withLanguage(target) {
     const raw = String(target || '');
     if (!raw) return '#';
@@ -38,6 +40,29 @@
     url.searchParams.set('lang', language());
     return `${url.pathname}${url.search}${url.hash}`;
   }
+
+  function cardTarget(record) {
+    const pages = Array.isArray(record.pages) ? record.pages : [];
+    if (pages.includes('projects')) return `projects.html#record-${record.id}`;
+    if (pages.includes('learning')) return `learning.html#record-${record.id}`;
+    if (pages.includes('capabilities')) return `capabilities.html#record-${record.id}`;
+    return record.target || '#';
+  }
+
+  function compactText(value, limit) {
+    const normalized = String(value || '').replace(/\s+/g, ' ').trim();
+    if (normalized.length <= limit) return normalized;
+    return `${normalized.slice(0, Math.max(1, limit - 1)).replace(/[，,、；;：:\s]+$/u, '')}…`;
+  }
+
+  function timelineSummary(record) {
+    const explicit = localized(record.timelineSummary);
+    if (explicit) return compactText(explicit, language() === 'en' ? 148 : 70);
+    const full = localized(record.summary);
+    const firstSentence = full.split(/(?<=[。！？.!?])\s*/u).find(Boolean) || full;
+    return compactText(firstSentence, language() === 'en' ? 148 : 70);
+  }
+
   function temporalFraction(value) {
     const text = String(value || '');
     if (/^\d{4}$/.test(text)) return 0.5;
@@ -52,6 +77,7 @@
     return (date - new Date(Date.UTC(year, 0, 1))) /
       (Date.UTC(year + 1, 0, 1) - Date.UTC(year, 0, 1));
   }
+
   function positions(events, isRtl) {
     const values = events.map((event) => 9 + temporalFraction(event.timelineDate) * 82);
     const minGap = events.length > 12 ? 3.8 : 5;
@@ -68,6 +94,7 @@
     }
     return isRtl ? values.map((value) => 100 - value) : values;
   }
+
   function mobilePositions(events, height) {
     const values = events.map((event) => 54 + temporalFraction(event.timelineDate) * (height - 108));
     for (let index = 1; index < values.length; index += 1) {
@@ -79,61 +106,79 @@
     }
     return values;
   }
+
   function eventMarkup(event, position, index, mobile = false) {
     const milestone = event.timelineType === 'milestone';
     const lane = index % 3 - 1;
     const edge = mobile ? '' : position < 19 ? ' edge-start' : position > 81 ? ' edge-end' : '';
     const title = esc(localized(event.title));
-    const summary = esc(localized(event.summary));
-    const href = esc(withLanguage(event.target));
+    const summary = esc(timelineSummary(event));
+    const role = esc(localized(event.role));
+    const href = esc(withLanguage(cardTarget(event)));
     const capabilities = esc((event.capabilities || []).join(' · '));
     const period = esc(localized(event.period || event.timelineDate));
     const style = mobile ? `top:${position}px;left:56px;--lane:0` : `left:${position}%;--lane:${lane}`;
+    const detailId = `timeline-detail-${esc(event.id)}`;
     return `<article class="timeline-event portfolio-timeline-event ${milestone ? 'is-milestone' : 'is-progress'} lane-${lane}${edge}"
       style="${style}" data-record-id="${esc(event.id)}" data-year="${String(event.timelineDate).slice(0, 4)}" data-capabilities="${capabilities}"
-      role="button" tabindex="0" aria-expanded="false" aria-label="${title}, ${period}">
+      role="button" tabindex="0" aria-expanded="false" aria-controls="${detailId}" aria-label="${title}, ${period}">
       <span class="event-node" aria-hidden="true"></span>
       <span class="event-label">${title}</span>
-      <span class="event-detail" role="tooltip">
-        <span class="event-date">${period}</span><strong>${title}</strong><span>${summary}</span>
+      <span class="event-detail" id="${detailId}" role="group">
+        <span class="event-date">${period}</span>
+        <strong>${title}</strong>
+        ${role ? `<span class="event-role">${role}</span>` : ''}
+        <span class="event-summary">${summary}</span>
         <a href="${href}">${esc(COPY[language()].detail)} →</a>
       </span>
     </article>`;
   }
+
   function closeCard(card) {
     card.classList.remove('is-open');
     card.setAttribute('aria-expanded', 'false');
   }
+
   function closeAll(root, except = null) {
     $$('.portfolio-timeline-event.is-open', root).forEach((card) => {
       if (card !== except) closeCard(card);
     });
   }
+
+  function syncRadar(year) {
+    const radar = $(`#year-switch button[data-year="${year}"]`);
+    if (!radar) return;
+    radar.dispatchEvent(new MouseEvent('click', {
+      bubbles: false,
+      cancelable: true,
+      view: window
+    }));
+  }
+
   function openCard(eventCard, root) {
     closeAll(root, eventCard);
     eventCard.classList.add('is-open');
     eventCard.setAttribute('aria-expanded', 'true');
 
     const year = eventCard.dataset.year;
-    const radar = $(`#year-switch button[data-year="${year}"]`);
-    if (radar) radar.click();
+    syncRadar(year);
     const message = $('#timeline-link-message');
     if (message) {
       message.textContent = `${COPY[language()].linked}: ${year}${eventCard.dataset.capabilities ? ` · ${eventCard.dataset.capabilities}` : ''}`;
     }
   }
+
   function bindEvents(root) {
     $$('.portfolio-timeline-event', root).forEach((eventCard) => {
       const activate = (event) => {
         if (event.target?.closest?.('a')) return;
+        event.preventDefault();
+        event.stopPropagation();
         openCard(eventCard, root);
       };
       eventCard.addEventListener('click', activate);
       eventCard.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          activate(event);
-        }
+        if (event.key === 'Enter' || event.key === ' ') activate(event);
       });
     });
 
@@ -146,6 +191,7 @@
       outsideClickBound = true;
     }
   }
+
   function render() {
     const root = $('#timeline-list');
     if (!root || !records.length) return;
@@ -182,8 +228,9 @@
     window.__portfolioTimelineYears = years;
     queueMicrotask(() => { rendering = false; });
   }
+
   async function load() {
-    const response = await fetch(`content/generated/records.json?v=portfolio-4-${Date.now()}`, { cache: 'no-store' });
+    const response = await fetch(`content/generated/records.json?v=portfolio-5-${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) throw new Error(`records.json: ${response.status}`);
     records = (await response.json()).items || [];
     render();
@@ -197,6 +244,7 @@
     $$('.archive-language button').forEach((button) => button.addEventListener('click', () => setTimeout(render, 80)));
     matchMedia('(max-width: 760px)').addEventListener?.('change', render);
   }
+
   const start = () => setTimeout(() => load().catch((error) => console.error('Portfolio timeline:', error)), 180);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
   else start();

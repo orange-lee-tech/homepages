@@ -5,18 +5,45 @@
 .portfolio-timeline-row .timeline-year { top: calc(var(--row-height, 168px) / 2 - 28px); }
 .portfolio-timeline-row .timeline-direction { top: calc(var(--row-height, 168px) / 2 - 18px); }
 .portfolio-timeline-event { top: calc(var(--row-height, 168px) / 2 + var(--lane, 0) * 24px); cursor: pointer; }
+.portfolio-timeline-event.is-open { z-index: 80; }
 .portfolio-timeline-event.lane--1 .event-label { bottom: 30px; top: auto; }
 .portfolio-timeline-event.lane-0 .event-label { top: 28px; bottom: auto; }
 .portfolio-timeline-event.lane-1 .event-label { top: 34px; bottom: auto; }
 .portfolio-timeline-event.is-progress .event-label { opacity: 0; transform: translateX(-50%) translateY(4px); transition: 150ms ease; }
-.portfolio-timeline-event.is-progress:hover .event-label, .portfolio-timeline-event.is-progress:focus-visible .event-label, .portfolio-timeline-event.is-progress.is-open .event-label { opacity: 1; transform: translateX(-50%); }
-.portfolio-timeline-event .event-detail { top: 42px; bottom: auto; }
+.portfolio-timeline-event.is-progress:hover .event-label,
+.portfolio-timeline-event.is-progress:focus-visible .event-label,
+.portfolio-timeline-event.is-progress.is-open .event-label { opacity: 1; transform: translateX(-50%); }
+.portfolio-timeline-event .event-detail { top: 42px; bottom: auto; width: min(252px, calc(100vw - 48px)); padding: 12px 13px; }
 .portfolio-timeline-event.lane-1 .event-detail { bottom: 42px; top: auto; }
 
-/* Details are click-locked. Hover alone never opens the panel. */
+/* Timeline details are compact and click-locked. Hover alone never opens the panel. */
 .portfolio-timeline-event:hover:not(.is-open) .event-detail,
 .portfolio-timeline-event:focus-visible:not(.is-open) .event-detail { display: none; }
-.portfolio-timeline-event.is-open .event-detail { display: block; }
+.portfolio-timeline-event.is-open .event-detail {
+  display: grid;
+  gap: 4px;
+  pointer-events: auto;
+}
+.portfolio-timeline-event .event-detail strong { margin: 0; line-height: 1.35; }
+.portfolio-timeline-event .event-role {
+  display: block;
+  color: var(--ice);
+  font-size: 10px;
+  line-height: 1.4;
+}
+.portfolio-timeline-event .event-summary {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--muted);
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.portfolio-timeline-event .event-detail a {
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: 600;
+}
 
 @media (max-width: 760px) {
   .portfolio-timeline-row { min-height: var(--row-height, 210px); margin: 0 18px; }

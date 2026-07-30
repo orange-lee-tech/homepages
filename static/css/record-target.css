@@ -1,0 +1,17 @@
+/* Exact hash navigation for dynamically rendered portfolio records. */
+.portfolio-record,
+.portfolio-evidence-grid [id^="record-"] {
+  scroll-margin-top: 96px;
+}
+
+.portfolio-record.is-targeted {
+  outline: 2px solid rgba(120, 214, 232, .78);
+  outline-offset: 5px;
+  box-shadow: 0 0 0 8px rgba(120, 214, 232, .09), var(--shadow);
+}
+
+.portfolio-evidence-grid .is-targeted {
+  outline: 2px solid rgba(120, 214, 232, .78);
+  outline-offset: 4px;
+  background: rgba(120, 214, 232, .08);
+}
