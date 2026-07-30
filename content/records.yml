@@ -5,9 +5,9 @@ page:
     zh: 本科数字履历主记录
     en: Canonical Undergraduate Portfolio Records
   description:
-    zh: 以一张主卡片对应一段连续经历；证书、影像和动态作为证据，不重复制造时间线节点。
-    en: One canonical card represents each continuous experience; certificates, images, and posts serve as evidence without duplicating timeline
-      nodes.
+    zh: 一张主卡对应一段连续经历；默认摘要保持简洁，背景、任务、行动、结果和个人体会在展开区完整保存。
+    en: One canonical card represents each continuous experience; the default summary stays concise while context, tasks, actions, outcomes, and
+      reflections are preserved in expandable detail.
 items:
 - id: antimony-clean-energy
   kind: engineering
@@ -26,16 +26,21 @@ items:
     zh: 学生项目副主持
     en: Student deputy project lead
   summary:
-    zh: 围绕锑尾矿与冶金渣资源化，参与热化学储热吸热器与智能调控系统的工程表达和赛事交付。
-    en: Worked on engineering communication and competition delivery for antimony recovery, thermochemical storage, and intelligent control.
+    zh: 围绕锑尾矿与冶金渣资源化，团队利用湿法冶金回收锑资源，并开发适配的热化学储热吸热器与智能调控系统；本人承担副主持、三维建模与赛事表达工作。
+    en: The team recovered antimony from tailings and metallurgical slag through hydrometallurgy and developed a thermochemical-storage receiver
+      with intelligent control; the user served as deputy lead and handled 3D modeling and competition communication.
   actions:
-  - zh: 分担项目组织与协作工作。
-    en: Shared project coordination and team delivery.
-  - zh: 负责 3D 建模、科技作品设计思路与宣传视频策划剪辑。
-    en: Handled 3D modeling, product presentation concepts, and promotional video planning and editing.
+  - zh: 分担团队组织、协作与现场答辩交付工作。
+    en: Shared team organization, collaboration, and on-site defense delivery.
+  - zh: 负责装置 3D 建模与科技作品的设计表达。
+    en: Handled device 3D modeling and engineering presentation.
+  - zh: 负责宣传视频的策划与剪辑。
+    en: Planned and edited the promotional video.
   outcomes:
+  - zh: 形成作品《“锑”旧焕新——一种基于可再生锑的光热化学储热系统》。
+    en: Produced the project “Antimony Renewal — a solar-thermochemical storage system based on renewable antimony.”
   - zh: 获第十八届全国大学生节能减排竞赛全国一等奖。
-    en: Won national first prize in the 18th National College Student Energy Conservation and Emission Reduction Competition.
+    en: Won national first prize in the 18th national energy-conservation competition.
   - zh: 同时获湖南省第三届大学生节能减排竞赛二等奖。
     en: Also won second prize in the third Hunan provincial competition.
   tags:
@@ -64,7 +69,21 @@ items:
       zh: 湖南省锑项目二等奖证书
       en: Hunan second-prize certificate for the antimony project
     stream: engineering
+  - path: static/assets/portfolio/energy-saving/energy-saving-04-national-first-prize-plaque.webp
+    alt:
+      zh: 全国大学生节能减排竞赛一等奖奖牌
+      chinese-traditional: 全國大學生節能減排競賽一等獎獎牌
+      en: National first-prize plaque in the energy-saving competition
+    stream: engineering
   links: []
+  context:
+  - zh: 第十八届全国大学生节能减排社会实践与科技作品竞赛由教育部高等学校能源动力类专业教学指导委员会指导，现场决赛在东北石油大学举行。
+    en: The 18th National College Student Energy Conservation and Emission Reduction Competition was guided by the Ministry of Education’s energy-and-power
+      teaching committee, with the on-site final at Northeast Petroleum University.
+  - zh: 项目任务是利用湿法冶金从锑尾矿和冶金渣中提取锑资源，并开发适配的热化学储热吸热器和智能调控系统。
+    en: The project task was to recover antimony from tailings and metallurgical slag through hydrometallurgy and develop a matching thermochemical-storage
+      receiver and intelligent control system.
+  displayPriority: 120
 - id: tungsten-recycling
   kind: engineering
   pages:
@@ -73,33 +92,45 @@ items:
   size: extended
   featured: true
   timelineDate: '2025-05-10'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 清洁低碳能源工程研究中心：钨资源回收与设备专利链
     en: 'Clean and Low-carbon Energy Research Center: Tungsten Recovery and Device Patent Chain'
-  period: 2024-10-07—2025-05-10
+  period:
+    zh: 工程研究中心经历 2024-10—2025-08；钨项目竞赛阶段 2024-10-07—2025-05-10
+    en: 'Research-center period: 2024-10—2025-08; tungsten competition phase: 2024-10-07—2025-05-10'
   role:
     zh: 学生项目主持 / 钨项目成员
     en: Student project lead / tungsten-project member
   summary:
-    zh: 在清洁低碳能源技术湖南省工程研究中心推进设备说明书、三维建模、实验图表和赛事材料；钨资源回收装置形成省赛与授权专利证据，另有“超快高温速控一体机”专利申请在办。
-    en: Advanced equipment documentation, 3D modeling, experimental figures, and competition materials at the Hunan Engineering Research Center
-      for Clean and Low-carbon Energy; the tungsten-recovery device produced provincial-competition and granted-patent evidence, while the Ultra-fast
-      High-temperature Integrated Controller patent remains pending.
+    zh: 在清洁低碳能源技术湖南省工程研究中心参与科研成果转化、设备研发与赛事组织；其中钨资源回收装置形成省赛二等奖和授权发明专利，另一项高温速控设备专利仍在办理。
+    en: At the Hunan Engineering Research Center for Clean and Low-carbon Energy Technology, contributed to research commercialization, equipment
+      development, and competition delivery; the tungsten-recovery device won a provincial second prize and obtained a granted invention patent,
+      while another high-temperature controller patent remains pending.
   actions:
-  - zh: 使用 SolidWorks 建立符合设计要求的装置模型。
-    en: Built the device model in SolidWorks.
-  - zh: 参与设备说明书、3D 打印准备与项目材料交付。
-    en: Contributed to documentation, 3D-print preparation, and project delivery.
-  - zh: 使用 Origin 2024 整理实验数据图表，并参与核心赛事材料组织。
-    en: Used Origin 2024 for experimental figures and helped organize core competition materials.
+  - zh: 率队撰写设备说明书并组织核心赛事材料。
+    en: Led preparation of equipment manuals and core competition materials.
+  - zh: 使用 SolidWorks 建立符合设计需求的设备模型，并为 3D 打印做准备。
+    en: Built design-compliant equipment models in SolidWorks and prepared them for 3D printing.
+  - zh: 使用 Origin 2024 绘制实验数据图表。
+    en: Produced experimental data figures with Origin 2024.
+  - zh: 参与节能减排、创新创业类赛事及专利申报。
+    en: Participated in energy-conservation and innovation competitions and patent applications.
   outcomes:
+  - zh: 形成作品《“钨”尽其用——一种基于氢冶金原理的可移动式钨资源回收装置设计》。
+    en: Produced “Making Full Use of Tungsten — a mobile tungsten-recovery device based on hydrogen metallurgy.”
   - zh: 获湖南省第三届大学生节能减排竞赛二等奖。
-    en: Won second prize in the third Hunan provincial competition.
-  - zh: 发明专利 202510469264.X 已获授权。
-    en: Invention patent 202510469264.X was granted.
-  - zh: 专利 202510196241.6《超快高温速控一体机》在办。
-    en: Patent application 202510196241.6, Ultra-fast High-temperature Integrated Controller, remains pending.
+    en: Won second prize in the third Hunan provincial energy-conservation competition.
+  - zh: 发明专利 202510469264.X《一种基于氢冶金原理的可移动式钨资源回收装置》已获授权。
+    en: Invention patent 202510469264.X, a mobile tungsten-recovery device based on hydrogen metallurgy, was granted.
+  - zh: 专利申请 202510196241.6《超快高温速控一体机》仍在办理，不能与已授权专利混同。
+    en: Patent application 202510196241.6, Ultra-fast High-temperature Integrated Controller, remains pending and is distinct from the granted
+      patent.
+  - zh: 2026 年校级创新训练项目《炽火工坊——基于 PID 算法精准控制的焦耳热一体机》结题良好。
+    en: The 2026 university innovation-training project “Chihuo Workshop — a PID-controlled Joule-heating integrated system” completed with a
+      good evaluation.
+  - zh: 该研究中心经历曾形成拟衔接本科毕业论文的研究方向。
+    en: The research-center work also formed a prospective direction for the undergraduate thesis.
   tags:
   - zh: 氢冶金
     en: Hydrogen Metallurgy
@@ -125,7 +156,21 @@ items:
       en: Patent grant notice for the tungsten recycling device
     stream: engineering
     featured: true
+  - path: static/assets/portfolio/engineering/engineering-innovation-project-completion-2026.webp
+    alt:
+      zh: 中南大学大学生创新创业项目结题证书
+      chinese-traditional: 中南大學大學生創新創業專案結題證書
+      en: CSU innovation and entrepreneurship project completion certificate
   links: []
+  context:
+  - zh: 工程研究中心工作由动力工程及工程热物理系石雷副教授指导，任务包括研发、专利申报和核心赛事学生组织。
+    en: The engineering-research-center work was supervised by Associate Professor Shi Lei and covered R&D, patent applications, and student organization
+      for major competitions.
+  - zh: 湖南省第三届大学生节能减排社会实践与科技作品竞赛由湖南省教育厅举办。
+    en: The third Hunan college energy-conservation competition was organized by the Hunan Provincial Department of Education.
+  - zh: 钨项目聚焦高效制氢同时回收钨金属。
+    en: The tungsten project focused on efficient hydrogen production while recovering tungsten metal.
+  displayPriority: 110
 - id: str-forensic-modeling
   kind: modeling
   pages:
@@ -134,7 +179,7 @@ items:
   size: extended
   featured: true
   timelineDate: '2025-08-28'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: STR 混合样本分析：同一项目的三项赛事成果
     en: 'STR Mixture Analysis: One Project, Three Competition Outcomes'
@@ -143,21 +188,25 @@ items:
     zh: 项目主持 / 论文与排版组织
     en: Project lead / writing and typesetting coordination
   summary:
-    zh: 围绕法医物证多人身份鉴定数据集，组织完成模型、论文与现场答辩材料，并在校级、省级和全国赛事中连续转化。
-    en: Organized modeling, paper production, and defense materials for forensic STR mixture analysis across university, provincial, and national
-      competitions.
+    zh: 主持“法医物证多人身份鉴定问题数据集”项目，围绕 STR 混合样本的等位基因分析与去噪完成四个子问题、论文和现场答辩，并在校级、省级与全国赛事中连续转化。
+    en: Led a forensic multi-person identification project, completing four subproblems on STR-mixture allele analysis and denoising, the paper,
+      and on-site defense, with outcomes across university, provincial, and national competitions.
   actions:
-  - zh: 主持论文写作与 LaTeX 制版，使用 VS Code 组织代码和材料。
-    en: Led paper writing and LaTeX production, organizing code and materials in VS Code.
-  - zh: 围绕混合样本等位基因分析与去噪提出项目方案。
-    en: Developed the project framing for allele analysis and denoising in mixed samples.
+  - zh: 担任项目主持，组织团队分工、论文结构与答辩材料。
+    en: Served as project lead, organizing team roles, paper structure, and defense materials.
+  - zh: 主持论文写作与 LaTeX 制版，并使用 VS Code 管理代码和材料。
+    en: Led paper writing and LaTeX typesetting and managed code and materials in VS Code.
+  - zh: 围绕 STR 混合样本等位基因分析提出高效去噪方案。
+    en: Developed an efficient denoising approach for allele analysis in STR mixtures.
   outcomes:
-  - zh: 中南大学第二十届数学建模竞赛一等奖。
-    en: First prize in the 20th CSU Mathematical Modeling Competition.
-  - zh: 湖南省大学生数学建模竞赛三等奖。
-    en: Third prize in the Hunan Provincial Mathematical Modeling Competition.
-  - zh: 2025 深圳杯数学建模挑战赛全国优秀论文。
-    en: National Outstanding Paper in the 2025 Shenzhen Cup Mathematical Modeling Challenge.
+  - zh: 形成论文《基于机器学习的 STR 混合样本等位基因分析与去噪方法研究》。
+    en: Produced the paper “Machine-learning-based allele analysis and denoising for STR mixture samples.”
+  - zh: 获中南大学第二十届数学建模竞赛一等奖。
+    en: Won first prize in the 20th CSU Mathematical Modeling Competition.
+  - zh: 在湖南省选拔阶段排名第二，最终获湖南省大学生数学建模竞赛三等奖。
+    en: Ranked second in the Hunan selection stage and ultimately won third prize in the Hunan Provincial Mathematical Modeling Competition.
+  - zh: 获 2025 深圳杯数学建模挑战赛全国优秀论文。
+    en: Received a National Outstanding Paper award in the 2025 Shenzhen Cup.
   tags:
   - zh: 数学建模
     en: Mathematical Modeling
@@ -187,6 +236,13 @@ items:
       en: CSU 20th modeling first-prize certificate
     stream: modeling
   links: []
+  displayPriority: 130
+  context:
+  - zh: 2025 深圳杯数学应用挑战赛由中国工业与应用数学学会和深圳市科学技术协会联合举办，现场决赛在深圳北理莫斯科大学举行。
+    en: The 2025 Shenzhen Cup Mathematical Application Challenge was jointly organized by CSIAM and the Shenzhen Association for Science and Technology,
+      with the on-site final at Shenzhen MSU-BIT University.
+  - zh: 项目解决赛题 D“法医物证多人身份鉴定问题数据集”的四个子问题。
+    en: The project addressed all four subproblems of Problem D, a forensic multi-person identification dataset.
 - id: rocket-debris-modeling
   kind: modeling
   pages:
@@ -207,11 +263,15 @@ items:
     zh: 完成深圳杯赛题“火箭残骸定位问题”的建模、论文表达与 Python 计算工作。
     en: Worked on modeling, paper production, and Python computation for the Shenzhen Cup rocket-debris localization problem.
   actions:
-  - zh: 使用 LaTeX 参与论文写作与制版。
-    en: Used LaTeX for paper writing and production.
+  - zh: 作为团队成员分担论文写作与制版。
+    en: Shared paper writing and typesetting as a team member.
+  - zh: 使用 LaTeX 完成数学表达与论文排版。
+    en: Used LaTeX for mathematical expression and paper production.
   - zh: 使用 Python 3.10 支持模型计算。
     en: Used Python 3.10 for model computation.
   outcomes:
+  - zh: 形成论文《基于 Chan–Taylor 算法的星源定位智算模型》。
+    en: Produced “An intelligent source-localization model based on the Chan–Taylor algorithm.”
   - zh: 获中南大学第十九届数学建模竞赛一等奖。
     en: Won first prize in the 19th CSU Mathematical Modeling Competition.
   tags:
@@ -232,6 +292,11 @@ items:
       en: CSU 19th modeling first-prize certificate
     stream: modeling
   links: []
+  context:
+  - zh: 项目来自中南大学第十九届数学建模竞赛，采用 2024 深圳杯赛题 A“火箭残骸定位问题”。
+    en: The project was completed for the 19th CSU Mathematical Modeling Competition using 2024 Shenzhen Cup Problem A, rocket-debris localization.
+  - zh: 团队需要完成赛题的四个子问题。
+    en: The team addressed all four subproblems.
 - id: mcm-olympic-medals
   kind: modeling
   pages:
@@ -240,7 +305,7 @@ items:
   size: standard
   featured: false
   timelineDate: '2025-01-28'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: MCM 奥运奖牌预测模型
     en: MCM Olympic Medal Prediction Model
@@ -252,11 +317,13 @@ items:
     zh: 组织完成 MCM C 题奥运奖牌预测项目，参与论文写作、制版与结果交付。
     en: Organized an MCM project on Olympic medal prediction and contributed to paper writing, typesetting, and delivery.
   actions:
-  - zh: 协调团队任务与论文结构。
-    en: Coordinated team tasks and paper structure.
-  - zh: 使用 LaTeX 与 VS Code 完成文档交付。
+  - zh: 担任项目主持，分担团队组织、论文写作与制版。
+    en: Served as project lead and shared team organization, paper writing, and typesetting.
+  - zh: 使用 LaTeX 与 VS Code 完成论文材料交付。
     en: Delivered the paper using LaTeX and VS Code.
   outcomes:
+  - zh: 形成论文《Olympic Medal Prediction Model Based on MLP Algorithm》。
+    en: Produced “Olympic Medal Prediction Model Based on MLP Algorithm.”
   - zh: 获得 COMAP Successful Participant（S 奖）。
     en: Received the COMAP Successful Participant award.
   tags:
@@ -276,6 +343,11 @@ items:
       en: 2025 MCM Successful Participant certificate
     stream: modeling
   links: []
+  context:
+  - zh: Mathematical Contest in Modeling 由美国数学及其应用联合会 COMAP 举办。
+    en: The Mathematical Contest in Modeling is organized by COMAP.
+  - zh: 团队解决 MCM C 题“奥运奖牌预测”的三个子问题。
+    en: The team addressed the three subproblems of MCM Problem C on Olympic medal prediction.
 - id: mathorcup-brfc
   kind: research
   pages:
@@ -299,20 +371,26 @@ items:
       contributions, but it was a clear and indispensable indirect contribution that enabled the project to form, keep iterating, and ultimately
       become a paper.'
   actions:
-  - zh: 发起组队、聚合成员并启动第十五届 MathorCup 汽车风阻项目。
-    en: Formed the team and launched the 15th MathorCup aerodynamic-modeling project.
-  - zh: 提供统一 LaTeX 模板，重整课题组文件结构与工程管理流程。
-    en: Provided a shared LaTeX template and reorganized the group's file and engineering workflow.
+  - zh: 作为领队发起组队、聚合成员并启动汽车风阻项目。
+    en: As team leader, formed the team and launched the vehicle-drag project.
+  - zh: 分担竞赛论文写作、LaTeX 制版和 ParaView 汽车风阻模拟仿真。
+    en: Shared competition-paper writing, LaTeX typesetting, and ParaView vehicle-drag simulation.
+  - zh: 提供统一 LaTeX 模板，重整课题组文件结构与科研工程流程。
+    en: Provided a shared LaTeX template and reorganized the group’s file structure and research-engineering workflow.
   - zh: 优化计算任务管理，将课题组 GPU 平均利用效率由约 40% 提升至约 90%。
     en: Improved compute-task management, raising average GPU utilization from about 40% to about 90%.
   outcomes:
-  - zh: 降低资源空闲、迭代等待与试错时间成本，也降低团队因反馈周期过长而中途放弃的风险。
-    en: Reduced idle compute, iteration waiting, and experimentation cost, while lowering the risk of the team abandoning work because feedback
-      cycles were too slow.
-  - zh: MathorCup 获华中赛区三等奖。
-    en: Won third prize in the MathorCup Central China region.
-  - zh: 成果转化论文 BRFC 已投稿 AAAI 2027；作者顺序按 OpenReview 公开记录展示，Yucheng Li 位列第四。
-    en: The resulting BRFC paper was submitted to AAAI 2027; author order follows the public OpenReview record, with Yucheng Li listed fourth.
+  - zh: 竞赛阶段形成论文《基于 FD-PINO 神经网络模型预测汽车风阻》。
+    en: The competition phase produced “Vehicle-drag prediction based on an FD-PINO neural-network model.”
+  - zh: 获第十五届 MathorCup 华中赛区三等奖。
+    en: Won third prize in the 15th MathorCup Central China region.
+  - zh: 降低资源空闲、迭代等待与试错成本，也降低团队因反馈周期过长而放弃项目的风险。
+    en: Reduced idle compute, iteration waiting, and experimentation cost, while lowering the risk of project abandonment caused by slow feedback
+      cycles.
+  - zh: BRFC 作者顺序为 Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu；Yucheng Li 位列第四。
+    en: BRFC author order is Jinlong Li, Fengyi Zhang, Yongjie Hu, Yucheng Li, and Shengjun Liu; Yucheng Li is fourth author.
+  - zh: 论文于 2026-07-20 提交 AAAI 2027，公开记录显示 2026-07-29 修改。
+    en: The paper was submitted to AAAI 2027 on 2026-07-20 and the public record shows a modification on 2026-07-29.
   tags:
   - MathorCup
   - Research Engineering
@@ -340,6 +418,15 @@ items:
       zh: OpenReview 个人主页
       en: OpenReview profile
     url: https://openreview.net/profile?id=%7EYucheng_Li13
+  context:
+  - zh: 第十五届 MathorCup 数学应用挑战赛由中国优选法统筹法与经济数学研究会举办。
+    en: The 15th MathorCup Mathematical Application Challenge was organized by the Chinese Society of Optimization, Overall Planning and Economic
+      Mathematics.
+  - zh: 竞赛阶段解决 A 题“汽车风阻预测”的三个问题及两个附加题。
+    en: The competition phase addressed three main questions and two bonus questions in Problem A on vehicle-drag prediction.
+  - zh: 科研转化阶段形成 BRFC：Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates。
+    en: 'The research-conversion phase produced BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates.'
+  displayPriority: 125
 - id: new-energy-materials-lab
   kind: research
   pages:
@@ -357,16 +444,21 @@ items:
     zh: 学生项目副主持
     en: Student deputy project lead
   summary:
-    zh: 在超级电容器纽扣电池方向参与市场调研与新电极材料实验工作。
-    en: Participated in market research and electrode-material experiments for supercapacitor coin cells.
+    zh: 在刘刚教授领导的新能源材料实验室参与超级电容器纽扣电池方向，承担市场调研和新电极材料实验基础工作。
+    en: Worked in Professor Liu Gang’s new-energy-materials laboratory on supercapacitor coin cells, covering market research and foundational
+      electrode-material experiments.
   actions:
   - zh: 组织并撰写市场调研报告。
     en: Organized and wrote a market research report.
-  - zh: 参与生物材料称量、活性炭烧制与电极片压制。
-    en: Worked on biomaterial weighing, activated-carbon preparation, and electrode pressing.
+  - zh: 完成大量生物材料称量。
+    en: Performed repeated biomaterial weighing.
+  - zh: 参与活性炭烧制。
+    en: Participated in activated-carbon firing.
+  - zh: 参与电极片压制。
+    en: Participated in electrode-sheet pressing.
   outcomes:
-  - zh: 形成新能源材料实验与市场调研的基础实践。
-    en: Built foundational experience in new-energy-material experiments and market research.
+  - zh: 形成超级电容器材料实验、基础工艺与市场调研的阶段性实践。
+    en: Built stage-based experience in supercapacitor materials, basic laboratory processes, and market research.
   tags:
   - zh: 超级电容器
     en: Supercapacitors
@@ -380,6 +472,11 @@ items:
   target: learning.html#record-new-energy-materials-lab
   media: []
   links: []
+  context:
+  - zh: 实验室方向由新能源科学与工程系主任刘刚教授领导。
+    en: The laboratory direction was led by Professor Liu Gang, head of the Department of New Energy Science and Engineering.
+  - zh: 任务是收集市场调研数据并推进新电极材料研发。
+    en: The task was to collect market data and advance the development of new electrode materials.
 - id: csu-energy-power-undergraduate
   kind: education
   pages:
@@ -424,11 +521,11 @@ items:
   size: extended
   featured: true
   timelineDate: '2026-01-26'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 中国科学院近代物理研究所 2026 年优秀大学生冬令营
     en: 2026 IMP Outstanding Undergraduate Winter Camp
-  period: 2026-01-26—2026-01-30
+  period: 2026-01-26—2026-01-29
   role:
     zh: 优秀营员
     en: Outstanding participant
@@ -437,15 +534,17 @@ items:
     en: Studied HIAF, CiADS, material irradiation, nuclear-waste transmutation, and linear accelerators through thirteen talks, researcher discussions,
       and facility visits.
   actions:
-  - zh: 参访近物所惠州学部与相关大科学装置设施。
-    en: Visited IMP's Huizhou campus and major-science-facility infrastructure.
-  - zh: 围绕加速器驱动次临界系统、直线加速器及热工方向与研究人员交流。
-    en: Discussed accelerator-driven subcritical systems, linear accelerators, and thermal engineering with researchers.
+  - zh: 参加 13 场专题报告。
+    en: Attended thirteen specialized reports.
+  - zh: 实地参观地下加速器及相关大科学装置设施。
+    en: Visited underground accelerator and related major-science-facility infrastructure.
+  - zh: 与专家交流核技术、直线加速器、热工和材料辐照应用。
+    en: Discussed nuclear technology, linear accelerators, thermal engineering, and material irradiation with experts.
   outcomes:
-  - zh: 获评优秀营员。
-    en: Recognized as an outstanding participant.
-  - zh: 进一步明确核能可持续发展、加速器热工与能源材料辐照的学习方向。
-    en: Clarified interests in sustainable nuclear energy, accelerator thermal engineering, and irradiation of energy materials.
+  - zh: 获评 2026 年优秀大学生冬令营“优秀营员”。
+    en: Recognized as an Outstanding Camper in the 2026 winter camp.
+  - zh: 加深对核能可持续发展与大科学装置的理解，为未来研究方向提供参考。
+    en: Deepened understanding of sustainable nuclear energy and major science facilities, providing reference for future research choices.
   tags:
   - zh: 中科院近物所
     en: Institute of Modern Physics
@@ -456,27 +555,39 @@ items:
   capabilities:
   - energy-power
   - reading-notes
-  - collaboration
   target: learning.html#record-imp-winter-camp
   media:
   - path: static/assets/portfolio/winter-camp/winter-camp-01-opening.webp
     alt:
       zh: 近物所 2026 年优秀大学生冬令营开幕屏幕
       en: Opening screen of the 2026 IMP winter camp
-    stream: engineering
     featured: true
   - path: static/assets/portfolio/winter-camp/winter-camp-04-hiaf-tunnel-layout.webp
     alt:
       zh: 强流重离子加速器隧道平面布置图
       en: HIAF tunnel layout
-    stream: engineering
   - path: static/assets/portfolio/winter-camp/winter-camp-05-comprehensive-test-hall.webp
     alt:
       zh: 近物所综合测试大厅外景
       en: IMP comprehensive test hall
+  - path: static/assets/portfolio/winter-camp/winter-camp-06-outstanding-camper.webp
+    alt:
+      zh: 中国科学院近代物理研究所 2026 年优秀大学生冬令营优秀营员证书
+      chinese-traditional: 中國科學院近代物理研究所 2026 年優秀大學生冬令營優秀營員證書
+      en: Outstanding Camper certificate from the 2026 IMP winter camp
     stream: engineering
+    featured: true
   links: []
   relatedPost: 2026-01-30-imp-winter-camp.md
+  context:
+  - zh: 参加中国科学院近代物理研究所“国之重器”大科学装置冬令营，聚焦核物理前沿技术应用。
+    en: Joined the Institute of Modern Physics winter camp on major national science facilities, focusing on applications of frontier nuclear
+      physics.
+  - zh: 学习目标是通过专题报告与实地参观理解 HIAF 与 CiADS 的应用原理。
+    en: The learning goal was to understand the application principles of HIAF and CiADS through lectures and site visits.
+  reflection:
+  - zh: 此次经历更像研究方向探索和认知拓展，而非团队协作成果。
+    en: This experience primarily reflects research-direction exploration and expanded understanding rather than a collaboration outcome.
 - id: yuan-ze-exchange
   kind: education
   pages:
@@ -521,7 +632,12 @@ items:
   - energy-power
   - reading-notes
   target: learning.html#record-yuan-ze-exchange
-  media: []
+  media:
+  - path: static/assets/portfolio/exchange/yuan-ze-invitation-letter.webp
+    alt:
+      zh: 元智大学交换学习邀请函
+      chinese-traditional: 元智大學交換學習邀請函
+      en: Yuan Ze University exchange invitation letter
   links: []
   relatedPost: 2026-07-01-yuan-ze-exchange-learning.md
 - id: yuan-ze-study-group
@@ -529,10 +645,10 @@ items:
   pages:
   - learning
   - capabilities
-  size: standard
+  size: extended
   featured: false
   timelineDate: '2026-03-07'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 星际和平公司“策略投资部”经济主题读书会
     en: 'Economics Study Group: Strategic Investment Department'
@@ -546,15 +662,25 @@ items:
     zh: 以工程经济课程为起点，六人团队分工精读财务与投资读物，并通过六次线下会议完成讨论和个人心得交付。
     en: A six-person team extended Engineering Economy through assigned reading, six in-person discussions, and individual written reflections.
   actions:
-  - zh: 围绕《富爸爸，穷爸爸》《小狗钱钱》等五本读物进行分工精读。
-    en: Read and discussed five finance books, including Rich Dad Poor Dad and Money or Your Life-style youth finance texts.
-  - zh: 参与六次线下讨论并完成个人心得报告。
-    en: Participated in six in-person sessions and completed an individual reflection report.
+  - zh: 分工精读 ISBN 9789573299936《小狗钱钱 2》。
+    en: 'Assigned reading: ISBN 9789573299936, Money Dog 2.'
+  - zh: 分工精读 ISBN 9789573299929《小狗钱钱》。
+    en: 'Assigned reading: ISBN 9789573299929, Money Dog.'
+  - zh: 分工精读 ISBN 9789868614321《看懂财经新闻的第一本书：认识国内外经济指标》。
+    en: 'Assigned reading: ISBN 9789868614321, A First Book for Understanding Financial News and Economic Indicators.'
+  - zh: 分工精读 ISBN 9789865072636《从 0 开始打造财务自由的致富系统》。
+    en: 'Assigned reading: ISBN 9789865072636, Building a Financial-Freedom System from Zero.'
+  - zh: 分工精读 ISBN 9789863615460《富爸爸，穷爸爸》。
+    en: 'Assigned reading: ISBN 9789863615460, Rich Dad Poor Dad.'
+  - zh: 项目期内完成六次线下聚会，实际会议日期为 03-19、03-26、03-30、04-09、04-23、05-07。
+    en: Completed six in-person meetings on 03-19, 03-26, 03-30, 04-09, 04-23, and 05-07.
+  - zh: 每位成员完成一份个人心得报告。
+    en: Each member completed an individual reflection report.
   outcomes:
   - zh: 团队获全校第二名。
     en: The team placed second university-wide.
-  - zh: 获得税前 NT$ 8,000 团队奖金。
-    en: Received a pre-tax NT$ 8,000 team award.
+  - zh: 获得税前 NT$8,000 团队奖金，由六人团队共同获得。
+    en: Received a pre-tax NT$8,000 team award shared by the six-member team.
   tags:
   - zh: 工程经济
     en: Engineering Economy
@@ -567,9 +693,25 @@ items:
   - collaboration
   - energy-power
   target: learning.html#record-yuan-ze-study-group
-  media: []
+  media:
+  - path: static/assets/portfolio/study-group/study-group-01-second-prize-award.webp
+    alt:
+      zh: 元智大学主题读书会全校第二名获奖海报
+      chinese-traditional: 元智大學主題讀書會全校第二名獲獎海報
+      en: University-wide second-place award poster for the theme-based study group
+    stream: modeling
+    featured: true
   links: []
   relatedPost: 2026-06-15-theme-study-group-award.md
+  context:
+  - zh: 元智大学 2026 春季学期主题读书会获“高等教育深耕计划”支持，旨在培养学生自主学习风气。
+    en: Yuan Ze University’s spring 2026 themed study group was supported by the Higher Education Sprout Project to cultivate self-directed learning.
+  - zh: 六人团队命名为“星际和平公司「策略投资部」”。
+    en: The six-member team was named “Interstellar Peace Company — Strategic Investment Department.”
+  reflection:
+  - zh: 通过分工精读和集中讨论，建立理解投资行情与基础理财知识的起点，也验证共同分工、按期交付和集中讨论的团队协作方式。
+    en: Assigned reading and concentrated discussion created a starting point for understanding markets and basic personal finance while validating
+      role division, timely delivery, and team discussion.
 - id: other-campus-volunteering
   kind: service
   pages:
@@ -624,13 +766,21 @@ items:
     zh: 对接教务、综合办与各年级辅导员，承担微信运营、学生档案与就业信息协同。
     en: Coordinated academic affairs, administration, counselors, WeChat operations, student records, and employment information.
   actions:
-  - zh: 主管学工办助理微信，分管学生档案。
-    en: Managed the student-office WeChat account and student records.
-  - zh: 协调企业就业信息发布与日常事务交付。
-    en: Coordinated employer information releases and operational delivery.
+  - zh: 按时完成助理 QQ、微信工作交接。
+    en: Completed assistant QQ and WeChat handovers on time.
+  - zh: 主管能源院学工办助理微信。
+    en: Managed the student-office assistant WeChat account.
+  - zh: 分管学生档案。
+    en: Handled student records.
+  - zh: 协调企业就业信息的及时发布。
+    en: Coordinated timely publication of employer recruitment information.
+  - zh: 参与中南大学“学长的火炬”项目。
+    en: Participated in CSU’s “Torch of Senior Students” project.
   outcomes:
-  - zh: “学长的火炬”工作评比：2024 年全校第 4，2025 年全校第 2。
-    en: 'Senior Torch program ranking: 4th university-wide in 2024 and 2nd in 2025.'
+  - zh: 2024 年“学长的火炬”工作评比学院排名全校第 4。
+    en: The school ranked fourth university-wide in the 2024 evaluation.
+  - zh: 2025 年“学长的火炬”工作评比学院排名全校第 2。
+    en: The school ranked second university-wide in the 2025 evaluation.
   tags:
   - zh: 学生工作
     en: Student Work
@@ -644,6 +794,9 @@ items:
   target: projects.html#record-student-office
   media: []
   links: []
+  context:
+  - zh: 能源学院学工办对接教务、综合办和各年级辅导员，承担综合学生事务协同。
+    en: The School of Energy student office coordinated academic affairs, general administration, and counselors across cohorts.
 - id: graphic-design-practice
   kind: practice
   pages:
@@ -666,15 +819,19 @@ items:
     zh: 在品牌设计公司完成商业设计实习，此后持续进行非全职设计实践。
     en: Completed a commercial design internship at a branding company and continued part-time design practice afterward.
   actions:
-  - zh: 参与技术培训、设计任务与客户需求对接。
-    en: Participated in technical training, design tasks, and client requirement discussions.
-  - zh: 使用 Adobe Illustrator 完成视觉与文字设计交付。
-    en: Used Adobe Illustrator for visual and typographic design delivery.
+  - zh: 主动参加公司内部技术培训。
+    en: Actively joined internal technical training.
+  - zh: 承担小型设计任务。
+    en: Took on small design tasks.
+  - zh: 跟随导师参与客户需求对接会。
+    en: Joined client requirement meetings with a mentor.
+  - zh: 严格遵循公司的设计流程完成交付。
+    en: Followed the company’s design process for delivery.
   outcomes:
-  - zh: 实习期间完成 4 份作品并取得实习证明。
-    en: Completed four works during the internship and received a certificate.
-  - zh: 累计完成设计作品 14 个。
-    en: Completed fourteen design works in total.
+  - zh: 实习期间完成 4 份设计作品并获得实习证明。
+    en: Completed four design works during the internship and received an internship certificate.
+  - zh: 现持续担任非全职平面设计师，本科阶段累计作品 14 个。
+    en: Continues as a non-full-time graphic designer, with fourteen undergraduate works in total.
   tags:
   - zh: 平面设计
     en: Graphic Design
@@ -687,6 +844,12 @@ items:
   target: projects.html#record-graphic-design-practice
   media: []
   links: []
+  context:
+  - zh: 昆明上维设计品牌有限公司以品牌设计为核心业务，实习用于通过商业项目衔接校园学习与职业需求。
+    en: Kunming Shangwei Brand Design focuses on brand design; the internship connected campus learning with professional requirements through
+      commercial work.
+  - zh: 学习目标包括 Adobe Illustrator、客户沟通、Logo 与文字设计基础、完整设计流程及行业行情。
+    en: Learning goals included Adobe Illustrator, client communication, logo and typography basics, full design workflows, and industry understanding.
 - id: alma-mater-outreach
   kind: practice
   pages:
@@ -729,6 +892,11 @@ items:
   target: projects.html#record-alma-mater-outreach
   media: []
   links: []
+  context:
+  - zh: 实践旨在扩大中南大学在高中母校的影响力，并召集不同高校的高中毕业在读学子联合宣讲。
+    en: The outreach aimed to increase CSU’s visibility at the user’s former high school and bring together alumni studying at different universities.
+  - zh: 任务是办好联合宣讲会并完成中南大学本科招生办的宣讲目标。
+    en: The task was to deliver the joint presentation and meet CSU undergraduate-admissions outreach goals.
 - id: hunan-100km
   kind: service
   pages:
@@ -737,7 +905,7 @@ items:
   size: extended
   featured: false
   timelineDate: '2023-10-01'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 湖南百公里：从志愿者到校区负责人
     en: 'Hunan 100 km: From Volunteer to Campus Lead'
@@ -772,6 +940,9 @@ items:
   target: projects.html#record-hunan-100km
   media: []
   links: []
+  context:
+  - zh: 活动由共青团湖南省委、湖南省体育局和湖南日报社主办。
+    en: The event was organized by the Hunan Provincial Communist Youth League, Hunan Sports Bureau, and Hunan Daily.
 - id: question-mark-weekend
   kind: service
   pages:
@@ -780,28 +951,41 @@ items:
   size: extended
   featured: false
   timelineDate: '2024-09-19'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 小问号 weekend：从课题组成员到优秀组长
     en: 'Question Mark Weekend: From Team Member to Outstanding Lead'
-  period:
-    zh: 2024 春季—2024-12-10
-    en: Spring 2024—2024-12-10
+  period: 2024-09-19—2024-12-10（另有 2024 春季组员经历）
   role:
     zh: 科学课题组成员 → 组长
     en: Science curriculum member → team lead
   summary:
-    zh: 从春季组员留任并竞选为秋季科学课题组组长，组织筛选、培训和四套课程包连续交付。
-    en: Progressed from a spring team member to autumn science-curriculum lead, organizing selection, training, and four consecutive lesson-package
-      deliveries.
+    zh: 基于 2024 春季科学课题组经历选择留任并竞选秋季组长，完整负责招募、培训、课程包组织、交付与结项。
+    en: After serving in the spring 2024 science group, stayed on and became autumn lead, taking responsibility for recruitment, training, lesson-package
+      organization, delivery, and closure.
   actions:
-  - zh: 组织新成员初筛、面试与专题培训。
-    en: Organized member screening, interviews, and topic training.
-  - zh: 带领 4 名组员按周交付四套科学课程包。
-    en: Led four members in delivering four weekly science lesson packages.
+  - zh: 制作保底大纲，全权组织新成员初筛和面试。
+    en: Prepared a fallback outline and fully organized initial screening and interviews for new members.
+  - zh: 10 月 13 日组织专题课培训会。
+    en: Organized the topic-course training meeting on October 13.
+  - zh: 带领 4 名组员按 1V1 模式组织工作。
+    en: Led four members through a one-to-one responsibility model.
+  - zh: 10 月 22 日交付《惊喜一跳——水杯对乒乓球的帮助》。
+    en: Delivered “A Surprising Jump — How a Cup Helps a Ping-pong Ball” on October 22.
+  - zh: 10 月 29 日交付《温水沸腾——气压的秘密》。
+    en: Delivered “Warm Water Boiling — The Secret of Air Pressure” on October 29.
+  - zh: 11 月 5 日交付《魔术谜底——点水成冰》。
+    en: Delivered “The Secret Behind the Magic — Freezing Water at a Touch” on November 5.
+  - zh: 11 月 12 日交付《冻住的流水——层流现象》。
+    en: Delivered “Frozen Flow — Laminar Flow” on November 12.
+  - zh: 四套课程包均提前一个工作日按质交付；11 月 14 日组织优秀志愿者评选并完成项目收尾。
+    en: All four lesson packages were delivered to standard one working day early; organized volunteer recognition and project closure on November
+      14.
   outcomes:
-  - zh: 课题组获评优秀课题组，本人获评优秀组长。
-    en: The team was recognized as outstanding and the user as an outstanding lead.
+  - zh: 本组获评优秀课题组，本人获评优秀组长。
+    en: The group was recognized as an outstanding team and the user as an outstanding lead.
+  - zh: 组内两名成员分别获评优秀课题员和专题之星。
+    en: Two team members were recognized as Outstanding Project Member and Topic Star.
   tags:
   - zh: 科学课程
     en: Science Curriculum
@@ -829,6 +1013,13 @@ items:
       zh: 专题组介绍
       en: Program introduction
     url: https://mp.weixin.qq.com/s/Mq76uKxrIuTp4X_s1b6nAg
+  context:
+  - zh: 累计志愿服务 27 小时；秋季担任小问号 weekend 专题管理组科学课题组组长。
+    en: Recorded 27 volunteer hours and served as science-group lead in the autumn Question Mark Weekend program.
+  reflection:
+  - zh: 即时沟通、头脑风暴、各司其职和积极跟进是团队合作的关键；课程设计还需站在青少年视角审视科学性与可接受性。
+    en: Timely communication, brainstorming, clear roles, and active follow-up are central to teamwork; lesson design must also be reviewed from
+      young learners’ perspectives for scientific quality and accessibility.
 - id: sun-tree-hole
   kind: service
   pages:
@@ -837,7 +1028,7 @@ items:
   size: extended
   featured: false
   timelineDate: '2024-09-30'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 太阳树洞：两期朋辈回信与心理关怀
     en: 'Sun Tree Hole: Two Cycles of Peer Letter Support'
@@ -849,13 +1040,15 @@ items:
     zh: 完成两期太阳树洞朋辈回信服务，以倾听、问题回应和适度建议支持来信者。
     en: Completed two cycles of peer letter-response service focused on listening, problem response, and appropriate guidance.
   actions:
-  - zh: 2024—2025 周期完成 5 封回信，20 小时。
-    en: Completed five replies and 20 hours in the 2024–2025 cycle.
-  - zh: 2026 周期完成 4 封回信，16 小时。
-    en: Completed four replies and 16 hours in the 2026 cycle.
+  - zh: 2024 年完成 10 月编号 15、11 月编号 24 两封回信。
+    en: 'Completed two 2024 replies: October No. 15 and November No. 24.'
+  - zh: 2025 年完成 2 月编号 15、3 月编号 21、5 月编号 23 三封回信。
+    en: 'Completed three 2025 replies: February No. 15, March No. 21, and May No. 23.'
+  - zh: 2026 年完成 3 月编号 27、4 月编号 35、5 月编号 34、6 月编号 4 四封回信。
+    en: 'Completed four 2026 replies: March No. 27, April No. 35, May No. 34, and June No. 4.'
   outcomes:
-  - zh: 两期均获评优秀回信志愿者。
-    en: Recognized as an outstanding letter-response volunteer in both cycles.
+  - zh: 两个周期均获评优秀回信志愿者。
+    en: Recognized as an outstanding reply volunteer in both cycles.
   tags:
   - zh: 朋辈关怀
     en: Peer Support
@@ -864,7 +1057,6 @@ items:
   - zh: 志愿服务
     en: Volunteering
   capabilities:
-  - collaboration
   - wps
   target: projects.html#record-sun-tree-hole
   media:
@@ -873,7 +1065,24 @@ items:
       zh: 太阳树洞优秀志愿者证书
       en: Sun Tree Hole outstanding-volunteer certificate
     stream: service
+  - path: static/assets/portfolio/volunteering/volunteering-05-sun-tree-hole-outstanding-volunteer-2026.webp
+    alt:
+      zh: 2025—2026 年度太阳树洞 Pro 优秀回信志愿者证书
+      chinese-traditional: 2025—2026 年度太陽樹洞 Pro 優秀回信志願者證書
+      en: 2025–2026 Outstanding Sun Tree Hole Pro reply volunteer certificate
+    stream: service
   links: []
+  context:
+  - zh: 2024—2025 周期累计 20 小时，服务目标是倾听、回应、鼓励、安慰，并针对问题提供可参考的解决思路。
+    en: The 2024–2025 cycle recorded 20 hours, aiming to listen, respond, encourage, comfort, and offer possible approaches to problems.
+  - zh: 2026 周期累计 16 小时，更强调问题导向、想象空间、共情能力和简洁文字表达。
+    en: The 2026 cycle recorded 16 hours and emphasized problem orientation, imagination, empathy, and concise writing.
+  reflection:
+  - zh: “树洞是有回音的”：回信既回应来信者内心，也通过具体书信传递朴素的人文关怀。
+    en: '“A tree hole has an echo”: the replies respond to inner concerns while conveying humane care through concrete letters.'
+  - zh: 第二期来信更简洁甚至没有明确问题，需要从“为何仍选择来信”出发，做真诚的倾听者与朋辈心理关怀者。
+    en: The second cycle often contained brief letters without explicit questions, requiring sincere listening and peer care grounded in why the
+      writer still chose to reach out.
 - id: forest-messenger
   kind: service
   pages:
@@ -894,13 +1103,19 @@ items:
     zh: 以一对一书信交流支持小学生表达、自信与成长，在持续与边界感之间完成三次互动。
     en: Supported a primary-school student's expression and confidence through three one-to-one letter exchanges.
   actions:
-  - zh: 围绕人生关键词、时间感与假期计划完成三封回信。
-    en: Completed three replies on life keywords, time, and holiday plans.
-  - zh: 使用适龄语言、提问、明信片与手绘插图增强互动。
-    en: Used age-appropriate language, questions, postcards, and illustrations.
+  - zh: 围绕“人生关键词”“时间变慢”“假期计划”完成三次书信互动。
+    en: Completed three exchanges around life keywords, time slowing down, and holiday plans.
+  - zh: 每次均在次日完成回信与打卡。
+    en: Completed each reply and check-in the following day.
+  - zh: 使用适合小学生认知的语言，将日常分享与启发思考结合。
+    en: Used age-appropriate language combining daily sharing with reflective prompts.
+  - zh: 通过提问拓展话题，并加入笔、明信片和手绘插图，使内容具体有趣。
+    en: Expanded topics through questions and added a pen, postcards, and hand-drawn illustrations to make the exchange concrete and engaging.
+  - zh: 保持积极情绪、适当边界感和持续责任。
+    en: Maintained positive tone, appropriate boundaries, and sustained responsibility.
   outcomes:
-  - zh: 获评优秀志愿者，累计 12 小时。
-    en: Recognized as an outstanding volunteer; 12 hours recorded.
+  - zh: 获评 2025 森林信使优秀志愿者。
+    en: Recognized as a 2025 Outstanding Forest Messenger Volunteer.
   tags:
   - zh: 书信陪伴
     en: Letter Companionship
@@ -909,7 +1124,6 @@ items:
   - zh: 志愿服务
     en: Volunteering
   capabilities:
-  - collaboration
   - wps
   target: projects.html#record-forest-messenger
   media:
@@ -919,6 +1133,13 @@ items:
       en: Forest Messenger outstanding-volunteer certificate
     stream: service
   links: []
+  context:
+  - zh: 累计 12 小时，以一对一书信为一名小学生提供长期、稳定、真实可互动的情感支持和成长陪伴；公开展示中隐去儿童姓名。
+    en: Recorded 12 hours of one-to-one letter companionship for a primary-school student; the child’s name is withheld in the public archive.
+  reflection:
+  - zh: “笔友”服务的价值在于持续与真诚；跨年龄交流既支持儿童表达与自信，也让本人从信任和回应中获得温暖。
+    en: The value of pen-pal service lies in consistency and sincerity; cross-age communication supports the child’s expression and confidence
+      while returning warmth through trust and response.
 - id: sun-student-companion
   kind: service
   pages:
@@ -942,19 +1163,17 @@ items:
     en: Completed 103 hours of sustained service as a Sun Student; within the one-to-one companion program, provided stable emotional support
       and growth-oriented communication for a student at Anhua No. 2 High School.
   actions:
-  - zh: 了解对方兴趣、学习条件与成长困惑。
-    en: Learned about the student's interests, study conditions, and concerns.
-  - zh: 提供适度的方法建议与情感支持。
-    en: Provided appropriate study guidance and emotional support.
+  - zh: 围绕彼此的高中与大学生活持续交流。
+    en: Discussed high-school and university life over time.
+  - zh: 了解对方的兴趣爱好和学习条件，并提供适当的方法建议。
+    en: Learned about the student’s interests and study conditions and offered appropriate methods.
   - zh: 2025 年 3 月 19 日在中南大学太阳学子同学会线下见面会担任发言代表。
-    en: Served as a speaker at the Central South University Sun Student offline gathering on 19 March 2025.
+    en: Served as a speaker at the CSU Sun Student offline gathering on March 19, 2025.
   outcomes:
-  - zh: 累计 14 小时陪伴服务。
-    en: Completed 14 hours of companionship service.
-  - zh: 在第四届太阳慈善基金会年会获评“童行伙伴优秀志愿者”二等奖。
-    en: Received second prize as an Outstanding Tongxing Partner Volunteer at the fourth Sun Charity Foundation annual meeting.
-  - zh: 相关服务经历于 2025 年 3 月 31 日被基金会微信公众号月刊记录。
-    en: The service experience was featured in the foundation’s WeChat monthly newsletter on 31 March 2025.
+  - zh: 在第四届太阳慈善基金会年会获“童行伙伴优秀志愿者”二等奖。
+    en: Received second prize as an Outstanding Tongxing Partner Volunteer at the fourth foundation annual meeting.
+  - zh: 相关经历于 2025 年 3 月 31 日被基金会微信公众号月刊报道。
+    en: The experience was featured in the foundation’s WeChat monthly newsletter on March 31, 2025.
   tags:
   - zh: 陪伴教育
     en: Companion Education
@@ -962,8 +1181,7 @@ items:
     en: One-to-one Communication
   - zh: 志愿服务
     en: Volunteering
-  capabilities:
-  - collaboration
+  capabilities: []
   target: projects.html#record-sun-student-companion
   media:
   - path: static/assets/portfolio/volunteering/volunteering-01-tongxing-partner-second-prize.webp
@@ -981,6 +1199,17 @@ items:
       zh: 基金会 2025 年 3 月月刊
       en: Foundation March 2025 newsletter
     url: https://mp.weixin.qq.com/s/6eDzUwLxgpyWvrZBAjnCuQ
+  context:
+  - zh: 太阳慈善公益基金会为省民政厅 4A 级基金会；本人自 2023-11-15 起以“太阳学子”身份持续参与公益服务，本科阶段累计 103 小时。
+    en: Sun Charity Foundation is a 4A-rated foundation under the provincial civil-affairs authority; the user has served as a Sun Student since
+      2023-11-15, recording 103 undergraduate volunteer hours.
+  - zh: 一对一陪伴项目累计 14 小时，为安化二中太阳学子提供长期、稳定的情感支持与成长陪伴。
+    en: The one-to-one companion program recorded 14 hours of stable emotional support and growth companionship for a Sun Student at Anhua No.
+      2 High School.
+  reflection:
+  - zh: 这段陪伴让本人更理解教育资源有限条件下的努力与成长，也把交流定位为平等支持而非单向指导。
+    en: The experience deepened understanding of growth under limited educational resources and framed the relationship as mutual support rather
+      than one-way guidance.
 - id: sun-scholarships
   kind: honor
   pages:
@@ -988,7 +1217,7 @@ items:
   size: compact
   featured: false
   timelineDate: '2023'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 太阳公益奖学金：连续三年获奖
     en: 'Sun Charity Scholarship: Three Consecutive Years'
@@ -1008,8 +1237,7 @@ items:
     en: Scholarship
   - zh: 连续三年
     en: Three Consecutive Years
-  capabilities:
-  - collaboration
+  capabilities: []
   target: capabilities.html#record-sun-scholarships
   media: []
   links: []
@@ -1020,7 +1248,7 @@ items:
   size: compact
   featured: false
   timelineDate: '2023'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 2023“外文奖”英语阅读大赛全国三等奖
     en: 2023 National Third Prize in English Reading
@@ -1077,8 +1305,7 @@ items:
     en: Mountain Climbing
   - zh: 第四名
     en: Fourth Place
-  capabilities:
-  - collaboration
+  capabilities: []
   target: capabilities.html#record-yuelu-mountain
   media:
   - path: static/assets/portfolio/sports/sports-01-yuelu-mountain-fourth-place.webp
@@ -1103,19 +1330,28 @@ items:
     zh: 校园成长记录
     en: Campus development record
   summary:
-    zh: 保留军训先进个人与党校结业等本科阶段校园成长记录。
-    en: Records undergraduate campus development including military-training recognition and party-school completion.
+    zh: 保留军训先进个人、党校结业与入学前省级优秀学生干部等关键成长记录。
+    chinese-traditional: 保留軍訓先進個人、黨校結業與入學前省級優秀學生幹部等關鍵成長記錄。
+    en: Preserves key growth records including military-training recognition, party-school completion, and the pre-university provincial outstanding
+      student-cadre honor.
   actions: []
-  outcomes: []
+  outcomes:
+  - zh: 2021—2022 学年度云南省级优秀学生干部（中学、中职）。
+    chinese-traditional: 2021—2022 學年度雲南省級優秀學生幹部（中學、中職）。
+    en: Yunnan Provincial Outstanding Student Cadre (secondary/vocational), academic year 2021–2022.
   tags:
   - zh: 军训先进个人
     en: Outstanding Military-training Individual
   - zh: 党校结业
     en: Party-school Completion
-  capabilities:
-  - collaboration
+  capabilities: []
   target: capabilities.html#record-campus-growth
-  media: []
+  media:
+  - path: static/assets/portfolio/honors/honors-01-provincial-outstanding-student-cadre.webp
+    alt:
+      zh: 云南省级优秀学生干部证书
+      chinese-traditional: 雲南省級優秀學生幹部證書
+      en: Yunnan provincial outstanding student cadre certificate
   links: []
 - id: wps-and-certifications
   kind: credential
@@ -1124,10 +1360,11 @@ items:
   size: standard
   featured: false
   timelineDate: '2024'
-  timelineType: milestone
+  timelineType: progress
   title:
-    zh: WPS 办公能力与等级认证
-    en: WPS Office Skills and Certifications
+    zh: WPS 办公能力与计算机认证
+    chinese-traditional: WPS 辦公能力與計算機認證
+    en: WPS Office Skills and Computing Credentials
   period:
     zh: 本科阶段
     en: Undergraduate stage
@@ -1135,13 +1372,17 @@ items:
     zh: 能力证据组
     en: Capability evidence group
   summary:
-    zh: 以全国计算机等级考试二级 WPS Office 证书对应文档、表格与演示制作能力，并保留普通话与急救认证。
+    zh: 以全国计算机等级考试二级 WPS Office 证书对应文档、表格与演示制作能力，并补充 CCF CSP-J/S 入门级一等奖、普通话与急救认证。
+    chinese-traditional: 以全國計算機等級考試二級 WPS Office 證書對應文件、試算表與簡報製作能力，並補充 CCF CSP-J/S 入門級一等獎、普通話與急救認證。
     en: Uses the National Computer Rank Examination Level 2 WPS Office certificate as evidence for document, spreadsheet, and presentation skills,
-      alongside Mandarin and first-aid credentials.
+      supplemented by a first-tier CCF CSP-J/S award, Mandarin, and first-aid credentials.
   actions: []
   outcomes:
   - zh: 全国计算机等级考试二级（WPS Office）。
     en: National Computer Rank Examination Level 2 (WPS Office).
+  - zh: CCF CSP-J/S 非专业级软件能力认证入门级一等奖。
+    chinese-traditional: CCF CSP-J/S 非專業級軟體能力認證入門級一等獎。
+    en: First-tier distinction in the CCF CSP-J/S non-professional software-ability certification, beginner level.
   - zh: 普通话水平测试二级乙等。
     en: Mandarin Proficiency Test, Level 2-B.
   - zh: CPR + AED 培训证书。
@@ -1156,7 +1397,12 @@ items:
   capabilities:
   - wps
   target: capabilities.html#record-wps-and-certifications
-  media: []
+  media:
+  - path: static/assets/portfolio/credentials/credential-01-ccf-csp-js-first-tier.webp
+    alt:
+      zh: CCF CSP-J/S 入门级一等奖证书
+      chinese-traditional: CCF CSP-J/S 入門級一等獎證書
+      en: CCF CSP-J/S beginner-level first-tier certificate
   links: []
 - id: desktop-ai-runtime
   kind: software
@@ -1164,7 +1410,7 @@ items:
   size: standard
   featured: false
   timelineDate: 2026-07
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: 桌面 AI Agent Runtime
     en: Desktop AI Agent Runtime
@@ -1195,7 +1441,7 @@ items:
   size: standard
   featured: false
   timelineDate: '2026-07-27'
-  timelineType: milestone
+  timelineType: progress
   title:
     zh: IELTS Learning Assistant
     en: IELTS Learning Assistant

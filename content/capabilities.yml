@@ -229,9 +229,11 @@ items:
       chinese-traditional: 團隊協作
       en: Collaboration
     definition:
-      zh: 团队组织、需求沟通、跨角色协同与结果交付能力。
-      chinese-traditional: 團隊組織、需求溝通、跨角色協同與結果交付能力。
-      en: Team organization, requirement communication, cross-role coordination, and delivery.
+      zh: 在多人竞赛、科研与工程项目、课程团队、公益组织和学生工作中，通过明确分工、持续沟通、资料交接、共同决策与按期交付完成共同目标。
+      chinese-traditional: 在多人競賽、科研與工程專案、課程團隊、公益組織和學生工作中，透過明確分工、持續溝通、資料交接、共同決策與按期交付完成共同目標。
+      en: >-
+        Completing shared goals in team competitions, research and engineering projects, course teams, service organizations, and student
+        work through clear roles, sustained communication, handovers, joint decisions, and timely delivery.
     levels:
       - year: 2024
         level: 3
@@ -240,20 +242,41 @@ items:
         level: 4
         primary: true
     tools:
+      - Team Formation
+      - Role Division
       - Project Coordination
       - Documentation
+      - Handover
       - Public Communication
     evidence:
       - text:
-          zh: 学工办期间对接教务、综合办与辅导员，参与微信运营、档案与就业信息协同。
-          chinese-traditional: 學工辦期間對接教務、綜合辦與輔導員，參與微信營運、檔案與就業資訊協同。
-          en: Coordinated academic affairs, student records, WeChat operations, and employment information in the student office.
-        target: projects.html#collaboration
+          zh: STR、火箭残骸、MCM 与 MathorCup—BRFC 均为多人建模或科研项目，承担主持、领队、论文结构、LaTeX 制版、代码材料组织或计算流程治理。
+          chinese-traditional: STR、火箭殘骸、MCM 與 MathorCup—BRFC 均為多人建模或科研專案，承擔主持、領隊、論文結構、LaTeX 製版、程式材料組織或計算流程治理。
+          en: >-
+            STR, rocket-debris modeling, MCM, and MathorCup–BRFC were multi-person modeling or research projects involving leadership, paper
+            structure, LaTeX production, code organization, or compute-workflow governance.
+        target: projects.html#record-str-forensic-modeling
       - text:
-          zh: 作为学生项目主持或副主持参与工程项目与全国竞赛。
-          chinese-traditional: 作為學生專案主持或副主持參與工程專案與全國競賽。
-          en: Participated in engineering projects and national competitions as student lead or deputy lead.
-        target: projects.html#collaboration
+          zh: 锑与钨工程项目、新能源材料实验室和清洁低碳能源工程研究中心均涉及多人研发、三维建模、实验材料和赛事交付。
+          chinese-traditional: 銻與鎢工程專案、新能源材料實驗室和清潔低碳能源工程研究中心均涉及多人研發、三維建模、實驗材料和賽事交付。
+          en: >-
+            The antimony and tungsten projects, new-energy-materials lab, and clean-energy research center involved team R&D, 3D modeling,
+            experimental work, and competition delivery.
+        target: projects.html#record-antimony-clean-energy
+      - text:
+          zh: 元智大学六人读书会通过分工精读、六次线下会议与个人报告共同交付并获全校第二名。
+          chinese-traditional: 元智大學六人讀書會透過分工精讀、六次線下會議與個人報告共同交付並獲全校第二名。
+          en: >-
+            The six-member Yuan Ze study group delivered assigned reading, six in-person meetings, and individual reports, placing second
+            university-wide.
+        target: learning.html#record-yuan-ze-study-group
+      - text:
+          zh: 学工办、母校联合宣讲、湖南百公里和小问号 weekend 分别形成跨部门交接、17 校联合组织、招募传播与四人课程组管理证据。
+          chinese-traditional: 學工辦、母校聯合宣講、湖南百公里和小問號 weekend 分別形成跨部門交接、17 校聯合組織、招募傳播與四人課程組管理證據。
+          en: >-
+            Student-office work, joint school outreach, Hunan 100 km, and Question Mark Weekend provide evidence of cross-unit handovers, a
+            17-university organization, recruitment communication, and management of a four-person curriculum team.
+        target: projects.html#record-question-mark-weekend
   - id: wps
     title:
       zh: WPS 三件套

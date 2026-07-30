@@ -1,7 +1,8 @@
 /* Canonical undergraduate portfolio cards and evidence streams. */
 .portfolio-record-section { margin-top: 72px; }
-.portfolio-record-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 20px; }
-.portfolio-record { min-width: 0; padding: 26px; border: 1px solid var(--paper-line, #d7d0c5); border-radius: 18px; background: rgba(251,249,244,.96); box-shadow: 0 15px 40px rgba(34,42,49,.055); scroll-margin-top: 100px; }
+.portfolio-record-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.portfolio-record-column { min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.portfolio-record { display: block; width: 100%; min-width: 0; margin: 0; padding: 26px; border: 1px solid var(--paper-line, #d7d0c5); border-radius: 18px; background: rgba(251,249,244,.96); box-shadow: 0 15px 40px rgba(34,42,49,.055); scroll-margin-top: 100px; }
 .portfolio-record.is-compact { padding: 22px; }
 .portfolio-record.is-extended { border-left: 4px solid var(--paper-brass, #8b5e2d); }
 .portfolio-record[hidden] { display: none; }
@@ -29,7 +30,8 @@
 .portfolio-evidence-grid a { padding: 18px; display: grid; gap: 6px; border: 1px solid var(--paper-line, #d7d0c5); border-radius: 13px; color: inherit; text-decoration: none; background: rgba(251,249,244,.94); }
 .portfolio-evidence-grid a:hover { border-color: rgba(29,95,122,.42); }
 .portfolio-evidence-grid span, .portfolio-evidence-grid small { color: var(--paper-muted, #5d6873); font: 500 11px/1.45 "IBM Plex Mono", monospace; }
-.portfolio-media-row .media-sequence { padding-right: 14px; }
+.portfolio-media-row .media-track { display: flex; width: max-content; }
+.portfolio-media-row .media-sequence { display: flex; gap: 14px; padding-right: 14px; flex: 0 0 auto; }
 .portfolio-evidence-dialog { width: min(1120px, calc(100% - 32px)); max-height: calc(100vh - 32px); padding: 0; overflow: hidden; border: 1px solid #3a4b5c; border-radius: 18px; background: #090d12; color: #f3f6f8; }
 .portfolio-evidence-dialog::backdrop { background: rgba(9,13,18,.86); }
 .portfolio-evidence-dialog-toolbar { min-height: 58px; padding: 10px 14px 10px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid #263342; }
@@ -37,4 +39,4 @@
 .portfolio-evidence-dialog-toolbar button { width: 42px; height: 42px; border: 1px solid #3a4b5c; border-radius: 10px; background: transparent; color: #f3f6f8; font-size: 24px; cursor: pointer; }
 .portfolio-evidence-dialog > img { width: 100%; max-height: calc(100vh - 110px); object-fit: contain; display: block; }
 
-@media (max-width: 760px) { .portfolio-record-grid, .portfolio-evidence-grid { grid-template-columns: 1fr; } .portfolio-record { padding: 22px; } .portfolio-record header { display: grid; } .portfolio-evidence-strip { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 760px) { .portfolio-record-grid { grid-template-columns: 1fr; } .portfolio-evidence-grid { grid-template-columns: 1fr; } .portfolio-record { padding: 22px; } .portfolio-record header { display: grid; } .portfolio-evidence-strip { grid-template-columns: repeat(2, minmax(0,1fr)); } }
