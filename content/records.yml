@@ -8,4 +8,335 @@ page:
     zh: 以一张主卡片对应一段连续经历；证书、影像和动态作为证据，不重复制造时间线节点。
     en: One canonical card represents each continuous experience; certificates, images, and posts serve as evidence without duplicating timeline
       nodes.
-items: []
+items:
+- id: antimony-clean-energy
+  kind: engineering
+  pages:
+  - projects
+  - capabilities
+  size: extended
+  featured: true
+  timelineDate: '2025-08-11'
+  timelineType: milestone
+  title:
+    zh: “锑”旧焕新：可再生锑光热化学储热项目
+    en: 'Antimony Renewal: Renewable Antimony Solar-Thermochemical Storage'
+  period: 2025-06—2025-08-11
+  role:
+    zh: 学生项目副主持
+    en: Student deputy project lead
+  summary:
+    zh: 围绕锑尾矿与冶金渣资源化，参与热化学储热吸热器与智能调控系统的工程表达和赛事交付。
+    en: Worked on engineering communication and competition delivery for antimony recovery, thermochemical storage, and intelligent control.
+  actions:
+  - zh: 分担项目组织与协作工作。
+    en: Shared project coordination and team delivery.
+  - zh: 负责 3D 建模、科技作品设计思路与宣传视频策划剪辑。
+    en: Handled 3D modeling, product presentation concepts, and promotional video planning and editing.
+  outcomes:
+  - zh: 获第十八届全国大学生节能减排竞赛全国一等奖。
+    en: Won national first prize in the 18th National College Student Energy Conservation and Emission Reduction Competition.
+  - zh: 同时获湖南省第三届大学生节能减排竞赛二等奖。
+    en: Also won second prize in the third Hunan provincial competition.
+  tags:
+  - zh: 能源工程
+    en: Energy Engineering
+  - zh: 资源回收
+    en: Resource Recovery
+  - zh: 储热
+    en: Thermal Storage
+  - zh: 3D 建模
+    en: 3D Modeling
+  capabilities:
+  - energy-power
+  - solidworks
+  - collaboration
+  target: projects.html#record-antimony-clean-energy
+  media:
+  - path: static/assets/portfolio/energy-saving/energy-saving-01-national-first-prize.webp
+    alt:
+      zh: 全国节能减排竞赛一等奖证书
+      en: National first-prize certificate
+    stream: engineering
+    featured: true
+  - path: static/assets/portfolio/energy-saving/energy-saving-03-hunan-antimony-second-prize.webp
+    alt:
+      zh: 湖南省锑项目二等奖证书
+      en: Hunan second-prize certificate for the antimony project
+    stream: engineering
+  links: []
+- id: tungsten-recycling
+  kind: engineering
+  pages:
+  - projects
+  - capabilities
+  size: extended
+  featured: true
+  timelineDate: '2025-05-10'
+  timelineType: milestone
+  title:
+    zh: 清洁低碳能源工程研究中心：钨资源回收与设备专利链
+    en: 'Clean and Low-carbon Energy Research Center: Tungsten Recovery and Device Patent Chain'
+  period: 2024-10-07—2025-05-10
+  role:
+    zh: 学生项目主持 / 钨项目成员
+    en: Student project lead / tungsten-project member
+  summary:
+    zh: 在清洁低碳能源技术湖南省工程研究中心推进设备说明书、三维建模、实验图表和赛事材料；钨资源回收装置形成省赛与授权专利证据，另有“超快高温速控一体机”专利申请在办。
+    en: Advanced equipment documentation, 3D modeling, experimental figures, and competition materials at the Hunan Engineering Research Center
+      for Clean and Low-carbon Energy; the tungsten-recovery device produced provincial-competition and granted-patent evidence, while the Ultra-fast
+      High-temperature Integrated Controller patent remains pending.
+  actions:
+  - zh: 使用 SolidWorks 建立符合设计要求的装置模型。
+    en: Built the device model in SolidWorks.
+  - zh: 参与设备说明书、3D 打印准备与项目材料交付。
+    en: Contributed to documentation, 3D-print preparation, and project delivery.
+  - zh: 使用 Origin 2024 整理实验数据图表，并参与核心赛事材料组织。
+    en: Used Origin 2024 for experimental figures and helped organize core competition materials.
+  outcomes:
+  - zh: 获湖南省第三届大学生节能减排竞赛二等奖。
+    en: Won second prize in the third Hunan provincial competition.
+  - zh: 发明专利 202510469264.X 已获授权。
+    en: Invention patent 202510469264.X was granted.
+  - zh: 专利 202510196241.6《超快高温速控一体机》在办。
+    en: Patent application 202510196241.6, Ultra-fast High-temperature Integrated Controller, remains pending.
+  tags:
+  - zh: 氢冶金
+    en: Hydrogen Metallurgy
+  - zh: 钨资源回收
+    en: Tungsten Recovery
+  - SolidWorks
+  - zh: 发明专利
+    en: Invention Patent
+  capabilities:
+  - energy-power
+  - solidworks
+  - collaboration
+  target: projects.html#record-tungsten-recycling
+  media:
+  - path: static/assets/portfolio/energy-saving/energy-saving-02-hunan-tungsten-second-prize.webp
+    alt:
+      zh: 湖南省钨资源回收项目二等奖证书
+      en: Hunan second-prize certificate for the tungsten project
+    stream: engineering
+  - path: static/assets/portfolio/patent/patent-01-tungsten-recycling-grant-notice.webp
+    alt:
+      zh: 钨资源回收装置授予发明专利权通知书
+      en: Patent grant notice for the tungsten recycling device
+    stream: engineering
+    featured: true
+  links: []
+- id: str-forensic-modeling
+  kind: modeling
+  pages:
+  - projects
+  - capabilities
+  size: extended
+  featured: true
+  timelineDate: '2025-08-28'
+  timelineType: milestone
+  title:
+    zh: STR 混合样本分析：同一项目的三项赛事成果
+    en: 'STR Mixture Analysis: One Project, Three Competition Outcomes'
+  period: 2025-04-28—2025-08-28
+  role:
+    zh: 项目主持 / 论文与排版组织
+    en: Project lead / writing and typesetting coordination
+  summary:
+    zh: 围绕法医物证多人身份鉴定数据集，组织完成模型、论文与现场答辩材料，并在校级、省级和全国赛事中连续转化。
+    en: Organized modeling, paper production, and defense materials for forensic STR mixture analysis across university, provincial, and national
+      competitions.
+  actions:
+  - zh: 主持论文写作与 LaTeX 制版，使用 VS Code 组织代码和材料。
+    en: Led paper writing and LaTeX production, organizing code and materials in VS Code.
+  - zh: 围绕混合样本等位基因分析与去噪提出项目方案。
+    en: Developed the project framing for allele analysis and denoising in mixed samples.
+  outcomes:
+  - zh: 中南大学第二十届数学建模竞赛一等奖。
+    en: First prize in the 20th CSU Mathematical Modeling Competition.
+  - zh: 湖南省大学生数学建模竞赛三等奖。
+    en: Third prize in the Hunan Provincial Mathematical Modeling Competition.
+  - zh: 2025 深圳杯数学建模挑战赛全国优秀论文。
+    en: National Outstanding Paper in the 2025 Shenzhen Cup Mathematical Modeling Challenge.
+  tags:
+  - zh: 数学建模
+    en: Mathematical Modeling
+  - STR
+  - zh: 机器学习
+    en: Machine Learning
+  - LaTeX
+  capabilities:
+  - latex
+  - collaboration
+  target: projects.html#record-str-forensic-modeling
+  media:
+  - path: static/assets/portfolio/math-modeling/math-modeling-01-shenzhen-cup-outstanding-paper.webp
+    alt:
+      zh: 深圳杯全国优秀论文证书
+      en: Shenzhen Cup Outstanding Paper certificate
+    stream: modeling
+    featured: true
+  - path: static/assets/portfolio/math-modeling/math-modeling-02-hunan-third-prize.webp
+    alt:
+      zh: 湖南省数学建模三等奖证书
+      en: Hunan modeling third-prize certificate
+    stream: modeling
+  - path: static/assets/portfolio/math-modeling/math-modeling-03-csu-20th-first-prize.webp
+    alt:
+      zh: 中南大学第二十届数学建模一等奖证书
+      en: CSU 20th modeling first-prize certificate
+    stream: modeling
+  links: []
+- id: rocket-debris-modeling
+  kind: modeling
+  pages:
+  - projects
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: '2024-05-20'
+  timelineType: milestone
+  title:
+    zh: 火箭残骸定位：Chan–Taylor 星源定位智算模型
+    en: Rocket Debris Localization with a Chan–Taylor Model
+  period: 2024-05-01—2024-05-20
+  role:
+    zh: 团队成员 / 论文与制版
+    en: Team member / paper and typesetting
+  summary:
+    zh: 完成深圳杯赛题“火箭残骸定位问题”的建模、论文表达与 Python 计算工作。
+    en: Worked on modeling, paper production, and Python computation for the Shenzhen Cup rocket-debris localization problem.
+  actions:
+  - zh: 使用 LaTeX 参与论文写作与制版。
+    en: Used LaTeX for paper writing and production.
+  - zh: 使用 Python 3.10 支持模型计算。
+    en: Used Python 3.10 for model computation.
+  outcomes:
+  - zh: 获中南大学第十九届数学建模竞赛一等奖。
+    en: Won first prize in the 19th CSU Mathematical Modeling Competition.
+  tags:
+  - zh: 数学建模
+    en: Mathematical Modeling
+  - zh: 定位算法
+    en: Localization Algorithms
+  - Python
+  - LaTeX
+  capabilities:
+  - latex
+  - collaboration
+  target: projects.html#record-rocket-debris-modeling
+  media:
+  - path: static/assets/portfolio/math-modeling/math-modeling-04-csu-19th-first-prize.webp
+    alt:
+      zh: 中南大学第十九届数学建模一等奖证书
+      en: CSU 19th modeling first-prize certificate
+    stream: modeling
+  links: []
+- id: mcm-olympic-medals
+  kind: modeling
+  pages:
+  - projects
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: '2025-01-28'
+  timelineType: milestone
+  title:
+    zh: MCM 奥运奖牌预测模型
+    en: MCM Olympic Medal Prediction Model
+  period: 2025-01-24—2025-01-28
+  role:
+    zh: 项目主持 / 组织与论文交付
+    en: Project lead / coordination and paper delivery
+  summary:
+    zh: 组织完成 MCM C 题奥运奖牌预测项目，参与论文写作、制版与结果交付。
+    en: Organized an MCM project on Olympic medal prediction and contributed to paper writing, typesetting, and delivery.
+  actions:
+  - zh: 协调团队任务与论文结构。
+    en: Coordinated team tasks and paper structure.
+  - zh: 使用 LaTeX 与 VS Code 完成文档交付。
+    en: Delivered the paper using LaTeX and VS Code.
+  outcomes:
+  - zh: 获得 COMAP Successful Participant（S 奖）。
+    en: Received the COMAP Successful Participant award.
+  tags:
+  - MCM
+  - zh: 预测模型
+    en: Predictive Modeling
+  - MLP
+  - LaTeX
+  capabilities:
+  - latex
+  - collaboration
+  target: projects.html#record-mcm-olympic-medals
+  media:
+  - path: static/assets/portfolio/math-modeling/math-modeling-06-mcm-successful-participant.webp
+    alt:
+      zh: 2025 MCM Successful Participant 证书
+      en: 2025 MCM Successful Participant certificate
+    stream: modeling
+  links: []
+- id: mathorcup-brfc
+  kind: research
+  pages:
+  - learning
+  - capabilities
+  size: extended
+  featured: true
+  timelineDate: '2025-04-18'
+  timelineType: milestone
+  title:
+    zh: 从第十五届 MathorCup 到 BRFC：项目发起与科研工程转化
+    en: 'From the 15th MathorCup to BRFC: Project Initiation and Research Engineering'
+  period: 2025-04-18—2026-07-29
+  role:
+    zh: 前期关键发起人 / 科研工程组织
+    en: Key early-stage initiator / research engineering coordinator
+  summary:
+    zh: 本人承担前期关键发起与科研工程组织：组建团队、促成项目启动、提供 LaTeX 模板并重构文件与计算流程。核心方法与实验由团队其他成员主责；上述工作并不替代方法贡献，但构成项目得以成立、持续迭代并最终转化为论文的关键条件，属于明确且不可忽略的间接贡献。
+    en: 'Served as the key early-stage initiator and research-engineering coordinator: formed the team, launched the project, provided the LaTeX
+      template, and reorganized file and compute workflows. Other members led the core method and experiments; this work did not replace methodological
+      contributions, but it was a clear and indispensable indirect contribution that enabled the project to form, keep iterating, and ultimately
+      become a paper.'
+  actions:
+  - zh: 发起组队、聚合成员并启动第十五届 MathorCup 汽车风阻项目。
+    en: Formed the team and launched the 15th MathorCup aerodynamic-modeling project.
+  - zh: 提供统一 LaTeX 模板，重整课题组文件结构与工程管理流程。
+    en: Provided a shared LaTeX template and reorganized the group's file and engineering workflow.
+  - zh: 优化计算任务管理，将课题组 GPU 平均利用效率由约 40% 提升至约 90%。
+    en: Improved compute-task management, raising average GPU utilization from about 40% to about 90%.
+  outcomes:
+  - zh: 降低资源空闲、迭代等待与试错时间成本，也降低团队因反馈周期过长而中途放弃的风险。
+    en: Reduced idle compute, iteration waiting, and experimentation cost, while lowering the risk of the team abandoning work because feedback
+      cycles were too slow.
+  - zh: MathorCup 获华中赛区三等奖。
+    en: Won third prize in the MathorCup Central China region.
+  - zh: 成果转化论文 BRFC 已投稿 AAAI 2027；作者顺序按 OpenReview 公开记录展示，Yucheng Li 位列第四。
+    en: The resulting BRFC paper was submitted to AAAI 2027; author order follows the public OpenReview record, with Yucheng Li listed fourth.
+  tags:
+  - MathorCup
+  - Research Engineering
+  - LaTeX
+  - GPU Workflow
+  - AAAI 2027
+  capabilities:
+  - research-engineering
+  - latex
+  - collaboration
+  target: learning.html#record-mathorcup-brfc
+  media:
+  - path: static/assets/portfolio/math-modeling/math-modeling-05-mathorcup-central-china-third-prize.webp
+    alt:
+      zh: 第十五届 MathorCup 华中赛区三等奖证书
+      en: 15th MathorCup Central China third-prize certificate
+    stream: modeling
+    featured: true
+  links:
+  - label:
+      zh: OpenReview 投稿页面
+      en: OpenReview submission
+    url: https://openreview.net/forum?id=nN8DoQbMno
+  - label:
+      zh: OpenReview 个人主页
+      en: OpenReview profile
+    url: https://openreview.net/profile?id=%7EYucheng_Li13
