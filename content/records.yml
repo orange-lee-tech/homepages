@@ -340,3 +340,233 @@ items:
       zh: OpenReview 个人主页
       en: OpenReview profile
     url: https://openreview.net/profile?id=%7EYucheng_Li13
+- id: new-energy-materials-lab
+  kind: research
+  pages:
+  - learning
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: 2024-10
+  timelineType: progress
+  title:
+    zh: 新能源材料实验室：超级电容器电极材料实践
+    en: 'New Energy Materials Lab: Supercapacitor Electrode Practice'
+  period: 2024-10—2025-12
+  role:
+    zh: 学生项目副主持
+    en: Student deputy project lead
+  summary:
+    zh: 在超级电容器纽扣电池方向参与市场调研与新电极材料实验工作。
+    en: Participated in market research and electrode-material experiments for supercapacitor coin cells.
+  actions:
+  - zh: 组织并撰写市场调研报告。
+    en: Organized and wrote a market research report.
+  - zh: 参与生物材料称量、活性炭烧制与电极片压制。
+    en: Worked on biomaterial weighing, activated-carbon preparation, and electrode pressing.
+  outcomes:
+  - zh: 形成新能源材料实验与市场调研的基础实践。
+    en: Built foundational experience in new-energy-material experiments and market research.
+  tags:
+  - zh: 超级电容器
+    en: Supercapacitors
+  - zh: 新能源材料
+    en: New Energy Materials
+  - zh: 实验实践
+    en: Laboratory Practice
+  capabilities:
+  - energy-power
+  - collaboration
+  target: learning.html#record-new-energy-materials-lab
+  media: []
+  links: []
+- id: csu-energy-power-undergraduate
+  kind: education
+  pages:
+  - learning
+  - capabilities
+  size: standard
+  featured: true
+  timelineDate: 2023-09
+  timelineType: milestone
+  title:
+    zh: 中南大学能源与动力工程本科阶段
+    en: Undergraduate Study in Energy and Power Engineering at Central South University
+  period: 2023—2027（预计）
+  role:
+    zh: 能源与动力工程本科生
+    en: Undergraduate in Energy and Power Engineering
+  summary:
+    zh: 就读于中南大学（985）能源与动力工程专业，专业评估标签为 B-，预计 2027 年毕业；本科阶段逐步把专业学习延伸到工程项目、数学建模、科研工程与软件资产建设。
+    en: Studying Energy and Power Engineering at Central South University (Project 985), with a B- discipline-evaluation tag and expected graduation
+      in 2027; undergraduate work has expanded into engineering projects, mathematical modeling, research engineering, and software assets.
+  actions: []
+  outcomes:
+  - zh: 形成能源工程、工程仿真、科学计算与项目协作相互连接的本科能力结构。
+    en: Built an undergraduate capability structure connecting energy engineering, simulation, scientific computing, and project collaboration.
+  tags:
+  - zh: 中南大学 985
+    en: Central South University · Project 985
+  - zh: 能源与动力工程
+    en: Energy and Power Engineering
+  - zh: 专业 B-
+    en: Discipline B-
+  capabilities:
+  - energy-power
+  target: learning.html#record-csu-energy-power-undergraduate
+  media: []
+  links: []
+- id: imp-winter-camp
+  kind: education
+  pages:
+  - learning
+  - capabilities
+  size: extended
+  featured: true
+  timelineDate: '2026-01-26'
+  timelineType: milestone
+  title:
+    zh: 中国科学院近代物理研究所 2026 年优秀大学生冬令营
+    en: 2026 IMP Outstanding Undergraduate Winter Camp
+  period: 2026-01-26—2026-01-30
+  role:
+    zh: 优秀营员
+    en: Outstanding participant
+  summary:
+    zh: 通过十三场专题报告、研究人员交流和大科学装置现场参观，系统了解 HIAF、CiADS、材料辐照、核废料嬗变与直线加速器相关方向。
+    en: Studied HIAF, CiADS, material irradiation, nuclear-waste transmutation, and linear accelerators through thirteen talks, researcher discussions,
+      and facility visits.
+  actions:
+  - zh: 参访近物所惠州学部与相关大科学装置设施。
+    en: Visited IMP's Huizhou campus and major-science-facility infrastructure.
+  - zh: 围绕加速器驱动次临界系统、直线加速器及热工方向与研究人员交流。
+    en: Discussed accelerator-driven subcritical systems, linear accelerators, and thermal engineering with researchers.
+  outcomes:
+  - zh: 获评优秀营员。
+    en: Recognized as an outstanding participant.
+  - zh: 进一步明确核能可持续发展、加速器热工与能源材料辐照的学习方向。
+    en: Clarified interests in sustainable nuclear energy, accelerator thermal engineering, and irradiation of energy materials.
+  tags:
+  - zh: 中科院近物所
+    en: Institute of Modern Physics
+  - HIAF
+  - CiADS
+  - zh: 能源战略
+    en: Energy Strategy
+  capabilities:
+  - energy-power
+  - reading-notes
+  - collaboration
+  target: learning.html#record-imp-winter-camp
+  media:
+  - path: static/assets/portfolio/winter-camp/winter-camp-01-opening.webp
+    alt:
+      zh: 近物所 2026 年优秀大学生冬令营开幕屏幕
+      en: Opening screen of the 2026 IMP winter camp
+    stream: engineering
+    featured: true
+  - path: static/assets/portfolio/winter-camp/winter-camp-04-hiaf-tunnel-layout.webp
+    alt:
+      zh: 强流重离子加速器隧道平面布置图
+      en: HIAF tunnel layout
+    stream: engineering
+  - path: static/assets/portfolio/winter-camp/winter-camp-05-comprehensive-test-hall.webp
+    alt:
+      zh: 近物所综合测试大厅外景
+      en: IMP comprehensive test hall
+    stream: engineering
+  links: []
+  relatedPost: 2026-01-30-imp-winter-camp.md
+- id: yuan-ze-exchange
+  kind: education
+  pages:
+  - learning
+  - capabilities
+  size: extended
+  featured: false
+  timelineDate: '2026-02-22'
+  timelineType: milestone
+  title:
+    zh: 元智大学机械工程学系交换学习
+    en: Exchange Study in Mechanical Engineering at Yuan Ze University
+  period: 2026-02-22—2026-06-30
+  role:
+    zh: 本科交换生
+    en: Undergraduate exchange student
+  summary:
+    zh: 完成 128 天春季学期交换，修读微积分（二）、工程经济、机率与统计，共 9 学分。
+    en: Completed a 128-day spring exchange with nine credits in Calculus II, Engineering Economy, and Probability and Statistics.
+  actions:
+  - zh: 在新环境中重建课程、预算与时间管理体系。
+    en: Rebuilt course, budget, and time-management routines in a new environment.
+  - zh: 将工程经济课程延伸到财务阅读与主题读书会实践。
+    en: Extended Engineering Economy into financial reading and a themed study group.
+  - zh: 使用 Python 可视化梯度、切平面与向量场等微积分概念。
+    en: Used Python to visualize calculus concepts including gradients, tangent planes, and vector fields.
+  - zh: 2026 年 6 月 8 日确定《工程经济》《实验设计与分析》《热交换设计》《财务管理》四本专业书的长期学习计划。
+    en: On 8 June 2026, established a long-term study plan around Engineering Economy, Design and Analysis of Experiments, Heat Exchanger Design,
+      and Financial Management.
+  outcomes:
+  - zh: 形成跨环境学习、自我管理与工程经济判断的阶段性成果。
+    en: Built evidence of cross-environment learning, self-management, and engineering-economic judgment.
+  tags:
+  - zh: 元智大学
+    en: Yuan Ze University
+  - TOP12
+  - zh: 机械工程
+    en: Mechanical Engineering
+  - zh: 9 学分
+    en: 9 Credits
+  capabilities:
+  - energy-power
+  - reading-notes
+  target: learning.html#record-yuan-ze-exchange
+  media: []
+  links: []
+  relatedPost: 2026-07-01-yuan-ze-exchange-learning.md
+- id: yuan-ze-study-group
+  kind: education
+  pages:
+  - learning
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: '2026-03-07'
+  timelineType: milestone
+  title:
+    zh: 星际和平公司“策略投资部”经济主题读书会
+    en: 'Economics Study Group: Strategic Investment Department'
+  period:
+    zh: 项目周期 2026-03-07—2026-06-15；六次会议 03-19—05-07
+    en: 'Project period: 2026-03-07—2026-06-15; six meetings: 03-19—05-07'
+  role:
+    zh: 团队成员
+    en: Team member
+  summary:
+    zh: 以工程经济课程为起点，六人团队分工精读财务与投资读物，并通过六次线下会议完成讨论和个人心得交付。
+    en: A six-person team extended Engineering Economy through assigned reading, six in-person discussions, and individual written reflections.
+  actions:
+  - zh: 围绕《富爸爸，穷爸爸》《小狗钱钱》等五本读物进行分工精读。
+    en: Read and discussed five finance books, including Rich Dad Poor Dad and Money or Your Life-style youth finance texts.
+  - zh: 参与六次线下讨论并完成个人心得报告。
+    en: Participated in six in-person sessions and completed an individual reflection report.
+  outcomes:
+  - zh: 团队获全校第二名。
+    en: The team placed second university-wide.
+  - zh: 获得税前 NT$ 8,000 团队奖金。
+    en: Received a pre-tax NT$ 8,000 team award.
+  tags:
+  - zh: 工程经济
+    en: Engineering Economy
+  - zh: 财务阅读
+    en: Finance Reading
+  - zh: 团队协作
+    en: Collaboration
+  capabilities:
+  - reading-notes
+  - collaboration
+  - energy-power
+  target: learning.html#record-yuan-ze-study-group
+  media: []
+  links: []
+  relatedPost: 2026-06-15-theme-study-group-award.md

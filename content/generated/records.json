@@ -587,6 +587,405 @@
           "url": "https://openreview.net/profile?id=%7EYucheng_Li13"
         }
       ]
+    },
+    {
+      "id": "new-energy-materials-lab",
+      "kind": "research",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2024-10",
+      "timelineType": "progress",
+      "title": {
+        "zh": "新能源材料实验室：超级电容器电极材料实践",
+        "en": "New Energy Materials Lab: Supercapacitor Electrode Practice",
+        "chinese-traditional": "新能源材料實驗室：超級電容器電極材料實踐"
+      },
+      "period": "2024-10—2025-12",
+      "role": {
+        "zh": "学生项目副主持",
+        "en": "Student deputy project lead",
+        "chinese-traditional": "學生項目副主持"
+      },
+      "summary": {
+        "zh": "在超级电容器纽扣电池方向参与市场调研与新电极材料实验工作。",
+        "en": "Participated in market research and electrode-material experiments for supercapacitor coin cells.",
+        "chinese-traditional": "在超級電容器紐扣電池方向參與市場調研與新電極材料實驗工作。"
+      },
+      "actions": [
+        {
+          "zh": "组织并撰写市场调研报告。",
+          "en": "Organized and wrote a market research report.",
+          "chinese-traditional": "組織並撰寫市場調研報告。"
+        },
+        {
+          "zh": "参与生物材料称量、活性炭烧制与电极片压制。",
+          "en": "Worked on biomaterial weighing, activated-carbon preparation, and electrode pressing.",
+          "chinese-traditional": "參與生物材料稱量、活性炭燒製與電極片壓制。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成新能源材料实验与市场调研的基础实践。",
+          "en": "Built foundational experience in new-energy-material experiments and market research.",
+          "chinese-traditional": "形成新能源材料實驗與市場調研的基礎實踐。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "超级电容器",
+          "en": "Supercapacitors",
+          "chinese-traditional": "超級電容器"
+        },
+        {
+          "zh": "新能源材料",
+          "en": "New Energy Materials",
+          "chinese-traditional": "新能源材料"
+        },
+        {
+          "zh": "实验实践",
+          "en": "Laboratory Practice",
+          "chinese-traditional": "實驗實踐"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "collaboration"
+      ],
+      "target": "learning.html#record-new-energy-materials-lab",
+      "media": [],
+      "links": []
+    },
+    {
+      "id": "csu-energy-power-undergraduate",
+      "kind": "education",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": true,
+      "timelineDate": "2023-09",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "中南大学能源与动力工程本科阶段",
+        "en": "Undergraduate Study in Energy and Power Engineering at Central South University",
+        "chinese-traditional": "中南大學能源與動力工程本科階段"
+      },
+      "period": "2023—2027（预计）",
+      "role": {
+        "zh": "能源与动力工程本科生",
+        "en": "Undergraduate in Energy and Power Engineering",
+        "chinese-traditional": "能源與動力工程本科生"
+      },
+      "summary": {
+        "zh": "就读于中南大学（985）能源与动力工程专业，专业评估标签为 B-，预计 2027 年毕业；本科阶段逐步把专业学习延伸到工程项目、数学建模、科研工程与软件资产建设。",
+        "en": "Studying Energy and Power Engineering at Central South University (Project 985), with a B- discipline-evaluation tag and expected graduation in 2027; undergraduate work has expanded into engineering projects, mathematical modeling, research engineering, and software assets.",
+        "chinese-traditional": "就讀於中南大學（985）能源與動力工程專業，專業評估標籤為 B-，預計 2027 年畢業；本科階段逐步把專業學習延伸到工程項目、數學建模、科研工程與軟件資產建設。"
+      },
+      "actions": [],
+      "outcomes": [
+        {
+          "zh": "形成能源工程、工程仿真、科学计算与项目协作相互连接的本科能力结构。",
+          "en": "Built an undergraduate capability structure connecting energy engineering, simulation, scientific computing, and project collaboration.",
+          "chinese-traditional": "形成能源工程、工程仿真、科學計算與項目協作相互連接的本科能力結構。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "中南大学 985",
+          "en": "Central South University · Project 985",
+          "chinese-traditional": "中南大學 985"
+        },
+        {
+          "zh": "能源与动力工程",
+          "en": "Energy and Power Engineering",
+          "chinese-traditional": "能源與動力工程"
+        },
+        {
+          "zh": "专业 B-",
+          "en": "Discipline B-",
+          "chinese-traditional": "專業 B-"
+        }
+      ],
+      "capabilities": [
+        "energy-power"
+      ],
+      "target": "learning.html#record-csu-energy-power-undergraduate",
+      "media": [],
+      "links": []
+    },
+    {
+      "id": "imp-winter-camp",
+      "kind": "education",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2026-01-26",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "中国科学院近代物理研究所 2026 年优秀大学生冬令营",
+        "en": "2026 IMP Outstanding Undergraduate Winter Camp",
+        "chinese-traditional": "中國科學院近代物理研究所 2026 年優秀大學生冬令營"
+      },
+      "period": "2026-01-26—2026-01-30",
+      "role": {
+        "zh": "优秀营员",
+        "en": "Outstanding participant",
+        "chinese-traditional": "優秀營員"
+      },
+      "summary": {
+        "zh": "通过十三场专题报告、研究人员交流和大科学装置现场参观，系统了解 HIAF、CiADS、材料辐照、核废料嬗变与直线加速器相关方向。",
+        "en": "Studied HIAF, CiADS, material irradiation, nuclear-waste transmutation, and linear accelerators through thirteen talks, researcher discussions, and facility visits.",
+        "chinese-traditional": "通過十三場專題報告、研究人員交流和大科學裝置現場參觀，系統瞭解 HIAF、CiADS、材料輻照、核廢料嬗變與直線加速器相關方向。"
+      },
+      "actions": [
+        {
+          "zh": "参访近物所惠州学部与相关大科学装置设施。",
+          "en": "Visited IMP's Huizhou campus and major-science-facility infrastructure.",
+          "chinese-traditional": "參訪近物所惠州學部與相關大科學裝置設施。"
+        },
+        {
+          "zh": "围绕加速器驱动次临界系统、直线加速器及热工方向与研究人员交流。",
+          "en": "Discussed accelerator-driven subcritical systems, linear accelerators, and thermal engineering with researchers.",
+          "chinese-traditional": "圍繞加速器驅動次臨界系統、直線加速器及熱工方向與研究人員交流。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "获评优秀营员。",
+          "en": "Recognized as an outstanding participant.",
+          "chinese-traditional": "獲評優秀營員。"
+        },
+        {
+          "zh": "进一步明确核能可持续发展、加速器热工与能源材料辐照的学习方向。",
+          "en": "Clarified interests in sustainable nuclear energy, accelerator thermal engineering, and irradiation of energy materials.",
+          "chinese-traditional": "進一步明確核能可持續發展、加速器熱工與能源材料輻照的學習方向。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "中科院近物所",
+          "en": "Institute of Modern Physics",
+          "chinese-traditional": "中科院近物所"
+        },
+        "HIAF",
+        "CiADS",
+        {
+          "zh": "能源战略",
+          "en": "Energy Strategy",
+          "chinese-traditional": "能源戰略"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "reading-notes",
+        "collaboration"
+      ],
+      "target": "learning.html#record-imp-winter-camp",
+      "media": [
+        {
+          "path": "static/assets/portfolio/winter-camp/winter-camp-01-opening.webp",
+          "alt": {
+            "zh": "近物所 2026 年优秀大学生冬令营开幕屏幕",
+            "en": "Opening screen of the 2026 IMP winter camp",
+            "chinese-traditional": "近物所 2026 年優秀大學生冬令營開幕屏幕"
+          },
+          "stream": "engineering",
+          "featured": true
+        },
+        {
+          "path": "static/assets/portfolio/winter-camp/winter-camp-04-hiaf-tunnel-layout.webp",
+          "alt": {
+            "zh": "强流重离子加速器隧道平面布置图",
+            "en": "HIAF tunnel layout",
+            "chinese-traditional": "強流重離子加速器隧道平面佈置圖"
+          },
+          "stream": "engineering"
+        },
+        {
+          "path": "static/assets/portfolio/winter-camp/winter-camp-05-comprehensive-test-hall.webp",
+          "alt": {
+            "zh": "近物所综合测试大厅外景",
+            "en": "IMP comprehensive test hall",
+            "chinese-traditional": "近物所綜合測試大廳外景"
+          },
+          "stream": "engineering"
+        }
+      ],
+      "links": [],
+      "relatedPost": "2026-01-30-imp-winter-camp.md"
+    },
+    {
+      "id": "yuan-ze-exchange",
+      "kind": "education",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": false,
+      "timelineDate": "2026-02-22",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "元智大学机械工程学系交换学习",
+        "en": "Exchange Study in Mechanical Engineering at Yuan Ze University",
+        "chinese-traditional": "元智大學機械工程學系交換學習"
+      },
+      "period": "2026-02-22—2026-06-30",
+      "role": {
+        "zh": "本科交换生",
+        "en": "Undergraduate exchange student",
+        "chinese-traditional": "本科交換生"
+      },
+      "summary": {
+        "zh": "完成 128 天春季学期交换，修读微积分（二）、工程经济、机率与统计，共 9 学分。",
+        "en": "Completed a 128-day spring exchange with nine credits in Calculus II, Engineering Economy, and Probability and Statistics.",
+        "chinese-traditional": "完成 128 天春季學期交換，修讀微積分（二）、工程經濟、機率與統計，共 9 學分。"
+      },
+      "actions": [
+        {
+          "zh": "在新环境中重建课程、预算与时间管理体系。",
+          "en": "Rebuilt course, budget, and time-management routines in a new environment.",
+          "chinese-traditional": "在新環境中重建課程、預算與時間管理體系。"
+        },
+        {
+          "zh": "将工程经济课程延伸到财务阅读与主题读书会实践。",
+          "en": "Extended Engineering Economy into financial reading and a themed study group.",
+          "chinese-traditional": "將工程經濟課程延伸到財務閱讀與主題讀書會實踐。"
+        },
+        {
+          "zh": "使用 Python 可视化梯度、切平面与向量场等微积分概念。",
+          "en": "Used Python to visualize calculus concepts including gradients, tangent planes, and vector fields.",
+          "chinese-traditional": "使用 Python 可視化梯度、切平面與向量場等微積分概念。"
+        },
+        {
+          "zh": "2026 年 6 月 8 日确定《工程经济》《实验设计与分析》《热交换设计》《财务管理》四本专业书的长期学习计划。",
+          "en": "On 8 June 2026, established a long-term study plan around Engineering Economy, Design and Analysis of Experiments, Heat Exchanger Design, and Financial Management.",
+          "chinese-traditional": "2026 年 6 月 8 日確定《工程經濟》《實驗設計與分析》《熱交換設計》《財務管理》四本專業書的長期學習計劃。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成跨环境学习、自我管理与工程经济判断的阶段性成果。",
+          "en": "Built evidence of cross-environment learning, self-management, and engineering-economic judgment.",
+          "chinese-traditional": "形成跨環境學習、自我管理與工程經濟判斷的階段性成果。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "元智大学",
+          "en": "Yuan Ze University",
+          "chinese-traditional": "元智大學"
+        },
+        "TOP12",
+        {
+          "zh": "机械工程",
+          "en": "Mechanical Engineering",
+          "chinese-traditional": "機械工程"
+        },
+        {
+          "zh": "9 学分",
+          "en": "9 Credits",
+          "chinese-traditional": "9 學分"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "reading-notes"
+      ],
+      "target": "learning.html#record-yuan-ze-exchange",
+      "media": [],
+      "links": [],
+      "relatedPost": "2026-07-01-yuan-ze-exchange-learning.md"
+    },
+    {
+      "id": "yuan-ze-study-group",
+      "kind": "education",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2026-03-07",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "星际和平公司“策略投资部”经济主题读书会",
+        "en": "Economics Study Group: Strategic Investment Department",
+        "chinese-traditional": "星際和平公司“策略投資部”經濟主題讀書會"
+      },
+      "period": {
+        "zh": "项目周期 2026-03-07—2026-06-15；六次会议 03-19—05-07",
+        "en": "Project period: 2026-03-07—2026-06-15; six meetings: 03-19—05-07",
+        "chinese-traditional": "項目週期 2026-03-07—2026-06-15；六次會議 03-19—05-07"
+      },
+      "role": {
+        "zh": "团队成员",
+        "en": "Team member",
+        "chinese-traditional": "團隊成員"
+      },
+      "summary": {
+        "zh": "以工程经济课程为起点，六人团队分工精读财务与投资读物，并通过六次线下会议完成讨论和个人心得交付。",
+        "en": "A six-person team extended Engineering Economy through assigned reading, six in-person discussions, and individual written reflections.",
+        "chinese-traditional": "以工程經濟課程為起點，六人團隊分工精讀財務與投資讀物，並通過六次線下會議完成討論和個人心得交付。"
+      },
+      "actions": [
+        {
+          "zh": "围绕《富爸爸，穷爸爸》《小狗钱钱》等五本读物进行分工精读。",
+          "en": "Read and discussed five finance books, including Rich Dad Poor Dad and Money or Your Life-style youth finance texts.",
+          "chinese-traditional": "圍繞《富爸爸，窮爸爸》《小狗錢錢》等五本讀物進行分工精讀。"
+        },
+        {
+          "zh": "参与六次线下讨论并完成个人心得报告。",
+          "en": "Participated in six in-person sessions and completed an individual reflection report.",
+          "chinese-traditional": "參與六次線下討論並完成個人心得報告。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "团队获全校第二名。",
+          "en": "The team placed second university-wide.",
+          "chinese-traditional": "團隊獲全校第二名。"
+        },
+        {
+          "zh": "获得税前 NT$ 8,000 团队奖金。",
+          "en": "Received a pre-tax NT$ 8,000 team award.",
+          "chinese-traditional": "獲得稅前 NT$ 8,000 團隊獎金。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "工程经济",
+          "en": "Engineering Economy",
+          "chinese-traditional": "工程經濟"
+        },
+        {
+          "zh": "财务阅读",
+          "en": "Finance Reading",
+          "chinese-traditional": "財務閱讀"
+        },
+        {
+          "zh": "团队协作",
+          "en": "Collaboration",
+          "chinese-traditional": "團隊協作"
+        }
+      ],
+      "capabilities": [
+        "reading-notes",
+        "collaboration",
+        "energy-power"
+      ],
+      "target": "learning.html#record-yuan-ze-study-group",
+      "media": [],
+      "links": [],
+      "relatedPost": "2026-06-15-theme-study-group-award.md"
     }
   ],
   "generatedBy": "content/records.yml"
