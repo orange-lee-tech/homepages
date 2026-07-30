@@ -218,6 +218,28 @@ timeline:
         en: Integrated 3D modeling, equipment communication, and patent records into a complete project delivery.
       capabilityIds: [solidworks, collaboration]
       target: capabilities.html#solidworks
+    - id: post-ai-certification-2026
+      year: 2026
+      date: "2026-01-08"
+      type: progress
+      title: { zh: 生成式人工智能工程师培训及认证, chinese-traditional: 生成式人工智能工程師培訓及認證, en: Generative AI engineer training and certification }
+      summary:
+        zh: 整理生成式人工智能工程师培训标准、学习形式与认证信息。
+        chinese-traditional: 整理生成式人工智能工程師培訓標準、學習形式與認證資訊。
+        en: Organized training standards, study formats, and certification information for generative AI engineering.
+      capabilityIds: [ai-agent, reading-notes]
+      target: post.html?f=人工智能报考.md
+    - id: post-homepage-2026
+      year: 2026
+      date: "2026-01-08"
+      type: progress
+      title: { zh: 个人主页动态发布, chinese-traditional: 個人主頁動態發布, en: Personal homepage post }
+      summary:
+        zh: 记录个人主页建设与公开内容入口。
+        chinese-traditional: 記錄個人主頁建設與公開內容入口。
+        en: Recorded the personal homepage build and its public content entry points.
+      capabilityIds: [full-stack]
+      target: post.html?f=2026-01-08-homepage.md
     - id: yuan-ze-exchange
       year: 2026
       date: 2026-02-22—06-30
@@ -228,7 +250,7 @@ timeline:
         chinese-traditional: 完成 128 天交換，修讀微積分（二）、工程經濟、機率與統計，共 9 學分。
         en: Completed a 128-day exchange with nine credits in Calculus II, Engineering Economy, and Probability and Statistics.
       capabilityIds: [energy-power, reading-notes]
-      target: learning.html#interests
+      target: post.html?f=2026-07-01-yuan-ze-exchange-learning.md
     - id: reading-system
       year: 2026
       date: "2026-06-08"
@@ -240,6 +262,17 @@ timeline:
         en: Established a long-term study plan around engineering economy, experimental design, heat exchanger design, and financial management.
       capabilityIds: [reading-notes, energy-power]
       target: capabilities.html#reading-notes
+    - id: post-theme-study-group-award-2026
+      year: 2026
+      date: "2026-06-15"
+      type: progress
+      title: { zh: 经济主题读书会获第二名, chinese-traditional: 經濟主題讀書會獲第二名, en: Economics study group won second prize }
+      summary:
+        zh: 围绕工程经济延伸完成六次主题读书会，团队获第二名，并获得税前 NT$ 8,000 奖金。
+        chinese-traditional: 圍繞工程經濟延伸完成六次主題讀書會，團隊獲第二名，並獲得稅前 NT$ 8,000 獎金。
+        en: Completed six study-group sessions derived from Engineering Economics; the team won second prize and a pre-tax NT$ 8,000 award.
+      capabilityIds: [reading-notes, collaboration, energy-power]
+      target: post.html?f=2026-06-15-theme-study-group-award.md
     - id: software-assets
       year: 2026
       date: 2026-07
@@ -251,6 +284,28 @@ timeline:
         en: Continued development of a desktop AI agent runtime, an IELTS browser extension, and the homepage content system.
       capabilityIds: [ai-agent, full-stack]
       target: projects.html
+    - id: post-ai-enterprise-website-2026
+      year: 2026
+      date: "2026-07-24"
+      type: progress
+      title: { zh: AI 企业官网项目动态, chinese-traditional: AI 企業官網專案動態, en: AI corporate website project post }
+      summary:
+        zh: 发布约 60 个人类小时完成企业官网的项目复盘。
+        chinese-traditional: 發布約 60 個人類小時完成企業官網的專案復盤。
+        en: Published a project reflection on building a corporate website in about 60 human hours.
+      capabilityIds: [full-stack, collaboration]
+      target: post.html?f=2026-07-24-ai-enterprise-website.md
+    - id: post-ielts-browser-extension-2026
+      year: 2026
+      date: "2026-07-27"
+      type: progress
+      title: { zh: IELTS 浏览器插件动态, chinese-traditional: IELTS 瀏覽器擴充功能動態, en: IELTS browser extension post }
+      summary:
+        zh: 发布约 2 个人类小时完成首个浏览器插件的产品化复盘。
+        chinese-traditional: 發布約 2 個人類小時完成首個瀏覽器擴充功能的產品化復盤。
+        en: Published a product reflection on completing a first browser extension in about two human hours.
+      capabilityIds: [full-stack, ai-agent]
+      target: post.html?f=2026-07-27-ielts-browser-extension.md
     - id: brfc-submission
       year: 2026
       date: 2026-07

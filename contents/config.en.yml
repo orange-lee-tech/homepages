@@ -54,15 +54,18 @@ posts:
   - title: I Spent About 60 Human Hours Building a Corporate Website with AI
     date: "2026-07-24"
     file: 2026-07-24-ai-enterprise-website.md
+  - title: "A 128-Day Exchange at Yuan Ze University: Courses, Campus Life, and Self-Management"
+    date: "2026-07-01"
+    file: 2026-07-01-yuan-ze-exchange-learning.md
+  - title: I Joined a Six-Session Economics Study Group at Yuan Ze University, and Our Team Won Second Prize
+    date: "2026-06-15"
+    file: 2026-06-15-theme-study-group-award.md
   - title: LiYucheng's Homepage
     date: "2026-01-08"
     file: 2026-01-08-homepage.md
   - title: Generative Artificial Intelligence Engineer Training and Certification
     date: "2026-01-08"
     file: 人工智能报考.md
-  - title: Generative Artificial Intelligence Engineer Training and Certification
-    date: "2026-01-08"
-    file: 生成式人工智能工程师培训及认证.md
 nav-menu: MENU
 nav-home: Home
 nav-home-top: Top
