@@ -1,43 +1,7 @@
 version: 1
 page:
   kind: research
-  eyebrow:
-    zh: 论文记录
-    chinese-traditional: 論文記錄
-    en: PUBLICATION RECORD
-  title:
-    zh: 论文与投稿
-    chinese-traditional: 論文與投稿
-    en: Paper & Submission
-  description:
-    zh: 按公开材料记录论文篇名、投稿去向、作者顺序与当前状态，不扩展未经公开记录支持的个人贡献。
-    chinese-traditional: 按公開材料記錄論文篇名、投稿去向、作者順序與目前狀態，不擴展未經公開記錄支持的個人貢獻。
-    en: A factual record of paper title, venue, author order, and current status, without adding unverified contribution claims.
-items:
-- id: brfc-aaai-2027
-  category: publication
-  status: submitted
-  updated: 2026-07
-  title:
-    zh: 'BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates'
-    chinese-traditional: 'BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates'
-    en: 'BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates'
-  summary:
-    zh: 已投稿 AAAI 2027。作者顺序：Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu；Yucheng Li 位列第四。
-    chinese-traditional: 已投稿 AAAI 2027。作者順序：Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu；Yucheng Li 位列第四。
-    en: 'Submitted to AAAI 2027. Author order: Jinlong Li, Fengyi Zhang, Yongjie Hu, Yucheng Li, and Shengjun Liu; Yucheng Li is the fourth author.'
-  tags:
-  - AAAI 2027
-  - Neural PDE
-  - Submitted
-  links:
-  - label:
-      zh: OpenReview 投稿页面
-      chinese-traditional: OpenReview 投稿頁面
-      en: OpenReview submission
-    url: https://openreview.net/forum?id=nN8DoQbMno
-  - label:
-      zh: OpenReview 个人主页
-      chinese-traditional: OpenReview 個人主頁
-      en: OpenReview profile
-    url: https://openreview.net/profile?id=%7EYucheng_Li13
+  eyebrow: { zh: 研究记录, chinese-traditional: 研究記錄, en: RESEARCH RECORDS }
+  title: { zh: 研究与成果转化, chinese-traditional: 研究與成果轉化, en: Research & Translation }
+  description: { zh: 研究经历改由本科履历主记录统一生成，避免竞赛、论文和工程组织被拆成重复卡片。, chinese-traditional: 研究經歷改由本科履歷主記錄統一生成，避免競賽、論文與工程組織被拆成重複卡片。, en: Research experiences are generated from canonical portfolio records so competitions, papers, and research engineering are not duplicated. }
+items: []
