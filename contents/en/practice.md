@@ -1,18 +1,22 @@
-## Joint Alumni Outreach Session｜Host｜Xishan School of Kunming No. 1 High School (2023/12–2024/01)
+# Public Practice and Service
 
-* Organized and trained outreach teams from 17 universities; achieved the Admissions Office outreach targets
-* Rated Outstanding at Central South University and awarded 2 credits; the following year’s admission rate increased by 288% YoY
+## Joint Alma Mater Outreach (2023-12-14—2024-01-25)
+- Organized and trained outreach teams from seventeen universities and completed CSU admissions goals.
+- Received an excellent rating and two credits; related admissions increased 288% year over year.
 
-## Hunan 100km｜Campus Lead, Recruitment Team (2023/10–2024/10)
+## Hunan 100 km Walk (2023-10-01—2024-10-16)
+- Participated in three editions and progressed from volunteer to campus recruitment lead.
+- Recruited 31 volunteer participations, attracted 467 online participants, completed 322 promotions, and distributed 240 prizes; twice recognized as an outstanding provincial volunteer.
 
-* Three-year track record: recruited 31 volunteer participations; 467 online recruits in total; 322 ad placements; distributed 240 prizes
-* Awarded Provincial Outstanding Volunteer twice
+## Sun Charity Foundation (2023-11-15—2026-06)
+- Completed 103 hours of public-service work.
+- Question Mark Weekend: progressed from member to science curriculum lead, delivered four lesson packages, and was recognized as an outstanding lead.
+- Sun Tree Hole: completed nine replies across two cycles and received outstanding-volunteer recognition in both.
+- Forest Messenger: completed three long-term companionship letters and was recognized as outstanding.
+- Sun Student Companion Program: served through March 2026.
+- Received the Sun Charity Scholarship for three consecutive years.
 
-## Sun Charity Public Welfare Foundation (Provincial Department of Civil Affairs 4A)｜Sun Scholar (2023/11–Present)
-
-* “Tongxing Partner” Outstanding Volunteer Second Prize; 91 hours of volunteer service in total
-* Sun Scholars 2025–2026 Companionship Program
-* Sun Tree Hollow: Five-letter Reply Project; recognized as an Outstanding Reply Volunteer upon completion
-* Forest Messenger: Three-letter Reply Project; recognized as an Outstanding Reply Volunteer upon completion
-* “Little Question Mark” Weekend Science Project Team Lead: organized screening, training, continuous delivery of course packages, and final recognition
-* “Little Question Mark” Weekend Science Project Team Member: delivered assigned course packages and received final recognition as an outstanding volunteer
+## Other Short-term Volunteering (2023—2024)
+- Participated in a 2023 HIV-prevention outreach activity.
+- Served as a project volunteer for Central South University’s 2024 anniversary.
+- Certificate images remain private for privacy and presentation reasons, while the factual records are retained.

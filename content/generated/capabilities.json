@@ -57,6 +57,14 @@
             "en": "Completed nine credits during a 2026 exchange in Mechanical Engineering at Yuan Ze University."
           },
           "target": "learning.html#interests"
+        },
+        {
+          "text": {
+            "zh": "参与锑资源清洁能源与钨资源回收项目，并参加中科院近物所 HIAF 与 CiADS 冬令营。",
+            "chinese-traditional": "參與銻資源清潔能源與鎢資源回收專案，並參加中科院近物所 HIAF 與 CiADS 冬令營。",
+            "en": "Worked on antimony and tungsten engineering projects and joined the IMP HIAF/CiADS winter camp."
+          },
+          "target": "projects.html#record-antimony-clean-energy"
         }
       ]
     },
@@ -118,6 +126,35 @@
             "en": "Ongoing development of a desktop AI agent runtime covering tools, MCP, skills, memory, and Electron testing."
           },
           "target": "projects.html"
+        }
+      ]
+    },
+    {
+      "id": "research-engineering",
+      "title": {
+        "zh": "科研工程与项目发起",
+        "chinese-traditional": "科研工程與專案發起",
+        "en": "Research Engineering & Project Initiation"
+      },
+      "definition": {
+        "zh": "通过团队组建、文档基础设施、计算资源组织与工程治理，使研究项目能够启动、持续迭代并完成成果转化。",
+        "chinese-traditional": "透過團隊組建、文件基礎設施、計算資源組織與工程治理，使研究專案能夠啟動、持續迭代並完成成果轉化。",
+        "en": "Enabling research projects to start, iterate, and convert into outcomes through team formation, document infrastructure, compute organization, and engineering governance."
+      },
+      "tools": [
+        "LaTeX",
+        "GPU Workflow",
+        "File Governance",
+        "Project Coordination"
+      ],
+      "evidence": [
+        {
+          "text": {
+            "zh": "发起 MathorCup 汽车风阻项目并推动 BRFC 论文转化；通过工程管理将 GPU 平均利用效率由约 40% 提升至约 90%。",
+            "chinese-traditional": "發起 MathorCup 汽車風阻專案並推動 BRFC 論文轉化；透過工程管理將 GPU 平均利用效率由約 40% 提升至約 90%。",
+            "en": "Initiated the MathorCup aerodynamic project and sustained its conversion into BRFC, raising average GPU utilization from about 40% to about 90% through engineering management."
+          },
+          "target": "learning.html#record-mathorcup-brfc"
         }
       ]
     },
@@ -242,6 +279,14 @@
             "chinese-traditional": "數學建模與科研材料中持續使用 LaTeX 進行結構化表達。",
             "en": "Continued use of LaTeX for structured mathematical modeling and research materials."
           }
+        },
+        {
+          "text": {
+            "zh": "在 STR、MCM、MathorCup—BRFC 等项目中承担论文结构、LaTeX 模板或制版工作。",
+            "chinese-traditional": "在 STR、MCM、MathorCup—BRFC 等專案中承擔論文結構、LaTeX 模板或製版工作。",
+            "en": "Handled paper structure, LaTeX templates, or typesetting in STR, MCM, and MathorCup–BRFC projects."
+          },
+          "target": "learning.html#record-mathorcup-brfc"
         }
       ]
     },
@@ -364,6 +409,14 @@
             "en": "Produced documents, records, information sheets, and presentation materials for student work and projects."
           },
           "target": "projects.html#collaboration"
+        },
+        {
+          "text": {
+            "zh": "全国计算机等级考试二级（WPS Office）为文档、表格和演示制作能力提供证书证据。",
+            "chinese-traditional": "全國計算機等級考試二級（WPS Office）為文件、試算表和簡報製作能力提供證書證據。",
+            "en": "The National Computer Rank Examination Level 2 (WPS Office) provides certificate evidence for document, spreadsheet, and presentation skills."
+          },
+          "target": "capabilities.html#record-wps-and-certifications"
         }
       ]
     },

@@ -570,3 +570,775 @@ items:
   media: []
   links: []
   relatedPost: 2026-06-15-theme-study-group-award.md
+- id: other-campus-volunteering
+  kind: service
+  pages:
+  - projects
+  - capabilities
+  size: compact
+  featured: false
+  timelineDate: '2024'
+  timelineType: progress
+  title:
+    zh: 防艾宣传与校庆项目志愿服务
+    en: HIV-prevention Outreach and University-anniversary Volunteering
+  period: 2023—2024
+  role:
+    zh: 活动志愿者 / 项目化志愿者
+    en: Event volunteer / project volunteer
+  summary:
+    zh: 保留 2023 年防治艾滋病宣传活动与 2024 年中南大学校庆项目化志愿服务记录；相关证明因隐私或展示价值原因不公开图片。
+    en: Preserves records of a 2023 HIV-prevention outreach activity and project-based volunteering for Central South University’s 2024 anniversary;
+      certificate images remain private for privacy and presentation reasons.
+  actions: []
+  outcomes:
+  - zh: 完成两项短期公共与校园志愿服务。
+    en: Completed two short-term public and campus volunteer activities.
+  tags:
+  - zh: 防艾宣传
+    en: HIV-prevention Outreach
+  - zh: 校庆志愿服务
+    en: University-anniversary Volunteering
+  capabilities:
+  - collaboration
+  target: projects.html#record-other-campus-volunteering
+  media: []
+  links: []
+- id: student-office
+  kind: practice
+  pages:
+  - projects
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: 2024-04
+  timelineType: progress
+  title:
+    zh: 中南大学能源学院学工办见习文员
+    en: Student Office Assistant, School of Energy Science and Engineering
+  period: 2024-04—2025-11-09
+  role:
+    zh: 见习文员
+    en: Student office assistant
+  summary:
+    zh: 对接教务、综合办与各年级辅导员，承担微信运营、学生档案与就业信息协同。
+    en: Coordinated academic affairs, administration, counselors, WeChat operations, student records, and employment information.
+  actions:
+  - zh: 主管学工办助理微信，分管学生档案。
+    en: Managed the student-office WeChat account and student records.
+  - zh: 协调企业就业信息发布与日常事务交付。
+    en: Coordinated employer information releases and operational delivery.
+  outcomes:
+  - zh: “学长的火炬”工作评比：2024 年全校第 4，2025 年全校第 2。
+    en: 'Senior Torch program ranking: 4th university-wide in 2024 and 2nd in 2025.'
+  tags:
+  - zh: 学生工作
+    en: Student Work
+  - zh: 微信运营
+    en: WeChat Operations
+  - zh: 档案管理
+    en: Records Management
+  capabilities:
+  - collaboration
+  - wps
+  target: projects.html#record-student-office
+  media: []
+  links: []
+- id: graphic-design-practice
+  kind: practice
+  pages:
+  - projects
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: '2023-12-20'
+  timelineType: milestone
+  title:
+    zh: 平面设计实习与持续设计实践
+    en: Graphic Design Internship and Ongoing Practice
+  period:
+    zh: 2023-12-20—至今
+    en: 2023-12-20—Present
+  role:
+    zh: 实习平面设计师 / 非全职平面设计师
+    en: Design intern / ongoing part-time designer
+  summary:
+    zh: 在品牌设计公司完成商业设计实习，此后持续进行非全职设计实践。
+    en: Completed a commercial design internship at a branding company and continued part-time design practice afterward.
+  actions:
+  - zh: 参与技术培训、设计任务与客户需求对接。
+    en: Participated in technical training, design tasks, and client requirement discussions.
+  - zh: 使用 Adobe Illustrator 完成视觉与文字设计交付。
+    en: Used Adobe Illustrator for visual and typographic design delivery.
+  outcomes:
+  - zh: 实习期间完成 4 份作品并取得实习证明。
+    en: Completed four works during the internship and received a certificate.
+  - zh: 累计完成设计作品 14 个。
+    en: Completed fourteen design works in total.
+  tags:
+  - zh: 平面设计
+    en: Graphic Design
+  - Adobe Illustrator
+  - zh: 客户沟通
+    en: Client Communication
+  capabilities:
+  - academic-graphic-design
+  - collaboration
+  target: projects.html#record-graphic-design-practice
+  media: []
+  links: []
+- id: alma-mater-outreach
+  kind: practice
+  pages:
+  - projects
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: '2023-12-14'
+  timelineType: progress
+  title:
+    zh: 母校联合宣讲与招生传播
+    en: Joint Alma Mater Outreach and Admissions Communication
+  period: 2023-12-14—2024-01-25
+  role:
+    zh: 主持 / 联合宣讲组织者
+    en: Lead organizer
+  summary:
+    zh: 组织高中毕业在读学子联合宣讲，协调 17 所大学队伍完成面向高三学生的招生传播。
+    en: Organized a joint outreach event with teams from seventeen universities for high-school seniors.
+  actions:
+  - zh: 组织培训 17 所大学宣讲队伍。
+    en: Organized and trained outreach teams from seventeen universities.
+  - zh: 完成中南大学本科招生宣讲目标。
+    en: Completed CSU undergraduate admissions outreach goals.
+  outcomes:
+  - zh: 在中南大学获评优秀并认定 2 学分。
+    en: Received an excellent rating and two credits at CSU.
+  - zh: 次年相关录取率同比增长 288%。
+    en: The following year's related admission rate increased 288% year over year.
+  tags:
+  - zh: 公开表达
+    en: Public Communication
+  - zh: 组织协调
+    en: Coordination
+  - zh: 招生传播
+    en: Admissions Outreach
+  capabilities:
+  - collaboration
+  - wps
+  target: projects.html#record-alma-mater-outreach
+  media: []
+  links: []
+- id: hunan-100km
+  kind: service
+  pages:
+  - projects
+  - capabilities
+  size: extended
+  featured: false
+  timelineDate: '2023-10-01'
+  timelineType: milestone
+  title:
+    zh: 湖南百公里：从志愿者到校区负责人
+    en: 'Hunan 100 km: From Volunteer to Campus Lead'
+  period: 2023-10-01—2024-10-16
+  role:
+    zh: 招募组校区负责人
+    en: Campus recruitment lead
+  summary:
+    zh: 连续参与三届百公里毅行，从普通志愿者成长为校区负责人，形成招募、传播和现场协同的量化记录。
+    en: Participated in three editions of the 100 km walk, progressing from volunteer to campus lead with measurable recruitment and outreach
+      results.
+  actions:
+  - zh: 累计招募志愿者 31 人次、线上拉新 467 人次。
+    en: Recruited 31 volunteer participations and 467 online participants.
+  - zh: 完成广告投放 322 次、发放奖品 240 个。
+    en: Completed 322 promotional placements and distributed 240 prizes.
+  outcomes:
+  - zh: 两次获评省级优秀志愿者。
+    en: Twice recognized as an outstanding provincial volunteer.
+  tags:
+  - zh: 志愿服务
+    en: Volunteering
+  - zh: 招募
+    en: Recruitment
+  - zh: 传播
+    en: Communication
+  - zh: 校区负责人
+    en: Campus Lead
+  capabilities:
+  - collaboration
+  - wps
+  target: projects.html#record-hunan-100km
+  media: []
+  links: []
+- id: question-mark-weekend
+  kind: service
+  pages:
+  - projects
+  - capabilities
+  size: extended
+  featured: false
+  timelineDate: '2024-09-19'
+  timelineType: milestone
+  title:
+    zh: 小问号 weekend：从课题组成员到优秀组长
+    en: 'Question Mark Weekend: From Team Member to Outstanding Lead'
+  period:
+    zh: 2024 春季—2024-12-10
+    en: Spring 2024—2024-12-10
+  role:
+    zh: 科学课题组成员 → 组长
+    en: Science curriculum member → team lead
+  summary:
+    zh: 从春季组员留任并竞选为秋季科学课题组组长，组织筛选、培训和四套课程包连续交付。
+    en: Progressed from a spring team member to autumn science-curriculum lead, organizing selection, training, and four consecutive lesson-package
+      deliveries.
+  actions:
+  - zh: 组织新成员初筛、面试与专题培训。
+    en: Organized member screening, interviews, and topic training.
+  - zh: 带领 4 名组员按周交付四套科学课程包。
+    en: Led four members in delivering four weekly science lesson packages.
+  outcomes:
+  - zh: 课题组获评优秀课题组，本人获评优秀组长。
+    en: The team was recognized as outstanding and the user as an outstanding lead.
+  tags:
+  - zh: 科学课程
+    en: Science Curriculum
+  - zh: 团队管理
+    en: Team Management
+  - zh: 志愿服务
+    en: Volunteering
+  capabilities:
+  - collaboration
+  - wps
+  target: projects.html#record-question-mark-weekend
+  media:
+  - path: static/assets/portfolio/volunteering/volunteering-04-question-mark-weekend-outstanding-leader.webp
+    alt:
+      zh: 小问号 weekend 优秀组长证书
+      en: Question Mark Weekend outstanding-lead certificate
+    stream: service
+    featured: true
+  links:
+  - label:
+      zh: 2024 秋季志愿者名单
+      en: Autumn 2024 volunteer list
+    url: https://mp.weixin.qq.com/s/lK7Gurtyx90xc1Br7qUEgA
+  - label:
+      zh: 专题组介绍
+      en: Program introduction
+    url: https://mp.weixin.qq.com/s/Mq76uKxrIuTp4X_s1b6nAg
+- id: sun-tree-hole
+  kind: service
+  pages:
+  - projects
+  - capabilities
+  size: extended
+  featured: false
+  timelineDate: '2024-09-30'
+  timelineType: milestone
+  title:
+    zh: 太阳树洞：两期朋辈回信与心理关怀
+    en: 'Sun Tree Hole: Two Cycles of Peer Letter Support'
+  period: 2024-09-30—2026-06-07
+  role:
+    zh: 回信志愿者
+    en: Letter-response volunteer
+  summary:
+    zh: 完成两期太阳树洞朋辈回信服务，以倾听、问题回应和适度建议支持来信者。
+    en: Completed two cycles of peer letter-response service focused on listening, problem response, and appropriate guidance.
+  actions:
+  - zh: 2024—2025 周期完成 5 封回信，20 小时。
+    en: Completed five replies and 20 hours in the 2024–2025 cycle.
+  - zh: 2026 周期完成 4 封回信，16 小时。
+    en: Completed four replies and 16 hours in the 2026 cycle.
+  outcomes:
+  - zh: 两期均获评优秀回信志愿者。
+    en: Recognized as an outstanding letter-response volunteer in both cycles.
+  tags:
+  - zh: 朋辈关怀
+    en: Peer Support
+  - zh: 书信
+    en: Letters
+  - zh: 志愿服务
+    en: Volunteering
+  capabilities:
+  - collaboration
+  - wps
+  target: projects.html#record-sun-tree-hole
+  media:
+  - path: static/assets/portfolio/volunteering/volunteering-02-sun-tree-hole-outstanding-volunteer.webp
+    alt:
+      zh: 太阳树洞优秀志愿者证书
+      en: Sun Tree Hole outstanding-volunteer certificate
+    stream: service
+  links: []
+- id: forest-messenger
+  kind: service
+  pages:
+  - projects
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: '2025-10-01'
+  timelineType: progress
+  title:
+    zh: 森林信使：三封长期陪伴回信
+    en: 'Forest Messenger: Three Letters of Long-Term Companionship'
+  period: 2025-10-01—2026-03
+  role:
+    zh: 书信陪伴志愿者
+    en: Letter companion volunteer
+  summary:
+    zh: 以一对一书信交流支持小学生表达、自信与成长，在持续与边界感之间完成三次互动。
+    en: Supported a primary-school student's expression and confidence through three one-to-one letter exchanges.
+  actions:
+  - zh: 围绕人生关键词、时间感与假期计划完成三封回信。
+    en: Completed three replies on life keywords, time, and holiday plans.
+  - zh: 使用适龄语言、提问、明信片与手绘插图增强互动。
+    en: Used age-appropriate language, questions, postcards, and illustrations.
+  outcomes:
+  - zh: 获评优秀志愿者，累计 12 小时。
+    en: Recognized as an outstanding volunteer; 12 hours recorded.
+  tags:
+  - zh: 书信陪伴
+    en: Letter Companionship
+  - zh: 儿童支持
+    en: Child Support
+  - zh: 志愿服务
+    en: Volunteering
+  capabilities:
+  - collaboration
+  - wps
+  target: projects.html#record-forest-messenger
+  media:
+  - path: static/assets/portfolio/volunteering/volunteering-03-forest-messenger-outstanding-volunteer.webp
+    alt:
+      zh: 森林信使优秀志愿者证书
+      en: Forest Messenger outstanding-volunteer certificate
+    stream: service
+  links: []
+- id: sun-student-companion
+  kind: service
+  pages:
+  - projects
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: '2025-03-07'
+  timelineType: progress
+  title:
+    zh: 太阳学子身份与一对一陪伴项目
+    en: Sun Student Identity and One-to-one Companion Program
+  period:
+    zh: 太阳学子 2023-11-15—2026-06；陪伴项目 2025-03-07—2026-03
+    en: 'Sun Student: 2023-11-15—2026-06; companion program: 2025-03-07—2026-03'
+  role:
+    zh: 太阳学子 / 陪伴志愿者
+    en: Sun Student / companion volunteer
+  summary:
+    zh: 以太阳学子身份持续参加基金会公益服务，累计 103 小时；其中在一对一陪伴项目中，为安化二中学生提供稳定的情感支持与成长交流。
+    en: Completed 103 hours of sustained service as a Sun Student; within the one-to-one companion program, provided stable emotional support
+      and growth-oriented communication for a student at Anhua No. 2 High School.
+  actions:
+  - zh: 了解对方兴趣、学习条件与成长困惑。
+    en: Learned about the student's interests, study conditions, and concerns.
+  - zh: 提供适度的方法建议与情感支持。
+    en: Provided appropriate study guidance and emotional support.
+  - zh: 2025 年 3 月 19 日在中南大学太阳学子同学会线下见面会担任发言代表。
+    en: Served as a speaker at the Central South University Sun Student offline gathering on 19 March 2025.
+  outcomes:
+  - zh: 累计 14 小时陪伴服务。
+    en: Completed 14 hours of companionship service.
+  - zh: 在第四届太阳慈善基金会年会获评“童行伙伴优秀志愿者”二等奖。
+    en: Received second prize as an Outstanding Tongxing Partner Volunteer at the fourth Sun Charity Foundation annual meeting.
+  - zh: 相关服务经历于 2025 年 3 月 31 日被基金会微信公众号月刊记录。
+    en: The service experience was featured in the foundation’s WeChat monthly newsletter on 31 March 2025.
+  tags:
+  - zh: 陪伴教育
+    en: Companion Education
+  - zh: 一对一交流
+    en: One-to-one Communication
+  - zh: 志愿服务
+    en: Volunteering
+  capabilities:
+  - collaboration
+  target: projects.html#record-sun-student-companion
+  media:
+  - path: static/assets/portfolio/volunteering/volunteering-01-tongxing-partner-second-prize.webp
+    alt:
+      zh: 太阳慈善公益基金会童行伙伴优秀志愿者二等奖证书
+      en: Sun Charity Foundation Outstanding Tongxing Partner Volunteer second-prize certificate
+    stream: service
+    featured: true
+  links:
+  - label:
+      zh: 太阳学子陪伴项目志愿者名单
+      en: Sun Student Companion volunteer list
+    url: https://mp.weixin.qq.com/s/Uwv3Dtgi8clVPZeDKQjDKQ
+  - label:
+      zh: 基金会 2025 年 3 月月刊
+      en: Foundation March 2025 newsletter
+    url: https://mp.weixin.qq.com/s/6eDzUwLxgpyWvrZBAjnCuQ
+- id: sun-scholarships
+  kind: honor
+  pages:
+  - capabilities
+  size: compact
+  featured: false
+  timelineDate: '2023'
+  timelineType: milestone
+  title:
+    zh: 太阳公益奖学金：连续三年获奖
+    en: 'Sun Charity Scholarship: Three Consecutive Years'
+  period: 2023—2025
+  role:
+    zh: 奖学金获得者
+    en: Scholarship recipient
+  summary:
+    zh: 连续三年获得太阳公益奖学金，并持续参与基金会服务项目。
+    en: Received the Sun Charity Scholarship for three consecutive years while continuing foundation service.
+  actions: []
+  outcomes:
+  - zh: 与基金会服务经历共同构成长期支持与回馈关系。
+    en: Forms a long-term cycle of support and giving back alongside foundation service.
+  tags:
+  - zh: 奖学金
+    en: Scholarship
+  - zh: 连续三年
+    en: Three Consecutive Years
+  capabilities:
+  - collaboration
+  target: capabilities.html#record-sun-scholarships
+  media: []
+  links: []
+- id: english-reading-award
+  kind: honor
+  pages:
+  - capabilities
+  size: compact
+  featured: false
+  timelineDate: '2023'
+  timelineType: milestone
+  title:
+    zh: 2023“外文奖”英语阅读大赛全国三等奖
+    en: 2023 National Third Prize in English Reading
+  period: '2023'
+  role:
+    zh: 参赛者
+    en: Participant
+  summary:
+    zh: 参加全国大学生英语阅读大赛并获全国三等奖。
+    en: Won national third prize in a university English reading competition.
+  actions: []
+  outcomes:
+  - zh: 形成本科阶段英语阅读能力的外部证据。
+    en: Provides external evidence of undergraduate English reading ability.
+  tags:
+  - zh: 英语阅读
+    en: English Reading
+  - zh: 全国三等奖
+    en: National Third Prize
+  capabilities:
+  - reading-notes
+  target: capabilities.html#record-english-reading-award
+  media:
+  - path: static/assets/portfolio/english/english-01-reading-national-third-prize.webp
+    alt:
+      zh: 外文奖英语阅读全国三等奖证书
+      en: National English reading third-prize certificate
+    stream: modeling
+  links: []
+- id: yuelu-mountain
+  kind: honor
+  pages:
+  - capabilities
+  size: compact
+  featured: false
+  timelineDate: '2024'
+  timelineType: progress
+  title:
+    zh: 中南大学攀登麓山比赛第四名
+    en: Fourth Place in CSU Yuelu Mountain Climb
+  period: '2024'
+  role:
+    zh: 参赛者
+    en: Participant
+  summary:
+    zh: 参加中南大学第十届春季登山比赛并获得第四名。
+    en: Placed fourth in CSU's 10th spring mountain-climbing competition.
+  actions: []
+  outcomes: []
+  tags:
+  - zh: 体育
+    en: Sport
+  - zh: 登山
+    en: Mountain Climbing
+  - zh: 第四名
+    en: Fourth Place
+  capabilities:
+  - collaboration
+  target: capabilities.html#record-yuelu-mountain
+  media:
+  - path: static/assets/portfolio/sports/sports-01-yuelu-mountain-fourth-place.webp
+    alt:
+      zh: 攀登麓山比赛第四名证书
+      en: Yuelu Mountain fourth-place certificate
+    stream: service
+  links: []
+- id: campus-growth
+  kind: honor
+  pages:
+  - capabilities
+  size: compact
+  featured: false
+  timelineDate: '2023'
+  timelineType: progress
+  title:
+    zh: 军训先进个人与党校学习
+    en: Military Training Recognition and Party-School Study
+  period: 2023—2024
+  role:
+    zh: 校园成长记录
+    en: Campus development record
+  summary:
+    zh: 保留军训先进个人与党校结业等本科阶段校园成长记录。
+    en: Records undergraduate campus development including military-training recognition and party-school completion.
+  actions: []
+  outcomes: []
+  tags:
+  - zh: 军训先进个人
+    en: Outstanding Military-training Individual
+  - zh: 党校结业
+    en: Party-school Completion
+  capabilities:
+  - collaboration
+  target: capabilities.html#record-campus-growth
+  media: []
+  links: []
+- id: wps-and-certifications
+  kind: credential
+  pages:
+  - capabilities
+  size: standard
+  featured: false
+  timelineDate: '2024'
+  timelineType: milestone
+  title:
+    zh: WPS 办公能力与等级认证
+    en: WPS Office Skills and Certifications
+  period:
+    zh: 本科阶段
+    en: Undergraduate stage
+  role:
+    zh: 能力证据组
+    en: Capability evidence group
+  summary:
+    zh: 以全国计算机等级考试二级 WPS Office 证书对应文档、表格与演示制作能力，并保留普通话与急救认证。
+    en: Uses the National Computer Rank Examination Level 2 WPS Office certificate as evidence for document, spreadsheet, and presentation skills,
+      alongside Mandarin and first-aid credentials.
+  actions: []
+  outcomes:
+  - zh: 全国计算机等级考试二级（WPS Office）。
+    en: National Computer Rank Examination Level 2 (WPS Office).
+  - zh: 普通话水平测试二级乙等。
+    en: Mandarin Proficiency Test, Level 2-B.
+  - zh: CPR + AED 培训证书。
+    en: CPR + AED training certificate.
+  tags:
+  - WPS Office
+  - zh: 计算机二级
+    en: Computer Rank Examination Level 2
+  - zh: 普通话
+    en: Mandarin
+  - CPR + AED
+  capabilities:
+  - wps
+  target: capabilities.html#record-wps-and-certifications
+  media: []
+  links: []
+- id: desktop-ai-runtime
+  kind: software
+  pages: []
+  size: standard
+  featured: false
+  timelineDate: 2026-07
+  timelineType: milestone
+  title:
+    zh: 桌面 AI Agent Runtime
+    en: Desktop AI Agent Runtime
+  period:
+    zh: 2026-07—持续维护
+    en: 2026-07—Maintained
+  role:
+    zh: 独立构建与长期维护
+    en: Independent build and maintenance
+  summary:
+    zh: 基于 Electron、React、MCP 与本地模型构建桌面 AI 应用运行时。
+    en: A desktop AI runtime built with Electron, React, MCP, and local models.
+  actions: []
+  outcomes: []
+  tags:
+  - Electron
+  - React
+  - MCP
+  capabilities:
+  - ai-agent
+  - full-stack
+  target: projects.html#desktop-ai-runtime
+  media: []
+  links: []
+- id: ielts-learning-assistant
+  kind: software
+  pages: []
+  size: standard
+  featured: false
+  timelineDate: '2026-07-27'
+  timelineType: milestone
+  title:
+    zh: IELTS Learning Assistant
+    en: IELTS Learning Assistant
+  period:
+    zh: 2026-07—持续维护
+    en: 2026-07—Maintained
+  role:
+    zh: 独立产品构建
+    en: Independent product build
+  summary:
+    zh: 为雅思机考平台补充自由笔记、错因复盘、生词与句子收藏。
+    en: A browser extension adding notes, mistake review, vocabulary, and sentence capture to IELTS practice platforms.
+  actions: []
+  outcomes: []
+  tags:
+  - Browser Extension
+  - IELTS
+  capabilities:
+  - full-stack
+  - ai-agent
+  target: projects.html#ielts-learning-assistant
+  media: []
+  links: []
+  relatedPost: 2026-07-27-ielts-browser-extension.md
+- id: homepage-renovation
+  kind: software
+  pages: []
+  size: standard
+  featured: false
+  timelineDate: '2026-01-08'
+  timelineType: milestone
+  title:
+    zh: 个人主页维护体系翻新
+    en: Personal Homepage Maintenance Renovation
+  period:
+    zh: 2026-01—持续维护
+    en: 2026-01—Maintained
+  role:
+    zh: 独立构建与维护
+    en: Independent build and maintenance
+  summary:
+    zh: 将静态主页升级为具备内容管线、多语言同步、CI 与数据驱动目录的长期数字档案。
+    en: Evolved a static homepage into a long-term digital archive with content pipelines, multilingual sync, CI, and data-driven catalogs.
+  actions: []
+  outcomes: []
+  tags:
+  - GitHub Pages
+  - YAML
+  - CI
+  capabilities:
+  - full-stack
+  target: projects.html#homepage-renovation
+  media: []
+  links: []
+  relatedPost: 2026-01-08-homepage.md
+- id: public-profiles
+  kind: software
+  pages: []
+  size: compact
+  featured: false
+  timelineDate: 2026-07
+  timelineType: progress
+  title:
+    zh: 公开技术与学术身份
+    en: Public Technical and Academic Profiles
+  period:
+    zh: 2026-07—持续维护
+    en: 2026-07—Maintained
+  role:
+    zh: 公开身份索引
+    en: Public identity index
+  summary:
+    zh: 集中维护 GitHub 与 OpenReview 入口，形成代码、项目和论文记录索引。
+    en: Maintains GitHub and OpenReview as a unified index of code, projects, and paper records.
+  actions: []
+  outcomes: []
+  tags:
+  - GitHub
+  - OpenReview
+  capabilities:
+  - full-stack
+  - research-engineering
+  target: projects.html#public-profiles
+  media: []
+  links: []
+- id: ai-enterprise-website
+  kind: software
+  pages: []
+  size: standard
+  featured: false
+  timelineDate: '2026-07-24'
+  timelineType: progress
+  title:
+    zh: 约 60 个人类小时完成企业官网
+    en: Corporate Website Built in About 60 Human Hours
+  period: '2026-07-24'
+  role:
+    zh: AI 协作开发复盘
+    en: AI-assisted development reflection
+  summary:
+    zh: 记录从零完成企业级门户网站的工程过程与 AI 协作方法。
+    en: A reflection on building a corporate portal from scratch with AI-assisted engineering.
+  actions: []
+  outcomes: []
+  tags:
+  - zh: AI 协作
+    en: AI Collaboration
+  - zh: 企业官网
+    en: Corporate Website
+  capabilities:
+  - full-stack
+  - collaboration
+  target: post.html?f=2026-07-24-ai-enterprise-website.md
+  media: []
+  links: []
+  relatedPost: 2026-07-24-ai-enterprise-website.md
+- id: ai-certification-post
+  kind: credential
+  pages: []
+  size: compact
+  featured: false
+  timelineDate: '2026-01-08'
+  timelineType: progress
+  title:
+    zh: 生成式人工智能工程师培训及认证
+    en: Generative AI Engineer Training and Certification
+  period: '2026-01-08'
+  role:
+    zh: 学习信息整理
+    en: Learning information record
+  summary:
+    zh: 整理生成式人工智能工程师培训标准、学习形式与认证信息。
+    en: Organized training standards, study formats, and certification information for generative AI engineering.
+  actions: []
+  outcomes: []
+  tags:
+  - zh: 生成式 AI
+    en: Generative AI
+  - zh: 认证
+    en: Certification
+  capabilities:
+  - ai-agent
+  - reading-notes
+  target: post.html?f=人工智能报考.md
+  media: []
+  links: []
