@@ -2,34 +2,34 @@
 
 <div class="md-card">
 
-# Research Directions (Research × Engineering)
+# Current Work
 
-* **Physics-constrained machine learning**: conservation/incompressibility/projection constraints; rollout stability and control of error accumulation
-* **Neural operators and time integrators**: cross-resolution generalization, long-horizon stability, benchmarking against strong baselines
-* **Scientific computing and numerical diagnostics**: consistent protocols for pseudo-spectral/energy spectrum/statistics; errors are quantifiable and traceable
+- Organizing undergraduate study, project, practice, and public-service records, while checking dates, roles, outcomes, and supporting evidence.
+- Keeping one main card for each continuous experience and separating the homepage timeline summary, the full subpage record, and visual evidence.
+- Adjusting milestone levels, adding the Institute of Modern Physics internship, and improving navigation from timeline entries to their corresponding cards.
 
-# Engineering Interests (Make It Usable)
+# Scope of This Maintenance Round
 
-* “Productizing” research outputs: clear entry points, stable user experience, long-term maintainability
-* Data and experiment governance: end-to-end closed loop across versions, directories, scripts, logs, and figures
-* Reproducibility first: results that cannot be reproduced are not results
+- **Content review**: checking patent status, awards, the scope of teamwork, project periods, and quantitative details.
+- **Page presentation**: refining card structure, image categories, mobile display, and anchor navigation.
+- **Multilingual maintenance**: using Simplified Chinese as the factual source, generating Traditional Chinese, and maintaining the English version separately.
 
 </div>
 
 <div class="md-card">
 
-# Next-Step Plan (Strengthening Checklist)
+# Principles for Recording Content
 
-* **Baseline alignment**: numerical comparisons with stronger operators/constraint methods; unified evaluation protocols
-* **Theory reinforcement**: convergence/error bounds or verifiable numerical evidence to support key hypotheses
-* **Scaling up**: 2D → 3D, higher resolutions, more complex boundary/external forcing setups
-* **Communication upgrade**: compress “method—evidence—conclusion” into a readable 2-page introduction + figure-driven storyline
+- Base statements on facts and distinguish clearly between completed, ongoing, and planned work.
+- Prefer dates, tasks, methods, and results over broad judgments about personal ability.
+- Do not turn a single award or interim result into a general long-term claim.
+- Leave uncertain information blank or state its current status rather than filling gaps through inference.
 
-# Long-Term Capability Stack (Self-Development)
+# Current Status
 
-* Academic writing: structured narrative, figure-driven communication, reader-friendly delivery
-* Engineering capability: reproducible, maintainable, deliverable
-* Systems thinking: closed-loop execution from requirements to solution to validation
+- The main undergraduate records, growth timeline, and visual evidence are still being organized.
+- The eight-week internship at the Institute of Modern Physics is ongoing, and its record will be updated as further results become available.
+- Chinese wording on the remaining pages will be reviewed gradually under the same principles.
 
 </div>
 
