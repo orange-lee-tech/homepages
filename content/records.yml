@@ -1,0 +1,11 @@
+version: 1
+updated: '2026-07-30'
+page:
+  title:
+    zh: 本科数字履历主记录
+    en: Canonical Undergraduate Portfolio Records
+  description:
+    zh: 以一张主卡片对应一段连续经历；证书、影像和动态作为证据，不重复制造时间线节点。
+    en: One canonical card represents each continuous experience; certificates, images, and posts serve as evidence without duplicating timeline
+      nodes.
+items: []

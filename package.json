@@ -4,18 +4,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/content-pipeline.mjs && node scripts/build-assets.mjs && node scripts/build-archive-data.mjs",
-    "build:check": "node scripts/content-pipeline.mjs --check && node scripts/build-assets.mjs --check && node scripts/build-archive-data.mjs --check",
+    "build": "node scripts/content-pipeline.mjs && node scripts/build-assets.mjs && node scripts/build-records.mjs && node scripts/build-archive-data.mjs",
+    "build:check": "node scripts/content-pipeline.mjs --check && node scripts/build-assets.mjs --check && node scripts/build-records.mjs --check && node scripts/build-archive-data.mjs --check",
     "build:content": "node scripts/content-pipeline.mjs",
     "build:content:check": "node scripts/content-pipeline.mjs --check",
     "build:assets": "node scripts/build-assets.mjs",
     "build:assets:check": "node scripts/build-assets.mjs --check",
+    "build:records": "node scripts/build-records.mjs",
+    "build:records:check": "node scripts/build-records.mjs --check",
     "build:archive": "node scripts/build-archive-data.mjs",
     "build:archive:check": "node scripts/build-archive-data.mjs --check",
     "i18n": "node scripts/i18n-sync.mjs",
     "i18n:traditional": "node scripts/i18n-sync.mjs --traditional-only",
     "new-post": "node scripts/new-post.mjs",
-    "check": "node scripts/validate-content.mjs",
+    "check": "node scripts/validate-content.mjs && node scripts/validate-records.mjs",
     "ci": "npm run build:check && npm run check"
   },
   "dependencies": {
