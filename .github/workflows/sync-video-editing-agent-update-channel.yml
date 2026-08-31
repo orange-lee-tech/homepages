@@ -1,0 +1,407 @@
+name: Sync Video Editing Agent Update Channel
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/sync-video-editing-agent-update-channel.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: video-editing-agent-update-channel
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout homepages
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate stable update manifest from latest GitHub Release
+        id: generate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_REPO: orange-lee-tech/video-editing-agent
+          CHANNEL_ROOT: video-editing-agent/stable
+          PUBLIC_ROOT: https://orange-lee-tech.github.io/homepages/video-editing-agent/stable
+        shell: python
+        run: |
+          import html
+          import json
+          import os
+          import re
+          import urllib.request
+          from pathlib import Path
+
+          repo = os.environ["SOURCE_REPO"]
+          token = os.environ["GH_TOKEN"]
+          channel_root = Path(os.environ["CHANNEL_ROOT"])
+          public_root = os.environ["PUBLIC_ROOT"].rstrip("/")
+          api = f"https://api.github.com/repos/{repo}/releases/latest"
+
+          def request_json(url: str) -> dict:
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      "Accept": "application/vnd.github+json",
+                      "Authorization": f"Bearer {token}",
+                      "User-Agent": "homepages-update-channel-sync/1",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                  },
+              )
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  return json.loads(response.read().decode("utf-8"))
+
+          def request_bytes(url: str) -> bytes:
+              request = urllib.request.Request(
+                  url,
+                  headers={"User-Agent": "homepages-update-channel-sync/1"},
+              )
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  return response.read()
+
+          release = request_json(api)
+          if release.get("draft") or release.get("prerelease"):
+              raise SystemExit("GitHub /releases/latest unexpectedly resolved to a draft/prerelease")
+
+          tag = release.get("tag_name")
+          if not isinstance(tag, str) or re.fullmatch(r"v\d+\.\d+\.\d+", tag) is None:
+              raise SystemExit(f"latest stable tag is not semantic vMAJOR.MINOR.PATCH: {tag!r}")
+          version = tag[1:]
+
+          assets = release.get("assets")
+          if not isinstance(assets, list):
+              raise SystemExit("latest stable release assets are missing")
+          by_name = {
+              item.get("name"): item
+              for item in assets
+              if isinstance(item, dict) and isinstance(item.get("name"), str)
+          }
+
+          installer_name = f"VideoEditingAgent-Setup-{version}.exe"
+          installer = by_name.get(installer_name)
+          metadata_asset = by_name.get("update-release-components.json")
+          if installer is None:
+              raise SystemExit(f"stable release is missing {installer_name}")
+          if metadata_asset is None:
+              raise SystemExit("stable release is missing update-release-components.json")
+
+          def digest_sha256(asset: dict, label: str) -> str:
+              digest = asset.get("digest")
+              if not isinstance(digest, str) or not digest.startswith("sha256:"):
+                  raise SystemExit(f"{label} is missing a GitHub SHA-256 digest")
+              value = digest.removeprefix("sha256:").lower()
+              if re.fullmatch(r"[0-9a-f]{64}", value) is None:
+                  raise SystemExit(f"{label} has an invalid GitHub SHA-256 digest")
+              return value
+
+          installer_sha256 = digest_sha256(installer, installer_name)
+          installer_url = installer.get("browser_download_url")
+          if not isinstance(installer_url, str) or not installer_url:
+              raise SystemExit("installer browser_download_url is missing")
+
+          metadata_url = metadata_asset.get("browser_download_url")
+          if not isinstance(metadata_url, str) or not metadata_url:
+              raise SystemExit("component metadata browser_download_url is missing")
+          metadata = json.loads(request_bytes(metadata_url).decode("utf-8"))
+
+          if metadata.get("schema") != "video-editing-agent/update-release-components/v1":
+              raise SystemExit("unsupported update-release-components schema")
+          if metadata.get("application_version") != version:
+              raise SystemExit(
+                  "component metadata application_version does not match stable release tag"
+              )
+
+          layout_version = metadata.get("layout_version")
+          minimum_updater_version = metadata.get("minimum_updater_version")
+          if (
+              isinstance(layout_version, bool)
+              or not isinstance(layout_version, int)
+              or layout_version < 1
+          ):
+              raise SystemExit("component metadata layout_version must be >= 1")
+          if (
+              isinstance(minimum_updater_version, bool)
+              or not isinstance(minimum_updater_version, int)
+              or minimum_updater_version < 1
+          ):
+              raise SystemExit("component metadata minimum_updater_version must be >= 1")
+
+          raw_components = metadata.get("components")
+          if not isinstance(raw_components, list) or not raw_components:
+              raise SystemExit("component metadata has no components")
+
+          components = []
+          seen_ids = set()
+          for raw in raw_components:
+              if not isinstance(raw, dict):
+                  raise SystemExit("component metadata entry is not an object")
+              component_id = raw.get("id")
+              component_version = raw.get("version")
+              filename = raw.get("filename")
+              expected_sha = raw.get("sha256")
+              expected_size = raw.get("size_bytes")
+              if not all(
+                  isinstance(value, str) and value
+                  for value in (component_id, component_version, filename, expected_sha)
+              ):
+                  raise SystemExit("component metadata contains a blank identity field")
+              if component_id in seen_ids:
+                  raise SystemExit(f"duplicate component id: {component_id}")
+              seen_ids.add(component_id)
+              if re.fullmatch(r"[0-9a-f]{64}", expected_sha.lower()) is None:
+                  raise SystemExit(f"component {component_id} has invalid metadata SHA-256")
+              if (
+                  isinstance(expected_size, bool)
+                  or not isinstance(expected_size, int)
+                  or expected_size < 1
+              ):
+                  raise SystemExit(f"component {component_id} has invalid size_bytes")
+
+              asset = by_name.get(filename)
+              if asset is None:
+                  raise SystemExit(f"stable release is missing component asset {filename}")
+              actual_sha = digest_sha256(asset, filename)
+              actual_size = asset.get("size")
+              if actual_sha != expected_sha.lower():
+                  raise SystemExit(
+                      f"component {component_id} digest mismatch between release and metadata"
+                  )
+              if actual_size != expected_size:
+                  raise SystemExit(
+                      f"component {component_id} size mismatch between release and metadata"
+                  )
+              url = asset.get("browser_download_url")
+              if not isinstance(url, str) or not url:
+                  raise SystemExit(f"component {component_id} download URL is missing")
+
+              components.append(
+                  {
+                      "id": component_id,
+                      "version": component_version,
+                      "url": url,
+                      "sha256": actual_sha,
+                      "size_bytes": actual_size,
+                  }
+              )
+
+          published_at = release.get("published_at")
+          html_url = release.get("html_url")
+          if not isinstance(published_at, str) or not published_at:
+              raise SystemExit("stable release published_at is missing")
+          if not isinstance(html_url, str) or not html_url:
+              raise SystemExit("stable release html_url is missing")
+
+          channel_root.mkdir(parents=True, exist_ok=True)
+          notes_path = channel_root / f"{version}.html"
+          manifest_path = channel_root / "latest.json"
+
+          manifest = {
+              "version": version,
+              "published_at": published_at,
+              "release_notes_url": f"{public_root}/{version}.html",
+              "download_url": installer_url,
+              "installer_sha256": installer_sha256,
+              "mandatory": False,
+              "layout_version": layout_version,
+              "minimum_updater_version": minimum_updater_version,
+              "components": components,
+          }
+          manifest_path.write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
+              encoding="utf-8",
+          )
+
+          release_name = release.get("name")
+          if not isinstance(release_name, str) or not release_name.strip():
+              release_name = f"有岐 {version}"
+          release_body = release.get("body")
+          if not isinstance(release_body, str):
+              release_body = ""
+
+          rows = "\n".join(
+              "<tr>"
+              f"<td>{html.escape(item['id'])}</td>"
+              f"<td>{html.escape(item['version'])}</td>"
+              f"<td>{item['size_bytes']:,}</td>"
+              f"<td><code>{html.escape(item['sha256'])}</code></td>"
+              "</tr>"
+              for item in components
+          )
+          notes = f"""<!doctype html>
+          <html lang="zh-CN">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>{html.escape(release_name)}</title>
+            <style>
+              body {{ max-width: 920px; margin: 40px auto; padding: 0 20px; font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif; line-height: 1.6; }}
+              code, pre {{ font-family: ui-monospace, "Cascadia Code", monospace; }}
+              pre {{ white-space: pre-wrap; padding: 16px; background: #f4f4f4; border-radius: 8px; }}
+              table {{ width: 100%; border-collapse: collapse; }}
+              th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }}
+              code {{ overflow-wrap: anywhere; }}
+            </style>
+          </head>
+          <body>
+            <h1>{html.escape(release_name)}</h1>
+            <p>版本：<strong>{html.escape(version)}</strong><br>
+            发布时间：{html.escape(published_at)}<br>
+            GitHub Release：<a href="{html.escape(html_url)}">{html.escape(html_url)}</a></p>
+            <h2>Release notes</h2>
+            <pre>{html.escape(release_body)}</pre>
+            <h2>更新组件</h2>
+            <table>
+              <thead><tr><th>Component</th><th>Version</th><th>Bytes</th><th>SHA-256</th></tr></thead>
+              <tbody>{rows}</tbody>
+            </table>
+            <h2>完整安装包</h2>
+            <p><a href="{html.escape(installer_url)}">{html.escape(installer_name)}</a></p>
+            <p><code>{html.escape(installer_sha256)}</code></p>
+          </body>
+          </html>
+          """
+          notes_path.write_text(notes, encoding="utf-8")
+
+          output = os.environ["GITHUB_OUTPUT"]
+          with open(output, "a", encoding="utf-8") as handle:
+              handle.write(f"version={version}\n")
+              handle.write(f"installer_sha256={installer_sha256}\n")
+              handle.write(f"manifest_path={manifest_path.as_posix()}\n")
+              handle.write(f"notes_path={notes_path.as_posix()}\n")
+
+          print(json.dumps(manifest, ensure_ascii=False, indent=2))
+
+      - name: Validate generated manifest contract
+        env:
+          MANIFEST: ${{ steps.generate.outputs.manifest_path }}
+        shell: python
+        run: |
+          import json
+          import re
+          import os
+          from pathlib import Path
+          from urllib.parse import urlsplit
+
+          payload = json.loads(Path(os.environ["MANIFEST"]).read_text(encoding="utf-8"))
+          required = (
+              "version",
+              "published_at",
+              "release_notes_url",
+              "download_url",
+              "installer_sha256",
+              "mandatory",
+              "layout_version",
+              "minimum_updater_version",
+              "components",
+          )
+          missing = [key for key in required if key not in payload]
+          if missing:
+              raise SystemExit(f"manifest is missing required fields: {missing}")
+          if re.fullmatch(r"\d+\.\d+\.\d+", payload["version"]) is None:
+              raise SystemExit("manifest version is not semantic major.minor.patch")
+          if re.fullmatch(r"[0-9a-f]{64}", payload["installer_sha256"]) is None:
+              raise SystemExit("manifest installer_sha256 is invalid")
+          for key in ("release_notes_url", "download_url"):
+              parts = urlsplit(payload[key])
+              if parts.scheme != "https" or not parts.netloc:
+                  raise SystemExit(f"manifest {key} is not a public HTTPS URL")
+          if not isinstance(payload["mandatory"], bool):
+              raise SystemExit("manifest mandatory must be boolean")
+          if not isinstance(payload["components"], list) or not payload["components"]:
+              raise SystemExit("manifest components must be a non-empty list")
+          for component in payload["components"]:
+              if set(component) != {"id", "version", "url", "sha256", "size_bytes"}:
+                  raise SystemExit("manifest component fields do not match client contract")
+              if re.fullmatch(r"[0-9a-f]{64}", component["sha256"]) is None:
+                  raise SystemExit(f"invalid component SHA-256: {component['id']}")
+              if component["size_bytes"] < 1:
+                  raise SystemExit(f"invalid component size: {component['id']}")
+
+      - name: Commit channel only when content changed
+        id: commit
+        env:
+          VERSION: ${{ steps.generate.outputs.version }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add video-editing-agent/stable/latest.json "video-editing-agent/stable/$VERSION.html"
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Update channel already matches stable v$VERSION"
+            exit 0
+          fi
+          git commit -m "chore: publish video editing agent update channel v$VERSION"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Verify release asset URLs
+        env:
+          MANIFEST: ${{ steps.generate.outputs.manifest_path }}
+        shell: python
+        run: |
+          import json
+          import os
+          import urllib.request
+          from pathlib import Path
+
+          payload = json.loads(Path(os.environ["MANIFEST"]).read_text(encoding="utf-8"))
+          urls = [payload["download_url"], *(item["url"] for item in payload["components"])]
+          for url in urls:
+              request = urllib.request.Request(
+                  url,
+                  method="HEAD",
+                  headers={"User-Agent": "homepages-update-channel-sync/1"},
+              )
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  if response.status < 200 or response.status >= 400:
+                      raise SystemExit(f"release asset URL failed: {response.status} {url}")
+              print(f"OK {url}")
+
+      - name: Verify live GitHub Pages update channel
+        env:
+          VERSION: ${{ steps.generate.outputs.version }}
+          EXPECTED_SHA256: ${{ steps.generate.outputs.installer_sha256 }}
+          LIVE_URL: https://orange-lee-tech.github.io/homepages/video-editing-agent/stable/latest.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 30); do
+            if curl -fsSL --max-time 20               "$LIVE_URL?run=${{ github.run_id }}-$attempt"               -o /tmp/live-latest.json; then
+              if python - "$VERSION" "$EXPECTED_SHA256" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          expected_version, expected_sha = sys.argv[1], sys.argv[2]
+          try:
+              payload = json.loads(Path("/tmp/live-latest.json").read_text(encoding="utf-8"))
+          except Exception:
+              raise SystemExit(1)
+          if payload.get("version") != expected_version:
+              raise SystemExit(1)
+          if payload.get("installer_sha256") != expected_sha:
+              raise SystemExit(1)
+          components = payload.get("components")
+          if not isinstance(components, list) or not components:
+              raise SystemExit(1)
+          print(f"Live update channel verified: v{expected_version}, {len(components)} components")
+          PY
+              then
+                exit 0
+              fi
+            fi
+            echo "GitHub Pages has not converged yet (attempt $attempt/30)"
+            sleep 10
+          done
+          echo "Live update channel did not converge within the bounded verification window" >&2
+          exit 1
