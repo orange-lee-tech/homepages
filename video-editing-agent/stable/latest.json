@@ -1,8 +1,33 @@
 {
-  "version": "0.1.5",
-  "published_at": "2026-08-30T14:22:06Z",
-  "release_notes_url": "https://orange-lee-tech.github.io/homepages/video-editing-agent/stable/0.1.5.html",
-  "download_url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v0.1.5-rc-e59cab8/VideoEditingAgent-Setup-0.1.5.exe",
-  "installer_sha256": "45fd1225340e988a030c2acbcb2864092cb61f368f8b98720e24f5a402e76663",
-  "mandatory": false
+  "version": "1.0.0",
+  "published_at": "2026-08-31T13:29:56Z",
+  "release_notes_url": "https://orange-lee-tech.github.io/homepages/video-editing-agent/stable/1.0.0.html",
+  "download_url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Setup-1.0.0.exe",
+  "installer_sha256": "dd47f88953d134dac522990db80fc719367a7abe627203b142fe681cb786e5a8",
+  "mandatory": false,
+  "layout_version": 1,
+  "minimum_updater_version": 1,
+  "components": [
+    {
+      "id": "app-core",
+      "version": "1.0.0",
+      "url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Update-app-core-1.0.0.zip",
+      "sha256": "3b1fb213975aacace68792b3fc2675c7926cc60a5c0ca9717b96573ba1692dfd",
+      "size_bytes": 173210427
+    },
+    {
+      "id": "media-runtime",
+      "version": "n8.1.2-44-g7c533d0f86",
+      "url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Update-media-runtime-1.0.0.zip",
+      "sha256": "5398de8c4f004cd1de6c155b83f9aa77fdd5c9caa2889ae7d8371029da8defc4",
+      "size_bytes": 59943136
+    },
+    {
+      "id": "transnet-runtime",
+      "version": "transnetv2-pytorch==1.0.5;torch==2.13.0+cpu",
+      "url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Update-transnet-runtime-1.0.0.zip",
+      "sha256": "2c619e53a1f94d12e0281f92f686eb0b224bff4677a918b50fe342e7f1af0aa1",
+      "size_bytes": 196717439
+    }
+  ]
 }
