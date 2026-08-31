@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Video Editing Agent 0.1.2</title>
+</head>
+<body>
+  <main>
+    <h1>Video Editing Agent 0.1.2</h1>
+    <p>发布日期：2026-08-30</p>
+    <p>这是 Stage-A 最终 Windows Human Gate 的视觉 Provider 瞬态恢复补丁。</p>
+    <ul>
+      <li>Gemini/OpenAI 视觉理解的明确瞬态错误使用 5 次有界重试。</li>
+      <li>无服务端 RetryInfo 时采用 2/4/8/16 秒指数退避。</li>
+      <li>服务端 RetryInfo 仍优先于本地较短等待。</li>
+      <li>重试预算耗尽后保留瞬态错误类型和原始 Provider 诊断。</li>
+      <li>不改变非重试型 Provider 错误、视觉语义验证或剪辑决策规则。</li>
+    </ul>
+    <p>安装包 SHA-256：<code>32838e2748ae60f0059d461cccadbc5dc971ae3a9d2fc49922f3d9d8821f8c43</code></p>
+    <p><a href="https://github.com/orange-lee-tech/video-editing-agent/releases/download/v0.1.2-rc-eadbaa7/VideoEditingAgent-Setup-0.1.2.exe">下载安装包</a></p>
+  </main>
+</body>
+</html>

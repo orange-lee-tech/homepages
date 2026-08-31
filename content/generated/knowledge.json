@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "page": {
+    "kind": "knowledge",
+    "eyebrow": {
+      "zh": "知识资产",
+      "chinese-traditional": "知識資產",
+      "en": "KNOWLEDGE ASSETS"
+    },
+    "title": {
+      "zh": "技术知识库",
+      "chinese-traditional": "技術知識庫",
+      "en": "Knowledge Base"
+    },
+    "description": {
+      "zh": "汇总长期学习过程中的技术笔记、工程经验、阅读记录和方法论沉淀。",
+      "chinese-traditional": "彙總長期學習過程中的技術筆記、工程經驗、閱讀紀錄與方法論沉澱。",
+      "en": "A structured collection of technical notes, engineering experience, reading records, and reusable methodologies."
+    }
+  },
+  "items": [
+    {
+      "id": "ai-engineering",
+      "category": "engineering",
+      "title": {
+        "zh": "AI 工程体系",
+        "chinese-traditional": "AI 工程體系",
+        "en": "AI Engineering System"
+      },
+      "summary": {
+        "zh": "Agent Runtime、MCP、工具调用、记忆系统和本地模型部署实践。",
+        "chinese-traditional": "Agent Runtime、MCP、工具調用、記憶系統與本地模型部署實踐。",
+        "en": "Practice notes on agent runtime, MCP, tool calling, memory systems, and local model deployment."
+      },
+      "tags": [
+        "AI",
+        "Agent",
+        "MCP",
+        "Local LLM"
+      ]
+    },
+    {
+      "id": "software-engineering",
+      "category": "engineering",
+      "title": {
+        "zh": "软件工程基础",
+        "chinese-traditional": "軟體工程基礎",
+        "en": "Software Engineering Fundamentals"
+      },
+      "summary": {
+        "zh": "Linux、C++、Python、前端、数据库、Docker 与系统设计学习路线。",
+        "chinese-traditional": "Linux、C++、Python、前端、資料庫、Docker 與系統設計學習路線。",
+        "en": "Learning path covering Linux, C++, Python, frontend, databases, Docker, and system design."
+      },
+      "tags": [
+        "Linux",
+        "C++",
+        "Python",
+        "Docker"
+      ]
+    },
+    {
+      "id": "scientific-computing",
+      "category": "research",
+      "title": {
+        "zh": "科学计算与科研方法",
+        "chinese-traditional": "科學計算與科研方法",
+        "en": "Scientific Computing and Research Methods"
+      },
+      "summary": {
+        "zh": "数值模拟、实验设计、论文阅读、可复现研究和科研工具链。",
+        "chinese-traditional": "數值模擬、實驗設計、論文閱讀、可重複研究與科研工具鏈。",
+        "en": "Numerical simulation, experimental design, paper reading, reproducible research, and scientific workflows."
+      },
+      "tags": [
+        "Scientific Computing",
+        "Research",
+        "Reproducibility"
+      ]
+    }
+  ],
+  "generatedBy": "content/knowledge.yml"
+}

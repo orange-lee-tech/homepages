@@ -1,0 +1,3183 @@
+{
+  "version": 1,
+  "updated": "2026-08-30",
+  "page": {
+    "title": {
+      "zh": "本科数字履历主记录",
+      "en": "Canonical Undergraduate Portfolio Records",
+      "chinese-traditional": "本科數字履歷主記錄"
+    },
+    "description": {
+      "zh": "一张主卡对应一段连续经历；默认摘要保持简洁，背景、任务、行动、结果和个人体会在展开区完整保存。",
+      "en": "One canonical card represents each continuous experience; the default summary stays concise while context, tasks, actions, outcomes, and reflections are preserved in expandable detail.",
+      "chinese-traditional": "一張主卡對應一段連續經歷；默認摘要保持簡潔，背景、任務、行動、結果和個人體會在展開區完整保存。"
+    }
+  },
+  "items": [
+    {
+      "id": "antimony-clean-energy",
+      "kind": "engineering",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2025-08-11",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "“锑”旧焕新：可再生锑光热化学储热项目",
+        "en": "Antimony Renewal: Renewable Antimony Solar-Thermochemical Storage",
+        "chinese-traditional": "“銻”舊煥新：可再生銻光熱化學儲熱項目"
+      },
+      "period": "2025-06—2025-08-11",
+      "role": {
+        "zh": "学生项目副主持",
+        "en": "Student deputy project lead",
+        "chinese-traditional": "學生項目副主持"
+      },
+      "summary": {
+        "zh": "围绕锑尾矿与冶金渣资源化，团队利用湿法冶金回收锑资源，并开发适配的热化学储热吸热器与智能调控系统；本人承担副主持、三维建模与赛事表达工作。",
+        "en": "The team recovered antimony from tailings and metallurgical slag through hydrometallurgy and developed a thermochemical-storage receiver with intelligent control; the user served as deputy lead and handled 3D modeling and competition communication.",
+        "chinese-traditional": "圍繞銻尾礦與冶金渣資源化，團隊利用溼法冶金回收銻資源，並開發適配的熱化學儲熱吸熱器與智能調控系統；本人承擔副主持、三維建模與賽事表達工作。"
+      },
+      "actions": [
+        {
+          "zh": "分担团队组织、协作与现场答辩交付工作。",
+          "en": "Shared team organization, collaboration, and on-site defense delivery.",
+          "chinese-traditional": "分擔團隊組織、協作與現場答辯交付工作。"
+        },
+        {
+          "zh": "负责装置 3D 建模与科技作品的设计表达。",
+          "en": "Handled device 3D modeling and engineering presentation.",
+          "chinese-traditional": "負責裝置 3D 建模與科技作品的設計表達。"
+        },
+        {
+          "zh": "负责宣传视频的策划与剪辑。",
+          "en": "Planned and edited the promotional video.",
+          "chinese-traditional": "負責宣傳視頻的策劃與剪輯。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成作品《“锑”旧焕新——一种基于可再生锑的光热化学储热系统》。",
+          "en": "Produced the project “Antimony Renewal — a solar-thermochemical storage system based on renewable antimony.”",
+          "chinese-traditional": "形成作品《“銻”舊煥新——一種基於可再生銻的光熱化學儲熱系統》。"
+        },
+        {
+          "zh": "获第十八届全国大学生节能减排竞赛全国一等奖。",
+          "en": "Won national first prize in the 18th national energy-conservation competition.",
+          "chinese-traditional": "獲第十八屆全國大學生節能減排競賽全國一等獎。"
+        },
+        {
+          "zh": "同时获湖南省第三届大学生节能减排竞赛二等奖。",
+          "en": "Also won second prize in the third Hunan provincial competition.",
+          "chinese-traditional": "同時獲湖南省第三屆大學生節能減排競賽二等獎。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "能源工程",
+          "en": "Energy Engineering",
+          "chinese-traditional": "能源工程"
+        },
+        {
+          "zh": "资源回收",
+          "en": "Resource Recovery",
+          "chinese-traditional": "資源回收"
+        },
+        {
+          "zh": "储热",
+          "en": "Thermal Storage",
+          "chinese-traditional": "儲熱"
+        },
+        {
+          "zh": "3D 建模",
+          "en": "3D Modeling",
+          "chinese-traditional": "3D 建模"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "solidworks",
+        "collaboration"
+      ],
+      "target": "projects.html#record-antimony-clean-energy",
+      "media": [
+        {
+          "path": "static/assets/portfolio/energy-saving/energy-saving-01-national-first-prize.webp",
+          "alt": {
+            "zh": "全国节能减排竞赛一等奖证书",
+            "en": "National first-prize certificate",
+            "chinese-traditional": "全國節能減排競賽一等獎證書"
+          },
+          "stream": "engineering",
+          "featured": true
+        },
+        {
+          "path": "static/assets/portfolio/energy-saving/energy-saving-03-hunan-antimony-second-prize.webp",
+          "alt": {
+            "zh": "湖南省锑项目二等奖证书",
+            "en": "Hunan second-prize certificate for the antimony project",
+            "chinese-traditional": "湖南省銻項目二等獎證書"
+          },
+          "stream": "engineering"
+        },
+        {
+          "path": "static/assets/portfolio/energy-saving/energy-saving-04-national-first-prize-plaque.webp",
+          "alt": {
+            "zh": "全国大学生节能减排竞赛一等奖奖牌",
+            "chinese-traditional": "全國大學生節能減排競賽一等獎獎牌",
+            "en": "National first-prize plaque in the energy-saving competition"
+          },
+          "stream": "engineering"
+        }
+      ],
+      "links": [],
+      "context": [
+        {
+          "zh": "第十八届全国大学生节能减排社会实践与科技作品竞赛由教育部高等学校能源动力类专业教学指导委员会指导，现场决赛在东北石油大学举行。",
+          "en": "The 18th National College Student Energy Conservation and Emission Reduction Competition was guided by the Ministry of Education’s energy-and-power teaching committee, with the on-site final at Northeast Petroleum University.",
+          "chinese-traditional": "第十八屆全國大學生節能減排社會實踐與科技作品競賽由教育部高等學校能源動力類專業教學指導委員會指導，現場決賽在東北石油大學舉行。"
+        },
+        {
+          "zh": "项目任务是利用湿法冶金从锑尾矿和冶金渣中提取锑资源，并开发适配的热化学储热吸热器和智能调控系统。",
+          "en": "The project task was to recover antimony from tailings and metallurgical slag through hydrometallurgy and develop a matching thermochemical-storage receiver and intelligent control system.",
+          "chinese-traditional": "項目任務是利用溼法冶金從銻尾礦和冶金渣中提取銻資源，並開發適配的熱化學儲熱吸熱器和智能調控系統。"
+        }
+      ],
+      "displayPriority": 120
+    },
+    {
+      "id": "tungsten-recycling",
+      "kind": "engineering",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2025-05-10",
+      "timelineType": "progress",
+      "title": {
+        "zh": "清洁低碳能源工程研究中心：钨资源回收与设备专利链",
+        "en": "Clean and Low-carbon Energy Research Center: Tungsten Recovery and Device Patent Chain",
+        "chinese-traditional": "清潔低碳能源工程研究中心：鎢資源回收與設備專利鏈"
+      },
+      "period": {
+        "zh": "工程研究中心经历 2024-10—2025-08；钨项目竞赛阶段 2024-10-07—2025-05-10",
+        "en": "Research-center period: 2024-10—2025-08; tungsten competition phase: 2024-10-07—2025-05-10",
+        "chinese-traditional": "工程研究中心經歷 2024-10—2025-08；鎢項目競賽階段 2024-10-07—2025-05-10"
+      },
+      "role": {
+        "zh": "学生项目主持 / 钨项目成员",
+        "en": "Student project lead / tungsten-project member",
+        "chinese-traditional": "學生項目主持 / 鎢項目成員"
+      },
+      "summary": {
+        "zh": "在清洁低碳能源技术湖南省工程研究中心参与科研成果转化、设备研发与赛事组织；其中钨资源回收装置形成省赛二等奖和授权发明专利，另一项高温速控设备专利仍在办理。",
+        "en": "At the Hunan Engineering Research Center for Clean and Low-carbon Energy Technology, contributed to research commercialization, equipment development, and competition delivery; the tungsten-recovery device won a provincial second prize and obtained a granted invention patent, while another high-temperature controller patent remains pending.",
+        "chinese-traditional": "在清潔低碳能源技術湖南省工程研究中心參與科研成果轉化、設備研發與賽事組織；其中鎢資源回收裝置形成省賽二等獎和授權發明專利，另一項高溫速控設備專利仍在辦理。"
+      },
+      "actions": [
+        {
+          "zh": "率队撰写设备说明书并组织核心赛事材料。",
+          "en": "Led preparation of equipment manuals and core competition materials.",
+          "chinese-traditional": "率隊撰寫設備說明書並組織核心賽事材料。"
+        },
+        {
+          "zh": "使用 SolidWorks 建立符合设计需求的设备模型，并为 3D 打印做准备。",
+          "en": "Built design-compliant equipment models in SolidWorks and prepared them for 3D printing.",
+          "chinese-traditional": "使用 SolidWorks 建立符合設計需求的設備模型，併為 3D 打印做準備。"
+        },
+        {
+          "zh": "使用 Origin 2024 绘制实验数据图表。",
+          "en": "Produced experimental data figures with Origin 2024.",
+          "chinese-traditional": "使用 Origin 2024 繪製實驗數據圖表。"
+        },
+        {
+          "zh": "参与节能减排、创新创业类赛事及专利申报。",
+          "en": "Participated in energy-conservation and innovation competitions and patent applications.",
+          "chinese-traditional": "參與節能減排、創新創業類賽事及專利申報。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成作品《“钨”尽其用——一种基于氢冶金原理的可移动式钨资源回收装置设计》。",
+          "en": "Produced “Making Full Use of Tungsten — a mobile tungsten-recovery device based on hydrogen metallurgy.”",
+          "chinese-traditional": "形成作品《“鎢”盡其用——一種基於氫冶金原理的可移動式鎢資源回收裝置設計》。"
+        },
+        {
+          "zh": "获湖南省第三届大学生节能减排竞赛二等奖。",
+          "en": "Won second prize in the third Hunan provincial energy-conservation competition.",
+          "chinese-traditional": "獲湖南省第三屆大學生節能減排競賽二等獎。"
+        },
+        {
+          "zh": "发明专利 202510469264.X《一种基于氢冶金原理的可移动式钨资源回收装置》已获授权。",
+          "en": "Invention patent 202510469264.X, a mobile tungsten-recovery device based on hydrogen metallurgy, was granted.",
+          "chinese-traditional": "發明專利 202510469264.X《一種基於氫冶金原理的可移動式鎢資源回收裝置》已獲授權。"
+        },
+        {
+          "zh": "专利申请 202510196241.6《超快高温速控一体机》仍在办理，不能与已授权专利混同。",
+          "en": "Patent application 202510196241.6, Ultra-fast High-temperature Integrated Controller, remains pending and is distinct from the granted patent.",
+          "chinese-traditional": "專利申請 202510196241.6《超快高溫速控一體機》仍在辦理，不能與已授權專利混同。"
+        },
+        {
+          "zh": "2026 年校级创新训练项目《炽火工坊——基于 PID 算法精准控制的焦耳热一体机》结题良好。",
+          "en": "The 2026 university innovation-training project “Chihuo Workshop — a PID-controlled Joule-heating integrated system” completed with a good evaluation.",
+          "chinese-traditional": "2026 年校級創新訓練項目《熾火工坊——基於 PID 算法精準控制的焦耳熱一體機》結題良好。"
+        },
+        {
+          "zh": "该研究中心经历曾形成拟衔接本科毕业论文的研究方向。",
+          "en": "The research-center work also formed a prospective direction for the undergraduate thesis.",
+          "chinese-traditional": "該研究中心經歷曾形成擬銜接本科畢業論文的研究方向。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "氢冶金",
+          "en": "Hydrogen Metallurgy",
+          "chinese-traditional": "氫冶金"
+        },
+        {
+          "zh": "钨资源回收",
+          "en": "Tungsten Recovery",
+          "chinese-traditional": "鎢資源回收"
+        },
+        "SolidWorks",
+        {
+          "zh": "发明专利",
+          "en": "Invention Patent",
+          "chinese-traditional": "發明專利"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "solidworks",
+        "collaboration"
+      ],
+      "target": "projects.html#record-tungsten-recycling",
+      "media": [
+        {
+          "path": "static/assets/portfolio/energy-saving/energy-saving-02-hunan-tungsten-second-prize.webp",
+          "alt": {
+            "zh": "湖南省钨资源回收项目二等奖证书",
+            "en": "Hunan second-prize certificate for the tungsten project",
+            "chinese-traditional": "湖南省鎢資源回收項目二等獎證書"
+          },
+          "stream": "engineering"
+        },
+        {
+          "path": "static/assets/portfolio/patent/patent-01-tungsten-recycling-grant-notice.webp",
+          "alt": {
+            "zh": "钨资源回收装置授予发明专利权通知书",
+            "en": "Patent grant notice for the tungsten recycling device",
+            "chinese-traditional": "鎢資源回收裝置授予發明專利權通知書"
+          },
+          "stream": "engineering",
+          "featured": true
+        },
+        {
+          "path": "static/assets/portfolio/engineering/engineering-innovation-project-completion-2026.webp",
+          "alt": {
+            "zh": "中南大学大学生创新创业项目结题证书",
+            "chinese-traditional": "中南大學大學生創新創業專案結題證書",
+            "en": "CSU innovation and entrepreneurship project completion certificate"
+          }
+        }
+      ],
+      "links": [],
+      "context": [
+        {
+          "zh": "工程研究中心工作由动力工程及工程热物理系石雷副教授指导，任务包括研发、专利申报和核心赛事学生组织。",
+          "en": "The engineering-research-center work was supervised by Associate Professor Shi Lei and covered R&D, patent applications, and student organization for major competitions.",
+          "chinese-traditional": "工程研究中心工作由動力工程及工程熱物理系石雷副教授指導，任務包括研發、專利申報和核心賽事學生組織。"
+        },
+        {
+          "zh": "湖南省第三届大学生节能减排社会实践与科技作品竞赛由湖南省教育厅举办。",
+          "en": "The third Hunan college energy-conservation competition was organized by the Hunan Provincial Department of Education.",
+          "chinese-traditional": "湖南省第三屆大學生節能減排社會實踐與科技作品競賽由湖南省教育廳舉辦。"
+        },
+        {
+          "zh": "钨项目聚焦高效制氢同时回收钨金属。",
+          "en": "The tungsten project focused on efficient hydrogen production while recovering tungsten metal.",
+          "chinese-traditional": "鎢項目聚焦高效制氫同時回收鎢金屬。"
+        }
+      ],
+      "displayPriority": 110
+    },
+    {
+      "id": "str-forensic-modeling",
+      "kind": "modeling",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2025-08-28",
+      "timelineType": "progress",
+      "title": {
+        "zh": "STR 混合样本分析：同一项目的三项赛事成果",
+        "en": "STR Mixture Analysis: One Project, Three Competition Outcomes",
+        "chinese-traditional": "STR 混合樣本分析：同一項目的三項賽事成果"
+      },
+      "period": "2025-04-28—2025-08-28",
+      "role": {
+        "zh": "项目主持 / 论文与排版组织",
+        "en": "Project lead / writing and typesetting coordination",
+        "chinese-traditional": "項目主持 / 論文與排版組織"
+      },
+      "summary": {
+        "zh": "主持“法医物证多人身份鉴定问题数据集”项目，围绕 STR 混合样本的等位基因分析与去噪完成四个子问题、论文和现场答辩，并在校级、省级与全国赛事中连续转化。",
+        "en": "Led a forensic multi-person identification project, completing four subproblems on STR-mixture allele analysis and denoising, the paper, and on-site defense, with outcomes across university, provincial, and national competitions.",
+        "chinese-traditional": "主持“法醫物證多人身份鑑定問題數據集”項目，圍繞 STR 混合樣本的等位基因分析與去噪完成四個子問題、論文和現場答辯，並在校級、省級與全國賽事中連續轉化。"
+      },
+      "actions": [
+        {
+          "zh": "担任项目主持，组织团队分工、论文结构与答辩材料。",
+          "en": "Served as project lead, organizing team roles, paper structure, and defense materials.",
+          "chinese-traditional": "擔任項目主持，組織團隊分工、論文結構與答辯材料。"
+        },
+        {
+          "zh": "主持论文写作与 LaTeX 制版，并使用 VS Code 管理代码和材料。",
+          "en": "Led paper writing and LaTeX typesetting and managed code and materials in VS Code.",
+          "chinese-traditional": "主持論文寫作與 LaTeX 製版，並使用 VS Code 管理代碼和材料。"
+        },
+        {
+          "zh": "围绕 STR 混合样本等位基因分析提出高效去噪方案。",
+          "en": "Developed an efficient denoising approach for allele analysis in STR mixtures.",
+          "chinese-traditional": "圍繞 STR 混合樣本等位基因分析提出高效去噪方案。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成论文《基于机器学习的 STR 混合样本等位基因分析与去噪方法研究》。",
+          "en": "Produced the paper “Machine-learning-based allele analysis and denoising for STR mixture samples.”",
+          "chinese-traditional": "形成論文《基於機器學習的 STR 混合樣本等位基因分析與去噪方法研究》。"
+        },
+        {
+          "zh": "获中南大学第二十届数学建模竞赛一等奖。",
+          "en": "Won first prize in the 20th CSU Mathematical Modeling Competition.",
+          "chinese-traditional": "獲中南大學第二十屆數學建模競賽一等獎。"
+        },
+        {
+          "zh": "在湖南省选拔阶段排名第二，最终获湖南省大学生数学建模竞赛三等奖。",
+          "en": "Ranked second in the Hunan selection stage and ultimately won third prize in the Hunan Provincial Mathematical Modeling Competition.",
+          "chinese-traditional": "在湖南省選拔階段排名第二，最終獲湖南省大學生數學建模競賽三等獎。"
+        },
+        {
+          "zh": "获 2025 深圳杯数学建模挑战赛全国优秀论文。",
+          "en": "Received a National Outstanding Paper award in the 2025 Shenzhen Cup.",
+          "chinese-traditional": "獲 2025 深圳杯數學建模挑戰賽全國優秀論文。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "数学建模",
+          "en": "Mathematical Modeling",
+          "chinese-traditional": "數學建模"
+        },
+        "STR",
+        {
+          "zh": "机器学习",
+          "en": "Machine Learning",
+          "chinese-traditional": "機器學習"
+        },
+        "LaTeX"
+      ],
+      "capabilities": [
+        "latex",
+        "collaboration"
+      ],
+      "target": "projects.html#record-str-forensic-modeling",
+      "media": [
+        {
+          "path": "static/assets/portfolio/math-modeling/math-modeling-01-shenzhen-cup-outstanding-paper.webp",
+          "alt": {
+            "zh": "深圳杯全国优秀论文证书",
+            "en": "Shenzhen Cup Outstanding Paper certificate",
+            "chinese-traditional": "深圳杯全國優秀論文證書"
+          },
+          "stream": "modeling",
+          "featured": true
+        },
+        {
+          "path": "static/assets/portfolio/math-modeling/math-modeling-02-hunan-third-prize.webp",
+          "alt": {
+            "zh": "湖南省数学建模三等奖证书",
+            "en": "Hunan modeling third-prize certificate",
+            "chinese-traditional": "湖南省數學建模三等獎證書"
+          },
+          "stream": "modeling"
+        },
+        {
+          "path": "static/assets/portfolio/math-modeling/math-modeling-03-csu-20th-first-prize.webp",
+          "alt": {
+            "zh": "中南大学第二十届数学建模一等奖证书",
+            "en": "CSU 20th modeling first-prize certificate",
+            "chinese-traditional": "中南大學第二十屆數學建模一等獎證書"
+          },
+          "stream": "modeling"
+        }
+      ],
+      "links": [],
+      "displayPriority": 130,
+      "context": [
+        {
+          "zh": "2025 深圳杯数学应用挑战赛由中国工业与应用数学学会和深圳市科学技术协会联合举办，现场决赛在深圳北理莫斯科大学举行。",
+          "en": "The 2025 Shenzhen Cup Mathematical Application Challenge was jointly organized by CSIAM and the Shenzhen Association for Science and Technology, with the on-site final at Shenzhen MSU-BIT University.",
+          "chinese-traditional": "2025 深圳杯數學應用挑戰賽由中國工業與應用數學學會和深圳市科學技術協會聯合舉辦，現場決賽在深圳北理莫斯科大學舉行。"
+        },
+        {
+          "zh": "项目解决赛题 D“法医物证多人身份鉴定问题数据集”的四个子问题。",
+          "en": "The project addressed all four subproblems of Problem D, a forensic multi-person identification dataset.",
+          "chinese-traditional": "項目解決賽題 D“法醫物證多人身份鑑定問題數據集”的四個子問題。"
+        }
+      ]
+    },
+    {
+      "id": "rocket-debris-modeling",
+      "kind": "modeling",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2024-05-20",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "火箭残骸定位：Chan–Taylor 星源定位智算模型",
+        "en": "Rocket Debris Localization with a Chan–Taylor Model",
+        "chinese-traditional": "火箭殘骸定位：Chan–Taylor 星源定位智算模型"
+      },
+      "period": "2024-05-01—2024-05-20",
+      "role": {
+        "zh": "团队成员 / 论文与制版",
+        "en": "Team member / paper and typesetting",
+        "chinese-traditional": "團隊成員 / 論文與製版"
+      },
+      "summary": {
+        "zh": "完成深圳杯赛题“火箭残骸定位问题”的建模、论文表达与 Python 计算工作。",
+        "en": "Worked on modeling, paper production, and Python computation for the Shenzhen Cup rocket-debris localization problem.",
+        "chinese-traditional": "完成深圳盃賽題“火箭殘骸定位問題”的建模、論文表達與 Python 計算工作。"
+      },
+      "actions": [
+        {
+          "zh": "作为团队成员分担论文写作与制版。",
+          "en": "Shared paper writing and typesetting as a team member.",
+          "chinese-traditional": "作為團隊成員分擔論文寫作與製版。"
+        },
+        {
+          "zh": "使用 LaTeX 完成数学表达与论文排版。",
+          "en": "Used LaTeX for mathematical expression and paper production.",
+          "chinese-traditional": "使用 LaTeX 完成數學表達與論文排版。"
+        },
+        {
+          "zh": "使用 Python 3.10 支持模型计算。",
+          "en": "Used Python 3.10 for model computation.",
+          "chinese-traditional": "使用 Python 3.10 支持模型計算。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成论文《基于 Chan–Taylor 算法的星源定位智算模型》。",
+          "en": "Produced “An intelligent source-localization model based on the Chan–Taylor algorithm.”",
+          "chinese-traditional": "形成論文《基於 Chan–Taylor 算法的星源定位智算模型》。"
+        },
+        {
+          "zh": "获中南大学第十九届数学建模竞赛一等奖。",
+          "en": "Won first prize in the 19th CSU Mathematical Modeling Competition.",
+          "chinese-traditional": "獲中南大學第十九屆數學建模競賽一等獎。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "数学建模",
+          "en": "Mathematical Modeling",
+          "chinese-traditional": "數學建模"
+        },
+        {
+          "zh": "定位算法",
+          "en": "Localization Algorithms",
+          "chinese-traditional": "定位算法"
+        },
+        "Python",
+        "LaTeX"
+      ],
+      "capabilities": [
+        "latex",
+        "collaboration"
+      ],
+      "target": "projects.html#record-rocket-debris-modeling",
+      "media": [
+        {
+          "path": "static/assets/portfolio/math-modeling/math-modeling-04-csu-19th-first-prize.webp",
+          "alt": {
+            "zh": "中南大学第十九届数学建模一等奖证书",
+            "en": "CSU 19th modeling first-prize certificate",
+            "chinese-traditional": "中南大學第十九屆數學建模一等獎證書"
+          },
+          "stream": "modeling"
+        }
+      ],
+      "links": [],
+      "context": [
+        {
+          "zh": "项目来自中南大学第十九届数学建模竞赛，采用 2024 深圳杯赛题 A“火箭残骸定位问题”。",
+          "en": "The project was completed for the 19th CSU Mathematical Modeling Competition using 2024 Shenzhen Cup Problem A, rocket-debris localization.",
+          "chinese-traditional": "項目來自中南大學第十九屆數學建模競賽，採用 2024 深圳盃賽題 A“火箭殘骸定位問題”。"
+        },
+        {
+          "zh": "团队需要完成赛题的四个子问题。",
+          "en": "The team addressed all four subproblems.",
+          "chinese-traditional": "團隊需要完成賽題的四個子問題。"
+        }
+      ]
+    },
+    {
+      "id": "mcm-olympic-medals",
+      "kind": "modeling",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2025-01-28",
+      "timelineType": "progress",
+      "title": {
+        "zh": "MCM 奥运奖牌预测模型",
+        "en": "MCM Olympic Medal Prediction Model",
+        "chinese-traditional": "MCM 奧運獎牌預測模型"
+      },
+      "period": "2025-01-24—2025-01-28",
+      "role": {
+        "zh": "项目主持 / 组织与论文交付",
+        "en": "Project lead / coordination and paper delivery",
+        "chinese-traditional": "項目主持 / 組織與論文交付"
+      },
+      "summary": {
+        "zh": "组织完成 MCM C 题奥运奖牌预测项目，参与论文写作、制版与结果交付。",
+        "en": "Organized an MCM project on Olympic medal prediction and contributed to paper writing, typesetting, and delivery.",
+        "chinese-traditional": "組織完成 MCM C 題奧運獎牌預測項目，參與論文寫作、製版與結果交付。"
+      },
+      "actions": [
+        {
+          "zh": "担任项目主持，分担团队组织、论文写作与制版。",
+          "en": "Served as project lead and shared team organization, paper writing, and typesetting.",
+          "chinese-traditional": "擔任項目主持，分擔團隊組織、論文寫作與製版。"
+        },
+        {
+          "zh": "使用 LaTeX 与 VS Code 完成论文材料交付。",
+          "en": "Delivered the paper using LaTeX and VS Code.",
+          "chinese-traditional": "使用 LaTeX 與 VS Code 完成論文材料交付。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成论文《Olympic Medal Prediction Model Based on MLP Algorithm》。",
+          "en": "Produced “Olympic Medal Prediction Model Based on MLP Algorithm.”",
+          "chinese-traditional": "形成論文《Olympic Medal Prediction Model Based on MLP Algorithm》。"
+        },
+        {
+          "zh": "获得 COMAP Successful Participant（S 奖）。",
+          "en": "Received the COMAP Successful Participant award.",
+          "chinese-traditional": "獲得 COMAP Successful Participant（S 獎）。"
+        }
+      ],
+      "tags": [
+        "MCM",
+        {
+          "zh": "预测模型",
+          "en": "Predictive Modeling",
+          "chinese-traditional": "預測模型"
+        },
+        "MLP",
+        "LaTeX"
+      ],
+      "capabilities": [
+        "latex",
+        "collaboration"
+      ],
+      "target": "projects.html#record-mcm-olympic-medals",
+      "media": [
+        {
+          "path": "static/assets/portfolio/math-modeling/math-modeling-06-mcm-successful-participant.webp",
+          "alt": {
+            "zh": "2025 MCM Successful Participant 证书",
+            "en": "2025 MCM Successful Participant certificate",
+            "chinese-traditional": "2025 MCM Successful Participant 證書"
+          },
+          "stream": "modeling"
+        }
+      ],
+      "links": [],
+      "context": [
+        {
+          "zh": "Mathematical Contest in Modeling 由美国数学及其应用联合会 COMAP 举办。",
+          "en": "The Mathematical Contest in Modeling is organized by COMAP.",
+          "chinese-traditional": "Mathematical Contest in Modeling 由美國數學及其應用聯合會 COMAP 舉辦。"
+        },
+        {
+          "zh": "团队解决 MCM C 题“奥运奖牌预测”的三个子问题。",
+          "en": "The team addressed the three subproblems of MCM Problem C on Olympic medal prediction.",
+          "chinese-traditional": "團隊解決 MCM C 題“奧運獎牌預測”的三個子問題。"
+        }
+      ]
+    },
+    {
+      "id": "mathorcup-brfc",
+      "kind": "research",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2025-04-18",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "从第十五届 MathorCup 到 BRFC：项目发起与科研工程转化",
+        "en": "From the 15th MathorCup to BRFC: Project Initiation and Research Engineering",
+        "chinese-traditional": "從第十五屆 MathorCup 到 BRFC：項目發起與科研工程轉化"
+      },
+      "period": "2025-04-18—2026-07-29",
+      "role": {
+        "zh": "前期关键发起人 / 科研工程组织",
+        "en": "Key early-stage initiator / research engineering coordinator",
+        "chinese-traditional": "前期關鍵發起人 / 科研工程組織"
+      },
+      "summary": {
+        "zh": "本人承担前期关键发起与科研工程组织：组建团队、促成项目启动、提供 LaTeX 模板并重构文件与计算流程。核心方法与实验由团队其他成员主责；上述工作并不替代方法贡献，但构成项目得以成立、持续迭代并最终转化为论文的关键条件，属于明确且不可忽略的间接贡献。",
+        "en": "Served as the key early-stage initiator and research-engineering coordinator: formed the team, launched the project, provided the LaTeX template, and reorganized file and compute workflows. Other members led the core method and experiments; this work did not replace methodological contributions, but it was a clear and indispensable indirect contribution that enabled the project to form, keep iterating, and ultimately become a paper.",
+        "chinese-traditional": "本人承擔前期關鍵發起與科研工程組織：組建團隊、促成項目啟動、提供 LaTeX 模板並重構文件與計算流程。核心方法與實驗由團隊其他成員主責；上述工作並不替代方法貢獻，但構成項目得以成立、持續迭代並最終轉化為論文的關鍵條件，屬於明確且不可忽略的間接貢獻。"
+      },
+      "actions": [
+        {
+          "zh": "作为领队发起组队、聚合成员并启动汽车风阻项目。",
+          "en": "As team leader, formed the team and launched the vehicle-drag project.",
+          "chinese-traditional": "作為領隊發起組隊、聚合成員並啟動汽車風阻項目。"
+        },
+        {
+          "zh": "分担竞赛论文写作、LaTeX 制版和 ParaView 汽车风阻模拟仿真。",
+          "en": "Shared competition-paper writing, LaTeX typesetting, and ParaView vehicle-drag simulation.",
+          "chinese-traditional": "分擔競賽論文寫作、LaTeX 製版和 ParaView 汽車風阻模擬仿真。"
+        },
+        {
+          "zh": "提供统一 LaTeX 模板，重整课题组文件结构与科研工程流程。",
+          "en": "Provided a shared LaTeX template and reorganized the group’s file structure and research-engineering workflow.",
+          "chinese-traditional": "提供統一 LaTeX 模板，重整課題組文件結構與科研工程流程。"
+        },
+        {
+          "zh": "优化计算任务管理，将课题组 GPU 平均利用效率由约 40% 提升至约 90%。",
+          "en": "Improved compute-task management, raising average GPU utilization from about 40% to about 90%.",
+          "chinese-traditional": "優化計算任務管理，將課題組 GPU 平均利用效率由約 40% 提升至約 90%。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "竞赛阶段形成论文《基于 FD-PINO 神经网络模型预测汽车风阻》。",
+          "en": "The competition phase produced “Vehicle-drag prediction based on an FD-PINO neural-network model.”",
+          "chinese-traditional": "競賽階段形成論文《基於 FD-PINO 神經網絡模型預測汽車風阻》。"
+        },
+        {
+          "zh": "获第十五届 MathorCup 华中赛区三等奖。",
+          "en": "Won third prize in the 15th MathorCup Central China region.",
+          "chinese-traditional": "獲第十五屆 MathorCup 華中賽區三等獎。"
+        },
+        {
+          "zh": "降低资源空闲、迭代等待与试错成本，也降低团队因反馈周期过长而放弃项目的风险。",
+          "en": "Reduced idle compute, iteration waiting, and experimentation cost, while lowering the risk of project abandonment caused by slow feedback cycles.",
+          "chinese-traditional": "降低資源空閒、迭代等待與試錯成本，也降低團隊因反饋週期過長而放棄項目的風險。"
+        },
+        {
+          "zh": "BRFC 作者顺序为 Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu；Yucheng Li 位列第四。",
+          "en": "BRFC author order is Jinlong Li, Fengyi Zhang, Yongjie Hu, Yucheng Li, and Shengjun Liu; Yucheng Li is fourth author.",
+          "chinese-traditional": "BRFC 作者順序為 Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu；Yucheng Li 位列第四。"
+        },
+        {
+          "zh": "论文于 2026-07-20 提交 AAAI 2027，公开记录显示 2026-07-29 修改。",
+          "en": "The paper was submitted to AAAI 2027 on 2026-07-20 and the public record shows a modification on 2026-07-29.",
+          "chinese-traditional": "論文於 2026-07-20 提交 AAAI 2027，公開記錄顯示 2026-07-29 修改。"
+        }
+      ],
+      "tags": [
+        "MathorCup",
+        "Research Engineering",
+        "LaTeX",
+        "GPU Workflow",
+        "AAAI 2027"
+      ],
+      "capabilities": [
+        "research-engineering",
+        "latex",
+        "collaboration"
+      ],
+      "target": "learning.html#record-mathorcup-brfc",
+      "media": [
+        {
+          "path": "static/assets/portfolio/math-modeling/math-modeling-05-mathorcup-central-china-third-prize.webp",
+          "alt": {
+            "zh": "第十五届 MathorCup 华中赛区三等奖证书",
+            "en": "15th MathorCup Central China third-prize certificate",
+            "chinese-traditional": "第十五屆 MathorCup 華中賽區三等獎證書"
+          },
+          "stream": "modeling",
+          "featured": true
+        }
+      ],
+      "links": [
+        {
+          "label": {
+            "zh": "OpenReview 投稿页面",
+            "en": "OpenReview submission",
+            "chinese-traditional": "OpenReview 投稿頁面"
+          },
+          "url": "https://openreview.net/forum?id=nN8DoQbMno"
+        },
+        {
+          "label": {
+            "zh": "OpenReview 个人主页",
+            "en": "OpenReview profile",
+            "chinese-traditional": "OpenReview 個人主頁"
+          },
+          "url": "https://openreview.net/profile?id=%7EYucheng_Li13"
+        }
+      ],
+      "context": [
+        {
+          "zh": "第十五届 MathorCup 数学应用挑战赛由中国优选法统筹法与经济数学研究会举办。",
+          "en": "The 15th MathorCup Mathematical Application Challenge was organized by the Chinese Society of Optimization, Overall Planning and Economic Mathematics.",
+          "chinese-traditional": "第十五屆 MathorCup 數學應用挑戰賽由中國優選法統籌法與經濟數學研究會舉辦。"
+        },
+        {
+          "zh": "竞赛阶段解决 A 题“汽车风阻预测”的三个问题及两个附加题。",
+          "en": "The competition phase addressed three main questions and two bonus questions in Problem A on vehicle-drag prediction.",
+          "chinese-traditional": "競賽階段解決 A 題“汽車風阻預測”的三個問題及兩個附加題。"
+        },
+        {
+          "zh": "科研转化阶段形成 BRFC：Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates。",
+          "en": "The research-conversion phase produced BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates.",
+          "chinese-traditional": "科研轉化階段形成 BRFC：Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates。"
+        }
+      ],
+      "displayPriority": 125
+    },
+    {
+      "id": "new-energy-materials-lab",
+      "kind": "research",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2024-10",
+      "timelineType": "progress",
+      "title": {
+        "zh": "新能源材料实验室：超级电容器电极材料实践",
+        "en": "New Energy Materials Lab: Supercapacitor Electrode Practice",
+        "chinese-traditional": "新能源材料實驗室：超級電容器電極材料實踐"
+      },
+      "period": "2024-10—2025-12",
+      "role": {
+        "zh": "学生项目副主持",
+        "en": "Student deputy project lead",
+        "chinese-traditional": "學生項目副主持"
+      },
+      "summary": {
+        "zh": "在刘刚教授领导的新能源材料实验室参与超级电容器纽扣电池方向，承担市场调研和新电极材料实验基础工作。",
+        "en": "Worked in Professor Liu Gang’s new-energy-materials laboratory on supercapacitor coin cells, covering market research and foundational electrode-material experiments.",
+        "chinese-traditional": "在劉剛教授領導的新能源材料實驗室參與超級電容器紐扣電池方向，承擔市場調研和新電極材料實驗基礎工作。"
+      },
+      "actions": [
+        {
+          "zh": "组织并撰写市场调研报告。",
+          "en": "Organized and wrote a market research report.",
+          "chinese-traditional": "組織並撰寫市場調研報告。"
+        },
+        {
+          "zh": "完成大量生物材料称量。",
+          "en": "Performed repeated biomaterial weighing.",
+          "chinese-traditional": "完成大量生物材料稱量。"
+        },
+        {
+          "zh": "参与活性炭烧制。",
+          "en": "Participated in activated-carbon firing.",
+          "chinese-traditional": "參與活性炭燒製。"
+        },
+        {
+          "zh": "参与电极片压制。",
+          "en": "Participated in electrode-sheet pressing.",
+          "chinese-traditional": "參與電極片壓制。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成超级电容器材料实验、基础工艺与市场调研的阶段性实践。",
+          "en": "Built stage-based experience in supercapacitor materials, basic laboratory processes, and market research.",
+          "chinese-traditional": "形成超級電容器材料實驗、基礎工藝與市場調研的階段性實踐。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "超级电容器",
+          "en": "Supercapacitors",
+          "chinese-traditional": "超級電容器"
+        },
+        {
+          "zh": "新能源材料",
+          "en": "New Energy Materials",
+          "chinese-traditional": "新能源材料"
+        },
+        {
+          "zh": "实验实践",
+          "en": "Laboratory Practice",
+          "chinese-traditional": "實驗實踐"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "collaboration"
+      ],
+      "target": "learning.html#record-new-energy-materials-lab",
+      "media": [],
+      "links": [],
+      "context": [
+        {
+          "zh": "实验室方向由新能源科学与工程系主任刘刚教授领导。",
+          "en": "The laboratory direction was led by Professor Liu Gang, head of the Department of New Energy Science and Engineering.",
+          "chinese-traditional": "實驗室方向由新能源科學與工程系主任劉剛教授領導。"
+        },
+        {
+          "zh": "任务是收集市场调研数据并推进新电极材料研发。",
+          "en": "The task was to collect market data and advance the development of new electrode materials.",
+          "chinese-traditional": "任務是收集市場調研數據並推進新電極材料研發。"
+        }
+      ]
+    },
+    {
+      "id": "csu-energy-power-undergraduate",
+      "kind": "education",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": true,
+      "timelineDate": "2023-09",
+      "timelineType": "progress",
+      "title": {
+        "zh": "中南大学能源与动力工程本科阶段",
+        "en": "Undergraduate Study in Energy and Power Engineering at Central South University",
+        "chinese-traditional": "中南大學能源與動力工程本科階段"
+      },
+      "period": "2023—2027（预计）",
+      "role": {
+        "zh": "能源与动力工程本科生",
+        "en": "Undergraduate in Energy and Power Engineering",
+        "chinese-traditional": "能源與動力工程本科生"
+      },
+      "summary": {
+        "zh": "就读于中南大学（985）能源与动力工程专业，专业评估标签为 B-，预计 2027 年毕业；本科阶段逐步把专业学习延伸到工程项目、数学建模、科研工程与软件资产建设。",
+        "en": "Studying Energy and Power Engineering at Central South University (Project 985), with a B- discipline-evaluation tag and expected graduation in 2027; undergraduate work has expanded into engineering projects, mathematical modeling, research engineering, and software assets.",
+        "chinese-traditional": "就讀於中南大學（985）能源與動力工程專業，專業評估標籤為 B-，預計 2027 年畢業；本科階段逐步把專業學習延伸到工程項目、數學建模、科研工程與軟件資產建設。"
+      },
+      "actions": [],
+      "outcomes": [
+        {
+          "zh": "形成能源工程、工程仿真、科学计算与项目协作相互连接的本科能力结构。",
+          "en": "Built an undergraduate capability structure connecting energy engineering, simulation, scientific computing, and project collaboration.",
+          "chinese-traditional": "形成能源工程、工程仿真、科學計算與項目協作相互連接的本科能力結構。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "中南大学 985",
+          "en": "Central South University · Project 985",
+          "chinese-traditional": "中南大學 985"
+        },
+        {
+          "zh": "能源与动力工程",
+          "en": "Energy and Power Engineering",
+          "chinese-traditional": "能源與動力工程"
+        },
+        {
+          "zh": "专业 B-",
+          "en": "Discipline B-",
+          "chinese-traditional": "專業 B-"
+        }
+      ],
+      "capabilities": [
+        "energy-power"
+      ],
+      "target": "learning.html#record-csu-energy-power-undergraduate",
+      "media": [],
+      "links": []
+    },
+    {
+      "id": "imp-winter-camp",
+      "kind": "education",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2026-01-26",
+      "timelineType": "progress",
+      "title": {
+        "zh": "中国科学院近代物理研究所 2026 年优秀大学生冬令营",
+        "en": "2026 IMP Outstanding Undergraduate Winter Camp",
+        "chinese-traditional": "中國科學院近代物理研究所 2026 年優秀大學生冬令營"
+      },
+      "period": "2026-01-26—2026-01-29",
+      "role": {
+        "zh": "优秀营员",
+        "en": "Outstanding participant",
+        "chinese-traditional": "優秀營員"
+      },
+      "summary": {
+        "zh": "通过十三场专题报告、研究人员交流和大科学装置现场参观，系统了解 HIAF、CiADS、材料辐照、核废料嬗变与直线加速器相关方向。",
+        "en": "Studied HIAF, CiADS, material irradiation, nuclear-waste transmutation, and linear accelerators through thirteen talks, researcher discussions, and facility visits.",
+        "chinese-traditional": "通過十三場專題報告、研究人員交流和大科學裝置現場參觀，系統瞭解 HIAF、CiADS、材料輻照、核廢料嬗變與直線加速器相關方向。"
+      },
+      "actions": [
+        {
+          "zh": "参加 13 场专题报告。",
+          "en": "Attended thirteen specialized reports.",
+          "chinese-traditional": "參加 13 場專題報告。"
+        },
+        {
+          "zh": "实地参观地下加速器及相关大科学装置设施。",
+          "en": "Visited underground accelerator and related major-science-facility infrastructure.",
+          "chinese-traditional": "實地參觀地下加速器及相關大科學裝置設施。"
+        },
+        {
+          "zh": "与专家交流核技术、直线加速器、热工和材料辐照应用。",
+          "en": "Discussed nuclear technology, linear accelerators, thermal engineering, and material irradiation with experts.",
+          "chinese-traditional": "與專家交流核技術、直線加速器、熱工和材料輻照應用。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "获评 2026 年优秀大学生冬令营“优秀营员”。",
+          "en": "Recognized as an Outstanding Camper in the 2026 winter camp.",
+          "chinese-traditional": "獲評 2026 年優秀大學生冬令營“優秀營員”。"
+        },
+        {
+          "zh": "加深对核能可持续发展与大科学装置的理解，为未来研究方向提供参考。",
+          "en": "Deepened understanding of sustainable nuclear energy and major science facilities, providing reference for future research choices.",
+          "chinese-traditional": "加深對核能可持續發展與大科學裝置的理解，為未來研究方向提供參考。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "中科院近物所",
+          "en": "Institute of Modern Physics",
+          "chinese-traditional": "中科院近物所"
+        },
+        "HIAF",
+        "CiADS",
+        {
+          "zh": "能源战略",
+          "en": "Energy Strategy",
+          "chinese-traditional": "能源戰略"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "reading-notes"
+      ],
+      "target": "learning.html#record-imp-winter-camp",
+      "media": [
+        {
+          "path": "static/assets/portfolio/winter-camp/winter-camp-01-opening.webp",
+          "alt": {
+            "zh": "近物所 2026 年优秀大学生冬令营开幕屏幕",
+            "en": "Opening screen of the 2026 IMP winter camp",
+            "chinese-traditional": "近物所 2026 年優秀大學生冬令營開幕屏幕"
+          },
+          "featured": true
+        },
+        {
+          "path": "static/assets/portfolio/winter-camp/winter-camp-04-hiaf-tunnel-layout.webp",
+          "alt": {
+            "zh": "强流重离子加速器隧道平面布置图",
+            "en": "HIAF tunnel layout",
+            "chinese-traditional": "強流重離子加速器隧道平面佈置圖"
+          }
+        },
+        {
+          "path": "static/assets/portfolio/winter-camp/winter-camp-05-comprehensive-test-hall.webp",
+          "alt": {
+            "zh": "近物所综合测试大厅外景",
+            "en": "IMP comprehensive test hall",
+            "chinese-traditional": "近物所綜合測試大廳外景"
+          }
+        },
+        {
+          "path": "static/assets/portfolio/winter-camp/winter-camp-06-outstanding-camper.webp",
+          "alt": {
+            "zh": "中国科学院近代物理研究所 2026 年优秀大学生冬令营优秀营员证书",
+            "chinese-traditional": "中國科學院近代物理研究所 2026 年優秀大學生冬令營優秀營員證書",
+            "en": "Outstanding Camper certificate from the 2026 IMP winter camp"
+          },
+          "stream": "engineering",
+          "featured": true
+        }
+      ],
+      "links": [],
+      "relatedPost": "2026-01-30-imp-winter-camp.md",
+      "context": [
+        {
+          "zh": "参加中国科学院近代物理研究所“国之重器”大科学装置冬令营，聚焦核物理前沿技术应用。",
+          "en": "Joined the Institute of Modern Physics winter camp on major national science facilities, focusing on applications of frontier nuclear physics.",
+          "chinese-traditional": "參加中國科學院近代物理研究所“國之重器”大科學裝置冬令營，聚焦核物理前沿技術應用。"
+        },
+        {
+          "zh": "学习目标是通过专题报告与实地参观理解 HIAF 与 CiADS 的应用原理。",
+          "en": "The learning goal was to understand the application principles of HIAF and CiADS through lectures and site visits.",
+          "chinese-traditional": "學習目標是通過專題報告與實地參觀理解 HIAF 與 CiADS 的應用原理。"
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "此次经历更像研究方向探索和认知拓展，而非团队协作成果。",
+          "en": "This experience primarily reflects research-direction exploration and expanded understanding rather than a collaboration outcome.",
+          "chinese-traditional": "此次經歷更像研究方向探索和認知拓展，而非團隊協作成果。"
+        }
+      ]
+    },
+    {
+      "id": "yuan-ze-exchange",
+      "kind": "education",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": false,
+      "timelineDate": "2026-02-22",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "元智大学机械工程学系交换学习",
+        "en": "Exchange Study in Mechanical Engineering at Yuan Ze University",
+        "chinese-traditional": "元智大學機械工程學系交換學習"
+      },
+      "period": "2026-02-22—2026-06-30",
+      "role": {
+        "zh": "本科交换生",
+        "en": "Undergraduate exchange student",
+        "chinese-traditional": "本科交換生"
+      },
+      "summary": {
+        "zh": "完成 128 天春季学期交换，修读微积分（二）、工程经济、机率与统计，共 9 学分。",
+        "en": "Completed a 128-day spring exchange with nine credits in Calculus II, Engineering Economy, and Probability and Statistics.",
+        "chinese-traditional": "完成 128 天春季學期交換，修讀微積分（二）、工程經濟、機率與統計，共 9 學分。"
+      },
+      "actions": [
+        {
+          "zh": "在新环境中重建课程、预算与时间管理体系。",
+          "en": "Rebuilt course, budget, and time-management routines in a new environment.",
+          "chinese-traditional": "在新環境中重建課程、預算與時間管理體系。"
+        },
+        {
+          "zh": "将工程经济课程延伸到财务阅读与主题读书会实践。",
+          "en": "Extended Engineering Economy into financial reading and a themed study group.",
+          "chinese-traditional": "將工程經濟課程延伸到財務閱讀與主題讀書會實踐。"
+        },
+        {
+          "zh": "使用 Python 可视化梯度、切平面与向量场等微积分概念。",
+          "en": "Used Python to visualize calculus concepts including gradients, tangent planes, and vector fields.",
+          "chinese-traditional": "使用 Python 可視化梯度、切平面與向量場等微積分概念。"
+        },
+        {
+          "zh": "2026 年 6 月 8 日确定《工程经济》《实验设计与分析》《热交换设计》《财务管理》四本专业书的长期学习计划。",
+          "en": "On 8 June 2026, established a long-term study plan around Engineering Economy, Design and Analysis of Experiments, Heat Exchanger Design, and Financial Management.",
+          "chinese-traditional": "2026 年 6 月 8 日確定《工程經濟》《實驗設計與分析》《熱交換設計》《財務管理》四本專業書的長期學習計劃。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成跨环境学习、自我管理与工程经济判断的阶段性成果。",
+          "en": "Built evidence of cross-environment learning, self-management, and engineering-economic judgment.",
+          "chinese-traditional": "形成跨環境學習、自我管理與工程經濟判斷的階段性成果。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "元智大学",
+          "en": "Yuan Ze University",
+          "chinese-traditional": "元智大學"
+        },
+        "TOP12",
+        {
+          "zh": "机械工程",
+          "en": "Mechanical Engineering",
+          "chinese-traditional": "機械工程"
+        },
+        {
+          "zh": "9 学分",
+          "en": "9 Credits",
+          "chinese-traditional": "9 學分"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "reading-notes"
+      ],
+      "target": "learning.html#record-yuan-ze-exchange",
+      "media": [
+        {
+          "path": "static/assets/portfolio/exchange/yuan-ze-invitation-letter.webp",
+          "alt": {
+            "zh": "元智大学交换学习邀请函",
+            "chinese-traditional": "元智大學交換學習邀請函",
+            "en": "Yuan Ze University exchange invitation letter"
+          }
+        }
+      ],
+      "links": [],
+      "relatedPost": "2026-07-01-yuan-ze-exchange-learning.md"
+    },
+    {
+      "id": "yuan-ze-study-group",
+      "kind": "education",
+      "pages": [
+        "learning",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": false,
+      "timelineDate": "2026-03-07",
+      "timelineType": "progress",
+      "title": {
+        "zh": "星际和平公司“策略投资部”经济主题读书会",
+        "en": "Economics Study Group: Strategic Investment Department",
+        "chinese-traditional": "星際和平公司“策略投資部”經濟主題讀書會"
+      },
+      "period": {
+        "zh": "项目周期 2026-03-07—2026-06-15；六次会议 03-19—05-07",
+        "en": "Project period: 2026-03-07—2026-06-15; six meetings: 03-19—05-07",
+        "chinese-traditional": "項目週期 2026-03-07—2026-06-15；六次會議 03-19—05-07"
+      },
+      "role": {
+        "zh": "团队成员",
+        "en": "Team member",
+        "chinese-traditional": "團隊成員"
+      },
+      "summary": {
+        "zh": "以工程经济课程为起点，六人团队分工精读财务与投资读物，并通过六次线下会议完成讨论和个人心得交付。",
+        "en": "A six-person team extended Engineering Economy through assigned reading, six in-person discussions, and individual written reflections.",
+        "chinese-traditional": "以工程經濟課程為起點，六人團隊分工精讀財務與投資讀物，並通過六次線下會議完成討論和個人心得交付。"
+      },
+      "actions": [
+        {
+          "zh": "分工精读 ISBN 9789573299936《小狗钱钱 2》。",
+          "en": "Assigned reading: ISBN 9789573299936, Money Dog 2.",
+          "chinese-traditional": "分工精讀 ISBN 9789573299936《小狗錢錢 2》。"
+        },
+        {
+          "zh": "分工精读 ISBN 9789573299929《小狗钱钱》。",
+          "en": "Assigned reading: ISBN 9789573299929, Money Dog.",
+          "chinese-traditional": "分工精讀 ISBN 9789573299929《小狗錢錢》。"
+        },
+        {
+          "zh": "分工精读 ISBN 9789868614321《看懂财经新闻的第一本书：认识国内外经济指标》。",
+          "en": "Assigned reading: ISBN 9789868614321, A First Book for Understanding Financial News and Economic Indicators.",
+          "chinese-traditional": "分工精讀 ISBN 9789868614321《看懂財經新聞的第一本書：認識國內外經濟指標》。"
+        },
+        {
+          "zh": "分工精读 ISBN 9789865072636《从 0 开始打造财务自由的致富系统》。",
+          "en": "Assigned reading: ISBN 9789865072636, Building a Financial-Freedom System from Zero.",
+          "chinese-traditional": "分工精讀 ISBN 9789865072636《從 0 開始打造財務自由的致富系統》。"
+        },
+        {
+          "zh": "分工精读 ISBN 9789863615460《富爸爸，穷爸爸》。",
+          "en": "Assigned reading: ISBN 9789863615460, Rich Dad Poor Dad.",
+          "chinese-traditional": "分工精讀 ISBN 9789863615460《富爸爸，窮爸爸》。"
+        },
+        {
+          "zh": "项目期内完成六次线下聚会，实际会议日期为 03-19、03-26、03-30、04-09、04-23、05-07。",
+          "en": "Completed six in-person meetings on 03-19, 03-26, 03-30, 04-09, 04-23, and 05-07.",
+          "chinese-traditional": "項目期內完成六次線下聚會，實際會議日期為 03-19、03-26、03-30、04-09、04-23、05-07。"
+        },
+        {
+          "zh": "每位成员完成一份个人心得报告。",
+          "en": "Each member completed an individual reflection report.",
+          "chinese-traditional": "每位成員完成一份個人心得報告。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "团队获全校第二名。",
+          "en": "The team placed second university-wide.",
+          "chinese-traditional": "團隊獲全校第二名。"
+        },
+        {
+          "zh": "获得税前 NT$8,000 团队奖金，由六人团队共同获得。",
+          "en": "Received a pre-tax NT$8,000 team award shared by the six-member team.",
+          "chinese-traditional": "獲得稅前 NT$8,000 團隊獎金，由六人團隊共同獲得。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "工程经济",
+          "en": "Engineering Economy",
+          "chinese-traditional": "工程經濟"
+        },
+        {
+          "zh": "财务阅读",
+          "en": "Finance Reading",
+          "chinese-traditional": "財務閱讀"
+        },
+        {
+          "zh": "团队协作",
+          "en": "Collaboration",
+          "chinese-traditional": "團隊協作"
+        }
+      ],
+      "capabilities": [
+        "reading-notes",
+        "collaboration",
+        "energy-power"
+      ],
+      "target": "learning.html#record-yuan-ze-study-group",
+      "media": [
+        {
+          "path": "static/assets/portfolio/study-group/study-group-01-second-prize-award.webp",
+          "alt": {
+            "zh": "元智大学主题读书会全校第二名获奖海报",
+            "chinese-traditional": "元智大學主題讀書會全校第二名獲獎海報",
+            "en": "University-wide second-place award poster for the theme-based study group"
+          },
+          "stream": "modeling",
+          "featured": true
+        }
+      ],
+      "links": [],
+      "relatedPost": "2026-06-15-theme-study-group-award.md",
+      "context": [
+        {
+          "zh": "元智大学 2026 春季学期主题读书会获“高等教育深耕计划”支持，旨在培养学生自主学习风气。",
+          "en": "Yuan Ze University’s spring 2026 themed study group was supported by the Higher Education Sprout Project to cultivate self-directed learning.",
+          "chinese-traditional": "元智大學 2026 春季學期主題讀書會獲“高等教育深耕計劃”支持，旨在培養學生自主學習風氣。"
+        },
+        {
+          "zh": "六人团队命名为“星际和平公司「策略投资部」”。",
+          "en": "The six-member team was named “Interstellar Peace Company — Strategic Investment Department.”",
+          "chinese-traditional": "六人團隊命名為“星際和平公司「策略投資部」”。"
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "通过分工精读和集中讨论，建立理解投资行情与基础理财知识的起点，也验证共同分工、按期交付和集中讨论的团队协作方式。",
+          "en": "Assigned reading and concentrated discussion created a starting point for understanding markets and basic personal finance while validating role division, timely delivery, and team discussion.",
+          "chinese-traditional": "通過分工精讀和集中討論，建立理解投資行情與基礎理財知識的起點，也驗證共同分工、按期交付和集中討論的團隊協作方式。"
+        }
+      ]
+    },
+    {
+      "id": "other-campus-volunteering",
+      "kind": "service",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "compact",
+      "featured": false,
+      "timelineDate": "2024",
+      "timelineType": "progress",
+      "title": {
+        "zh": "防艾宣传与校庆项目志愿服务",
+        "en": "HIV-prevention Outreach and University-anniversary Volunteering",
+        "chinese-traditional": "防艾宣傳與校慶項目志願服務"
+      },
+      "period": "2023—2024",
+      "role": {
+        "zh": "活动志愿者 / 项目化志愿者",
+        "en": "Event volunteer / project volunteer",
+        "chinese-traditional": "活動志願者 / 項目化志願者"
+      },
+      "summary": {
+        "zh": "保留 2023 年防治艾滋病宣传活动与 2024 年中南大学校庆项目化志愿服务记录；相关证明因隐私或展示价值原因不公开图片。",
+        "en": "Preserves records of a 2023 HIV-prevention outreach activity and project-based volunteering for Central South University’s 2024 anniversary; certificate images remain private for privacy and presentation reasons.",
+        "chinese-traditional": "保留 2023 年防治艾滋病宣傳活動與 2024 年中南大學校慶項目化志願服務記錄；相關證明因隱私或展示價值原因不公開圖片。"
+      },
+      "actions": [],
+      "outcomes": [
+        {
+          "zh": "完成两项短期公共与校园志愿服务。",
+          "en": "Completed two short-term public and campus volunteer activities.",
+          "chinese-traditional": "完成兩項短期公共與校園志願服務。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "防艾宣传",
+          "en": "HIV-prevention Outreach",
+          "chinese-traditional": "防艾宣傳"
+        },
+        {
+          "zh": "校庆志愿服务",
+          "en": "University-anniversary Volunteering",
+          "chinese-traditional": "校慶志願服務"
+        }
+      ],
+      "capabilities": [
+        "collaboration"
+      ],
+      "target": "projects.html#record-other-campus-volunteering",
+      "media": [],
+      "links": []
+    },
+    {
+      "id": "student-office",
+      "kind": "practice",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2024-04",
+      "timelineType": "progress",
+      "title": {
+        "zh": "中南大学能源学院学工办见习文员",
+        "en": "Student Office Assistant, School of Energy Science and Engineering",
+        "chinese-traditional": "中南大學能源學院學工辦見習文員"
+      },
+      "period": "2024-04—2025-11-09",
+      "role": {
+        "zh": "见习文员",
+        "en": "Student office assistant",
+        "chinese-traditional": "見習文員"
+      },
+      "summary": {
+        "zh": "对接教务、综合办与各年级辅导员，承担微信运营、学生档案与就业信息协同。",
+        "en": "Coordinated academic affairs, administration, counselors, WeChat operations, student records, and employment information.",
+        "chinese-traditional": "對接教務、綜合辦與各年級輔導員，承擔微信運營、學生檔案與就業信息協同。"
+      },
+      "actions": [
+        {
+          "zh": "按时完成助理 QQ、微信工作交接。",
+          "en": "Completed assistant QQ and WeChat handovers on time.",
+          "chinese-traditional": "按時完成助理 QQ、微信工作交接。"
+        },
+        {
+          "zh": "主管能源院学工办助理微信。",
+          "en": "Managed the student-office assistant WeChat account.",
+          "chinese-traditional": "主管能源院學工辦助理微信。"
+        },
+        {
+          "zh": "分管学生档案。",
+          "en": "Handled student records.",
+          "chinese-traditional": "分管學生檔案。"
+        },
+        {
+          "zh": "协调企业就业信息的及时发布。",
+          "en": "Coordinated timely publication of employer recruitment information.",
+          "chinese-traditional": "協調企業就業信息的及時發佈。"
+        },
+        {
+          "zh": "参与中南大学“学长的火炬”项目。",
+          "en": "Participated in CSU’s “Torch of Senior Students” project.",
+          "chinese-traditional": "參與中南大學“學長的火炬”項目。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "2024 年“学长的火炬”工作评比学院排名全校第 4。",
+          "en": "The school ranked fourth university-wide in the 2024 evaluation.",
+          "chinese-traditional": "2024 年“學長的火炬”工作評比學院排名全校第 4。"
+        },
+        {
+          "zh": "2025 年“学长的火炬”工作评比学院排名全校第 2。",
+          "en": "The school ranked second university-wide in the 2025 evaluation.",
+          "chinese-traditional": "2025 年“學長的火炬”工作評比學院排名全校第 2。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "学生工作",
+          "en": "Student Work",
+          "chinese-traditional": "學生工作"
+        },
+        {
+          "zh": "微信运营",
+          "en": "WeChat Operations",
+          "chinese-traditional": "微信運營"
+        },
+        {
+          "zh": "档案管理",
+          "en": "Records Management",
+          "chinese-traditional": "檔案管理"
+        }
+      ],
+      "capabilities": [
+        "collaboration",
+        "wps"
+      ],
+      "target": "projects.html#record-student-office",
+      "media": [],
+      "links": [],
+      "context": [
+        {
+          "zh": "能源学院学工办对接教务、综合办和各年级辅导员，承担综合学生事务协同。",
+          "en": "The School of Energy student office coordinated academic affairs, general administration, and counselors across cohorts.",
+          "chinese-traditional": "能源學院學工辦對接教務、綜合辦和各年級輔導員，承擔綜合學生事務協同。"
+        }
+      ]
+    },
+    {
+      "id": "graphic-design-practice",
+      "kind": "practice",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2023-12-20",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "平面设计实习与持续设计实践",
+        "en": "Graphic Design Internship and Ongoing Practice",
+        "chinese-traditional": "平面設計實習與持續設計實踐"
+      },
+      "period": {
+        "zh": "2023-12-20—至今",
+        "en": "2023-12-20—Present",
+        "chinese-traditional": "2023-12-20—至今"
+      },
+      "role": {
+        "zh": "实习平面设计师 / 非全职平面设计师",
+        "en": "Design intern / ongoing part-time designer",
+        "chinese-traditional": "實習平面設計師 / 非全職平面設計師"
+      },
+      "summary": {
+        "zh": "在品牌设计公司完成商业设计实习，此后持续进行非全职设计实践。",
+        "en": "Completed a commercial design internship at a branding company and continued part-time design practice afterward.",
+        "chinese-traditional": "在品牌設計公司完成商業設計實習，此後持續進行非全職設計實踐。"
+      },
+      "actions": [
+        {
+          "zh": "主动参加公司内部技术培训。",
+          "en": "Actively joined internal technical training.",
+          "chinese-traditional": "主動參加公司內部技術培訓。"
+        },
+        {
+          "zh": "承担小型设计任务。",
+          "en": "Took on small design tasks.",
+          "chinese-traditional": "承擔小型設計任務。"
+        },
+        {
+          "zh": "跟随导师参与客户需求对接会。",
+          "en": "Joined client requirement meetings with a mentor.",
+          "chinese-traditional": "跟隨導師參與客戶需求對接會。"
+        },
+        {
+          "zh": "严格遵循公司的设计流程完成交付。",
+          "en": "Followed the company’s design process for delivery.",
+          "chinese-traditional": "嚴格遵循公司的設計流程完成交付。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "实习期间完成 4 份设计作品并获得实习证明。",
+          "en": "Completed four design works during the internship and received an internship certificate.",
+          "chinese-traditional": "實習期間完成 4 份設計作品並獲得實習證明。"
+        },
+        {
+          "zh": "现持续担任非全职平面设计师，本科阶段累计作品 14 个。",
+          "en": "Continues as a non-full-time graphic designer, with fourteen undergraduate works in total.",
+          "chinese-traditional": "現持續擔任非全職平面設計師，本科階段累計作品 14 個。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "平面设计",
+          "en": "Graphic Design",
+          "chinese-traditional": "平面設計"
+        },
+        "Adobe Illustrator",
+        {
+          "zh": "客户沟通",
+          "en": "Client Communication",
+          "chinese-traditional": "客戶溝通"
+        }
+      ],
+      "capabilities": [
+        "academic-graphic-design",
+        "collaboration"
+      ],
+      "target": "projects.html#record-graphic-design-practice",
+      "media": [],
+      "links": [],
+      "context": [
+        {
+          "zh": "昆明上维设计品牌有限公司以品牌设计为核心业务，实习用于通过商业项目衔接校园学习与职业需求。",
+          "en": "Kunming Shangwei Brand Design focuses on brand design; the internship connected campus learning with professional requirements through commercial work.",
+          "chinese-traditional": "昆明上維設計品牌有限公司以品牌設計為核心業務，實習用於通過商業項目銜接校園學習與職業需求。"
+        },
+        {
+          "zh": "学习目标包括 Adobe Illustrator、客户沟通、Logo 与文字设计基础、完整设计流程及行业行情。",
+          "en": "Learning goals included Adobe Illustrator, client communication, logo and typography basics, full design workflows, and industry understanding.",
+          "chinese-traditional": "學習目標包括 Adobe Illustrator、客戶溝通、Logo 與文字設計基礎、完整設計流程及行業行情。"
+        }
+      ]
+    },
+    {
+      "id": "alma-mater-outreach",
+      "kind": "practice",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2023-12-14",
+      "timelineType": "progress",
+      "title": {
+        "zh": "母校联合宣讲与招生传播",
+        "en": "Joint Alma Mater Outreach and Admissions Communication",
+        "chinese-traditional": "母校聯合宣講與招生傳播"
+      },
+      "period": "2023-12-14—2024-01-25",
+      "role": {
+        "zh": "主持 / 联合宣讲组织者",
+        "en": "Lead organizer",
+        "chinese-traditional": "主持 / 聯合宣講組織者"
+      },
+      "summary": {
+        "zh": "组织高中毕业在读学子联合宣讲，协调 17 所大学队伍完成面向高三学生的招生传播。",
+        "en": "Organized a joint outreach event with teams from seventeen universities for high-school seniors.",
+        "chinese-traditional": "組織高中畢業在讀學子聯合宣講，協調 17 所大學隊伍完成面向高三學生的招生傳播。"
+      },
+      "actions": [
+        {
+          "zh": "组织培训 17 所大学宣讲队伍。",
+          "en": "Organized and trained outreach teams from seventeen universities.",
+          "chinese-traditional": "組織培訓 17 所大學宣講隊伍。"
+        },
+        {
+          "zh": "完成中南大学本科招生宣讲目标。",
+          "en": "Completed CSU undergraduate admissions outreach goals.",
+          "chinese-traditional": "完成中南大學本科招生宣講目標。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "在中南大学获评优秀并认定 2 学分。",
+          "en": "Received an excellent rating and two credits at CSU.",
+          "chinese-traditional": "在中南大學獲評優秀並認定 2 學分。"
+        },
+        {
+          "zh": "次年相关录取率同比增长 288%。",
+          "en": "The following year's related admission rate increased 288% year over year.",
+          "chinese-traditional": "次年相關錄取率同比增長 288%。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "公开表达",
+          "en": "Public Communication",
+          "chinese-traditional": "公開表達"
+        },
+        {
+          "zh": "组织协调",
+          "en": "Coordination",
+          "chinese-traditional": "組織協調"
+        },
+        {
+          "zh": "招生传播",
+          "en": "Admissions Outreach",
+          "chinese-traditional": "招生傳播"
+        }
+      ],
+      "capabilities": [
+        "collaboration",
+        "wps"
+      ],
+      "target": "projects.html#record-alma-mater-outreach",
+      "media": [],
+      "links": [],
+      "context": [
+        {
+          "zh": "实践旨在扩大中南大学在高中母校的影响力，并召集不同高校的高中毕业在读学子联合宣讲。",
+          "en": "The outreach aimed to increase CSU’s visibility at the user’s former high school and bring together alumni studying at different universities.",
+          "chinese-traditional": "實踐旨在擴大中南大學在高中母校的影響力，並召集不同高校的高中畢業在讀學子聯合宣講。"
+        },
+        {
+          "zh": "任务是办好联合宣讲会并完成中南大学本科招生办的宣讲目标。",
+          "en": "The task was to deliver the joint presentation and meet CSU undergraduate-admissions outreach goals.",
+          "chinese-traditional": "任務是辦好聯合宣講會並完成中南大學本科招生辦的宣講目標。"
+        }
+      ]
+    },
+    {
+      "id": "hunan-100km",
+      "kind": "service",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": false,
+      "timelineDate": "2023-10-01",
+      "timelineType": "progress",
+      "title": {
+        "zh": "湖南百公里：从志愿者到校区负责人",
+        "en": "Hunan 100 km: From Volunteer to Campus Lead",
+        "chinese-traditional": "湖南百公里：從志願者到校區負責人"
+      },
+      "period": "2023-10-01—2024-10-16",
+      "role": {
+        "zh": "招募组校区负责人",
+        "en": "Campus recruitment lead",
+        "chinese-traditional": "招募組校區負責人"
+      },
+      "summary": {
+        "zh": "连续参与三届百公里毅行，从普通志愿者成长为校区负责人，形成招募、传播和现场协同的量化记录。",
+        "en": "Participated in three editions of the 100 km walk, progressing from volunteer to campus lead with measurable recruitment and outreach results.",
+        "chinese-traditional": "連續參與三屆百公里毅行，從普通志願者成長為校區負責人，形成招募、傳播和現場協同的量化記錄。"
+      },
+      "actions": [
+        {
+          "zh": "累计招募志愿者 31 人次、线上拉新 467 人次。",
+          "en": "Recruited 31 volunteer participations and 467 online participants.",
+          "chinese-traditional": "累計招募志願者 31 人次、線上拉新 467 人次。"
+        },
+        {
+          "zh": "完成广告投放 322 次、发放奖品 240 个。",
+          "en": "Completed 322 promotional placements and distributed 240 prizes.",
+          "chinese-traditional": "完成廣告投放 322 次、發放獎品 240 個。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "两次获评省级优秀志愿者。",
+          "en": "Twice recognized as an outstanding provincial volunteer.",
+          "chinese-traditional": "兩次獲評省級優秀志願者。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "志愿服务",
+          "en": "Volunteering",
+          "chinese-traditional": "志願服務"
+        },
+        {
+          "zh": "招募",
+          "en": "Recruitment",
+          "chinese-traditional": "招募"
+        },
+        {
+          "zh": "传播",
+          "en": "Communication",
+          "chinese-traditional": "傳播"
+        },
+        {
+          "zh": "校区负责人",
+          "en": "Campus Lead",
+          "chinese-traditional": "校區負責人"
+        }
+      ],
+      "capabilities": [
+        "collaboration",
+        "wps"
+      ],
+      "target": "projects.html#record-hunan-100km",
+      "media": [],
+      "links": [],
+      "context": [
+        {
+          "zh": "活动由共青团湖南省委、湖南省体育局和湖南日报社主办。",
+          "en": "The event was organized by the Hunan Provincial Communist Youth League, Hunan Sports Bureau, and Hunan Daily.",
+          "chinese-traditional": "活動由共青團湖南省委、湖南省體育局和湖南日報社主辦。"
+        }
+      ]
+    },
+    {
+      "id": "question-mark-weekend",
+      "kind": "service",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": false,
+      "timelineDate": "2024-09-19",
+      "timelineType": "progress",
+      "title": {
+        "zh": "小问号 weekend：从课题组成员到优秀组长",
+        "en": "Question Mark Weekend: From Team Member to Outstanding Lead",
+        "chinese-traditional": "小問號 weekend：從課題組成員到優秀組長"
+      },
+      "period": "2024-09-19—2024-12-10（另有 2024 春季组员经历）",
+      "role": {
+        "zh": "科学课题组成员 → 组长",
+        "en": "Science curriculum member → team lead",
+        "chinese-traditional": "科學課題組成員 → 組長"
+      },
+      "summary": {
+        "zh": "基于 2024 春季科学课题组经历选择留任并竞选秋季组长，完整负责招募、培训、课程包组织、交付与结项。",
+        "en": "After serving in the spring 2024 science group, stayed on and became autumn lead, taking responsibility for recruitment, training, lesson-package organization, delivery, and closure.",
+        "chinese-traditional": "基於 2024 春季科學課題組經歷選擇留任並競選秋季組長，完整負責招募、培訓、課程包組織、交付與結項。"
+      },
+      "actions": [
+        {
+          "zh": "制作保底大纲，全权组织新成员初筛和面试。",
+          "en": "Prepared a fallback outline and fully organized initial screening and interviews for new members.",
+          "chinese-traditional": "製作保底大綱，全權組織新成員初篩和麵試。"
+        },
+        {
+          "zh": "10 月 13 日组织专题课培训会。",
+          "en": "Organized the topic-course training meeting on October 13.",
+          "chinese-traditional": "10 月 13 日組織專題課培訓會。"
+        },
+        {
+          "zh": "带领 4 名组员按 1V1 模式组织工作。",
+          "en": "Led four members through a one-to-one responsibility model.",
+          "chinese-traditional": "帶領 4 名組員按 1V1 模式組織工作。"
+        },
+        {
+          "zh": "10 月 22 日交付《惊喜一跳——水杯对乒乓球的帮助》。",
+          "en": "Delivered “A Surprising Jump — How a Cup Helps a Ping-pong Ball” on October 22.",
+          "chinese-traditional": "10 月 22 日交付《驚喜一跳——水杯對乒乓球的幫助》。"
+        },
+        {
+          "zh": "10 月 29 日交付《温水沸腾——气压的秘密》。",
+          "en": "Delivered “Warm Water Boiling — The Secret of Air Pressure” on October 29.",
+          "chinese-traditional": "10 月 29 日交付《溫水沸騰——氣壓的秘密》。"
+        },
+        {
+          "zh": "11 月 5 日交付《魔术谜底——点水成冰》。",
+          "en": "Delivered “The Secret Behind the Magic — Freezing Water at a Touch” on November 5.",
+          "chinese-traditional": "11 月 5 日交付《魔術謎底——點水成冰》。"
+        },
+        {
+          "zh": "11 月 12 日交付《冻住的流水——层流现象》。",
+          "en": "Delivered “Frozen Flow — Laminar Flow” on November 12.",
+          "chinese-traditional": "11 月 12 日交付《凍住的流水——層流現象》。"
+        },
+        {
+          "zh": "四套课程包均提前一个工作日按质交付；11 月 14 日组织优秀志愿者评选并完成项目收尾。",
+          "en": "All four lesson packages were delivered to standard one working day early; organized volunteer recognition and project closure on November 14.",
+          "chinese-traditional": "四套課程包均提前一個工作日按質交付；11 月 14 日組織優秀志願者評選並完成項目收尾。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "本组获评优秀课题组，本人获评优秀组长。",
+          "en": "The group was recognized as an outstanding team and the user as an outstanding lead.",
+          "chinese-traditional": "本組獲評優秀課題組，本人獲評優秀組長。"
+        },
+        {
+          "zh": "组内两名成员分别获评优秀课题员和专题之星。",
+          "en": "Two team members were recognized as Outstanding Project Member and Topic Star.",
+          "chinese-traditional": "組內兩名成員分別獲評優秀課題員和專題之星。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "科学课程",
+          "en": "Science Curriculum",
+          "chinese-traditional": "科學課程"
+        },
+        {
+          "zh": "团队管理",
+          "en": "Team Management",
+          "chinese-traditional": "團隊管理"
+        },
+        {
+          "zh": "志愿服务",
+          "en": "Volunteering",
+          "chinese-traditional": "志願服務"
+        }
+      ],
+      "capabilities": [
+        "collaboration",
+        "wps"
+      ],
+      "target": "projects.html#record-question-mark-weekend",
+      "media": [
+        {
+          "path": "static/assets/portfolio/volunteering/volunteering-04-question-mark-weekend-outstanding-leader.webp",
+          "alt": {
+            "zh": "小问号 weekend 优秀组长证书",
+            "en": "Question Mark Weekend outstanding-lead certificate",
+            "chinese-traditional": "小問號 weekend 優秀組長證書"
+          },
+          "stream": "service",
+          "featured": true
+        }
+      ],
+      "links": [
+        {
+          "label": {
+            "zh": "2024 秋季志愿者名单",
+            "en": "Autumn 2024 volunteer list",
+            "chinese-traditional": "2024 秋季志願者名單"
+          },
+          "url": "https://mp.weixin.qq.com/s/lK7Gurtyx90xc1Br7qUEgA"
+        },
+        {
+          "label": {
+            "zh": "专题组介绍",
+            "en": "Program introduction",
+            "chinese-traditional": "專題組介紹"
+          },
+          "url": "https://mp.weixin.qq.com/s/Mq76uKxrIuTp4X_s1b6nAg"
+        }
+      ],
+      "context": [
+        {
+          "zh": "累计志愿服务 27 小时；秋季担任小问号 weekend 专题管理组科学课题组组长。",
+          "en": "Recorded 27 volunteer hours and served as science-group lead in the autumn Question Mark Weekend program.",
+          "chinese-traditional": "累計志願服務 27 小時；秋季擔任小問號 weekend 專題管理組科學課題組組長。"
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "即时沟通、头脑风暴、各司其职和积极跟进是团队合作的关键；课程设计还需站在青少年视角审视科学性与可接受性。",
+          "en": "Timely communication, brainstorming, clear roles, and active follow-up are central to teamwork; lesson design must also be reviewed from young learners’ perspectives for scientific quality and accessibility.",
+          "chinese-traditional": "即時溝通、頭腦風暴、各司其職和積極跟進是團隊合作的關鍵；課程設計還需站在青少年視角審視科學性與可接受性。"
+        }
+      ]
+    },
+    {
+      "id": "sun-tree-hole",
+      "kind": "service",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": false,
+      "timelineDate": "2024-09-30",
+      "timelineType": "progress",
+      "title": {
+        "zh": "太阳树洞：两期朋辈回信与心理关怀",
+        "en": "Sun Tree Hole: Two Cycles of Peer Letter Support",
+        "chinese-traditional": "太陽樹洞：兩期朋輩回信與心理關懷"
+      },
+      "period": "2024-09-30—2026-06-07",
+      "role": {
+        "zh": "回信志愿者",
+        "en": "Letter-response volunteer",
+        "chinese-traditional": "回信志願者"
+      },
+      "summary": {
+        "zh": "完成两期太阳树洞朋辈回信服务，以倾听、问题回应和适度建议支持来信者。",
+        "en": "Completed two cycles of peer letter-response service focused on listening, problem response, and appropriate guidance.",
+        "chinese-traditional": "完成兩期太陽樹洞朋輩回信服務，以傾聽、問題回應和適度建議支持來信者。"
+      },
+      "actions": [
+        {
+          "zh": "2024 年完成 10 月编号 15、11 月编号 24 两封回信。",
+          "en": "Completed two 2024 replies: October No. 15 and November No. 24.",
+          "chinese-traditional": "2024 年完成 10 月編號 15、11 月編號 24 兩封回信。"
+        },
+        {
+          "zh": "2025 年完成 2 月编号 15、3 月编号 21、5 月编号 23 三封回信。",
+          "en": "Completed three 2025 replies: February No. 15, March No. 21, and May No. 23.",
+          "chinese-traditional": "2025 年完成 2 月編號 15、3 月編號 21、5 月編號 23 三封回信。"
+        },
+        {
+          "zh": "2026 年完成 3 月编号 27、4 月编号 35、5 月编号 34、6 月编号 4 四封回信。",
+          "en": "Completed four 2026 replies: March No. 27, April No. 35, May No. 34, and June No. 4.",
+          "chinese-traditional": "2026 年完成 3 月編號 27、4 月編號 35、5 月編號 34、6 月編號 4 四封回信。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "两个周期均获评优秀回信志愿者。",
+          "en": "Recognized as an outstanding reply volunteer in both cycles.",
+          "chinese-traditional": "兩個週期均獲評優秀回信志願者。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "朋辈关怀",
+          "en": "Peer Support",
+          "chinese-traditional": "朋輩關懷"
+        },
+        {
+          "zh": "书信",
+          "en": "Letters",
+          "chinese-traditional": "書信"
+        },
+        {
+          "zh": "志愿服务",
+          "en": "Volunteering",
+          "chinese-traditional": "志願服務"
+        }
+      ],
+      "capabilities": [
+        "wps"
+      ],
+      "target": "projects.html#record-sun-tree-hole",
+      "media": [
+        {
+          "path": "static/assets/portfolio/volunteering/volunteering-02-sun-tree-hole-outstanding-volunteer.webp",
+          "alt": {
+            "zh": "太阳树洞优秀志愿者证书",
+            "en": "Sun Tree Hole outstanding-volunteer certificate",
+            "chinese-traditional": "太陽樹洞優秀志願者證書"
+          },
+          "stream": "service"
+        },
+        {
+          "path": "static/assets/portfolio/volunteering/volunteering-05-sun-tree-hole-outstanding-volunteer-2026.webp",
+          "alt": {
+            "zh": "2025—2026 年度太阳树洞 Pro 优秀回信志愿者证书",
+            "chinese-traditional": "2025—2026 年度太陽樹洞 Pro 優秀回信志願者證書",
+            "en": "2025–2026 Outstanding Sun Tree Hole Pro reply volunteer certificate"
+          },
+          "stream": "service"
+        }
+      ],
+      "links": [],
+      "context": [
+        {
+          "zh": "2024—2025 周期累计 20 小时，服务目标是倾听、回应、鼓励、安慰，并针对问题提供可参考的解决思路。",
+          "en": "The 2024–2025 cycle recorded 20 hours, aiming to listen, respond, encourage, comfort, and offer possible approaches to problems.",
+          "chinese-traditional": "2024—2025 週期累計 20 小時，服務目標是傾聽、回應、鼓勵、安慰，並針對問題提供可參考的解決思路。"
+        },
+        {
+          "zh": "2026 周期累计 16 小时，更强调问题导向、想象空间、共情能力和简洁文字表达。",
+          "en": "The 2026 cycle recorded 16 hours and emphasized problem orientation, imagination, empathy, and concise writing.",
+          "chinese-traditional": "2026 週期累計 16 小時，更強調問題導向、想像空間、共情能力和簡潔文字表達。"
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "“树洞是有回音的”：回信既回应来信者内心，也通过具体书信传递朴素的人文关怀。",
+          "en": "“A tree hole has an echo”: the replies respond to inner concerns while conveying humane care through concrete letters.",
+          "chinese-traditional": "“樹洞是有迴音的”：回信既回應來信者內心，也通過具體書信傳遞樸素的人文關懷。"
+        },
+        {
+          "zh": "第二期来信更简洁甚至没有明确问题，需要从“为何仍选择来信”出发，做真诚的倾听者与朋辈心理关怀者。",
+          "en": "The second cycle often contained brief letters without explicit questions, requiring sincere listening and peer care grounded in why the writer still chose to reach out.",
+          "chinese-traditional": "第二期來信更簡潔甚至沒有明確問題，需要從“為何仍選擇來信”出發，做真誠的傾聽者與朋輩心理關懷者。"
+        }
+      ]
+    },
+    {
+      "id": "forest-messenger",
+      "kind": "service",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2025-10-01",
+      "timelineType": "progress",
+      "title": {
+        "zh": "森林信使：三封长期陪伴回信",
+        "en": "Forest Messenger: Three Letters of Long-Term Companionship",
+        "chinese-traditional": "森林信使：三封長期陪伴回信"
+      },
+      "period": "2025-10-01—2026-03",
+      "role": {
+        "zh": "书信陪伴志愿者",
+        "en": "Letter companion volunteer",
+        "chinese-traditional": "書信陪伴志願者"
+      },
+      "summary": {
+        "zh": "以一对一书信交流支持小学生表达、自信与成长，在持续与边界感之间完成三次互动。",
+        "en": "Supported a primary-school student's expression and confidence through three one-to-one letter exchanges.",
+        "chinese-traditional": "以一對一書信交流支持小學生表達、自信與成長，在持續與邊界感之間完成三次互動。"
+      },
+      "actions": [
+        {
+          "zh": "围绕“人生关键词”“时间变慢”“假期计划”完成三次书信互动。",
+          "en": "Completed three exchanges around life keywords, time slowing down, and holiday plans.",
+          "chinese-traditional": "圍繞“人生關鍵詞”“時間變慢”“假期計劃”完成三次書信互動。"
+        },
+        {
+          "zh": "每次均在次日完成回信与打卡。",
+          "en": "Completed each reply and check-in the following day.",
+          "chinese-traditional": "每次均在次日完成回信與打卡。"
+        },
+        {
+          "zh": "使用适合小学生认知的语言，将日常分享与启发思考结合。",
+          "en": "Used age-appropriate language combining daily sharing with reflective prompts.",
+          "chinese-traditional": "使用適合小學生認知的語言，將日常分享與啟發思考結合。"
+        },
+        {
+          "zh": "通过提问拓展话题，并加入笔、明信片和手绘插图，使内容具体有趣。",
+          "en": "Expanded topics through questions and added a pen, postcards, and hand-drawn illustrations to make the exchange concrete and engaging.",
+          "chinese-traditional": "通過提問拓展話題，並加入筆、明信片和手繪插圖，使內容具體有趣。"
+        },
+        {
+          "zh": "保持积极情绪、适当边界感和持续责任。",
+          "en": "Maintained positive tone, appropriate boundaries, and sustained responsibility.",
+          "chinese-traditional": "保持積極情緒、適當邊界感和持續責任。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "获评 2025 森林信使优秀志愿者。",
+          "en": "Recognized as a 2025 Outstanding Forest Messenger Volunteer.",
+          "chinese-traditional": "獲評 2025 森林信使優秀志願者。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "书信陪伴",
+          "en": "Letter Companionship",
+          "chinese-traditional": "書信陪伴"
+        },
+        {
+          "zh": "儿童支持",
+          "en": "Child Support",
+          "chinese-traditional": "兒童支持"
+        },
+        {
+          "zh": "志愿服务",
+          "en": "Volunteering",
+          "chinese-traditional": "志願服務"
+        }
+      ],
+      "capabilities": [
+        "wps"
+      ],
+      "target": "projects.html#record-forest-messenger",
+      "media": [
+        {
+          "path": "static/assets/portfolio/volunteering/volunteering-03-forest-messenger-outstanding-volunteer.webp",
+          "alt": {
+            "zh": "森林信使优秀志愿者证书",
+            "en": "Forest Messenger outstanding-volunteer certificate",
+            "chinese-traditional": "森林信使優秀志願者證書"
+          },
+          "stream": "service"
+        }
+      ],
+      "links": [],
+      "context": [
+        {
+          "zh": "累计 12 小时，以一对一书信为一名小学生提供长期、稳定、真实可互动的情感支持和成长陪伴；公开展示中隐去儿童姓名。",
+          "en": "Recorded 12 hours of one-to-one letter companionship for a primary-school student; the child’s name is withheld in the public archive.",
+          "chinese-traditional": "累計 12 小時，以一對一書信為一名小學生提供長期、穩定、真實可互動的情感支持和成長陪伴；公開展示中隱去兒童姓名。"
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "“笔友”服务的价值在于持续与真诚；跨年龄交流既支持儿童表达与自信，也让本人从信任和回应中获得温暖。",
+          "en": "The value of pen-pal service lies in consistency and sincerity; cross-age communication supports the child’s expression and confidence while returning warmth through trust and response.",
+          "chinese-traditional": "“筆友”服務的價值在於持續與真誠；跨年齡交流既支持兒童表達與自信，也讓本人從信任和回應中獲得溫暖。"
+        }
+      ]
+    },
+    {
+      "id": "sun-student-companion",
+      "kind": "service",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2025-03-07",
+      "timelineType": "progress",
+      "title": {
+        "zh": "太阳学子身份与一对一陪伴项目",
+        "en": "Sun Student Identity and One-to-one Companion Program",
+        "chinese-traditional": "太陽學子身份與一對一陪伴項目"
+      },
+      "period": {
+        "zh": "太阳学子 2023-11-15—2026-06；陪伴项目 2025-03-07—2026-03",
+        "en": "Sun Student: 2023-11-15—2026-06; companion program: 2025-03-07—2026-03",
+        "chinese-traditional": "太陽學子 2023-11-15—2026-06；陪伴項目 2025-03-07—2026-03"
+      },
+      "role": {
+        "zh": "太阳学子 / 陪伴志愿者",
+        "en": "Sun Student / companion volunteer",
+        "chinese-traditional": "太陽學子 / 陪伴志願者"
+      },
+      "summary": {
+        "zh": "以太阳学子身份持续参加基金会公益服务，累计 103 小时；其中在一对一陪伴项目中，为安化二中学生提供稳定的情感支持与成长交流。",
+        "en": "Completed 103 hours of sustained service as a Sun Student; within the one-to-one companion program, provided stable emotional support and growth-oriented communication for a student at Anhua No. 2 High School.",
+        "chinese-traditional": "以太陽學子身份持續參加基金會公益服務，累計 103 小時；其中在一對一陪伴項目中，為安化二中學生提供穩定的情感支持與成長交流。"
+      },
+      "actions": [
+        {
+          "zh": "围绕彼此的高中与大学生活持续交流。",
+          "en": "Discussed high-school and university life over time.",
+          "chinese-traditional": "圍繞彼此的高中與大學生活持續交流。"
+        },
+        {
+          "zh": "了解对方的兴趣爱好和学习条件，并提供适当的方法建议。",
+          "en": "Learned about the student’s interests and study conditions and offered appropriate methods.",
+          "chinese-traditional": "瞭解對方的興趣愛好和學習條件，並提供適當的方法建議。"
+        },
+        {
+          "zh": "2025 年 3 月 19 日在中南大学太阳学子同学会线下见面会担任发言代表。",
+          "en": "Served as a speaker at the CSU Sun Student offline gathering on March 19, 2025.",
+          "chinese-traditional": "2025 年 3 月 19 日在中南大學太陽學子同學會線下見面會擔任發言代表。"
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "在第四届太阳慈善基金会年会获“童行伙伴优秀志愿者”二等奖。",
+          "en": "Received second prize as an Outstanding Tongxing Partner Volunteer at the fourth foundation annual meeting.",
+          "chinese-traditional": "在第四屆太陽慈善基金會年會獲“童行夥伴優秀志願者”二等獎。"
+        },
+        {
+          "zh": "相关经历于 2025 年 3 月 31 日被基金会微信公众号月刊报道。",
+          "en": "The experience was featured in the foundation’s WeChat monthly newsletter on March 31, 2025.",
+          "chinese-traditional": "相關經歷於 2025 年 3 月 31 日被基金會微信公眾號月刊報道。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "陪伴教育",
+          "en": "Companion Education",
+          "chinese-traditional": "陪伴教育"
+        },
+        {
+          "zh": "一对一交流",
+          "en": "One-to-one Communication",
+          "chinese-traditional": "一對一交流"
+        },
+        {
+          "zh": "志愿服务",
+          "en": "Volunteering",
+          "chinese-traditional": "志願服務"
+        }
+      ],
+      "capabilities": [],
+      "target": "projects.html#record-sun-student-companion",
+      "media": [
+        {
+          "path": "static/assets/portfolio/volunteering/volunteering-01-tongxing-partner-second-prize.webp",
+          "alt": {
+            "zh": "太阳慈善公益基金会童行伙伴优秀志愿者二等奖证书",
+            "en": "Sun Charity Foundation Outstanding Tongxing Partner Volunteer second-prize certificate",
+            "chinese-traditional": "太陽慈善公益基金會童行夥伴優秀志願者二等獎證書"
+          },
+          "stream": "service",
+          "featured": true
+        }
+      ],
+      "links": [
+        {
+          "label": {
+            "zh": "太阳学子陪伴项目志愿者名单",
+            "en": "Sun Student Companion volunteer list",
+            "chinese-traditional": "太陽學子陪伴項目志願者名單"
+          },
+          "url": "https://mp.weixin.qq.com/s/Uwv3Dtgi8clVPZeDKQjDKQ"
+        },
+        {
+          "label": {
+            "zh": "基金会 2025 年 3 月月刊",
+            "en": "Foundation March 2025 newsletter",
+            "chinese-traditional": "基金會 2025 年 3 月月刊"
+          },
+          "url": "https://mp.weixin.qq.com/s/6eDzUwLxgpyWvrZBAjnCuQ"
+        }
+      ],
+      "context": [
+        {
+          "zh": "太阳慈善公益基金会为省民政厅 4A 级基金会；本人自 2023-11-15 起以“太阳学子”身份持续参与公益服务，本科阶段累计 103 小时。",
+          "en": "Sun Charity Foundation is a 4A-rated foundation under the provincial civil-affairs authority; the user has served as a Sun Student since 2023-11-15, recording 103 undergraduate volunteer hours.",
+          "chinese-traditional": "太陽慈善公益基金會為省民政廳 4A 級基金會；本人自 2023-11-15 起以“太陽學子”身份持續參與公益服務，本科階段累計 103 小時。"
+        },
+        {
+          "zh": "一对一陪伴项目累计 14 小时，为安化二中太阳学子提供长期、稳定的情感支持与成长陪伴。",
+          "en": "The one-to-one companion program recorded 14 hours of stable emotional support and growth companionship for a Sun Student at Anhua No. 2 High School.",
+          "chinese-traditional": "一對一陪伴項目累計 14 小時，為安化二中太陽學子提供長期、穩定的情感支持與成長陪伴。"
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "这段陪伴让本人更理解教育资源有限条件下的努力与成长，也把交流定位为平等支持而非单向指导。",
+          "en": "The experience deepened understanding of growth under limited educational resources and framed the relationship as mutual support rather than one-way guidance.",
+          "chinese-traditional": "這段陪伴讓本人更理解教育資源有限條件下的努力與成長，也把交流定位為平等支持而非單向指導。"
+        }
+      ]
+    },
+    {
+      "id": "sun-scholarships",
+      "kind": "honor",
+      "pages": [
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2023",
+      "timelineType": "progress",
+      "title": {
+        "zh": "两项独立奖学金｜累计 14,000 元",
+        "en": "Two Independent Scholarships | RMB 14,000 Total",
+        "chinese-traditional": "兩項獨立獎學金｜累計 14,000 元"
+      },
+      "period": {
+        "zh": "高三—大三",
+        "en": "Senior high school—third undergraduate year",
+        "chinese-traditional": "高三—大三"
+      },
+      "role": {
+        "zh": "奖学金获得者",
+        "en": "Scholarship recipient",
+        "chinese-traditional": "獎學金獲得者"
+      },
+      "summary": {
+        "zh": "两项奖学金来源相互独立：高三获昆明市西山区教育体育局颁发的西山区突破者奖学金 5,000 元；大一、大二、大三连续三年获太阳慈善公益基金会的太阳慈善公益奖学金，每次 3,000 元；两项合计 14,000 元。",
+        "en": "The two scholarships are independent awards from different organizations: a RMB 5,000 Xishan District Breakthrough Scholarship from the Kunming Xishan District Education and Sports Bureau in the final year of high school, and the RMB 3,000 Sun Charity Public-welfare Scholarship from the Sun Charity Foundation in each of the first three undergraduate years, totaling RMB 14,000.",
+        "chinese-traditional": "兩項獎學金來源相互獨立：高三獲昆明市西山區教育體育局頒發的西山區突破者獎學金 5,000 元；大一、大二、大三連續三年獲太陽慈善公益基金會的太陽慈善公益獎學金，每次 3,000 元；兩項合計 14,000 元。"
+      },
+      "actions": [],
+      "outcomes": [
+        {
+          "zh": "西山区突破者奖学金｜昆明市西山区教育体育局｜5,000 元（高三）。",
+          "en": "Xishan District Breakthrough Scholarship | Kunming Xishan District Education and Sports Bureau | RMB 5,000 (final year of high school).",
+          "chinese-traditional": "西山區突破者獎學金｜昆明市西山區教育體育局｜5,000 元（高三）。"
+        },
+        {
+          "zh": "太阳慈善公益奖学金｜太阳慈善公益基金会｜3,000 元 × 3（大一、大二、大三），合计 9,000 元。",
+          "en": "Sun Charity Public-welfare Scholarship | Sun Charity Foundation | RMB 3,000 × 3 in the first, second, and third undergraduate years, totaling RMB 9,000.",
+          "chinese-traditional": "太陽慈善公益獎學金｜太陽慈善公益基金會｜3,000 元 × 3（大一、大二、大三），合計 9,000 元。"
+        },
+        {
+          "zh": "两项独立奖学金累计 14,000 元。",
+          "en": "Two independent scholarships totaling RMB 14,000.",
+          "chinese-traditional": "兩項獨立獎學金累計 14,000 元。"
+        },
+        {
+          "zh": "太阳慈善公益奖学金与基金会服务经历共同构成长期支持与回馈关系。",
+          "en": "The Sun Charity scholarship and foundation service together form a long-term cycle of support and giving back.",
+          "chinese-traditional": "太陽慈善公益獎學金與基金會服務經歷共同構成長期支持與回饋關係。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "奖学金",
+          "en": "Scholarship",
+          "chinese-traditional": "獎學金"
+        },
+        {
+          "zh": "两项独立奖项",
+          "en": "Two Independent Awards",
+          "chinese-traditional": "兩項獨立獎項"
+        },
+        {
+          "zh": "高中荣誉",
+          "en": "High-school Honor",
+          "chinese-traditional": "高中榮譽"
+        },
+        {
+          "zh": "本科荣誉",
+          "en": "Undergraduate Honor",
+          "chinese-traditional": "本科榮譽"
+        },
+        {
+          "zh": "累计 14,000 元",
+          "en": "RMB 14,000 Total",
+          "chinese-traditional": "累計 14,000 元"
+        }
+      ],
+      "capabilities": [],
+      "target": "capabilities.html#record-sun-scholarships",
+      "media": [],
+      "links": []
+    },
+    {
+      "id": "english-reading-award",
+      "kind": "honor",
+      "pages": [
+        "capabilities"
+      ],
+      "size": "compact",
+      "featured": false,
+      "timelineDate": "2023",
+      "timelineType": "progress",
+      "title": {
+        "zh": "2023“外文奖”英语阅读大赛全国三等奖",
+        "en": "2023 National Third Prize in English Reading",
+        "chinese-traditional": "2023“外文獎”英語閱讀大賽全國三等獎"
+      },
+      "period": "2023",
+      "role": {
+        "zh": "参赛者",
+        "en": "Participant",
+        "chinese-traditional": "參賽者"
+      },
+      "summary": {
+        "zh": "参加全国大学生英语阅读大赛并获全国三等奖。",
+        "en": "Won national third prize in a university English reading competition.",
+        "chinese-traditional": "參加全國大學生英語閱讀大賽並獲全國三等獎。"
+      },
+      "actions": [],
+      "outcomes": [
+        {
+          "zh": "形成本科阶段英语阅读能力的外部证据。",
+          "en": "Provides external evidence of undergraduate English reading ability.",
+          "chinese-traditional": "形成本科階段英語閱讀能力的外部證據。"
+        }
+      ],
+      "tags": [
+        {
+          "zh": "英语阅读",
+          "en": "English Reading",
+          "chinese-traditional": "英語閱讀"
+        },
+        {
+          "zh": "全国三等奖",
+          "en": "National Third Prize",
+          "chinese-traditional": "全國三等獎"
+        }
+      ],
+      "capabilities": [
+        "reading-notes"
+      ],
+      "target": "capabilities.html#record-english-reading-award",
+      "media": [
+        {
+          "path": "static/assets/portfolio/english/english-01-reading-national-third-prize.webp",
+          "alt": {
+            "zh": "外文奖英语阅读全国三等奖证书",
+            "en": "National English reading third-prize certificate",
+            "chinese-traditional": "外文獎英語閱讀全國三等獎證書"
+          },
+          "stream": "modeling"
+        }
+      ],
+      "links": []
+    },
+    {
+      "id": "yuelu-mountain",
+      "kind": "honor",
+      "pages": [
+        "capabilities"
+      ],
+      "size": "compact",
+      "featured": false,
+      "timelineDate": "2024",
+      "timelineType": "progress",
+      "title": {
+        "zh": "中南大学攀登麓山比赛第四名",
+        "en": "Fourth Place in CSU Yuelu Mountain Climb",
+        "chinese-traditional": "中南大學攀登麓山比賽第四名"
+      },
+      "period": "2024",
+      "role": {
+        "zh": "参赛者",
+        "en": "Participant",
+        "chinese-traditional": "參賽者"
+      },
+      "summary": {
+        "zh": "参加中南大学第十届春季登山比赛并获得第四名。",
+        "en": "Placed fourth in CSU's 10th spring mountain-climbing competition.",
+        "chinese-traditional": "參加中南大學第十屆春季登山比賽並獲得第四名。"
+      },
+      "actions": [],
+      "outcomes": [],
+      "tags": [
+        {
+          "zh": "体育",
+          "en": "Sport",
+          "chinese-traditional": "體育"
+        },
+        {
+          "zh": "登山",
+          "en": "Mountain Climbing",
+          "chinese-traditional": "登山"
+        },
+        {
+          "zh": "第四名",
+          "en": "Fourth Place",
+          "chinese-traditional": "第四名"
+        }
+      ],
+      "capabilities": [],
+      "target": "capabilities.html#record-yuelu-mountain",
+      "media": [
+        {
+          "path": "static/assets/portfolio/sports/sports-01-yuelu-mountain-fourth-place.webp",
+          "alt": {
+            "zh": "攀登麓山比赛第四名证书",
+            "en": "Yuelu Mountain fourth-place certificate",
+            "chinese-traditional": "攀登麓山比賽第四名證書"
+          },
+          "stream": "service"
+        }
+      ],
+      "links": []
+    },
+    {
+      "id": "campus-growth",
+      "kind": "honor",
+      "pages": [
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2023",
+      "timelineType": "progress",
+      "title": {
+        "zh": "云南省优秀学生干部与校园成长荣誉",
+        "en": "Yunnan Provincial Outstanding Student Cadre and Campus Honors",
+        "chinese-traditional": "雲南省優秀學生幹部與校園成長榮譽"
+      },
+      "period": "2023—2024",
+      "role": {
+        "zh": "高中省级荣誉 / 本科校园成长",
+        "en": "Provincial high-school honor / undergraduate campus development",
+        "chinese-traditional": "高中省級榮譽 / 本科校園成長"
+      },
+      "summary": {
+        "zh": "高中阶段以 2021—2022 学年度云南省优秀学生干部（云南省教育厅）为长期保留的省级荣誉；本科阶段另记录军训先进个人与党校结业。",
+        "chinese-traditional": "高中階段以 2021—2022 學年度雲南省優秀學生幹部（雲南省教育廳）為長期保留的省級榮譽；本科階段另記錄軍訓先進個人與黨校結業。",
+        "en": "The 2021–2022 Yunnan Provincial Outstanding Student Cadre honor from the Yunnan Provincial Department of Education is retained as a durable provincial-level high-school distinction; undergraduate records also include military-training recognition and party-school completion."
+      },
+      "actions": [],
+      "outcomes": [
+        {
+          "zh": "2021—2022 学年度云南省优秀学生干部｜云南省教育厅。",
+          "chinese-traditional": "2021—2022 學年度雲南省優秀學生幹部｜雲南省教育廳。",
+          "en": "Yunnan Provincial Outstanding Student Cadre, academic year 2021–2022 | Yunnan Provincial Department of Education."
+        },
+        {
+          "zh": "本科入学军训获军训先进个人。",
+          "chinese-traditional": "本科入學軍訓獲軍訓先進個人。",
+          "en": "Received Outstanding Individual recognition during undergraduate-entry military training."
+        },
+        {
+          "zh": "完成党校学习并结业。",
+          "chinese-traditional": "完成黨校學習並結業。",
+          "en": "Completed party-school study."
+        }
+      ],
+      "tags": [
+        {
+          "zh": "云南省优秀学生干部",
+          "en": "Yunnan Provincial Outstanding Student Cadre",
+          "chinese-traditional": "雲南省優秀學生幹部"
+        },
+        {
+          "zh": "省级荣誉",
+          "en": "Provincial Honor",
+          "chinese-traditional": "省級榮譽"
+        },
+        {
+          "zh": "军训先进个人",
+          "en": "Outstanding Military-training Individual",
+          "chinese-traditional": "軍訓先進個人"
+        },
+        {
+          "zh": "党校结业",
+          "en": "Party-school Completion",
+          "chinese-traditional": "黨校結業"
+        }
+      ],
+      "capabilities": [],
+      "target": "capabilities.html#record-campus-growth",
+      "media": [
+        {
+          "path": "static/assets/portfolio/honors/honors-01-provincial-outstanding-student-cadre.webp",
+          "alt": {
+            "zh": "云南省级优秀学生干部证书",
+            "chinese-traditional": "雲南省級優秀學生幹部證書",
+            "en": "Yunnan provincial outstanding student cadre certificate"
+          }
+        }
+      ],
+      "links": []
+    },
+    {
+      "id": "wps-and-certifications",
+      "kind": "credential",
+      "pages": [
+        "capabilities"
+      ],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2024",
+      "timelineType": "progress",
+      "title": {
+        "zh": "WPS 办公能力与计算机认证",
+        "chinese-traditional": "WPS 辦公能力與計算機認證",
+        "en": "WPS Office Skills and Computing Credentials"
+      },
+      "period": {
+        "zh": "本科阶段",
+        "en": "Undergraduate stage",
+        "chinese-traditional": "本科階段"
+      },
+      "role": {
+        "zh": "能力证据组",
+        "en": "Capability evidence group",
+        "chinese-traditional": "能力證據組"
+      },
+      "summary": {
+        "zh": "以全国计算机等级考试二级 WPS Office 证书对应文档、表格与演示制作能力，并补充 CCF CSP-J/S 入门级一等奖、普通话与急救认证。",
+        "chinese-traditional": "以全國計算機等級考試二級 WPS Office 證書對應文件、試算表與簡報製作能力，並補充 CCF CSP-J/S 入門級一等獎、普通話與急救認證。",
+        "en": "Uses the National Computer Rank Examination Level 2 WPS Office certificate as evidence for document, spreadsheet, and presentation skills, supplemented by a first-tier CCF CSP-J/S award, Mandarin, and first-aid credentials."
+      },
+      "actions": [],
+      "outcomes": [
+        {
+          "zh": "全国计算机等级考试二级（WPS Office）。",
+          "en": "National Computer Rank Examination Level 2 (WPS Office).",
+          "chinese-traditional": "全國計算機等級考試二級（WPS Office）。"
+        },
+        {
+          "zh": "CCF CSP-J/S 非专业级软件能力认证入门级一等奖。",
+          "chinese-traditional": "CCF CSP-J/S 非專業級軟體能力認證入門級一等獎。",
+          "en": "First-tier distinction in the CCF CSP-J/S non-professional software-ability certification, beginner level."
+        },
+        {
+          "zh": "普通话水平测试二级乙等。",
+          "en": "Mandarin Proficiency Test, Level 2-B.",
+          "chinese-traditional": "普通話水平測試二級乙等。"
+        },
+        {
+          "zh": "CPR + AED 培训证书。",
+          "en": "CPR + AED training certificate.",
+          "chinese-traditional": "CPR + AED 培訓證書。"
+        }
+      ],
+      "tags": [
+        "WPS Office",
+        {
+          "zh": "计算机二级",
+          "en": "Computer Rank Examination Level 2",
+          "chinese-traditional": "計算機二級"
+        },
+        {
+          "zh": "普通话",
+          "en": "Mandarin",
+          "chinese-traditional": "普通話"
+        },
+        "CPR + AED"
+      ],
+      "capabilities": [
+        "wps"
+      ],
+      "target": "capabilities.html#record-wps-and-certifications",
+      "media": [
+        {
+          "path": "static/assets/portfolio/credentials/credential-01-ccf-csp-js-first-tier.webp",
+          "alt": {
+            "zh": "CCF CSP-J/S 入门级一等奖证书",
+            "chinese-traditional": "CCF CSP-J/S 入門級一等獎證書",
+            "en": "CCF CSP-J/S beginner-level first-tier certificate"
+          }
+        }
+      ],
+      "links": []
+    },
+    {
+      "id": "desktop-ai-runtime",
+      "kind": "software",
+      "pages": [],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2026-07",
+      "timelineType": "progress",
+      "title": {
+        "zh": "桌面 AI Agent Runtime",
+        "en": "Desktop AI Agent Runtime",
+        "chinese-traditional": "桌面 AI Agent Runtime"
+      },
+      "period": {
+        "zh": "2026-07—持续维护",
+        "en": "2026-07—Maintained",
+        "chinese-traditional": "2026-07—持續維護"
+      },
+      "role": {
+        "zh": "独立构建与长期维护",
+        "en": "Independent build and maintenance",
+        "chinese-traditional": "獨立構建與長期維護"
+      },
+      "summary": {
+        "zh": "基于 Electron、React、MCP 与本地模型构建桌面 AI 应用运行时。",
+        "en": "A desktop AI runtime built with Electron, React, MCP, and local models.",
+        "chinese-traditional": "基於 Electron、React、MCP 與本地模型構建桌面 AI 應用運行時。"
+      },
+      "actions": [],
+      "outcomes": [],
+      "tags": [
+        "Electron",
+        "React",
+        "MCP"
+      ],
+      "capabilities": [
+        "ai-agent",
+        "full-stack"
+      ],
+      "target": "projects.html#desktop-ai-runtime",
+      "media": [],
+      "links": []
+    },
+    {
+      "id": "ielts-learning-assistant",
+      "kind": "software",
+      "pages": [],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2026-07-27",
+      "timelineType": "progress",
+      "title": {
+        "zh": "IELTS Learning Assistant",
+        "en": "IELTS Learning Assistant",
+        "chinese-traditional": "IELTS Learning Assistant"
+      },
+      "period": {
+        "zh": "2026-07—持续维护",
+        "en": "2026-07—Maintained",
+        "chinese-traditional": "2026-07—持續維護"
+      },
+      "role": {
+        "zh": "独立产品构建",
+        "en": "Independent product build",
+        "chinese-traditional": "獨立產品構建"
+      },
+      "summary": {
+        "zh": "为雅思机考平台补充自由笔记、错因复盘、生词与句子收藏。",
+        "en": "A browser extension adding notes, mistake review, vocabulary, and sentence capture to IELTS practice platforms.",
+        "chinese-traditional": "為雅思機考平臺補充自由筆記、錯因復盤、生詞與句子收藏。"
+      },
+      "actions": [],
+      "outcomes": [],
+      "tags": [
+        "Browser Extension",
+        "IELTS"
+      ],
+      "capabilities": [
+        "full-stack",
+        "ai-agent"
+      ],
+      "target": "projects.html#ielts-learning-assistant",
+      "media": [],
+      "links": [],
+      "relatedPost": "2026-07-27-ielts-browser-extension.md"
+    },
+    {
+      "id": "homepage-renovation",
+      "kind": "software",
+      "pages": [],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2026-01-08",
+      "timelineType": "progress",
+      "title": {
+        "zh": "个人主页维护体系翻新",
+        "en": "Personal Homepage Maintenance Renovation",
+        "chinese-traditional": "個人主頁維護體系翻新"
+      },
+      "period": {
+        "zh": "2026-01—持续维护",
+        "en": "2026-01—Maintained",
+        "chinese-traditional": "2026-01—持續維護"
+      },
+      "role": {
+        "zh": "独立构建与维护",
+        "en": "Independent build and maintenance",
+        "chinese-traditional": "獨立構建與維護"
+      },
+      "summary": {
+        "zh": "将静态主页升级为具备内容管线、多语言同步、CI 与数据驱动目录的长期数字档案。",
+        "en": "Evolved a static homepage into a long-term digital archive with content pipelines, multilingual sync, CI, and data-driven catalogs.",
+        "chinese-traditional": "將靜態主頁升級為具備內容管線、多語言同步、CI 與數據驅動目錄的長期數字檔案。"
+      },
+      "actions": [],
+      "outcomes": [],
+      "tags": [
+        "GitHub Pages",
+        "YAML",
+        "CI"
+      ],
+      "capabilities": [
+        "full-stack"
+      ],
+      "target": "projects.html#homepage-renovation",
+      "media": [],
+      "links": [],
+      "relatedPost": "2026-01-08-homepage.md"
+    },
+    {
+      "id": "public-profiles",
+      "kind": "software",
+      "pages": [],
+      "size": "compact",
+      "featured": false,
+      "timelineDate": "2026-07",
+      "timelineType": "progress",
+      "title": {
+        "zh": "公开技术与学术身份",
+        "en": "Public Technical and Academic Profiles",
+        "chinese-traditional": "公開技術與學術身份"
+      },
+      "period": {
+        "zh": "2026-07—持续维护",
+        "en": "2026-07—Maintained",
+        "chinese-traditional": "2026-07—持續維護"
+      },
+      "role": {
+        "zh": "公开身份索引",
+        "en": "Public identity index",
+        "chinese-traditional": "公開身份索引"
+      },
+      "summary": {
+        "zh": "集中维护 GitHub 与 OpenReview 入口，形成代码、项目和论文记录索引。",
+        "en": "Maintains GitHub and OpenReview as a unified index of code, projects, and paper records.",
+        "chinese-traditional": "集中維護 GitHub 與 OpenReview 入口，形成代碼、項目和論文記錄索引。"
+      },
+      "actions": [],
+      "outcomes": [],
+      "tags": [
+        "GitHub",
+        "OpenReview"
+      ],
+      "capabilities": [
+        "full-stack",
+        "research-engineering"
+      ],
+      "target": "projects.html#public-profiles",
+      "media": [],
+      "links": []
+    },
+    {
+      "id": "ai-enterprise-website",
+      "kind": "software",
+      "pages": [],
+      "size": "standard",
+      "featured": false,
+      "timelineDate": "2026-07-24",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "约 60 个人类小时完成企业官网",
+        "en": "Corporate Website Built in About 60 Human Hours",
+        "chinese-traditional": "約 60 個人類小時完成企業官網"
+      },
+      "period": "2026-07-24",
+      "role": {
+        "zh": "AI 协作开发复盘",
+        "en": "AI-assisted development reflection",
+        "chinese-traditional": "AI 協作開發復盤"
+      },
+      "summary": {
+        "zh": "记录从零完成企业级门户网站的工程过程与 AI 协作方法。",
+        "en": "A reflection on building a corporate portal from scratch with AI-assisted engineering.",
+        "chinese-traditional": "記錄從零完成企業級門戶網站的工程過程與 AI 協作方法。"
+      },
+      "actions": [],
+      "outcomes": [],
+      "tags": [
+        {
+          "zh": "AI 协作",
+          "en": "AI Collaboration",
+          "chinese-traditional": "AI 協作"
+        },
+        {
+          "zh": "企业官网",
+          "en": "Corporate Website",
+          "chinese-traditional": "企業官網"
+        }
+      ],
+      "capabilities": [
+        "full-stack",
+        "collaboration"
+      ],
+      "target": "post.html?f=2026-07-24-ai-enterprise-website.md",
+      "media": [],
+      "links": [],
+      "relatedPost": "2026-07-24-ai-enterprise-website.md"
+    },
+    {
+      "id": "imp-muon-thermal-internship",
+      "kind": "research",
+      "pages": [
+        "projects",
+        "learning",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2026-08-28",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "中国科学院近代物理研究所实习 8 周",
+        "chinese-traditional": "中國科學院近代物理研究所實習 8 週",
+        "en": "Eight-week Internship at the Institute of Modern Physics, CAS"
+      },
+      "period": {
+        "zh": "2026-07-06—2026-08-28",
+        "chinese-traditional": "2026-07-06—2026-08-28",
+        "en": "2026-07-06—2026-08-28"
+      },
+      "role": {
+        "zh": "科研实习生",
+        "chinese-traditional": "科研實習生",
+        "en": "Research intern"
+      },
+      "summary": {
+        "zh": "在广东惠州中国科学院近代物理研究所完成八周科研实习，围绕缪子运输工程开展热工分析，使用 ANSYS Fluent 并依托超算集群完成数值模拟与工况校核；这段经历进一步把仿真能力映射到运行工况、边界条件、异常状态与安全裕度的工程判断。",
+        "chinese-traditional": "在廣東惠州中國科學院近代物理研究所完成八週科研實習，圍繞緲子運輸工程開展熱工分析，使用 ANSYS Fluent 並依託超算集群完成數值模擬與工況校核；這段經歷進一步把仿真能力映射到運行工況、邊界條件、異常狀態與安全裕度的工程判斷。",
+        "en": "Completed an eight-week research internship at the Institute of Modern Physics in Huizhou, Guangdong, conducting thermal analysis for muon transport engineering with ANSYS Fluent on a supercomputing cluster; the work connected simulation practice with engineering judgment around operating cases, boundary conditions, abnormal states, and safety margins."
+      },
+      "actions": [
+        {
+          "zh": "围绕缪子运输工程整理边界条件、运行工况与校核参数，先明确工程问题再建立计算模型。",
+          "chinese-traditional": "圍繞緲子運輸工程整理邊界條件、運行工況與校核參數，先明確工程問題再建立計算模型。",
+          "en": "Organized boundary conditions, operating cases, and verification parameters before constructing the numerical model."
+        },
+        {
+          "zh": "使用 ANSYS Fluent 建立并运行数值模型，依托超算集群完成模拟计算，并关注计算任务的资源、状态与结果一致性。",
+          "chinese-traditional": "使用 ANSYS Fluent 建立並運行數值模型，依託超算集群完成模擬計算，並關注計算任務的資源、狀態與結果一致性。",
+          "en": "Built and ran ANSYS Fluent models on a supercomputing cluster while tracking computational resources, job states, and result consistency."
+        },
+        {
+          "zh": "对物理耦合场参数组进行校核，比较关键工况并评估安全裕度，避免把单一仿真结果脱离运行条件解读。",
+          "chinese-traditional": "對物理耦合場參數組進行校核，比較關鍵工況並評估安全裕度，避免把單一仿真結果脫離運行條件解讀。",
+          "en": "Verified coupled-field parameter sets, compared key operating cases, and assessed safety margins without interpreting isolated simulation outputs outside their operating context."
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "已完成八周实习与阶段性热工分析任务；在已校核的物理耦合场参数组下，结果显示安全裕度充足。",
+          "chinese-traditional": "已完成八週實習與階段性熱工分析任務；在已校核的物理耦合場參數組下，結果顯示安全裕度充足。",
+          "en": "Completed the eight-week internship and staged thermal-analysis work; verified parameter sets showed adequate safety margins."
+        },
+        {
+          "zh": "形成 ANSYS Fluent、超算集群与工程热工分析相结合的科研实践，并建立“工况—边界—异常—校核—安全裕度”的运维思维映射。",
+          "chinese-traditional": "形成 ANSYS Fluent、超算集群與工程熱工分析相結合的科研實踐，並建立「工況—邊界—異常—校核—安全裕度」的運維思維映射。",
+          "en": "Built practical experience combining ANSYS Fluent, HPC, and engineering thermal analysis, with an operations-oriented mental model spanning cases, boundaries, abnormal conditions, verification, and safety margin."
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "这段经历让我把“会跑仿真”进一步转化为“知道模型服务于什么运行判断”：先确认边界、工况与风险，再看结果与裕度；这种顺序可以迁移到设备运维和工程技术管理。",
+          "chinese-traditional": "這段經歷讓我把「會跑仿真」進一步轉化為「知道模型服務於什麼運行判斷」：先確認邊界、工況與風險，再看結果與裕度；這種順序可以遷移到設備運維和工程技術管理。",
+          "en": "The experience shifted my focus from simply running simulations to understanding which operating decisions a model supports: establish boundaries, cases, and risks first, then interpret results and margins—a sequence transferable to equipment operations and engineering management."
+        }
+      ],
+      "tags": [
+        {
+          "zh": "中科院近物所",
+          "chinese-traditional": "中科院近物所",
+          "en": "Institute of Modern Physics, CAS"
+        },
+        {
+          "zh": "缪子运输工程",
+          "chinese-traditional": "緲子運輸工程",
+          "en": "Muon Transport Engineering"
+        },
+        "ANSYS Fluent",
+        {
+          "zh": "超算集群",
+          "chinese-traditional": "超算集群",
+          "en": "Supercomputing Cluster"
+        },
+        {
+          "zh": "运行校核",
+          "chinese-traditional": "運行校核",
+          "en": "Operational Verification"
+        }
+      ],
+      "capabilities": [
+        "energy-power",
+        "ansys"
+      ],
+      "target": "projects.html#record-imp-muon-thermal-internship",
+      "media": [],
+      "links": [],
+      "context": [
+        {
+          "zh": "实习地点为广东惠州，周期为 2026 年 7 月 6 日至 8 月 28 日，共八周。",
+          "chinese-traditional": "實習地點為廣東惠州，週期為 2026 年 7 月 6 日至 8 月 28 日，共八週。",
+          "en": "The internship was based in Huizhou, Guangdong, from July 6 to August 28, 2026, for eight weeks."
+        },
+        {
+          "zh": "本记录强调由科研仿真形成的运维思维映射，不将科研实习表述为实际生产运行岗位经历。",
+          "chinese-traditional": "本記錄強調由科研仿真形成的運維思維映射，不將科研實習表述為實際生產運行崗位經歷。",
+          "en": "This record highlights operations-oriented thinking derived from research simulation and does not present the internship as production operations experience."
+        }
+      ],
+      "relatedPost": "2026-08-28-imp-internship-complete.md",
+      "displayPriority": 155
+    },
+    {
+      "id": "ai-certification-post",
+      "kind": "credential",
+      "pages": [],
+      "size": "compact",
+      "featured": false,
+      "timelineDate": "2026-01-08",
+      "timelineType": "progress",
+      "title": {
+        "zh": "生成式人工智能工程师培训及认证",
+        "en": "Generative AI Engineer Training and Certification",
+        "chinese-traditional": "生成式人工智能工程師培訓及認證"
+      },
+      "period": "2026-01-08",
+      "role": {
+        "zh": "学习信息整理",
+        "en": "Learning information record",
+        "chinese-traditional": "學習信息整理"
+      },
+      "summary": {
+        "zh": "整理生成式人工智能工程师培训标准、学习形式与认证信息。",
+        "en": "Organized training standards, study formats, and certification information for generative AI engineering.",
+        "chinese-traditional": "整理生成式人工智能工程師培訓標準、學習形式與認證信息。"
+      },
+      "actions": [],
+      "outcomes": [],
+      "tags": [
+        {
+          "zh": "生成式 AI",
+          "en": "Generative AI",
+          "chinese-traditional": "生成式 AI"
+        },
+        {
+          "zh": "认证",
+          "en": "Certification",
+          "chinese-traditional": "認證"
+        }
+      ],
+      "capabilities": [
+        "ai-agent",
+        "reading-notes"
+      ],
+      "target": "post.html?f=人工智能报考.md",
+      "media": [],
+      "links": []
+    },
+    {
+      "id": "ai-engineering-orchestration",
+      "kind": "practice",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2026-08-02",
+      "timelineType": "milestone",
+      "title": {
+        "zh": "GitHub–PowerShell–AI 工程协作体系",
+        "chinese-traditional": "GitHub–PowerShell–AI 工程協作體系",
+        "en": "GitHub–PowerShell–AI Engineering Collaboration System"
+      },
+      "period": {
+        "zh": "2026-07-28—2026-08-02 形成体系，持续复用",
+        "chinese-traditional": "2026-07-28—2026-08-02 形成體系，持續複用",
+        "en": "Systematized 2026-07-28—2026-08-02; continuously reused"
+      },
+      "role": {
+        "zh": "工程协作体系设计 / AI 工作流编排",
+        "chinese-traditional": "工程協作體系設計 / AI 工作流編排",
+        "en": "Engineering workflow design / AI orchestration"
+      },
+      "summary": {
+        "zh": "从个人网站重构中的提交失败、长对话漂移、构建验证与交接问题出发，将 ChatGPT、GitHub 与 PowerShell 从临时工具组合固化为可复用工程协作体系：GitHub 作为事实源与版本边界，PowerShell 作为本地构建和验证工作台，AI 负责方案、修改、核对与文档化，最终决策由可验证结果和人工验收共同约束。",
+        "chinese-traditional": "從個人網站重構中的提交失敗、長對話漂移、構建驗證與交接問題出發，將 ChatGPT、GitHub 與 PowerShell 從臨時工具組合固化為可複用工程協作體系：GitHub 作為事實源與版本邊界，PowerShell 作為本地構建和驗證工作臺，AI 負責方案、修改、核對與文檔化，最終決策由可驗證結果和人工驗收共同約束。",
+        "en": "Derived from real failures in website refactoring—failed commits, long-context drift, build verification, and handoffs—this workflow turns ChatGPT, GitHub, and PowerShell into a reusable engineering system: GitHub is the source of truth and version boundary, PowerShell is the local build/verification workbench, AI handles planning, changes, review, and documentation, while verified results and human acceptance remain authoritative."
+      },
+      "actions": [
+        {
+          "zh": "明确三类工具的职责边界，避免让聊天上下文、远端仓库和本地工作区彼此替代。",
+          "chinese-traditional": "明確三類工具的職責邊界，避免讓聊天上下文、遠端倉庫和本地工作區彼此替代。",
+          "en": "Defined clear responsibilities for conversational context, the remote repository, and the local workspace so none substitutes for another."
+        },
+        {
+          "zh": "将任务拆成可核验的小批次，以 diff、原子提交、构建检查、运行结果和回滚点管理变更风险。",
+          "chinese-traditional": "將任務拆成可核驗的小批次，以 diff、原子提交、構建檢查、運行結果和回滾點管理變更風險。",
+          "en": "Split work into verifiable batches and managed change risk through diffs, atomic commits, build checks, runtime evidence, and rollback points."
+        },
+        {
+          "zh": "为长周期项目建立交接文档、施工细节与事实源优先级，降低新对话接手时的重复试错。",
+          "chinese-traditional": "為長週期項目建立交接文檔、施工細節與事實源優先級，降低新對話接手時的重複試錯。",
+          "en": "Established handoff documents, implementation notes, and source-of-truth priority rules for long-running projects to reduce repeated trial and error."
+        },
+        {
+          "zh": "把“AI 给出答案”与“工程上已经成立”分开，只有通过本地验证、CI/检查、仓库状态和人工验收的结果才进入主线。",
+          "chinese-traditional": "把「AI 給出答案」與「工程上已經成立」分開，只有通過本地驗證、CI/檢查、倉庫狀態和人工驗收的結果才進入主線。",
+          "en": "Separated AI output from engineering truth: only changes backed by local verification, checks/CI, repository state, and human acceptance enter the mainline."
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "形成可迁移到不同项目的 AI–GitHub–PowerShell 协作方法与 Skill/交接文档范式。",
+          "chinese-traditional": "形成可遷移到不同項目的 AI–GitHub–PowerShell 協作方法與 Skill/交接文檔範式。",
+          "en": "Produced a reusable AI–GitHub–PowerShell collaboration method plus a Skill/handoff-document pattern transferable across projects."
+        },
+        {
+          "zh": "后续个人网站与软件项目均沿用“事实源—任务切片—验证—提交—交接”的工程管理节奏。",
+          "chinese-traditional": "後續個人網站與軟體項目均沿用「事實源—任務切片—驗證—提交—交接」的工程管理節奏。",
+          "en": "Later website and software work reused the same source-of-truth → task slicing → verification → commit → handoff management rhythm."
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "真正提升效率的不是把更多工具接在一起，而是先规定谁拥有事实、谁负责验证、何时允许提交，以及失败后如何恢复。",
+          "chinese-traditional": "真正提升效率的不是把更多工具接在一起，而是先規定誰擁有事實、誰負責驗證、何時允許提交，以及失敗後如何恢復。",
+          "en": "Efficiency came not from connecting more tools, but from defining who owns truth, who verifies it, when a change may be committed, and how recovery works after failure."
+        }
+      ],
+      "tags": [
+        {
+          "zh": "工程管理",
+          "chinese-traditional": "工程管理",
+          "en": "Engineering Management"
+        },
+        "GitHub",
+        "PowerShell",
+        {
+          "zh": "AI 协作",
+          "chinese-traditional": "AI 協作",
+          "en": "AI Collaboration"
+        },
+        {
+          "zh": "可验证交付",
+          "chinese-traditional": "可驗證交付",
+          "en": "Verifiable Delivery"
+        }
+      ],
+      "capabilities": [
+        "collaboration",
+        "ai-agent",
+        "full-stack"
+      ],
+      "target": "projects.html#record-ai-engineering-orchestration",
+      "media": [],
+      "links": [],
+      "relatedPost": "2026-08-20-ai-engineering-orchestration.md",
+      "displayPriority": 150
+    },
+    {
+      "id": "ai-video-editing-software",
+      "kind": "software",
+      "pages": [
+        "projects",
+        "capabilities"
+      ],
+      "size": "extended",
+      "featured": true,
+      "timelineDate": "2026-08-30",
+      "timelineType": "progress",
+      "title": {
+        "zh": "AI 视频剪辑软件：能力边界与产品化验证",
+        "chinese-traditional": "AI 視頻剪輯軟體：能力邊界與產品化驗證",
+        "en": "AI Video Editing Software: Capability Boundaries and Product Validation"
+      },
+      "period": {
+        "zh": "2026-08-10—持续开发",
+        "chinese-traditional": "2026-08-10—持續開發",
+        "en": "2026-08-10—ongoing"
+      },
+      "role": {
+        "zh": "独立产品设计 / AI 协作开发与验证",
+        "chinese-traditional": "獨立產品設計 / AI 協作開發與驗證",
+        "en": "Independent product design / AI-assisted development and validation"
+      },
+      "summary": {
+        "zh": "独立推进本地优先的 AI 视频剪辑软件，不把目标设为“让模型包办一切”，而是持续验证 AI 在规划、素材理解、剪辑决策、EDL、渲染与复核各环节真正能负责什么、必须被什么证据约束；截至 0.1.3 已进入 Windows Human Gate 产品验证，并开始为软件著作权申报整理工程资产。",
+        "chinese-traditional": "獨立推進本地優先的 AI 視頻剪輯軟體，不把目標設為「讓模型包辦一切」，而是持續驗證 AI 在規劃、素材理解、剪輯決策、EDL、渲染與複核各環節真正能負責什麼、必須被什麼證據約束；截至 0.1.3 已進入 Windows Human Gate 產品驗證，並開始為軟體著作權申報整理工程資產。",
+        "en": "Independently developing a local-first AI video editor, with the goal not of letting a model do everything but of testing what AI can genuinely own—and what evidence must constrain it—across planning, media understanding, editorial decisions, EDL, rendering, and review; by v0.1.3 the project had entered Windows Human Gate product validation and software-copyright preparation."
+      },
+      "actions": [
+        {
+          "zh": "将产品拆成 Planning 与 Editing 两条可独立工作的路径，并建立 Brief → ScriptPlan/ShootingPlan 与本地素材 → Director/EditPlan → EDL → Renderer/Review 的可检查管线。",
+          "chinese-traditional": "將產品拆成 Planning 與 Editing 兩條可獨立工作的路徑，並建立 Brief → ScriptPlan/ShootingPlan 與本地素材 → Director/EditPlan → EDL → Renderer/Review 的可檢查管線。",
+          "en": "Split the product into independently usable Planning and Editing paths with inspectable pipelines from Brief to plans and from local footage through Director/EditPlan, EDL, Renderer, and Review."
+        },
+        {
+          "zh": "坚持证据约束：模型可以提出方案，但不能凭空创造源素材时间戳、镜头事实或最终时间线权威。",
+          "chinese-traditional": "堅持證據約束：模型可以提出方案，但不能憑空創造源素材時間戳、鏡頭事實或最終時間線權威。",
+          "en": "Enforced evidence grounding: models may propose decisions but cannot invent source timestamps, shot facts, or final timeline authority."
+        },
+        {
+          "zh": "建立产品宪法、架构契约、ADR、Work Order、质量门与 Human Gate，把“代码能跑”和“普通 Windows 用户可用”分成不同验证层级。",
+          "chinese-traditional": "建立產品憲法、架構契約、ADR、Work Order、質量門與 Human Gate，把「代碼能跑」和「普通 Windows 用戶可用」分成不同驗證層級。",
+          "en": "Established a product constitution, architecture contracts, ADRs, Work Orders, quality gates, and Human Gates to separate code-level correctness from ordinary Windows-user usability."
+        },
+        {
+          "zh": "围绕安装、自动更新、模型配额、失败恢复与真实素材测试持续修正工程边界，而不是用演示性成功替代产品可用性。",
+          "chinese-traditional": "圍繞安裝、自動更新、模型配額、失敗恢復與真實素材測試持續修正工程邊界，而不是用演示性成功替代產品可用性。",
+          "en": "Iterated on installation, updates, provider quotas, failure recovery, and real-footage tests instead of treating demo success as product usability."
+        }
+      ],
+      "outcomes": [
+        {
+          "zh": "已形成公开代码仓库、Windows 可安装版本与 0.1.3 版本迭代链路，当前仍处于结构施工和产品验证阶段。",
+          "chinese-traditional": "已形成公開代碼倉庫、Windows 可安裝版本與 0.1.3 版本迭代鏈路，當前仍處於結構施工和產品驗證階段。",
+          "en": "Produced a public code repository, installable Windows builds, and a v0.1.3 iteration path; the product remains in structural construction and validation."
+        },
+        {
+          "zh": "建立从自动化测试到 Human Gate 的分层验证机制，显式记录失败、阻塞条件与恢复路径。",
+          "chinese-traditional": "建立從自動化測試到 Human Gate 的分層驗證機制，顯式記錄失敗、阻塞條件與恢復路徑。",
+          "en": "Established layered validation from automated tests to Human Gates, explicitly recording failures, blockers, and recovery paths."
+        },
+        {
+          "zh": "已开始按中国软件著作权申请需求整理版本、代码、说明文档与发布资产，尚未将“准备申报”表述为“已获权利”。",
+          "chinese-traditional": "已開始按中國軟體著作權申請需求整理版本、代碼、說明文檔與發布資產，尚未將「準備申報」表述為「已獲權利」。",
+          "en": "Began organizing versions, source code, documentation, and release assets for a Chinese software-copyright application, without presenting preparation as a granted right."
+        }
+      ],
+      "reflection": [
+        {
+          "zh": "这个项目最重要的产物不是“AI 会剪视频”的演示，而是一套不断暴露 AI 能力边界、把不可验证决策退回给证据和人工门控的产品工程方法。",
+          "chinese-traditional": "這個項目最重要的產物不是「AI 會剪視頻」的演示，而是一套不斷暴露 AI 能力邊界、把不可驗證決策退回給證據和人工門控的產品工程方法。",
+          "en": "The central outcome is not a demo that “AI can edit video,” but a product-engineering method that exposes AI capability boundaries and routes unverifiable decisions back to evidence and human gates."
+        }
+      ],
+      "tags": [
+        {
+          "zh": "AI 视频剪辑",
+          "chinese-traditional": "AI 視頻剪輯",
+          "en": "AI Video Editing"
+        },
+        "Python",
+        "EDL",
+        {
+          "zh": "产品工程",
+          "chinese-traditional": "產品工程",
+          "en": "Product Engineering"
+        },
+        {
+          "zh": "软件著作权准备",
+          "chinese-traditional": "軟體著作權準備",
+          "en": "Software Copyright Preparation"
+        }
+      ],
+      "capabilities": [
+        "ai-agent",
+        "full-stack",
+        "collaboration"
+      ],
+      "target": "projects.html#record-ai-video-editing-software",
+      "media": [],
+      "links": [
+        {
+          "label": {
+            "zh": "GitHub 仓库",
+            "chinese-traditional": "GitHub 倉庫",
+            "en": "GitHub Repository"
+          },
+          "url": "https://github.com/orange-lee-tech/video-editing-agent"
+        }
+      ],
+      "context": [
+        {
+          "zh": "GitHub 仓库创建于 2026-08-10；截至 2026-08-30，主线版本已推进至 0.1.3，并持续进行真实 Windows 环境验证。",
+          "chinese-traditional": "GitHub 倉庫創建於 2026-08-10；截至 2026-08-30，主線版本已推進至 0.1.3，並持續進行真實 Windows 環境驗證。",
+          "en": "The GitHub repository was created on August 10, 2026; by August 30 the mainline had advanced to v0.1.3 with continued validation in real Windows environments."
+        }
+      ],
+      "relatedPost": "2026-08-30-ai-video-directing-software.md",
+      "displayPriority": 160
+    }
+  ],
+  "generatedBy": "content/records.yml"
+}

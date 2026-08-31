@@ -1,0 +1,42 @@
+/* Canonical undergraduate portfolio cards and evidence streams. */
+.portfolio-record-section { margin-top: 72px; }
+.portfolio-record-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.portfolio-record-column { min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.portfolio-record { display: block; width: 100%; min-width: 0; margin: 0; padding: 26px; border: 1px solid var(--paper-line, #d7d0c5); border-radius: 18px; background: rgba(251,249,244,.96); box-shadow: 0 15px 40px rgba(34,42,49,.055); scroll-margin-top: 100px; }
+.portfolio-record.is-compact { padding: 22px; }
+.portfolio-record.is-extended { border-left: 4px solid var(--paper-brass, #8b5e2d); }
+.portfolio-record[hidden] { display: none; }
+.portfolio-record header { display: flex; justify-content: space-between; gap: 16px; color: var(--paper-brass, #8b5e2d); font: 600 11px/1.5 "IBM Plex Mono", monospace; letter-spacing: .04em; }
+.portfolio-record header time { color: var(--paper-muted, #5d6873); text-align: right; }
+.portfolio-record-role { margin: 18px 0 6px; color: var(--paper-link, #1d5f7a); font-size: 13px; font-weight: 700; }
+.portfolio-record h3 { margin: 0 0 14px; font-size: clamp(22px, 2.2vw, 31px); line-height: 1.3; }
+.portfolio-record-summary { margin: 0; color: var(--paper-muted, #5d6873); line-height: 1.78; }
+.portfolio-record-list { margin-top: 20px; color: var(--paper-muted, #5d6873); }
+.portfolio-record-list strong { color: var(--paper-text, #16202a); font-size: 13px; }
+.portfolio-record-list ul { margin: 8px 0 0; padding-left: 20px; line-height: 1.72; }
+.portfolio-record-details { margin-top: 18px; border-top: 1px solid var(--paper-line, #d7d0c5); }
+.portfolio-record-details summary { padding-top: 14px; color: var(--paper-link, #1d5f7a); cursor: pointer; font-weight: 700; }
+.portfolio-record-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+.portfolio-record-tags span { padding: 4px 8px; border: 1px solid var(--paper-line, #d7d0c5); border-radius: 7px; background: var(--paper-soft, #ece7de); color: var(--paper-muted, #5d6873); font: 500 11px/1.35 "IBM Plex Mono", monospace; }
+.portfolio-record-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.portfolio-record-links a { color: var(--paper-link, #1d5f7a); font-weight: 700; text-decoration: none; }
+.portfolio-evidence-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 20px; }
+.portfolio-evidence-strip button { min-width: 0; padding: 0; overflow: hidden; border: 1px solid var(--paper-line, #d7d0c5); border-radius: 10px; background: #fff; cursor: zoom-in; }
+.portfolio-evidence-strip img { width: 100%; aspect-ratio: 4/3; display: block; object-fit: cover; }
+.portfolio-filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+.portfolio-filter-bar button { min-height: 38px; padding: 0 12px; border: 1px solid var(--paper-line, #d7d0c5); border-radius: 9px; background: rgba(251,249,244,.86); color: var(--paper-muted, #5d6873); cursor: pointer; }
+.portfolio-filter-bar button.is-active { border-color: rgba(29,95,122,.42); background: rgba(29,95,122,.09); color: var(--paper-link, #1d5f7a); }
+.portfolio-evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.portfolio-evidence-grid a { padding: 18px; display: grid; gap: 6px; border: 1px solid var(--paper-line, #d7d0c5); border-radius: 13px; color: inherit; text-decoration: none; background: rgba(251,249,244,.94); }
+.portfolio-evidence-grid a:hover { border-color: rgba(29,95,122,.42); }
+.portfolio-evidence-grid span, .portfolio-evidence-grid small { color: var(--paper-muted, #5d6873); font: 500 11px/1.45 "IBM Plex Mono", monospace; }
+.portfolio-media-row .media-track { display: flex; width: max-content; }
+.portfolio-media-row .media-sequence { display: flex; gap: 14px; padding-right: 14px; flex: 0 0 auto; }
+.portfolio-evidence-dialog { width: min(1120px, calc(100% - 32px)); max-height: calc(100vh - 32px); padding: 0; overflow: hidden; border: 1px solid #3a4b5c; border-radius: 18px; background: #090d12; color: #f3f6f8; }
+.portfolio-evidence-dialog::backdrop { background: rgba(9,13,18,.86); }
+.portfolio-evidence-dialog-toolbar { min-height: 58px; padding: 10px 14px 10px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid #263342; }
+.portfolio-evidence-dialog-toolbar p { margin: 0; }
+.portfolio-evidence-dialog-toolbar button { width: 42px; height: 42px; border: 1px solid #3a4b5c; border-radius: 10px; background: transparent; color: #f3f6f8; font-size: 24px; cursor: pointer; }
+.portfolio-evidence-dialog > img { width: 100%; max-height: calc(100vh - 110px); object-fit: contain; display: block; }
+
+@media (max-width: 760px) { .portfolio-record-grid { grid-template-columns: 1fr; } .portfolio-evidence-grid { grid-template-columns: 1fr; } .portfolio-record { padding: 22px; } .portfolio-record header { display: grid; } .portfolio-evidence-strip { grid-template-columns: repeat(2, minmax(0,1fr)); } }

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "page": {
+    "kind": "research",
+    "eyebrow": {
+      "zh": "研究记录",
+      "chinese-traditional": "研究記錄",
+      "en": "RESEARCH RECORDS"
+    },
+    "title": {
+      "zh": "研究与成果转化",
+      "chinese-traditional": "研究與成果轉化",
+      "en": "Research & Translation"
+    },
+    "description": {
+      "zh": "研究经历改由本科履历主记录统一生成，避免竞赛、论文和工程组织被拆成重复卡片。",
+      "chinese-traditional": "研究經歷改由本科履歷主記錄統一生成，避免競賽、論文與工程組織被拆成重複卡片。",
+      "en": "Research experiences are generated from canonical portfolio records so competitions",
+      "papers": null,
+      "and research engineering are not duplicated.": null
+    }
+  },
+  "items": [],
+  "generatedBy": "content/research.yml"
+}

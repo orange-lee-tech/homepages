@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Li Yucheng's engineering, research, and software archive" />
+  <meta name="author" content="Li Yucheng" />
+  <title>Graphite Archive · Li Yucheng</title>
+  <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+  <link rel="stylesheet" href="static/css/archive.css?v=graphite-archive-4" />
+  <link rel="stylesheet" href="static/css/archive-pages.css?v=archive-ia-2" />
+  <link rel="stylesheet" href="static/css/records-home.css?v=portfolio-6" />
+</head>
+<body class="archive-page">
+  <header class="archive-chrome">
+    <a class="archive-brand" href="#profile" aria-label="Back to the first chapter">
+      <span class="archive-brand-mark" aria-hidden="true"></span>
+      <span id="archive-brand">Graphite Archive</span>
+    </a>
+    <div class="archive-language" aria-label="Language selector">
+      <button type="button" data-language="zh" aria-pressed="false">简</button>
+      <button type="button" data-language="chinese-traditional" aria-pressed="true">繁</button>
+      <button type="button" data-language="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <aside class="section-rail" aria-label="Page chapters">
+    <span class="rail-line" aria-hidden="true"><span id="rail-progress"></span></span>
+    <a href="#profile" data-section-link="profile" class="is-active">
+      <span class="rail-number">01</span>
+      <strong id="rail-profile">当前</strong>
+    </a>
+    <a href="#timeline" data-section-link="timeline">
+      <span class="rail-number">02</span>
+      <strong id="rail-timeline">轨迹</strong>
+    </a>
+    <a href="#archive" data-section-link="archive">
+      <span class="rail-number">03</span>
+      <strong id="rail-archive">档案</strong>
+    </a>
+    <span class="rail-more" aria-hidden="true">↓</span>
+  </aside>
+
+  <main>
+    <section class="archive-screen profile-screen" id="profile" aria-labelledby="profile-section-title">
+      <div class="archive-shell">
+        <div class="archive-visually-hidden">
+          <p id="profile-kicker">01 / PROFILE</p>
+          <h1 id="profile-section-title">当前档案</h1>
+          <p id="profile-section-description">当前身份、能力配置与公开入口。</p>
+        </div>
+
+        <div class="profile-grid">
+          <article class="instrument-card identity-card">
+            <div class="instrument-topline">
+              <span class="system-code">ID / LYC-2026</span>
+              <span class="active-state" id="profile-active">当前有效</span>
+            </div>
+
+            <h2 class="profile-display-name" id="profile-display-name">李雨橙</h2>
+            <p class="profile-role" id="profile-role"></p>
+            <p class="profile-thesis" id="profile-thesis"></p>
+
+            <dl class="profile-facts">
+              <div>
+                <dt id="label-status">状态</dt>
+                <dd id="profile-status"></dd>
+              </div>
+              <div>
+                <dt id="label-phase">阶段</dt>
+                <dd id="profile-phase"></dd>
+              </div>
+              <div>
+                <dt id="label-focus">主线</dt>
+                <dd id="profile-focus"></dd>
+              </div>
+            </dl>
+
+            <div class="identity-ports" id="identity-ports" aria-label="Identity ports"></div>
+            <p class="profile-build" id="profile-build"></p>
+          </article>
+
+          <article class="instrument-card radar-card">
+            <div class="radar-toolbar">
+              <div>
+                <p class="system-code" id="radar-code">能力雷达</p>
+                <p class="radar-state-line"><strong id="radar-heading">2026</strong><span id="radar-current-state">CURRENT</span></p>
+              </div>
+              <div class="year-switch" id="year-switch" role="group" aria-label="Capability year"></div>
+            </div>
+
+            <div class="radar-stage">
+              <svg class="radar-svg" id="radar-svg" viewBox="0 0 600 490" role="img" aria-labelledby="radar-svg-title radar-svg-desc">
+                <title id="radar-svg-title">Capability radar</title>
+                <desc id="radar-svg-desc">Five capability levels for the selected year.</desc>
+              </svg>
+            </div>
+
+            <div class="radar-footer">
+              <p class="radar-summary" id="radar-summary"></p>
+              <div class="scale-legend" id="scale-legend" aria-label="Capability scale"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-screen timeline-screen" id="timeline" aria-labelledby="timeline-title">
+      <div class="archive-shell">
+        <div class="archive-visually-hidden">
+          <p id="timeline-kicker">02 / TIMELINE</p>
+          <h2 id="timeline-title">形成轨迹</h2>
+          <p id="timeline-description"></p>
+        </div>
+
+        <div class="timeline-board" id="timeline-list" aria-live="polite"></div>
+        <p class="timeline-link-message" id="timeline-link-message" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="archive-screen portal-screen" id="archive" aria-labelledby="archive-title">
+      <div class="archive-shell">
+        <div class="archive-visually-hidden">
+          <p id="archive-kicker">03 / ARCHIVE</p>
+          <h2 id="archive-title">档案入口</h2>
+          <p id="archive-description">四个入口，连接完整个人内容世界。</p>
+        </div>
+        <div class="portal-grid" id="archive-portals"></div>
+      </div>
+    </section>
+  </main>
+
+
+  <section class="home-destination-section" aria-label="Archive destinations">
+    <div class="archive-shell home-destination-inner">
+      <p class="home-destination-label" data-home-destination-label>继续浏览完整档案</p>
+      <nav class="home-destination-nav" data-home-destination-nav>
+        <a href="index.html" data-nav-key="home" aria-current="page">主页</a>
+        <a href="projects.html" data-nav-key="projects">项目</a>
+        <a href="learning.html" data-nav-key="learning">学习</a>
+        <a href="capabilities.html" data-nav-key="capabilities">能力</a>
+        <a href="updates.html" data-nav-key="updates">动态</a>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="archive-footer">
+    <div class="archive-shell archive-footer-inner">
+      <span>© Li Yucheng 2023–2026</span>
+      <span>
+        <a href="https://github.com/orange-lee-tech" target="_blank" rel="noopener noreferrer">GitHub</a>
+        ·
+        <a href="https://openreview.net/profile?id=%7EYucheng_Li13" target="_blank" rel="noopener noreferrer">OpenReview</a>
+        ·
+        <a href="LICENSE">License</a>
+      </span>
+    </div>
+  </footer>
+
+  <p class="archive-state" id="archive-state" role="status" aria-live="polite">Loading archive…</p>
+  <script src="static/js/archive-chrome.js?v=privacy-metrics-1"></script>
+  <script src="static/js/archive-homepage.js?v=pages-path-1"></script>
+  <script src="static/js/portfolio-timeline.js?v=portfolio-6"></script>
+</body>
+</html>

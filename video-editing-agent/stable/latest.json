@@ -1,0 +1,8 @@
+{
+  "version": "0.1.5",
+  "published_at": "2026-08-30T14:22:06Z",
+  "release_notes_url": "https://orange-lee-tech.github.io/homepages/video-editing-agent/stable/0.1.5.html",
+  "download_url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v0.1.5-rc-e59cab8/VideoEditingAgent-Setup-0.1.5.exe",
+  "installer_sha256": "45fd1225340e988a030c2acbcb2864092cb61f368f8b98720e24f5a402e76663",
+  "mandatory": false
+}

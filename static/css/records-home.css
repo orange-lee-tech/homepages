@@ -1,0 +1,106 @@
+/* Proportional portfolio timeline: real dates, collision lanes, dynamic row heights. */
+.portfolio-timeline-row { height: var(--row-height, 168px); }
+.portfolio-timeline-row::before { top: calc(var(--row-height, 168px) / 2); }
+.portfolio-timeline-row:not(:last-child)::after { top: calc(var(--row-height, 168px) / 2); height: var(--row-height, 168px); }
+.portfolio-timeline-row .timeline-year { top: calc(var(--row-height, 168px) / 2 - 28px); }
+.portfolio-timeline-row .timeline-direction { top: calc(var(--row-height, 168px) / 2 - 18px); }
+.portfolio-timeline-event { top: calc(var(--row-height, 168px) / 2 + var(--lane, 0) * 24px); cursor: pointer; }
+.portfolio-timeline-event.is-open { z-index: 80; }
+.portfolio-timeline-event.lane--1 .event-label { bottom: 30px; top: auto; }
+.portfolio-timeline-event.lane-0 .event-label { top: 28px; bottom: auto; }
+.portfolio-timeline-event.lane-1 .event-label { top: 34px; bottom: auto; }
+.portfolio-timeline-event.is-progress .event-label { opacity: 0; transform: translateX(-50%) translateY(4px); transition: 150ms ease; }
+.portfolio-timeline-event.is-progress:hover .event-label,
+.portfolio-timeline-event.is-progress:focus-visible .event-label,
+.portfolio-timeline-event.is-progress.is-open .event-label { opacity: 1; transform: translateX(-50%); }
+.portfolio-timeline-event .event-detail { top: 42px; bottom: auto; width: min(252px, calc(100vw - 48px)); padding: 12px 13px; }
+.portfolio-timeline-event.lane-1 .event-detail { bottom: 42px; top: auto; }
+
+/* Timeline details are compact and click-locked. Hover alone never opens the panel. */
+.portfolio-timeline-event:hover:not(.is-open) .event-detail,
+.portfolio-timeline-event:focus-visible:not(.is-open) .event-detail { display: none; }
+.portfolio-timeline-event.is-open .event-detail {
+  display: grid;
+  gap: 4px;
+  pointer-events: auto;
+}
+.portfolio-timeline-event .event-detail strong { margin: 0; line-height: 1.35; }
+.portfolio-timeline-event .event-role {
+  display: block;
+  color: var(--ice);
+  font-size: 10px;
+  line-height: 1.4;
+}
+.portfolio-timeline-event .event-summary {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--muted);
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.portfolio-timeline-event .event-detail a {
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .portfolio-timeline-row { min-height: var(--row-height, 210px); margin: 0 18px; }
+  .portfolio-timeline-event .event-label { width: 118px; font-size: 11px; }
+  .portfolio-timeline-event .event-detail { width: min(250px, calc(100vw - 64px)); }
+}
+
+@media (max-width: 760px) {
+  .portfolio-timeline-row.is-mobile {
+    position: relative;
+    height: var(--row-height, 320px);
+    min-height: var(--row-height, 320px);
+    margin: 0 18px;
+  }
+  .portfolio-timeline-row.is-mobile::before {
+    top: 42px;
+    bottom: 34px;
+    left: 56px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(180deg, rgba(120,214,232,.35), var(--ice), rgba(120,214,232,.35));
+  }
+  .portfolio-timeline-row.is-mobile:not(:last-child)::after { display: none; }
+  .portfolio-timeline-row.is-mobile .timeline-year {
+    top: 4px;
+    left: 0;
+    right: auto;
+  }
+  .portfolio-timeline-row.is-mobile .timeline-direction { display: none; }
+  .portfolio-timeline-row.is-mobile .portfolio-timeline-event {
+    width: 44px;
+    height: 44px;
+    transform: translate(-50%, -50%);
+  }
+  .portfolio-timeline-row.is-mobile .event-label,
+  .portfolio-timeline-row.is-mobile .portfolio-timeline-event.is-progress .event-label {
+    top: 50%;
+    bottom: auto;
+    left: 34px;
+    width: min(230px, calc(100vw - 132px));
+    opacity: 1;
+    text-align: left;
+    transform: translateY(-50%);
+  }
+  .portfolio-timeline-row.is-mobile .portfolio-timeline-event:hover .event-label,
+  .portfolio-timeline-row.is-mobile .portfolio-timeline-event:focus-visible .event-label,
+  .portfolio-timeline-row.is-mobile .portfolio-timeline-event.is-open .event-label {
+    transform: translateY(-50%);
+  }
+  .portfolio-timeline-row.is-mobile .event-detail,
+  .portfolio-timeline-row.is-mobile .lane-1 .event-detail {
+    top: 22px;
+    bottom: auto;
+    left: 34px;
+    right: auto;
+    width: min(270px, calc(100vw - 96px));
+    transform: none;
+  }
+}

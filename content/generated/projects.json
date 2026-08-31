@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "page": {
+    "title": {
+      "zh": "项目资产",
+      "chinese-traditional": "專案資產",
+      "en": "Projects"
+    },
+    "description": {
+      "zh": "汇总持续维护的软件、浏览器扩展与开源工程。论文与投稿记录单独归入 Research。",
+      "chinese-traditional": "彙總持續維護的軟體、瀏覽器擴充功能與開源工程。論文與投稿記錄單獨歸入 Research。",
+      "en": "Maintained software, browser extensions, and open-source engineering work. Papers and submissions are recorded separately under Research."
+    }
+  },
+  "items": [
+    {
+      "id": "desktop-ai-runtime",
+      "category": "engineering",
+      "status": "active",
+      "featured": true,
+      "updated": "2026-07",
+      "title": {
+        "zh": "桌面 AI Agent Runtime",
+        "chinese-traditional": "桌面 AI Agent Runtime",
+        "en": "Desktop AI Agent Runtime"
+      },
+      "summary": {
+        "zh": "基于 Electron、Vite 与 React 构建的本地桌面 AI 应用，重点完善 Agent Runtime、Tool Runtime、MCP、Skill、记忆、流式回复和稳定性测试。",
+        "chinese-traditional": "基於 Electron、Vite 與 React 建構的本機桌面 AI 應用，重點完善 Agent Runtime、Tool Runtime、MCP、Skill、記憶、串流回覆與穩定性測試。",
+        "en": "A local desktop AI application built with Electron, Vite, and React, focused on agent and tool runtimes, MCP, skills, memory, streaming responses, and reliability testing."
+      },
+      "tags": [
+        "Electron",
+        "React",
+        "Agent Runtime",
+        "MCP",
+        "Playwright"
+      ]
+    },
+    {
+      "id": "ielts-learning-assistant",
+      "category": "engineering",
+      "status": "active",
+      "featured": true,
+      "updated": "2026-07",
+      "title": {
+        "zh": "IELTS Learning Assistant",
+        "chinese-traditional": "IELTS Learning Assistant",
+        "en": "IELTS Learning Assistant"
+      },
+      "summary": {
+        "zh": "面向雅思机考平台的浏览器扩展，用于自由笔记、错因复盘、生词积累、句子收藏、标签管理与 Markdown 导出。",
+        "chinese-traditional": "面向雅思機考平台的瀏覽器擴充功能，用於自由筆記、錯因複盤、生詞累積、句子收藏、標籤管理與 Markdown 匯出。",
+        "en": "A browser extension for IELTS computer-based practice, supporting notes, mistake review, vocabulary collection, sentence capture, tags, and Markdown export."
+      },
+      "tags": [
+        "Browser Extension",
+        "Edge",
+        "IELTS",
+        "Knowledge Management"
+      ],
+      "links": [
+        {
+          "label": {
+            "zh": "GitHub 仓库",
+            "chinese-traditional": "GitHub 儲存庫",
+            "en": "GitHub repository"
+          },
+          "url": "https://github.com/orange-lee-tech/ielts-learning-assistant"
+        }
+      ]
+    },
+    {
+      "id": "homepage-renovation",
+      "category": "opensource",
+      "status": "active",
+      "featured": true,
+      "updated": "2026-07",
+      "title": {
+        "zh": "个人主页维护体系翻新",
+        "chinese-traditional": "個人主頁維護體系翻新",
+        "en": "Personal Homepage Maintenance Renovation"
+      },
+      "summary": {
+        "zh": "将静态个人主页升级为内容优先的长期资产门户，加入文章生成、繁体同步、图片扫描、内容校验、CI 与数据驱动项目目录。",
+        "chinese-traditional": "將靜態個人主頁升級為內容優先的長期資產入口，加入文章產生、繁體同步、圖片掃描、內容驗證、CI 與資料驅動專案目錄。",
+        "en": "Evolving a static homepage into a content-first long-term asset portal with post generation, Traditional Chinese sync, image discovery, validation, CI, and a data-driven project catalog."
+      },
+      "tags": [
+        "GitHub Pages",
+        "Markdown",
+        "YAML",
+        "Content Pipeline",
+        "CI"
+      ],
+      "links": [
+        {
+          "label": {
+            "zh": "当前仓库",
+            "chinese-traditional": "目前儲存庫",
+            "en": "Current repository"
+          },
+          "url": "https://github.com/orange-lee-tech/homepages"
+        }
+      ]
+    },
+    {
+      "id": "public-profiles",
+      "category": "profile",
+      "status": "maintained",
+      "featured": false,
+      "updated": "2026-07",
+      "title": {
+        "zh": "公开技术与学术身份",
+        "chinese-traditional": "公開技術與學術身分",
+        "en": "Public Technical and Academic Profiles"
+      },
+      "summary": {
+        "zh": "集中维护 GitHub 开源活动与 OpenReview 学术身份入口，作为公开项目、代码和论文记录的统一索引。",
+        "chinese-traditional": "集中維護 GitHub 開源活動與 OpenReview 學術身分入口，作為公開專案、程式碼與論文記錄的統一索引。",
+        "en": "Central entry points for GitHub open-source activity and the OpenReview academic identity, providing a unified index for public projects, code, and papers."
+      },
+      "tags": [
+        "GitHub",
+        "OpenReview",
+        "Public Profile"
+      ],
+      "links": [
+        {
+          "label": {
+            "zh": "GitHub 主页",
+            "chinese-traditional": "GitHub 主頁",
+            "en": "GitHub profile"
+          },
+          "url": "https://github.com/orange-lee-tech"
+        },
+        {
+          "label": {
+            "zh": "OpenReview 主页",
+            "chinese-traditional": "OpenReview 主頁",
+            "en": "OpenReview profile"
+          },
+          "url": "https://openreview.net/profile?id=%7EYucheng_Li13"
+        }
+      ]
+    }
+  ],
+  "generatedBy": "content/projects.yml"
+}

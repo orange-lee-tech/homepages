@@ -1,0 +1,1007 @@
+{
+  "version": 2,
+  "updated": "2026-08-30",
+  "chrome": {
+    "brand": {
+      "zh": "石墨数字档案馆",
+      "chinese-traditional": "石墨數位檔案館",
+      "en": "Graphite Archive"
+    },
+    "sections": {
+      "profile": {
+        "zh": "身份控制台",
+        "chinese-traditional": "身分控制台",
+        "en": "Profile"
+      },
+      "timeline": {
+        "zh": "能力时间线",
+        "chinese-traditional": "能力時間線",
+        "en": "Timeline"
+      },
+      "archive": {
+        "zh": "资产门户",
+        "chinese-traditional": "資產入口",
+        "en": "Archive"
+      }
+    }
+  },
+  "profile": {
+    "name": "Li Yucheng",
+    "chineseName": "李雨橙",
+    "role": {
+      "zh": "工程探索者 · 科研实践者 · 软件构建者",
+      "chinese-traditional": "工程探索者 · 科研實踐者 · 軟體構建者",
+      "en": "Engineer · Researcher · Builder"
+    },
+    "thesis": {
+      "zh": "以能源动力与工程仿真为专业主线，把科研分析、运行校核意识、AI 软件构建和工程管理方法沉淀为可验证、可维护的成果。",
+      "chinese-traditional": "以能源動力與工程模擬為專業主線，把科研分析、運行校核意識、AI 軟體構建和工程管理方法沉澱為可驗證、可維護的成果。",
+      "en": "Anchored in energy engineering and simulation, turning research analysis, operational-verification thinking, AI software building, and engineering-management methods into verifiable, maintainable outcomes."
+    },
+    "status": {
+      "zh": "中南大学能源与动力工程本科生；2026 年完成元智大学机械工程学系交换学习与中国科学院近代物理研究所八周科研实习。",
+      "chinese-traditional": "中南大學能源與動力工程本科生；2026 年完成元智大學機械工程學系交換學習與中國科學院近代物理研究所八週科研實習。",
+      "en": "Undergraduate in Energy and Power Engineering; completed a 2026 Mechanical Engineering exchange at Yuan Ze University and an eight-week research internship at the Institute of Modern Physics, CAS."
+    },
+    "phase": {
+      "zh": "本科阶段 · 工程实践、系统交付与长期维护",
+      "chinese-traditional": "本科階段 · 工程實踐、系統交付與長期維護",
+      "en": "Undergraduate stage · engineering practice, system delivery, and long-term maintenance"
+    },
+    "focus": {
+      "zh": "能源动力、工程仿真、运行校核、AI 系统工程与工程管理",
+      "chinese-traditional": "能源動力、工程模擬、運行校核、AI 系統工程與工程管理",
+      "en": "Energy systems, simulation, operational verification, AI systems engineering, and engineering management"
+    },
+    "build": "PROFILE BUILD 2026.08",
+    "ports": [
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/orange-lee-tech"
+      },
+      {
+        "id": "openreview",
+        "label": "OpenReview",
+        "url": "https://openreview.net/profile?id=%7EYucheng_Li13"
+      },
+      {
+        "id": "email",
+        "label": "Email",
+        "url": "mailto:1010969261@qq.com"
+      },
+      {
+        "id": "wechat",
+        "label": {
+          "zh": "微信公众号",
+          "chinese-traditional": "微信公眾號",
+          "en": "WeChat Official Account"
+        },
+        "pending": true
+      },
+      {
+        "id": "maimai",
+        "label": {
+          "zh": "脉脉",
+          "chinese-traditional": "脈脈",
+          "en": "Maimai"
+        },
+        "pending": true
+      }
+    ]
+  },
+  "scale": [
+    {
+      "level": 1,
+      "label": {
+        "zh": "接触了解",
+        "chinese-traditional": "接觸了解",
+        "en": "Initial understanding"
+      }
+    },
+    {
+      "level": 2,
+      "label": {
+        "zh": "系统学习",
+        "chinese-traditional": "系統學習",
+        "en": "Structured learning"
+      }
+    },
+    {
+      "level": 3,
+      "label": {
+        "zh": "独立实践",
+        "chinese-traditional": "獨立實踐",
+        "en": "Independent practice"
+      }
+    },
+    {
+      "level": 4,
+      "label": {
+        "zh": "完整成果",
+        "chinese-traditional": "完整成果",
+        "en": "Complete outcome"
+      }
+    },
+    {
+      "level": 5,
+      "label": {
+        "zh": "生产运用",
+        "chinese-traditional": "生產運用",
+        "en": "Production use"
+      }
+    }
+  ],
+  "radar": {
+    "defaultYear": 2026,
+    "currentYear": 2026,
+    "years": [
+      {
+        "year": 2024,
+        "primary": "collaboration",
+        "snapshot": {
+          "zh": "从团队协作与视觉表达进入工程实践。",
+          "chinese-traditional": "從團隊協作與視覺表達進入工程實踐。",
+          "en": "Entered engineering practice through collaboration and visual communication."
+        },
+        "capabilities": [
+          {
+            "id": "collaboration",
+            "name": {
+              "zh": "团队协作",
+              "chinese-traditional": "團隊協作",
+              "en": "Collaboration"
+            },
+            "level": 3
+          },
+          {
+            "id": "wps",
+            "name": {
+              "zh": "WPS 三件套",
+              "chinese-traditional": "WPS 三件套",
+              "en": "Office Productivity"
+            },
+            "level": 4
+          },
+          {
+            "id": "academic-graphic-design",
+            "name": {
+              "zh": "平面设计",
+              "chinese-traditional": "平面設計",
+              "en": "Graphic Design"
+            },
+            "level": 4
+          },
+          {
+            "id": "latex",
+            "name": {
+              "zh": "LaTeX 排版",
+              "chinese-traditional": "LaTeX 排版",
+              "en": "LaTeX Typesetting"
+            },
+            "level": 3
+          },
+          {
+            "id": "solidworks",
+            "name": {
+              "zh": "SolidWorks 仿真",
+              "chinese-traditional": "SolidWorks 模擬",
+              "en": "SolidWorks Simulation"
+            },
+            "level": 1
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "primary": "collaboration",
+        "snapshot": {
+          "zh": "团队交付与完整成果并行增长。",
+          "chinese-traditional": "團隊交付與完整成果並行增長。",
+          "en": "Team delivery and complete outcomes advanced together."
+        },
+        "capabilities": [
+          {
+            "id": "collaboration",
+            "name": {
+              "zh": "团队协作",
+              "chinese-traditional": "團隊協作",
+              "en": "Collaboration"
+            },
+            "level": 4
+          },
+          {
+            "id": "full-stack",
+            "name": {
+              "zh": "全栈开发",
+              "chinese-traditional": "全端開發",
+              "en": "Full-stack Development"
+            },
+            "level": 2
+          },
+          {
+            "id": "academic-graphic-design",
+            "name": {
+              "zh": "平面设计",
+              "chinese-traditional": "平面設計",
+              "en": "Graphic Design"
+            },
+            "level": 5
+          },
+          {
+            "id": "latex",
+            "name": {
+              "zh": "LaTeX 排版",
+              "chinese-traditional": "LaTeX 排版",
+              "en": "LaTeX Typesetting"
+            },
+            "level": 4
+          },
+          {
+            "id": "solidworks",
+            "name": {
+              "zh": "SolidWorks 仿真",
+              "chinese-traditional": "SolidWorks 模擬",
+              "en": "SolidWorks Simulation"
+            },
+            "level": 4
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "primary": "energy-power",
+        "snapshot": {
+          "zh": "专业主线、运行校核意识与软件工程能力汇合。",
+          "chinese-traditional": "專業主線、運行校核意識與軟體工程能力匯合。",
+          "en": "The engineering major, operational-verification thinking, and software practice converged."
+        },
+        "capabilities": [
+          {
+            "id": "energy-power",
+            "name": {
+              "zh": "能源与动力",
+              "chinese-traditional": "能源與動力",
+              "en": "Energy & Power"
+            },
+            "level": 2
+          },
+          {
+            "id": "ansys",
+            "name": {
+              "zh": "ANSYS 仿真",
+              "chinese-traditional": "ANSYS 模擬",
+              "en": "ANSYS Simulation"
+            },
+            "level": 4
+          },
+          {
+            "id": "ai-agent",
+            "name": {
+              "zh": "AI Agent 工程",
+              "chinese-traditional": "AI Agent 工程",
+              "en": "AI Agent Engineering"
+            },
+            "level": 3
+          },
+          {
+            "id": "full-stack",
+            "name": {
+              "zh": "全栈开发",
+              "chinese-traditional": "全端開發",
+              "en": "Full-stack Development"
+            },
+            "level": 5
+          },
+          {
+            "id": "reading-notes",
+            "name": {
+              "zh": "读书笔记",
+              "chinese-traditional": "讀書筆記",
+              "en": "Reading Notes"
+            },
+            "level": 4
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "heading": {
+      "zh": "能力形成时间线",
+      "chinese-traditional": "能力形成時間線",
+      "en": "Capability Formation Timeline"
+    },
+    "description": {
+      "zh": "以真实经历、项目和成果解释能力如何形成，而不是展示抽象成长百分比。",
+      "chinese-traditional": "以真實經歷、專案與成果解釋能力如何形成，而不是展示抽象成長百分比。",
+      "en": "Factual experiences, projects, and outcomes explain how capabilities formed—without artificial growth percentages."
+    },
+    "events": [
+      {
+        "id": "graphic-design-internship",
+        "year": 2024,
+        "date": "2023-12—2024-02",
+        "type": "milestone",
+        "title": {
+          "zh": "平面设计实习完成",
+          "chinese-traditional": "平面設計實習完成",
+          "en": "Graphic design internship"
+        },
+        "summary": {
+          "zh": "在昆明上维设计品牌有限公司参与需求对接与交付，在职完成 4 份作品，累计作品 14 个。",
+          "chinese-traditional": "在昆明上維設計品牌有限公司參與需求對接與交付，在職完成 4 份作品，累計作品 14 個。",
+          "en": "Worked on client communication and delivery at Kunming Shangwei Design, completing four internship works and fourteen works in total."
+        },
+        "capabilityIds": [
+          "academic-graphic-design",
+          "collaboration"
+        ],
+        "target": "capabilities.html#academic-graphic-design"
+      },
+      {
+        "id": "student-office",
+        "year": 2024,
+        "date": "2024-04",
+        "type": "progress",
+        "title": {
+          "zh": "学工办协作体系",
+          "chinese-traditional": "學工辦協作體系",
+          "en": "Student office collaboration"
+        },
+        "summary": {
+          "zh": "对接教务、综合办与辅导员，参与微信运营、档案与就业信息协同。",
+          "chinese-traditional": "對接教務、綜合辦與輔導員，參與微信營運、檔案與就業資訊協同。",
+          "en": "Coordinated academic affairs, student records, WeChat operations, and employment information."
+        },
+        "capabilityIds": [
+          "collaboration",
+          "wps"
+        ],
+        "target": "capabilities.html#collaboration"
+      },
+      {
+        "id": "clean-energy-project",
+        "year": 2024,
+        "date": "2024-10",
+        "type": "milestone",
+        "title": {
+          "zh": "清洁低碳能源项目启动",
+          "chinese-traditional": "清潔低碳能源專案啟動",
+          "en": "Clean-energy engineering project"
+        },
+        "summary": {
+          "zh": "担任学生项目主持，推进设备说明书、SolidWorks 建模、3D 打印与实验数据处理。",
+          "chinese-traditional": "擔任學生專案主持，推進設備說明書、SolidWorks 建模、3D 列印與實驗數據處理。",
+          "en": "Led student work on equipment documentation, SolidWorks modeling, 3D printing, and experiment data processing."
+        },
+        "capabilityIds": [
+          "solidworks",
+          "collaboration",
+          "energy-power"
+        ],
+        "target": "learning.html#research"
+      },
+      {
+        "id": "modeling-results",
+        "year": 2025,
+        "date": "2025-01—08",
+        "type": "milestone",
+        "title": {
+          "zh": "数学建模成果链",
+          "chinese-traditional": "數學建模成果鏈",
+          "en": "Mathematical modeling outcomes"
+        },
+        "summary": {
+          "zh": "获 MCM/COMAP 国际 S 奖、MathorCup 华中赛区三等奖与深圳杯全国优秀论文。",
+          "chinese-traditional": "獲 MCM/COMAP 國際 S 獎、MathorCup 華中賽區三等獎與深圳杯全國優秀論文。",
+          "en": "Earned an MCM/COMAP S Award, a MathorCup regional third prize, and a Shenzhen Cup national outstanding paper."
+        },
+        "capabilityIds": [
+          "collaboration",
+          "latex"
+        ],
+        "target": "capabilities.html#honors"
+      },
+      {
+        "id": "energy-competition",
+        "year": 2025,
+        "date": "2025-06—08",
+        "type": "milestone",
+        "title": {
+          "zh": "节能减排竞赛全国一等奖",
+          "chinese-traditional": "節能減排競賽全國一等獎",
+          "en": "National first prize in energy competition"
+        },
+        "summary": {
+          "zh": "作为项目副主持参与第十八届全国大学生节能减排社会实践与科技竞赛。",
+          "chinese-traditional": "作為專案副主持參與第十八屆全國大學生節能減排社會實踐與科技競賽。",
+          "en": "Contributed as deputy project lead to the 18th national university energy conservation and emission reduction competition."
+        },
+        "capabilityIds": [
+          "collaboration",
+          "energy-power"
+        ],
+        "target": "capabilities.html#honors"
+      },
+      {
+        "id": "solidworks-outcome",
+        "year": 2025,
+        "date": "2025-08",
+        "type": "progress",
+        "title": {
+          "zh": "工程建模形成完整成果",
+          "chinese-traditional": "工程建模形成完整成果",
+          "en": "Complete engineering modeling outcome"
+        },
+        "summary": {
+          "zh": "将三维建模、设备表达与专利链路整合到完整项目交付中。",
+          "chinese-traditional": "將三維建模、設備表達與專利鏈路整合到完整專案交付中。",
+          "en": "Integrated 3D modeling, equipment communication, and patent records into a complete project delivery."
+        },
+        "capabilityIds": [
+          "solidworks",
+          "collaboration"
+        ],
+        "target": "capabilities.html#solidworks"
+      },
+      {
+        "id": "post-ai-certification-2026",
+        "year": 2026,
+        "date": "2026-01-08",
+        "type": "progress",
+        "title": {
+          "zh": "生成式人工智能工程师培训及认证",
+          "chinese-traditional": "生成式人工智能工程師培訓及認證",
+          "en": "Generative AI engineer training and certification"
+        },
+        "summary": {
+          "zh": "整理生成式人工智能工程师培训标准、学习形式与认证信息。",
+          "chinese-traditional": "整理生成式人工智能工程師培訓標準、學習形式與認證資訊。",
+          "en": "Organized training standards, study formats, and certification information for generative AI engineering."
+        },
+        "capabilityIds": [
+          "ai-agent",
+          "reading-notes"
+        ],
+        "target": "post.html?f=人工智能报考.md"
+      },
+      {
+        "id": "post-homepage-2026",
+        "year": 2026,
+        "date": "2026-01-08",
+        "type": "progress",
+        "title": {
+          "zh": "个人主页动态发布",
+          "chinese-traditional": "個人主頁動態發布",
+          "en": "Personal homepage post"
+        },
+        "summary": {
+          "zh": "记录个人主页建设与公开内容入口。",
+          "chinese-traditional": "記錄個人主頁建設與公開內容入口。",
+          "en": "Recorded the personal homepage build and its public content entry points."
+        },
+        "capabilityIds": [
+          "full-stack"
+        ],
+        "target": "post.html?f=2026-01-08-homepage.md"
+      },
+      {
+        "id": "yuan-ze-exchange",
+        "year": 2026,
+        "date": "2026-02-22—06-30",
+        "type": "milestone",
+        "title": {
+          "zh": "元智大学机械工程学系交换",
+          "chinese-traditional": "元智大學機械工程學系交換",
+          "en": "Yuan Ze University exchange"
+        },
+        "summary": {
+          "zh": "完成 128 天交换，修读微积分（二）、工程经济、机率与统计，共 9 学分。",
+          "chinese-traditional": "完成 128 天交換，修讀微積分（二）、工程經濟、機率與統計，共 9 學分。",
+          "en": "Completed a 128-day exchange with nine credits in Calculus II, Engineering Economy, and Probability and Statistics."
+        },
+        "capabilityIds": [
+          "energy-power",
+          "reading-notes"
+        ],
+        "target": "post.html?f=2026-07-01-yuan-ze-exchange-learning.md"
+      },
+      {
+        "id": "reading-system",
+        "year": 2026,
+        "date": "2026-06-08",
+        "type": "progress",
+        "title": {
+          "zh": "工程与财务阅读体系",
+          "chinese-traditional": "工程與財務閱讀體系",
+          "en": "Engineering and finance reading system"
+        },
+        "summary": {
+          "zh": "确定《工程经济》《实验设计与分析》《热交换设计》《财务管理》四本专业书的长期学习计划。",
+          "chinese-traditional": "確定《工程經濟》《實驗設計與分析》《熱交換設計》《財務管理》四本專業書的長期學習計畫。",
+          "en": "Established a long-term study plan around engineering economy, experimental design, heat exchanger design, and financial management."
+        },
+        "capabilityIds": [
+          "reading-notes",
+          "energy-power"
+        ],
+        "target": "capabilities.html#reading-notes"
+      },
+      {
+        "id": "post-theme-study-group-award-2026",
+        "year": 2026,
+        "date": "2026-06-15",
+        "type": "progress",
+        "title": {
+          "zh": "经济主题读书会获第二名",
+          "chinese-traditional": "經濟主題讀書會獲第二名",
+          "en": "Economics study group won second prize"
+        },
+        "summary": {
+          "zh": "围绕工程经济延伸完成六次主题读书会，团队获第二名，并获得税前 NT$ 8,000 奖金。",
+          "chinese-traditional": "圍繞工程經濟延伸完成六次主題讀書會，團隊獲第二名，並獲得稅前 NT$ 8,000 獎金。",
+          "en": "Completed six study-group sessions derived from Engineering Economics; the team won second prize and a pre-tax NT$ 8,000 award."
+        },
+        "capabilityIds": [
+          "reading-notes",
+          "collaboration",
+          "energy-power"
+        ],
+        "target": "post.html?f=2026-06-15-theme-study-group-award.md"
+      },
+      {
+        "id": "software-assets",
+        "year": 2026,
+        "date": "2026-07",
+        "type": "milestone",
+        "title": {
+          "zh": "软件资产连续交付",
+          "chinese-traditional": "軟體資產連續交付",
+          "en": "Continuous software asset delivery"
+        },
+        "summary": {
+          "zh": "持续开发桌面 AI Agent Runtime、IELTS 浏览器扩展与个人主页内容维护体系。",
+          "chinese-traditional": "持續開發桌面 AI Agent Runtime、IELTS 瀏覽器擴充功能與個人主頁內容維護體系。",
+          "en": "Continued development of a desktop AI agent runtime, an IELTS browser extension, and the homepage content system."
+        },
+        "capabilityIds": [
+          "ai-agent",
+          "full-stack"
+        ],
+        "target": "projects.html"
+      },
+      {
+        "id": "post-ai-enterprise-website-2026",
+        "year": 2026,
+        "date": "2026-07-24",
+        "type": "progress",
+        "title": {
+          "zh": "AI 企业官网项目动态",
+          "chinese-traditional": "AI 企業官網專案動態",
+          "en": "AI corporate website project post"
+        },
+        "summary": {
+          "zh": "发布约 60 个人类小时完成企业官网的项目复盘。",
+          "chinese-traditional": "發布約 60 個人類小時完成企業官網的專案復盤。",
+          "en": "Published a project reflection on building a corporate website in about 60 human hours."
+        },
+        "capabilityIds": [
+          "full-stack",
+          "collaboration"
+        ],
+        "target": "post.html?f=2026-07-24-ai-enterprise-website.md"
+      },
+      {
+        "id": "post-ielts-browser-extension-2026",
+        "year": 2026,
+        "date": "2026-07-27",
+        "type": "progress",
+        "title": {
+          "zh": "IELTS 浏览器插件动态",
+          "chinese-traditional": "IELTS 瀏覽器擴充功能動態",
+          "en": "IELTS browser extension post"
+        },
+        "summary": {
+          "zh": "发布约 2 个人类小时完成首个浏览器插件的产品化复盘。",
+          "chinese-traditional": "發布約 2 個人類小時完成首個瀏覽器擴充功能的產品化復盤。",
+          "en": "Published a product reflection on completing a first browser extension in about two human hours."
+        },
+        "capabilityIds": [
+          "full-stack",
+          "ai-agent"
+        ],
+        "target": "post.html?f=2026-07-27-ielts-browser-extension.md"
+      },
+      {
+        "id": "brfc-submission",
+        "year": 2026,
+        "date": "2026-07",
+        "type": "milestone",
+        "title": {
+          "zh": "BRFC 投稿 AAAI 2027",
+          "chinese-traditional": "BRFC 投稿 AAAI 2027",
+          "en": "BRFC submitted to AAAI 2027"
+        },
+        "summary": {
+          "zh": "OpenReview 记录论文投稿；作者顺序为 Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu，Yucheng Li 位列第四。",
+          "chinese-traditional": "OpenReview 記錄論文投稿；作者順序為 Jinlong Li、Fengyi Zhang、Yongjie Hu、Yucheng Li、Shengjun Liu，Yucheng Li 位列第四。",
+          "en": "OpenReview records the submission by Jinlong Li, Fengyi Zhang, Yongjie Hu, Yucheng Li, and Shengjun Liu; Yucheng Li is the fourth author."
+        },
+        "capabilityIds": [
+          "energy-power",
+          "latex"
+        ],
+        "target": "learning.html#research"
+      },
+      {
+        "id": "ai-engineering-orchestration",
+        "year": 2026,
+        "date": "2026-08-02",
+        "type": "milestone",
+        "title": {
+          "zh": "GitHub–PowerShell–AI 工程协作体系定型",
+          "chinese-traditional": "GitHub–PowerShell–AI 工程協作體系定型",
+          "en": "GitHub–PowerShell–AI engineering workflow formalized"
+        },
+        "summary": {
+          "zh": "将事实源、任务切片、本地验证、原子提交、回滚与交接固化为可复用工程管理方法。",
+          "chinese-traditional": "將事實源、任務切片、本地驗證、原子提交、回滾與交接固化為可複用工程管理方法。",
+          "en": "Formalized source-of-truth control, task slicing, local verification, atomic commits, rollback, and handoffs into a reusable engineering-management method."
+        },
+        "capabilityIds": [
+          "collaboration",
+          "ai-agent",
+          "full-stack"
+        ],
+        "target": "post.html?f=2026-08-20-ai-engineering-orchestration.md"
+      },
+      {
+        "id": "imp-internship-complete",
+        "year": 2026,
+        "date": "2026-08-28",
+        "type": "milestone",
+        "title": {
+          "zh": "近物所八周科研实习完成",
+          "chinese-traditional": "近物所八週科研實習完成",
+          "en": "Eight-week IMP research internship completed"
+        },
+        "summary": {
+          "zh": "完成缪子运输工程热工分析与工况校核，把仿真实践进一步映射到边界、异常、校核与安全裕度的运维思维。",
+          "chinese-traditional": "完成緲子運輸工程熱工分析與工況校核，把仿真實踐進一步映射到邊界、異常、校核與安全裕度的運維思維。",
+          "en": "Completed thermal analysis and operating-case verification for muon transport engineering, connecting simulation practice to operations-oriented thinking around boundaries, abnormal states, verification, and safety margin."
+        },
+        "capabilityIds": [
+          "energy-power",
+          "ansys"
+        ],
+        "target": "post.html?f=2026-08-28-imp-internship-complete.md"
+      },
+      {
+        "id": "ai-video-editing-product-validation",
+        "year": 2026,
+        "date": "2026-08-30",
+        "type": "progress",
+        "title": {
+          "zh": "AI 视频剪辑软件进入产品化验证",
+          "chinese-traditional": "AI 視頻剪輯軟體進入產品化驗證",
+          "en": "AI video editor entered product validation"
+        },
+        "summary": {
+          "zh": "以本地素材、证据约束和 Human Gate 持续探索 AI 剪辑能力边界，0.1.3 进入真实 Windows 验证并开始整理软件著作权申报资产。",
+          "chinese-traditional": "以本地素材、證據約束和 Human Gate 持續探索 AI 剪輯能力邊界，0.1.3 進入真實 Windows 驗證並開始整理軟體著作權申報資產。",
+          "en": "Continued probing AI editing boundaries with local footage, evidence constraints, and Human Gates; v0.1.3 entered real Windows validation and software-copyright asset preparation."
+        },
+        "capabilityIds": [
+          "ai-agent",
+          "full-stack",
+          "collaboration"
+        ],
+        "target": "post.html?f=2026-08-30-ai-video-directing-software.md"
+      }
+    ]
+  },
+  "portals": [
+    {
+      "id": "collaboration",
+      "title": {
+        "zh": "协作网络",
+        "chinese-traditional": "協作網絡",
+        "en": "Collaboration Network"
+      },
+      "description": {
+        "zh": "项目组织、学生工作、社会实践与长期协同交付。",
+        "chinese-traditional": "專案組織、學生工作、社會實踐與長期協同交付。",
+        "en": "Project organization",
+        "student work": null,
+        "public service": null,
+        "and long-term collaborative delivery.": null
+      },
+      "count": {
+        "zh": "组织 · 沟通 · 交付",
+        "chinese-traditional": "組織 · 溝通 · 交付",
+        "en": "Organize · Communicate · Deliver"
+      },
+      "updated": "2026-07",
+      "target": "projects.html#collaboration",
+      "visual": "network",
+      "terms": [
+        {
+          "text": "团队协作",
+          "en": "Collaboration",
+          "x": 48,
+          "y": 44,
+          "size": "core"
+        },
+        {
+          "text": "项目主持",
+          "en": "Project Lead",
+          "x": 20,
+          "y": 23,
+          "size": "main"
+        },
+        {
+          "text": "学工办",
+          "en": "Student Office",
+          "x": 70,
+          "y": 18,
+          "size": "main"
+        },
+        {
+          "text": "志愿服务",
+          "en": "Volunteering",
+          "x": 18,
+          "y": 71,
+          "size": "support"
+        },
+        {
+          "text": "公开表达",
+          "en": "Public Communication",
+          "x": 70,
+          "y": 70,
+          "size": "support"
+        },
+        {
+          "text": "交付",
+          "en": "Delivery",
+          "x": 52,
+          "y": 83,
+          "size": "echo"
+        },
+        {
+          "text": "协作",
+          "en": "Teamwork",
+          "x": 78,
+          "y": 46,
+          "size": "echo"
+        }
+      ]
+    },
+    {
+      "id": "interests",
+      "title": {
+        "zh": "兴趣图谱",
+        "chinese-traditional": "興趣圖譜",
+        "en": "Interest Map"
+      },
+      "description": {
+        "zh": "从能源工程延伸到科学计算、AI 系统与工程经济判断。",
+        "chinese-traditional": "從能源工程延伸到科學計算、AI 系統與工程經濟判斷。",
+        "en": "From energy engineering to scientific computing",
+        "AI systems": null,
+        "and engineering-economy judgment.": null
+      },
+      "count": {
+        "zh": "工程 · 计算 · 系统",
+        "chinese-traditional": "工程 · 計算 · 系統",
+        "en": "Engineering · Computing · Systems"
+      },
+      "updated": "2026-07",
+      "target": "learning.html#interests",
+      "visual": "orbit",
+      "terms": [
+        {
+          "text": "能源动力",
+          "en": "Energy & Power",
+          "x": 48,
+          "y": 45,
+          "size": "core"
+        },
+        {
+          "text": "科学计算",
+          "en": "Scientific Computing",
+          "x": 21,
+          "y": 24,
+          "size": "main"
+        },
+        {
+          "text": "AI Agent",
+          "en": "AI Agent",
+          "x": 72,
+          "y": 20,
+          "size": "main"
+        },
+        {
+          "text": "工程经济",
+          "en": "Engineering Economy",
+          "x": 18,
+          "y": 72,
+          "size": "support"
+        },
+        {
+          "text": "神经算子",
+          "en": "Neural Operators",
+          "x": 69,
+          "y": 73,
+          "size": "support"
+        },
+        {
+          "text": "仿真",
+          "en": "Simulation",
+          "x": 79,
+          "y": 48,
+          "size": "echo"
+        },
+        {
+          "text": "能源",
+          "en": "Energy",
+          "x": 47,
+          "y": 83,
+          "size": "echo"
+        }
+      ]
+    },
+    {
+      "id": "knowledge",
+      "title": {
+        "zh": "知识系统",
+        "chinese-traditional": "知識系統",
+        "en": "Knowledge System"
+      },
+      "description": {
+        "zh": "技术笔记、读书记录、实验方法和可复用工程经验。",
+        "chinese-traditional": "技術筆記、讀書記錄、實驗方法與可複用工程經驗。",
+        "en": "Technical notes",
+        "reading records": null,
+        "experimental methods": null,
+        "and reusable engineering experience.": null
+      },
+      "count": {
+        "zh": "记录 · 连接 · 复用",
+        "chinese-traditional": "記錄 · 連接 · 複用",
+        "en": "Record · Connect · Reuse"
+      },
+      "updated": "2026-07",
+      "target": "learning.html#knowledge",
+      "visual": "hierarchy",
+      "terms": [
+        {
+          "text": "知识资产",
+          "en": "Knowledge Assets",
+          "x": 47,
+          "y": 42,
+          "size": "core"
+        },
+        {
+          "text": "读书笔记",
+          "en": "Reading Notes",
+          "x": 18,
+          "y": 22,
+          "size": "main"
+        },
+        {
+          "text": "工程方法",
+          "en": "Engineering Methods",
+          "x": 69,
+          "y": 20,
+          "size": "main"
+        },
+        {
+          "text": "实验设计",
+          "en": "Experiment Design",
+          "x": 19,
+          "y": 70,
+          "size": "support"
+        },
+        {
+          "text": "可复现",
+          "en": "Reproducibility",
+          "x": 68,
+          "y": 72,
+          "size": "support"
+        },
+        {
+          "text": "索引",
+          "en": "Index",
+          "x": 77,
+          "y": 46,
+          "size": "echo"
+        },
+        {
+          "text": "复用",
+          "en": "Reuse",
+          "x": 46,
+          "y": 83,
+          "size": "echo"
+        }
+      ]
+    },
+    {
+      "id": "honors",
+      "title": {
+        "zh": "荣誉档案",
+        "chinese-traditional": "榮譽檔案",
+        "en": "Honors Archive"
+      },
+      "description": {
+        "zh": "竞赛、证书、专利与社会实践记录，按事实归档。",
+        "chinese-traditional": "競賽、證書、專利與社會實踐記錄，按事實歸檔。",
+        "en": "Competitions",
+        "certificates": null,
+        "patents": null,
+        "and public-service records": null,
+        "archived factually.": null
+      },
+      "count": {
+        "zh": "竞赛 · 专利 · 证书",
+        "chinese-traditional": "競賽 · 專利 · 證書",
+        "en": "Awards · Patents · Certificates"
+      },
+      "updated": "2026-07",
+      "target": "capabilities.html#honors",
+      "visual": "stamp",
+      "terms": [
+        {
+          "text": "全国一等奖",
+          "en": "National First Prize",
+          "x": 45,
+          "y": 42,
+          "size": "core"
+        },
+        {
+          "text": "专利",
+          "en": "Patents",
+          "x": 18,
+          "y": 21,
+          "size": "main"
+        },
+        {
+          "text": "数学建模",
+          "en": "Modeling",
+          "x": 69,
+          "y": 19,
+          "size": "main"
+        },
+        {
+          "text": "志愿服务",
+          "en": "Volunteering",
+          "x": 18,
+          "y": 71,
+          "size": "support"
+        },
+        {
+          "text": "证书",
+          "en": "Certificates",
+          "x": 70,
+          "y": 72,
+          "size": "support"
+        },
+        {
+          "text": 2025,
+          "en": "2025",
+          "x": 78,
+          "y": 46,
+          "size": "echo"
+        },
+        {
+          "text": "ARCHIVE",
+          "en": "ARCHIVE",
+          "x": 46,
+          "y": 83,
+          "size": "echo"
+        }
+      ]
+    }
+  ],
+  "generatedBy": "content/homepage.yml"
+}

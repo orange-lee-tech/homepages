@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Video Editing Agent 0.1.5</title>
+</head>
+<body>
+  <main>
+    <h1>Video Editing Agent 0.1.5</h1>
+    <p>发布日期：2026-08-30</p>
+    <p>Stage-A 最终 Human Gate 通过版本。</p>
+    <ul>
+      <li>修复 Windows 安装包中 Renderer 请求 libx264、而实际 LGPL FFmpeg 未包含该编码器的问题。</li>
+      <li>Stage-A H.264 软件编码基线切换为实际打包并验证可用的 libopenh264。</li>
+      <li>Windows 打包新增真实 H.264 编码和 ffprobe 验证，防止再次发布“FFmpeg 可启动但不能成片”的安装包。</li>
+      <li>保留 0.1.1–0.1.4 的终端闪烁、视觉 Provider 容错、脚本事实回退、公共音乐安全降级等修复。</li>
+    </ul>
+    <p>0.1.5 已通过 Planning 与 Automatic Editing 最终 Human Gate。</p>
+    <p>安装包 SHA-256：<code>45fd1225340e988a030c2acbcb2864092cb61f368f8b98720e24f5a402e76663</code></p>
+    <p><a href="https://github.com/orange-lee-tech/video-editing-agent/releases/download/v0.1.5-rc-e59cab8/VideoEditingAgent-Setup-0.1.5.exe">下载安装包</a></p>
+    <p>正式 1.0.0 尚未发布；当前处于发布前兼容性与体验修饰讨论阶段。</p>
+  </main>
+</body>
+</html>

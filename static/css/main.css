@@ -1,0 +1,488 @@
+@import "./styles.css";
+
+/* =========================================================
+   站点主样式（main.css）
+   目标：
+   1) 清理历史遗留/被覆盖的样式，降低维护成本
+   2) 轮播（SHOW）容器高度加大，确保图片完整展示
+   3) 关键位置补中文注释，便于后续协作开发
+   ========================================================= */
+
+/* ---------- 全局变量（站点主色） ---------- */
+:root{
+    --h-title-color:#2F55FF; /* 一级标题：明亮蓝 */ /* 标题蓝 */
+
+    /* ===== SHOW 轮播关键参数（只调这里即可） =====
+       说明：图片本体大小不改，只扩容器高度，避免“下半截被裁”。
+       你如果后续换更高的图片，可继续把 --show-img-max-h 调大。
+    */
+    --show-img-max-h: 320px;   /* 主图最大高度（不改变图片，只是允许它完整显示） */
+    --show-top: 10px;          /* 图片离 track 顶部的距离 */
+    --show-extra: 12px;       /* 额外留白：取“主图最大高度”级别，等效把容器高度翻倍 */
+    --show-shift-x: 260px;     /* 左右预告图水平偏移 */
+    --show-scale-side: .82;    /* 左右预告图缩放比例 */
+    --show-side-opacity: .55;  /* 左右预告图透明度 */
+    /* ===== PERSON 轮播参数（生活照更“轻”） ===== */
+    --person-img-max-h: 280px;
+    --person-top: 10px;
+    --person-extra: 12px;
+    --person-shift-x: 220px;
+    --person-scale-side: .82;
+    --person-side-opacity: .55;
+
+    --h-subtitle-color:#0B2F8A; /* 二级标题：深蓝 */
+    --h-text-color:#111111; /* 正文/其余标题：黑 */
+}
+
+/* ---------- 导航栏与页脚 ---------- */
+.header {
+    border-bottom: solid 2px var(--bs-blue);
+    z-index: 10000; /* 确保导航始终在最上层 */
+}
+
+.bg-bottom {
+    background-color: var(--h-title-color);
+}
+
+/* ---------- 顶部封面（背景图） ---------- */
+.top-section {
+    position: relative;
+    padding: 10rem 0;
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+}
+
+.top-section h2 { font-weight: 400; }
+
+.top-section .top-section-content {
+    position: relative;
+    z-index: 1; /* 文字在遮罩层之上 */
+}
+
+/* 顶部封面遮罩：提升文字可读性 */
+.top-section:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- 各 section 标题与正文排版 ---------- */
+section > .container > header > h2,
+section > .container > h2,
+section header h2{
+    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+                 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    color: var(--h-title-color);
+    font-size: 2.3rem;
+    line-height: 4rem;
+}
+
+section .main-body{
+    font-size: 1.3rem;
+    font-weight: 200;
+    line-height: 2.4rem;
+}
+
+
+
+/* ---------- Markdown 内容：标题层级统一配色 ----------
+   规则：
+   - 一级标题（# / h1）：明亮蓝（--h-title-color）
+   - 二级标题（## / h2）：深蓝（--h-subtitle-color）
+   - 其余标题与正文：黑（--h-text-color）
+   说明：只作用于渲染容器（id 以 -md 结尾），不会影响导航/轮播等 UI
+------------------------------------------------------- */
+[id$="-md"]{ color: var(--h-text-color); }
+
+[id$="-md"] h1{
+  color: var(--h-title-color);
+    font-size: 1.17em; /* 采用 h3 的默认字号 */
+font-weight: 800;
+  margin-top: 1.25rem;
+  margin-bottom: .75rem;
+}
+
+[id$="-md"] h2{
+  color: var(--h-subtitle-color);
+    font-size: 1em; /* 采用 h4 的默认字号 */
+font-weight: 800;
+  margin-top: 1.15rem;
+  margin-bottom: .65rem;
+}
+
+[id$="-md"] h3,
+[id$="-md"] h4,
+[id$="-md"] h5,
+[id$="-md"] h6{
+  color: var(--h-text-color);
+  font-weight: 800;
+  margin-top: 1.05rem;
+  margin-bottom: .55rem;
+}
+
+[id$="-md"] p,
+[id$="-md"] li{
+  color: var(--h-text-color);
+}
+
+/* 背景渐变（浅色/灰色） */
+.bg-gradient-primary-to-secondary-light {
+    background: linear-gradient(45deg, #fcfcfc, #ffffff) !important;
+}
+.bg-gradient-primary-to-secondary-gray {
+    background: linear-gradient(45deg, #f0f0f0, #f1f1f1) !important;
+}
+
+/* ---------- 头像（浮在封面之下、右侧） ---------- */
+#avatar {
+    position: relative;
+    height: 0; /* 让头像“浮”在文档流之上 */
+    top: min(-65px, max(-100px, calc(-1*100vw/12)));
+    max-width: 55em;
+    margin: 0 1.5rem 0 0;
+    float: right;
+    z-index: 9000;
+}
+
+#avatar img {
+    height: max(130px, min(200px, calc(100vw/6)));
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 991px) {
+    #avatar { margin: 0; }
+}
+
+/* =========================================================
+   轮播通用结构（按钮 + track）
+   说明：.carousel-track 在 HTML 里作为容器类名复用（SHOW / PERSON 都能用）
+   ========================================================= */
+.carousel-row{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 左右按钮（可复用到 person-track） */
+.carousel-btn{
+  border: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.85);
+  color: #0b3d91;
+  font-size: 22px;
+  line-height: 38px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+.carousel-btn:hover{ background: rgba(255,255,255,1); }
+
+/* track 的基础属性：作为绝对定位的参照系 */
+.carousel-track{
+  position: relative;
+  flex: 1;
+}
+
+/* =========================================================
+   SHOW：三张堆叠轮播（prev / active / next）
+   - 中间：主图（active）
+   - 左右：预告图（prev / next）小一些、在后面
+   - 本次只做“扩容器高度”，不动图片大小/比例
+   ========================================================= */
+#show{
+  position: relative;
+  z-index: 2;
+}
+
+#show-track{
+  z-index: 3;
+  /* 关键：容器高度 = 主图最大高度 + 顶部偏移 + 额外留白（相当于翻倍扩容） */
+  min-height: calc(var(--show-img-max-h) + var(--show-top) + var(--show-extra));
+}
+
+/* 单张 item：绝对定位叠放 */
+#show-track .carousel-item-single{
+  display: none;
+  position: absolute;
+  top: var(--show-top);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform .28s ease, opacity .28s ease;
+}
+
+/* 三张可见：prev / active / next */
+#show-track .carousel-item-single.prev,
+#show-track .carousel-item-single.active,
+#show-track .carousel-item-single.next{
+  display: block;
+}
+
+/* 主图 */
+#show-track .carousel-item-single.active{
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* 左右预告图 */
+#show-track .carousel-item-single.prev{
+  z-index: 2;
+  opacity: var(--show-side-opacity);
+  transform: translateX(calc(-50% - var(--show-shift-x))) scale(var(--show-scale-side));
+}
+#show-track .carousel-item-single.next{
+  z-index: 2;
+  opacity: var(--show-side-opacity);
+  transform: translateX(calc(-50% + var(--show-shift-x))) scale(var(--show-scale-side));
+}
+
+/* 图片本体：
+   - 不锁死宽度，保留自适应（靠 max-* 控制上限，避免撑爆）
+   - object-fit: contain 保证完整展示（不裁切）
+*/
+#show-track .carousel-item-single img{
+  display: block;
+  max-width: min(900px, 92vw);
+  max-height: var(--show-img-max-h);
+  width: auto;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* 响应式：窄屏略缩减上限高度与左右偏移 */
+@media (max-width: 991px){
+  :root{
+    --show-img-max-h: 260px;
+    --show-extra: 10px;   /* 同步翻倍扩容 */
+    --show-shift-x: 140px; /* 窄屏降低左右偏移 */
+  }
+}
+/* 手机端封面：使用专用裁剪图 background2.jpeg */
+@media (max-width: 991px){
+  .top-section{
+    background-image: url("../assets/img/background2.jpeg") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
+/* ===== 手机端：确保轮播箭头可点击（防遮挡） ===== */
+@media (max-width: 991px){
+  /* 给轮播容器建立层叠上下文 */
+  .carousel-row{
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 箭头按钮置顶，确保在图片之上 */
+  .carousel-btn{
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto;
+  }
+
+  /* 图片层降低点击优先级，避免挡住按钮 */
+  #show-track .carousel-item-single,
+  #show-track .carousel-item-single img{
+    pointer-events: none;
+  }
+}
+/* =========================================================
+   PERSON：三张堆叠轮播（prev / active / next）
+   ========================================================= */
+#person-track{
+  position: relative;
+  min-height: calc(var(--person-img-max-h) + var(--person-top) + var(--person-extra));
+}
+
+#person-track .carousel-item-single{
+  display: none;
+  position: absolute;
+  top: var(--person-top);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform .28s ease, opacity .28s ease;
+}
+
+#person-track .carousel-item-single.prev,
+#person-track .carousel-item-single.active,
+#person-track .carousel-item-single.next{
+  display: block;
+}
+
+#person-track .carousel-item-single.active{
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+#person-track .carousel-item-single.prev{
+  z-index: 2;
+  opacity: var(--person-side-opacity);
+  transform: translateX(calc(-50% - var(--person-shift-x))) scale(var(--person-scale-side));
+}
+#person-track .carousel-item-single.next{
+  z-index: 2;
+  opacity: var(--person-side-opacity);
+  transform: translateX(calc(-50% + var(--person-shift-x))) scale(var(--person-scale-side));
+}
+
+#person-track .carousel-item-single img{
+  display: block;
+  max-width: min(860px, 92vw);
+  max-height: var(--person-img-max-h);
+  width: auto;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* 手机端适配 */
+@media (max-width: 991px){
+  :root{
+    --person-img-max-h: 240px;
+    --person-extra: 10px;
+    --person-shift-x: 140px;
+  }
+}
+/* =========================================================
+   DESIGN：三张堆叠轮播（复用 PERSON 的参数）
+   ========================================================= */
+#design-track{
+  position: relative;
+  min-height: calc(var(--person-img-max-h) + var(--person-top) + var(--person-extra));
+}
+#design-track .carousel-item-single{
+  display: none;
+  position: absolute;
+  top: var(--person-top);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform .28s ease, opacity .28s ease;
+}
+#design-track .carousel-item-single.prev,
+#design-track .carousel-item-single.active,
+#design-track .carousel-item-single.next{
+  display: block;
+}
+#design-track .carousel-item-single.active{
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+#design-track .carousel-item-single.prev{
+  z-index: 2;
+  opacity: var(--person-side-opacity);
+  transform: translateX(calc(-50% - var(--person-shift-x))) scale(var(--person-scale-side));
+}
+#design-track .carousel-item-single.next{
+  z-index: 2;
+  opacity: var(--person-side-opacity);
+  transform: translateX(calc(-50% + var(--person-shift-x))) scale(var(--person-scale-side));
+}
+#design-track .carousel-item-single img{
+  display: block;
+  max-width: min(900px, 92vw);
+  max-height: var(--person-img-max-h);
+  width: auto;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  margin: 0 auto;
+  object-fit: contain;
+}
+/* =========================
+   Content v2: cards + grid
+   ========================= */
+.md-grid{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.md-card{
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+.md-card h3{
+  margin: 0 0 10px 0;
+  font-size: 1.05rem;
+}
+
+.md-card ul{
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.md-kpi{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.md-kpi .k{
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.07);
+  background: rgba(13,110,253,.04); /* bootstrap primary 的淡底 */
+}
+
+.md-kpi .k b{
+  display: block;
+  font-size: .95rem;
+}
+
+.md-kpi .k span{
+  display: block;
+  font-size: .9rem;
+  opacity: .8;
+}
+
+/* Mobile */
+@media (max-width: 992px){
+  .md-grid{ grid-template-columns: 1fr; }
+  .md-kpi{ grid-template-columns: 1fr; }
+}
+/* Desktop：让 md-grid 的两张主卡片等高（子卡片不受影响） */
+@media (min-width: 992px){
+  .md-grid{
+    align-items: stretch; /* 覆盖 start */
+  }
+  .md-grid > .md-card{
+    height: 100%;
+  }
+}
+/* 科研/竞赛：卡片网格 */
+.cards-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+.cards-grid > .md-card{ height: 100%; }
+
+.card-meta{
+  margin-top: -6px;
+  margin-bottom: 10px;
+  font-size: .92rem;
+  opacity: .75;
+}
+
+@media (max-width: 992px){
+  .cards-grid{ grid-template-columns: 1fr; }
+}
