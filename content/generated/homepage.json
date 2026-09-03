@@ -662,14 +662,14 @@
         "date": "2026-08-28",
         "type": "milestone",
         "title": {
-          "zh": "近物所八周科研实习完成",
-          "chinese-traditional": "近物所八週科研實習完成",
-          "en": "Eight-week IMP research internship completed"
+          "zh": "近物所八周生产实习完成",
+          "chinese-traditional": "近物所八週生產實習完成",
+          "en": "Eight-week IMP production-practice placement completed"
         },
         "summary": {
-          "zh": "完成缪子运输工程热工分析与工况校核，把仿真实践进一步映射到边界、异常、校核与安全裕度的运维思维。",
-          "chinese-traditional": "完成緲子運輸工程熱工分析與工況校核，把仿真實踐進一步映射到邊界、異常、校核與安全裕度的運維思維。",
-          "en": "Completed thermal analysis and operating-case verification for muon transport engineering, connecting simulation practice to operations-oriented thinking around boundaries, abnormal states, verification, and safety margin."
+          "zh": "接手上游 FLUKA 输出与既有 ANSYS 工程，完成热源链恢复、数据与功率验证、CAD/网格故障定位及部分热物性实验，把工作重心从“模型能跑”推进到“结果可验证、过程可追溯”。",
+          "chinese-traditional": "接手上游 FLUKA 輸出與既有 ANSYS 工程，完成熱源鏈恢復、資料與功率驗證、CAD/網格故障定位及部分熱物性實驗，把工作重心從「模型能跑」推進到「結果可驗證、過程可追溯」。",
+          "en": "Inherited upstream FLUKA outputs and an existing ANSYS project, restoring the heat-source chain, validating data and power, locating CAD/meshing faults, and contributing to thermal-property experiments—shifting from a model merely running to results that are verifiable and traceable."
         },
         "capabilityIds": [
           "energy-power",

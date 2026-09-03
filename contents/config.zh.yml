@@ -1,0 +1,116 @@
+title: orange-lee-tech's Homepage
+page-top-title: 李雨橙
+top-section-bg-text: Marching Forward
+home-subtitle: <i class="bi bi-house-fill"></i>&nbsp;主页
+awards-subtitle: <i class="bi bi-award-fill"></i>&nbsp;获奖简报
+experience-subtitle: <i class="bi bi-briefcase-fill"></i>&nbsp;工作经历
+publications-subtitle: <i class="bi bi-file-text-fill"></i>&nbsp;科研与竞赛
+show-subtitle: <i class="bi bi-stars"></i>&nbsp;show
+design-subtitle: <i class="bi bi-palette"></i>&nbsp;平面设计
+person-subtitle: <i class="bi bi-camera"></i>&nbsp;person
+about-subtitle: <i class="bi bi-person-badge"></i>&nbsp;自我介绍
+interests-subtitle: <i class="bi bi-compass"></i>&nbsp;兴趣方向
+copyright-text: "&copy; 李雨橙 2023-2026. All Rights Reserved."
+show-images:
+  - image1.jpg
+  - image2.jpg
+  - image3.jpg
+  - image4.jpg
+  - image5.jpg
+  - image6.jpg
+  - image7.jpg
+  - image8.jpg
+person-images:
+  - image9.jpg
+  - image10.jpg
+  - image11.jpg
+  - image12.jpg
+  - image13.jpg
+  - image14.jpg
+design-images:
+  - work1.png
+  - work2.png
+  - work3.png
+  - work4.png
+  - work5.jpg
+  - work6.png
+  - work7.png
+  - work8.png
+  - work9.png
+  - work10.png
+  - work11.png
+  - work12.png
+  - work13.jpg
+  - work14.png
+  - work15.png
+  - work16.png
+  - work17.jpg
+  - work18.jpg
+  - work19.jpg
+posts:
+  - title: AI 视频编导软件：能力边界与产品化验证
+    date: "2026-08-30"
+    file: 2026-08-30-ai-video-directing-software.md
+  - title: 企业的“数字六部”：网站、APP、小程序、私域工作台、数据中台与 Agent 的生产关系与十年战略
+    date: "2026-08-29"
+    file: 2026-08-29-digital-six-functions.md
+  - title: 中国科学院近代物理研究所 8 周工作志
+    date: "2026-08-28"
+    file: 2026-08-28-imp-internship-complete.md
+  - title: GitHub–PowerShell–AI 工程协作体系
+    date: "2026-08-20"
+    file: 2026-08-20-ai-engineering-orchestration.md
+  - title: 我用约2个人类小时，和 AI 完成了人生第一个浏览器插件
+    date: "2026-07-27"
+    file: 2026-07-27-ielts-browser-extension.md
+  - title: 我用约60个人类小时，和 AI 完成了一座企业官网
+    date: "2026-07-24"
+    file: 2026-07-24-ai-enterprise-website.md
+  - title: 在元智大学完成 128 天交换：课程、校园与自我管理
+    date: "2026-07-01"
+    file: 2026-07-01-yuan-ze-exchange-learning.md
+  - title: 从能源动力学生视角看工业工程、循环经济与可持续转型
+    date: "2026-06-17"
+    file: 2026-06-17-circular-industrial-transformation.md
+  - title: 我在元智大学参加了六次经济主题读书会，团队获得第二名
+    date: "2026-06-15"
+    file: 2026-06-15-theme-study-group-award.md
+  - title: 理财知识荟萃（下篇）：行动指南
+    date: "2026-05-26"
+    file: 2026-05-26-personal-finance-action-guide.md
+  - title: 理财知识荟萃（上篇）：知识储备
+    date: "2026-05-25"
+    file: 2026-05-25-personal-finance-knowledge.md
+  - title: 公共建设工程管理与案例分享心得报告
+    date: "2026-04-12"
+    file: 2026-04-12-public-construction-management.md
+  - title: 探访中科院近物所“国之重器”：HIAF 与 CiADS 冬令营见闻
+    date: "2026-01-30"
+    file: 2026-01-30-imp-winter-camp.md
+  - title: 李雨橙的个人主页
+    date: "2026-01-08"
+    file: 2026-01-08-homepage.md
+  - title: 生成式人工智能工程师培训及认证
+    date: "2026-01-08"
+    file: 人工智能报考.md
+nav-menu: MENU
+nav-home: 主页
+nav-home-top: 主页
+nav-home-now: 现状
+nav-home-about: 自我介绍
+nav-home-interests: 兴趣方向
+nav-publications: 科研竞赛
+nav-experience: 工作经历
+nav-practice: 社会实践
+nav-awards: 获奖简报
+nav-awards-hs: 高中简报
+nav-awards-ug: 本科简报
+nav-posts: 即时动态
+nav-gallery: 图片
+nav-gallery-show: show
+nav-gallery-design: 平面设计
+nav-gallery-person: person
+nav-lang: 语言
+nav-lang-zh: 中文
+nav-lang-en: English
+nav-lang-cht: 繁體中文

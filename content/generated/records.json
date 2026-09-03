@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-30",
+  "updated": "2026-09-03",
   "page": {
     "title": {
       "zh": "本科数字履历主记录",
@@ -2807,9 +2807,9 @@
       "timelineDate": "2026-08-28",
       "timelineType": "milestone",
       "title": {
-        "zh": "中国科学院近代物理研究所实习 8 周",
-        "chinese-traditional": "中國科學院近代物理研究所實習 8 週",
-        "en": "Eight-week Internship at the Institute of Modern Physics, CAS"
+        "zh": "中国科学院近代物理研究所 8 周生产实习",
+        "chinese-traditional": "中國科學院近代物理研究所 8 週生產實習",
+        "en": "Eight-week Production-practice Placement at the Institute of Modern Physics, CAS"
       },
       "period": {
         "zh": "2026-07-06—2026-08-28",
@@ -2817,49 +2817,54 @@
         "en": "2026-07-06—2026-08-28"
       },
       "role": {
-        "zh": "科研实习生",
-        "chinese-traditional": "科研實習生",
-        "en": "Research intern"
+        "zh": "生产实习 / 科研工程实践",
+        "chinese-traditional": "生產實習 / 科研工程實踐",
+        "en": "Production-practice placement / research engineering"
       },
       "summary": {
-        "zh": "在广东惠州中国科学院近代物理研究所完成八周科研实习，围绕缪子运输工程开展热工分析，使用 ANSYS Fluent 并依托超算集群完成数值模拟与工况校核；这段经历进一步把仿真能力映射到运行工况、边界条件、异常状态与安全裕度的工程判断。",
-        "chinese-traditional": "在廣東惠州中國科學院近代物理研究所完成八週科研實習，圍繞緲子運輸工程開展熱工分析，使用 ANSYS Fluent 並依託超算集群完成數值模擬與工況校核；這段經歷進一步把仿真能力映射到運行工況、邊界條件、異常狀態與安全裕度的工程判斷。",
-        "en": "Completed an eight-week research internship at the Institute of Modern Physics in Huizhou, Guangdong, conducting thermal analysis for muon transport engineering with ANSYS Fluent on a supercomputing cluster; the work connected simulation practice with engineering judgment around operating cases, boundary conditions, abnormal states, and safety margins."
+        "zh": "在中国科学院近代物理研究所高功率束流室完成 8 周生产实习；基于上游 FLUKA 粒子输运输出，推进热工仿真接口、Fluent 工程继承、数据与功率验证、CAD/网格故障诊断及部分热物性实验，把工作重心从“模型能跑”推进到“结果可验证、过程可追溯”。",
+        "chinese-traditional": "在中國科學院近代物理研究所高功率束流室完成 8 週生產實習；基於上游 FLUKA 粒子輸運輸出，推進熱工仿真介面、Fluent 工程繼承、資料與功率驗證、CAD/網格故障診斷及部分熱物性實驗，把工作重心從「模型能跑」推進到「結果可驗證、過程可追溯」。",
+        "en": "Completed an eight-week production-practice placement in the High-Power Beam group at IMP; inherited upstream FLUKA outputs and advanced the thermal-simulation interface, Fluent project handover, data and power validation, CAD/meshing diagnosis, and selected thermal-property experiments, shifting the focus from a model merely running to evidence that can be verified and traced."
       },
       "actions": [
         {
-          "zh": "围绕缪子运输工程整理边界条件、运行工况与校核参数，先明确工程问题再建立计算模型。",
-          "chinese-traditional": "圍繞緲子運輸工程整理邊界條件、運行工況與校核參數，先明確工程問題再建立計算模型。",
-          "en": "Organized boundary conditions, operating cases, and verification parameters before constructing the numerical model."
+          "zh": "恢复旧 .29→Python/C→UDF→Fluent 热源链，并以单位、区域、总量、空间映射与守恒关系核对 46.800 kW、38.178 kW 与 37.243 kW 等关键功率差异。",
+          "chinese-traditional": "恢復舊 .29→Python/C→UDF→Fluent 熱源鏈，並以單位、區域、總量、空間映射與守恆關係核對 46.800 kW、38.178 kW 與 37.243 kW 等關鍵功率差異。",
+          "en": "Restored the legacy .29→Python/C→UDF→Fluent heat-source chain and reconciled key power differences using units, regions, totals, spatial mapping, and conservation."
         },
         {
-          "zh": "使用 ANSYS Fluent 建立并运行数值模型，依托超算集群完成模拟计算，并关注计算任务的资源、状态与结果一致性。",
-          "chinese-traditional": "使用 ANSYS Fluent 建立並運行數值模型，依託超算集群完成模擬計算，並關注計算任務的資源、狀態與結果一致性。",
-          "en": "Built and ran ANSYS Fluent models on a supercomputing cluster while tracking computational resources, job states, and result consistency."
+          "zh": "对新 FLUKA 数据接口进行完整性验证：识别 .30.lis 仅含 14,786,930 个数据，直接解析 fort.30 获得完整 34,560,000 个 float32，并由 Python 与 Fluent UDF 独立核对数量、总和、峰值和 Hash；5 mA 归一化后全域积分功率为 31.035 kW。",
+          "chinese-traditional": "對新 FLUKA 資料介面進行完整性驗證：識別 .30.lis 僅含 14,786,930 個資料，直接解析 fort.30 獲得完整 34,560,000 個 float32，並由 Python 與 Fluent UDF 獨立核對數量、總和、峰值和 Hash；5 mA 歸一化後全域積分功率為 31.035 kW。",
+          "en": "Validated the new FLUKA data interface by identifying a truncated .30.lis, parsing the complete 34,560,000-float fort.30 dataset, and independently checking count, sum, peak, and hash in Python and the Fluent UDF; the 5 mA full-domain power was 31.035 kW."
         },
         {
-          "zh": "对物理耦合场参数组进行校核，比较关键工况并评估安全裕度，避免把单一仿真结果脱离运行条件解读。",
-          "chinese-traditional": "對物理耦合場參數組進行校核，比較關鍵工況並評估安全裕度，避免把單一仿真結果脫離運行條件解讀。",
-          "en": "Verified coupled-field parameter sets, compared key operating cases, and assessed safety margins without interpreting isolated simulation outputs outside their operating context."
+          "zh": "排查 CAD/Fluent Meshing 故障：0.5 mm 局部加密后表面网格约 631 万面，进一步定位铜体与冷却管真实穿模、Solid 合并及 wall.5/wall.6 大量 inter-zone intersection，确认故障根因位于上游几何设计与交付。",
+          "chinese-traditional": "排查 CAD/Fluent Meshing 故障：0.5 mm 局部加密後表面網格約 631 萬面，進一步定位銅體與冷卻管真實穿模、Solid 合併及 wall.5/wall.6 大量 inter-zone intersection，確認故障根因位於上游幾何設計與交付。",
+          "en": "Diagnosed CAD/Fluent Meshing failures, tracing millions of surface faces and inter-zone intersections to real geometric interference and upstream CAD delivery rather than treating the issue as a solver-tuning problem."
+        },
+        {
+          "zh": "参与 DRPL-V 平板热流计导热系数测定设备实验，识别热膨胀、湿度、冷凝与接触热阻等并发误差来源，强化实验变量控制与计量意识。",
+          "chinese-traditional": "參與 DRPL-V 平板熱流計導熱係數測定設備實驗，識別熱膨脹、濕度、冷凝與接觸熱阻等併發誤差來源，強化實驗變數控制與計量意識。",
+          "en": "Participated in DRPL-V thermal-conductivity experiments and identified concurrent error sources including expansion, humidity, condensation, and contact thermal resistance."
         }
       ],
       "outcomes": [
         {
-          "zh": "已完成八周实习与阶段性热工分析任务；在已校核的物理耦合场参数组下，结果显示安全裕度充足。",
-          "chinese-traditional": "已完成八週實習與階段性熱工分析任務；在已校核的物理耦合場參數組下，結果顯示安全裕度充足。",
-          "en": "Completed the eight-week internship and staged thermal-analysis work; verified parameter sets showed adequate safety margins."
+          "zh": "旧热源链、新数据接口、关键功率缺口解释和几何故障定位形成可追溯证据；新版正式模型在实习结束时仍未完成体网格、热源挂接和热应力求解，不将阶段性工作表述为完整模型已经闭合。",
+          "chinese-traditional": "舊熱源鏈、新資料介面、關鍵功率缺口解釋和幾何故障定位形成可追溯證據；新版正式模型在實習結束時仍未完成體網格、熱源掛接和熱應力求解，不將階段性工作表述為完整模型已經閉合。",
+          "en": "Established traceable evidence for the legacy heat-source chain, new data interface, power-gap explanation, and geometry root cause; the new formal model still lacked volume meshing, heat-source hookup, and thermal-stress solution at the end of the placement."
         },
         {
-          "zh": "形成 ANSYS Fluent、超算集群与工程热工分析相结合的科研实践，并建立“工况—边界—异常—校核—安全裕度”的运维思维映射。",
-          "chinese-traditional": "形成 ANSYS Fluent、超算集群與工程熱工分析相結合的科研實踐，並建立「工況—邊界—異常—校核—安全裕度」的運維思維映射。",
-          "en": "Built practical experience combining ANSYS Fluent, HPC, and engineering thermal analysis, with an operations-oriented mental model spanning cases, boundaries, abnormal conditions, verification, and safety margin."
+          "zh": "形成“审查输入—验证输出—追溯根因—固化证据—明确未完成边界”的科研工程工作链，并用 GitHub 维持版本、时间与事实边界。",
+          "chinese-traditional": "形成「審查輸入—驗證輸出—追溯根因—固化證據—明確未完成邊界」的科研工程工作鏈，並用 GitHub 維持版本、時間與事實邊界。",
+          "en": "Developed a research-engineering workflow of reviewing inputs, validating outputs, tracing root causes, preserving evidence, and explicitly recording unresolved boundaries, with GitHub maintaining version, time, and factual boundaries."
         }
       ],
       "reflection": [
         {
-          "zh": "这段经历让我把“会跑仿真”进一步转化为“知道模型服务于什么运行判断”：先确认边界、工况与风险，再看结果与裕度；这种顺序可以迁移到设备运维和工程技术管理。",
-          "chinese-traditional": "這段經歷讓我把「會跑仿真」進一步轉化為「知道模型服務於什麼運行判斷」：先確認邊界、工況與風險，再看結果與裕度；這種順序可以遷移到設備運維和工程技術管理。",
-          "en": "The experience shifted my focus from simply running simulations to understanding which operating decisions a model supports: establish boundaries, cases, and risks first, then interpret results and margins—a sequence transferable to equipment operations and engineering management."
+          "zh": "八周实习留下的核心变化不是掌握更多软件，而是从“完成任务”转向“验证结果”，再从“定位故障”转向追问系统为什么产生故障、怎样让同类问题更少发生并降低下一位接手者的考古成本。",
+          "chinese-traditional": "八週實習留下的核心變化不是掌握更多軟體，而是從「完成任務」轉向「驗證結果」，再從「定位故障」轉向追問系統為什麼產生故障、怎樣讓同類問題更少發生並降低下一位接手者的考古成本。",
+          "en": "The main change was not learning more software, but moving from completing tasks to validating results, then from locating faults to asking why the system produced them and how to prevent recurrence and reduce handover archaeology."
         }
       ],
       "tags": [
@@ -2868,21 +2873,22 @@
           "chinese-traditional": "中科院近物所",
           "en": "Institute of Modern Physics, CAS"
         },
-        {
-          "zh": "缪子运输工程",
-          "chinese-traditional": "緲子運輸工程",
-          "en": "Muon Transport Engineering"
-        },
+        "FLUKA",
         "ANSYS Fluent",
         {
-          "zh": "超算集群",
-          "chinese-traditional": "超算集群",
-          "en": "Supercomputing Cluster"
+          "zh": "数据验证",
+          "chinese-traditional": "資料驗證",
+          "en": "Data Validation"
         },
         {
-          "zh": "运行校核",
-          "chinese-traditional": "運行校核",
-          "en": "Operational Verification"
+          "zh": "故障诊断",
+          "chinese-traditional": "故障診斷",
+          "en": "Fault Diagnosis"
+        },
+        {
+          "zh": "科研工程",
+          "chinese-traditional": "科研工程",
+          "en": "Research Engineering"
         }
       ],
       "capabilities": [
@@ -2894,14 +2900,19 @@
       "links": [],
       "context": [
         {
-          "zh": "实习地点为广东惠州，周期为 2026 年 7 月 6 日至 8 月 28 日，共八周。",
-          "chinese-traditional": "實習地點為廣東惠州，週期為 2026 年 7 月 6 日至 8 月 28 日，共八週。",
-          "en": "The internship was based in Huizhou, Guangdong, from July 6 to August 28, 2026, for eight weeks."
+          "zh": "实习地点为广东惠州，周期为 2026 年 7 月 6 日至 8 月 28 日，共八周；所在团队为高功率束流室。",
+          "chinese-traditional": "實習地點為廣東惠州，週期為 2026 年 7 月 6 日至 8 月 28 日，共八週；所在團隊為高功率束流室。",
+          "en": "The placement was based in Huizhou, Guangdong, from July 6 to August 28, 2026, in the High-Power Beam group."
         },
         {
-          "zh": "本记录强调由科研仿真形成的运维思维映射，不将科研实习表述为实际生产运行岗位经历。",
-          "chinese-traditional": "本記錄強調由科研仿真形成的運維思維映射，不將科研實習表述為實際生產運行崗位經歷。",
-          "en": "This record highlights operations-oriented thinking derived from research simulation and does not present the internship as production operations experience."
+          "zh": "本人不负责上游 FLUKA 粒子输运计算；工作重点是理解并审查上游输出，在明确职责边界内完成接口、验证、诊断与下游交付。",
+          "chinese-traditional": "本人不負責上游 FLUKA 粒子輸運計算；工作重點是理解並審查上游輸出，在明確職責邊界內完成介面、驗證、診斷與下游交付。",
+          "en": "The user did not own the upstream FLUKA particle-transport calculation; the responsibility was to understand and review its outputs and carry out interface, validation, diagnosis, and downstream handover work within a clear role boundary."
+        },
+        {
+          "zh": "“生产实习”是本科培养中的实习性质，不表述为实际生产运行岗位经历。",
+          "chinese-traditional": "「生產實習」是本科培養中的實習性質，不表述為實際生產運行崗位經歷。",
+          "en": "“Production practice” describes the university placement format and is not presented as an industrial production-operations job."
         }
       ],
       "relatedPost": "2026-08-28-imp-internship-complete.md",

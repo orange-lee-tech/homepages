@@ -1,0 +1,19 @@
+# 當前身份
+
+- 中南大學能源與動力工程本科生，預計 2027 年畢業
+- 2026 年春季於元智大學機械工程學系完成交換學習
+- 關注科學計算、AI 工程與可復現研究
+
+# 當前主線
+
+- **論文**：AAAI 2027 投稿《BRFC: Bounded Residual Feasibility Correction for Pretrained Neural PDE Surrogates》，Yucheng Li 位列第四作者
+- **工程**：開發桌面 AI Runtime、瀏覽器擴展與長期可維護的個人知識資產
+- **表達**：將研究、代碼和過程整理為可驗證、可閱讀、可持續更新的公開成果
+
+# 工作偏好
+
+可復現｜可維護｜可交付
+
+# 聯繫方式
+
+Email：[1010969261@qq.com](mailto:1010969261@qq.com)

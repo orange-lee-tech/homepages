@@ -1,0 +1,101 @@
+title: orange-lee-tech's Homepage
+page-top-title: Li Yucheng
+top-section-bg-text: Marching Forward
+home-subtitle: <i class="bi bi-house-fill"></i>&nbsp;Home
+awards-subtitle: <i class="bi bi-award-fill"></i>&nbsp;Awards
+experience-subtitle: <i class="bi bi-briefcase-fill"></i>&nbsp;Experience
+publications-subtitle: <i class="bi bi-file-text-fill"></i>&nbsp;Research & Competitions
+show-subtitle: <i class="bi bi-stars"></i>&nbsp;Show
+design-subtitle: <i class="bi bi-palette"></i>&nbsp;Graphic Design
+person-subtitle: <i class="bi bi-camera"></i>&nbsp;Person
+about-subtitle: <i class="bi bi-person-badge"></i>&nbsp;About
+interests-subtitle: <i class="bi bi-compass"></i>&nbsp;Interests
+copyright-text: "&copy; Li Yucheng 2023-2026. All Rights Reserved."
+show-images:
+  - image1.jpg
+  - image2.jpg
+  - image3.jpg
+  - image4.jpg
+  - image5.jpg
+  - image6.jpg
+  - image7.jpg
+  - image8.jpg
+person-images:
+  - image9.jpg
+  - image10.jpg
+  - image11.jpg
+  - image12.jpg
+  - image13.jpg
+  - image14.jpg
+design-images:
+  - work1.png
+  - work2.png
+  - work3.png
+  - work4.png
+  - work5.jpg
+  - work6.png
+  - work7.png
+  - work8.png
+  - work9.png
+  - work10.png
+  - work11.png
+  - work12.png
+  - work13.jpg
+  - work14.png
+  - work15.png
+  - work16.png
+  - work17.jpg
+  - work18.jpg
+  - work19.jpg
+posts:
+  - title: "AI Video Director: Capability Boundaries and Product Validation"
+    date: "2026-08-30"
+    file: 2026-08-30-ai-video-directing-software.md
+  - title: "Eight Weeks at IMP: From Results to Evidence"
+    date: "2026-08-28"
+    file: 2026-08-28-imp-internship-complete.md
+  - title: GitHub–PowerShell–AI Engineering Collaboration System
+    date: "2026-08-20"
+    file: 2026-08-20-ai-engineering-orchestration.md
+  - title: I Built My First Browser Extension with AI in About Two Human Hours
+    date: "2026-07-27"
+    file: 2026-07-27-ielts-browser-extension.md
+  - title: I Spent About 60 Human Hours Building a Corporate Website with AI
+    date: "2026-07-24"
+    file: 2026-07-24-ai-enterprise-website.md
+  - title: "A 128-Day Exchange at Yuan Ze University: Courses, Campus Life, and Self-Management"
+    date: "2026-07-01"
+    file: 2026-07-01-yuan-ze-exchange-learning.md
+  - title: I Joined a Six-Session Economics Study Group at Yuan Ze University, and Our Team Won Second Prize
+    date: "2026-06-15"
+    file: 2026-06-15-theme-study-group-award.md
+  - title: "Visiting IMP's Major Scientific Facilities: Notes from the HIAF and CiADS Winter Camp"
+    date: "2026-01-30"
+    file: 2026-01-30-imp-winter-camp.md
+  - title: LiYucheng's Homepage
+    date: "2026-01-08"
+    file: 2026-01-08-homepage.md
+  - title: Generative Artificial Intelligence Engineer Training and Certification
+    date: "2026-01-08"
+    file: 人工智能报考.md
+nav-menu: MENU
+nav-home: Home
+nav-home-top: Top
+nav-home-now: Now
+nav-home-about: About
+nav-home-interests: Interests
+nav-publications: Research
+nav-experience: Experience
+nav-practice: Social Practice
+nav-awards: Awards
+nav-awards-hs: High School Brief
+nav-awards-ug: Undergraduate Brief
+nav-posts: Updates
+nav-gallery: Gallery
+nav-gallery-show: Show
+nav-gallery-design: Graphic Design
+nav-gallery-person: Person
+nav-lang: Language
+nav-lang-zh: 中文
+nav-lang-en: English
+nav-lang-cht: 繁體中文
