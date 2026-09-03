@@ -30,7 +30,8 @@
       linked: '关联快照',
       detail: '查看关联档案',
       loading: '正在加载数字档案…',
-      error: '首页档案数据加载失败，请刷新页面。'
+      dataError: '首页档案数据请求失败，请检查网络后刷新页面。',
+      renderError: '首页档案页面渲染失败，请刷新页面。'
     },
     'chinese-traditional': {
       profileKicker: '01 / 目前檔案',
@@ -58,7 +59,8 @@
       linked: '關聯快照',
       detail: '查看關聯檔案',
       loading: '正在載入數位檔案…',
-      error: '首頁檔案資料載入失敗，請重新整理頁面。'
+      dataError: '首頁檔案資料請求失敗，請檢查網路後重新整理頁面。',
+      renderError: '首頁檔案頁面渲染失敗，請重新整理頁面。'
     },
     en: {
       profileKicker: '01 / PROFILE',
@@ -86,7 +88,8 @@
       linked: 'Linked snapshot',
       detail: 'Open related archive',
       loading: 'Loading archive…',
-      error: 'Homepage archive data failed to load. Refresh the page.'
+      dataError: 'Homepage archive data request failed. Check the network and refresh.',
+      renderError: 'Homepage archive rendering failed. Refresh the page.'
     }
   };
 
@@ -496,7 +499,7 @@
       `;
     }).join('');
 
-    $('.timeline-progress-toggle').forEach((toggle) => {
+    document.querySelectorAll('.timeline-progress-toggle').forEach((toggle) => {
       toggle.addEventListener('click', () => {
         const year = Number(toggle.dataset.timelineToggleYear);
         const row = toggle.closest('.timeline-row');
@@ -510,11 +513,11 @@
       });
     });
 
-    $('.timeline-event').forEach((button) => {
+    document.querySelectorAll('.timeline-event').forEach((button) => {
       button.addEventListener('click', (event) => {
         if (event.target.closest('a')) return;
         const wasOpen = button.classList.contains('is-open');
-        $('.timeline-event.is-open').forEach((item) => item.classList.remove('is-open'));
+        document.querySelectorAll('.timeline-event.is-open').forEach((item) => item.classList.remove('is-open'));
         button.classList.toggle('is-open', !wasOpen);
         if (!wasOpen) {
           const year = Number(button.dataset.year);
@@ -530,7 +533,7 @@
 
     document.addEventListener('click', (event) => {
       if (!event.target.closest('.timeline-event') && !window.matchMedia('(max-width: 760px)').matches) {
-        $('.timeline-event.is-open').forEach((item) => item.classList.remove('is-open'));
+        document.querySelectorAll('.timeline-event.is-open').forEach((item) => item.classList.remove('is-open'));
       }
     });
   }
@@ -632,7 +635,13 @@
       const response = await fetch('content/generated/homepage.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error(`Homepage data: HTTP ${response.status}`);
       data = await response.json();
+    } catch (error) {
+      console.error('[homepage:data]', error);
+      setState(COPY[language].dataError, true);
+      return;
+    }
 
+    try {
       renderChrome();
       renderProfile();
       renderRadarControls();
@@ -642,8 +651,8 @@
       setupSectionRail();
       setState('');
     } catch (error) {
-      console.error(error);
-      setState(COPY[language].error, true);
+      console.error('[homepage:render]', error);
+      setState(COPY[language].renderError, true);
     }
   }
 
