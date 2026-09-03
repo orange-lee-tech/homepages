@@ -48,6 +48,18 @@ design-images:
   - work18.jpg
   - work19.jpg
 posts:
+  - title: AI 視頻編導軟件：能力邊界與產品化驗證
+    date: "2026-08-30"
+    file: 2026-08-30-ai-video-directing-software.md
+  - title: 企業的「數字六部」：網站、APP、小程序、私域工作台、數據中台與 Agent 的生產關係與十年戰略
+    date: "2026-08-29"
+    file: 2026-08-29-digital-six-functions.md
+  - title: 中國科學院近代物理研究所 8 週工作志
+    date: "2026-08-28"
+    file: 2026-08-28-imp-internship-complete.md
+  - title: GitHub–PowerShell–AI 工程協作體系
+    date: "2026-08-20"
+    file: 2026-08-20-ai-engineering-orchestration.md
   - title: 我用約2個人類小時，和 AI 完成了人生第一個瀏覽器插件
     date: "2026-07-27"
     file: 2026-07-27-ielts-browser-extension.md

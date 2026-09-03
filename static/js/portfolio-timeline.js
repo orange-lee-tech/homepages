@@ -23,7 +23,7 @@
       const stored = localStorage.getItem('lang');
       if (LANGUAGES.includes(stored)) return stored;
     } catch {}
-    return 'chinese-traditional';
+    return 'zh';
   }
 
   function localized(value) {

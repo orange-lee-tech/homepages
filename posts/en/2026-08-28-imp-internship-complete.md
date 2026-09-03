@@ -75,6 +75,6 @@ The most important result of the eight weeks was therefore not a list of softwar
 > **Complete the task → verify the result → trace the fault to its cause → ask how to prevent the same class of failure and make the next handover easier.**
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/hiaf-control-center.webp?v=20260903-2" alt="Outside the HIAF Control Center" width="360" height="270" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/hiaf-control-center.webp?v=20260903-3" alt="Outside the HIAF Control Center" width="360" height="270" loading="lazy" decoding="async">
   <figcaption>Closing the eight-week work log at the HIAF Control Center.</figcaption>
 </figure>

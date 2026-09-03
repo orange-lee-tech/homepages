@@ -1,7 +1,7 @@
 ---
 title: "AI 视频编导软件：能力边界与产品化验证"
 date: 2026-08-30
-traditional: false
+traditional: manual
 ---
 
 <p class="post-lede">2026 年 8 月，我开始把“AI 能不能剪视频”这个模糊问题拆成一系列可以被工程验证的问题。到 8 月 30 日，项目已经推进到 0.1.3，并进入真实 Windows 环境下的 Human Gate 产品验证。</p>

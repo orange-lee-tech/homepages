@@ -1,7 +1,7 @@
 ---
 title: "中国科学院近代物理研究所 8 周工作志"
 date: 2026-08-28
-traditional: false
+traditional: manual
 ---
 
 <figure class="post-figure">
@@ -93,6 +93,6 @@ AI 在本项目中显著降低了跨软件学习、代码草拟、故障假设�
 > **从完成任务，到验证结果；从定位故障，到追问系统为何产生故障；再到考虑怎样让同类问题更少发生，让下一位接手者不必重新考古。**
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/hiaf-control-center.webp?v=20260903-2" alt="HIAF 中央控制楼前留影" width="360" height="270" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/hiaf-control-center.webp?v=20260903-3" alt="HIAF 中央控制楼前留影" width="360" height="270" loading="lazy" decoding="async">
   <figcaption>八周工作志的收尾：HIAF 中央控制楼。</figcaption>
 </figure>

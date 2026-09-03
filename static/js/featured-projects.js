@@ -5,7 +5,7 @@ function getFeaturedLang() {
   const requested = url.searchParams.get('lang');
   if (FEATURED_LANGS.includes(requested)) return requested;
   const saved = localStorage.getItem('lang');
-  return FEATURED_LANGS.includes(saved) ? saved : 'chinese-traditional';
+  return FEATURED_LANGS.includes(saved) ? saved : 'zh';
 }
 
 function featuredText(value, lang) {

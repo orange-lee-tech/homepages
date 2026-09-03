@@ -21,7 +21,7 @@
     const requested = new URL(window.location.href).searchParams.get('lang');
     if (LANGUAGES.includes(requested)) return requested;
     const saved = localStorage.getItem('lang');
-    return LANGUAGES.includes(saved) ? saved : 'chinese-traditional';
+    return LANGUAGES.includes(saved) ? saved : 'zh';
   }
 
   function localized(value) {

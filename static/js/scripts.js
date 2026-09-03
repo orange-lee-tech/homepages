@@ -18,7 +18,7 @@ function getLang() {
   if (saved === 'zh' || saved === 'en' || saved === 'chinese-traditional') {
     return saved;
   }
-  return 'chinese-traditional';
+  return 'zh';
 }
 
 function withLang(href, lang) {

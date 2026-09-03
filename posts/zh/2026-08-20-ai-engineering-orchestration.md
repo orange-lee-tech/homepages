@@ -1,7 +1,7 @@
 ---
 title: "GitHub–PowerShell–AI 工程协作体系"
 date: 2026-08-20
-traditional: false
+traditional: manual
 ---
 
 <p class="post-lede">这不是一次“把三个工具连起来”的配置记录，而是我在连续项目中逐渐形成的一套工程管理方法：先规定事实在哪里、修改在哪里发生、结果由什么验证，再让 AI 进入流程。</p>

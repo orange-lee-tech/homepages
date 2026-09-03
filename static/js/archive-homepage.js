@@ -114,7 +114,7 @@
     ]
   };
 
-  let language = 'chinese-traditional';
+  let language = 'zh';
   let data = null;
   let selectedYear = CURRENT_YEAR;
 
@@ -133,7 +133,7 @@
     const requested = new URL(window.location.href).searchParams.get('lang');
     if (LANGUAGES.includes(requested)) return requested;
     const saved = readStoredLanguage();
-    return LANGUAGES.includes(saved) ? saved : 'chinese-traditional';
+    return LANGUAGES.includes(saved) ? saved : 'zh';
   }
 
   function localized(value) {
