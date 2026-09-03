@@ -15,6 +15,7 @@
   let rendering = false;
   let observer;
   let outsideClickBound = false;
+  const expandedMobileYears = new Set();
 
   function language() {
     const requested = new URL(location.href).searchParams.get('lang');
@@ -95,16 +96,14 @@
     return isRtl ? values.map((value) => 100 - value) : values;
   }
 
-  function mobilePositions(events, height) {
-    const values = events.map((event) => 54 + temporalFraction(event.timelineDate) * (height - 108));
-    for (let index = 1; index < values.length; index += 1) {
-      values[index] = Math.max(values[index], values[index - 1] + 50);
+  function mobileToggleLabel(count, expanded) {
+    const lang = language();
+    if (lang === 'en') {
+      const noun = count === 1 ? 'progress item' : 'progress items';
+      return `${expanded ? 'Collapse' : 'Show'} ${count} ${noun}`;
     }
-    if (values.at(-1) > height - 42) {
-      const shift = values.at(-1) - (height - 42);
-      for (let index = 0; index < values.length; index += 1) values[index] -= shift;
-    }
-    return values;
+    const unit = lang === 'zh' ? '条进展' : '條進展';
+    return `${expanded ? (lang === 'zh' ? '收起' : '收起') : (lang === 'zh' ? '展开' : '展開')} ${count} ${unit}`;
   }
 
   function eventMarkup(event, position, index, mobile = false) {
@@ -117,7 +116,7 @@
     const href = esc(withLanguage(cardTarget(event)));
     const capabilities = esc((event.capabilities || []).join(' · '));
     const period = esc(localized(event.period || event.timelineDate));
-    const style = mobile ? `top:${position}px;left:56px;--lane:0` : `left:${position}%;--lane:${lane}`;
+    const style = mobile ? '--lane:0' : `left:${position}%;--lane:${lane}`;
     const detailId = `timeline-detail-${esc(event.id)}`;
     return `<article class="timeline-event portfolio-timeline-event ${milestone ? 'is-milestone' : 'is-progress'} lane-${lane}${edge}"
       style="${style}" data-record-id="${esc(event.id)}" data-year="${String(event.timelineDate).slice(0, 4)}" data-capabilities="${capabilities}"
@@ -174,7 +173,8 @@
         if (event.target?.closest?.('a')) return;
         event.preventDefault();
         event.stopPropagation();
-        openCard(eventCard, root);
+        if (eventCard.classList.contains('is-open')) closeCard(eventCard);
+        else openCard(eventCard, root);
       };
       eventCard.addEventListener('click', activate);
       eventCard.addEventListener('keydown', (event) => {
@@ -182,10 +182,28 @@
       });
     });
 
+    $('[data-timeline-toggle-year]', root).forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const year = Number(toggle.dataset.timelineToggleYear);
+        const row = toggle.closest('.portfolio-timeline-row');
+        if (!row || !Number.isFinite(year)) return;
+        const nextExpanded = !row.classList.contains('is-expanded');
+        row.classList.toggle('is-expanded', nextExpanded);
+        if (nextExpanded) expandedMobileYears.add(year);
+        else {
+          expandedMobileYears.delete(year);
+          $('.portfolio-timeline-event.is-progress.is-open', row).forEach(closeCard);
+        }
+        toggle.setAttribute('aria-expanded', String(nextExpanded));
+        toggle.textContent = mobileToggleLabel(Number(toggle.dataset.progressCount || 0), nextExpanded);
+      });
+    });
+
     if (!outsideClickBound) {
       document.addEventListener('click', (event) => {
         const currentRoot = $('#timeline-list');
         if (!currentRoot || event.target?.closest?.('.portfolio-timeline-event')) return;
+        if (matchMedia('(max-width: 760px)').matches) return;
         closeAll(currentRoot);
       });
       outsideClickBound = true;
@@ -208,11 +226,12 @@
     root.innerHTML = years.map((year, rowIndex) => {
       const events = grouped.get(year).sort((a, b) => String(a.timelineDate).localeCompare(String(b.timelineDate)));
       if (mobile) {
-        const height = Math.max(250, 112 + events.length * 58);
-        const eventPositions = mobilePositions(events, height);
-        return `<div class="timeline-row portfolio-timeline-row is-mobile is-ltr" style="--row-height:${height}px" data-timeline-year="${year}">
+        const progressCount = events.filter((event) => event.timelineType !== 'milestone').length;
+        const expanded = expandedMobileYears.has(year);
+        return `<div class="timeline-row portfolio-timeline-row is-mobile is-ltr${expanded ? ' is-expanded' : ''}" data-timeline-year="${year}">
           <strong class="timeline-year">${year}</strong><span class="timeline-direction" aria-hidden="true">↓</span>
-          ${events.map((event, index) => eventMarkup(event, eventPositions[index], index, true)).join('')}
+          ${events.map((event, index) => eventMarkup(event, 0, index, true)).join('')}
+          ${progressCount ? `<button class="timeline-mobile-toggle" type="button" data-timeline-toggle-year="${year}" data-progress-count="${progressCount}" aria-expanded="${expanded}">${esc(mobileToggleLabel(progressCount, expanded))}</button>` : ''}
         </div>`;
       }
       const rtl = rowIndex % 2 === 1;

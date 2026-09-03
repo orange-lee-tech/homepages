@@ -28,8 +28,8 @@
 # Current Status
 
 - The main undergraduate records, growth timeline, and visual evidence are still being organized.
-- The eight-week internship at the Institute of Modern Physics is ongoing, and its record will be updated as further results become available.
-- Chinese wording on the remaining pages will be reviewed gradually under the same principles.
+- The eight-week internship at the Institute of Modern Physics concluded on August 28, 2026. Its work log now reflects the final evidence and distinguishes closed verification, diagnosed issues, and work that remained unfinished in the new formal model.
+- The remaining site content will continue to be reviewed under the same principles.
 
 </div>
 

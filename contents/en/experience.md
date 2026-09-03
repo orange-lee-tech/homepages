@@ -11,6 +11,11 @@
 - On 8 June 2026, established a long-term study plan around four books on engineering economy, experimental design, heat exchanger design, and financial management.
 - Identity tags: Yuan Ze University TOP12; formal department: Mechanical Engineering.
 
+## Institute of Modern Physics, High-Power Beam Group | Intern (2026-07-06—2026-08-28)
+- Worked from upstream FLUKA particle-transport outputs on thermal-simulation interfaces, Fluent project handover, data and power verification, CAD/mesh diagnostics, and selected thermal-property experiments.
+- Established traceable evidence around the legacy heat-source chain, data interfaces, mapped-power gaps, and geometry faults; when the internship ended, the new formal model had not yet completed volume meshing, heat-source coupling, or thermal-stress solving.
+- The working focus evolved from “getting the software to run” toward systematic verification of units, regions, totals, spatial mapping, conservation, and engineering handover.
+
 ## Institute of Modern Physics | Outstanding Winter Camp Participant (2026-01-26—01-30)
 - Joined thirteen talks, researcher discussions, and visits to major scientific facilities.
 - Focused on HIAF, CiADS, material irradiation, nuclear-waste transmutation, and linear accelerators.
