@@ -89,17 +89,39 @@
     return String(markdown || '').replace(/^---\s*\r?\n[\s\S]*?\r?\n---\s*\r?\n?/, '');
   }
 
-  function excerpt(markdown, fallback) {
-    return stripFrontMatter(markdown)
+  function plainExcerptText(value) {
+    return String(value || '')
+      .replace(/<!--[\s\S]*?-->/g, ' ')
+      .replace(/<(script|style|template)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ')
+      .replace(/<figure\b[^>]*>[\s\S]*?<\/figure>/gi, ' ')
+      .replace(/<br\s*\/?\s*>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&nbsp;|&#160;/gi, ' ')
+      .replace(/&amp;/gi, '&')
+      .replace(/&lt;/gi, '<')
+      .replace(/&gt;/gi, '>')
+      .replace(/&quot;|&#34;/gi, '"')
+      .replace(/&#39;|&apos;/gi, "'")
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\\([\[\]().])/g, '$1')
+      .replace(/\[\d+\]/g, ' ')
       .replace(/```[\s\S]*?```/g, ' ')
+      .replace(/~~~[\s\S]*?~~~/g, ' ')
       .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
       .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
       .replace(/^#{1,6}\s+/gm, '')
-      .replace(/^[-*>]\s+/gm, '')
+      .replace(/^[-*>+]\s+/gm, '')
+      .replace(/^\d+[.)]\s+/gm, '')
       .replace(/[*_`~]/g, '')
       .replace(/\s+/g, ' ')
-      .trim()
-      .slice(0, 170) || fallback;
+      .trim();
+  }
+
+  function excerpt(markdown, fallback) {
+    const body = stripFrontMatter(markdown);
+    const lede = body.match(/<p\b[^>]*class=(["'])[^"']*\bpost-lede\b[^"']*\1[^>]*>([\s\S]*?)<\/p>/i);
+    const source = lede ? lede[2] : body;
+    return plainExcerptText(source).slice(0, 170) || fallback;
   }
 
   function normalizePostPath(value) {
