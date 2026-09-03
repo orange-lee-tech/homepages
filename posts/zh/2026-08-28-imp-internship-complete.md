@@ -5,7 +5,7 @@ traditional: false
 ---
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/imp-campus-entrance.webp" alt="中国科学院近代物理研究所园区入口" width="480" height="640" loading="eager" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/imp-campus-entrance.webp?v=20260903-2" alt="中国科学院近代物理研究所园区入口" width="480" height="640" loading="eager" decoding="async">
   <figcaption>八周实习所在的中国科学院近代物理研究所。</figcaption>
 </figure>
 
@@ -20,14 +20,14 @@ traditional: false
 自学起点依次是 Fluent 二维、三维最小案例和已有论文复现，之后加入已有 Fluent—Mechanical 工程。
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/fluent-thermal-result.webp" alt="Fluent 热工结果与能量计划诊断页面" width="480" height="270" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/fluent-thermal-result.webp?v=20260903-2" alt="Fluent 热工结果与能量计划诊断页面" width="480" height="270" loading="lazy" decoding="async">
   <figcaption>早期工程热工结果与能量计划诊断：先把计算链跑通，再逐项核对能量与边界。</figcaption>
 </figure>
 
 早期已经能够完成建模、网格、边界和求解设置，并独立核算冷却水约 7.97 kg/s、温升 0.98 ℃、换热约 32.48 kW。
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/handover-status.webp" alt="工程继承进度与关键指标状态页" width="360" height="202" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/handover-status.webp?v=20260903-2" alt="工程继承进度与关键指标状态页" width="360" height="202" loading="lazy" decoding="async">
   <figcaption>复杂工程真正需要接手的，不只是模型文件，还包括数据来源、接口逻辑、验证状态与尚未闭合的边界。</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ traditional: false
 这使我形成了一个更严格的认识：**输入文件同样不是天然事实，数据来源和完整性也需要验证。**
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/cad-meshing-workstation.webp" alt="在工作站检查 CAD 与网格问题" width="360" height="270" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/cad-meshing-workstation.webp?v=20260903-2" alt="在工作站检查 CAD 与网格问题" width="360" height="270" loading="lazy" decoding="async">
   <figcaption>CAD / Fluent Meshing 排障：故障表现在 Fluent，根因却可能位于更上游的几何设计与交付。</figcaption>
 </figure>
 
@@ -68,7 +68,7 @@ CAD/Fluent Meshing 排障进一步把工作方式从“调参数”推向“追�
 ## 从独立个体，到科研协作链中的责任节点
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/thermal-conductivity-experiment.webp" alt="DRPL-V 平板热流计导热系数实验设备" width="360" height="480" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/thermal-conductivity-experiment.webp?v=20260903-2" alt="DRPL-V 平板热流计导热系数实验设备" width="360" height="480" loading="lazy" decoding="async">
   <figcaption>热物性实验让我再次看到：真实系统中的误差来源往往同时来自设备、环境、材料状态与操作过程。</figcaption>
 </figure>
 
@@ -93,6 +93,6 @@ AI 在本项目中显著降低了跨软件学习、代码草拟、故障假设�
 > **从完成任务，到验证结果；从定位故障，到追问系统为何产生故障；再到考虑怎样让同类问题更少发生，让下一位接手者不必重新考古。**
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/hiaf-control-center.webp" alt="HIAF 中央控制楼前留影" width="360" height="270" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/hiaf-control-center.webp?v=20260903-2" alt="HIAF 中央控制楼前留影" width="360" height="270" loading="lazy" decoding="async">
   <figcaption>八周工作志的收尾：HIAF 中央控制楼。</figcaption>
 </figure>

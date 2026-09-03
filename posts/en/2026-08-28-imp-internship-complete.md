@@ -4,7 +4,7 @@ date: 2026-08-28
 ---
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/imp-campus-entrance.webp" alt="Entrance to the Institute of Modern Physics campus" width="480" height="640" loading="eager" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/imp-campus-entrance.webp?v=20260903-2" alt="Entrance to the Institute of Modern Physics campus" width="480" height="640" loading="eager" decoding="async">
   <figcaption>The Institute of Modern Physics, Chinese Academy of Sciences, where I completed the eight-week placement.</figcaption>
 </figure>
 
@@ -19,14 +19,14 @@ By the end of the placement, the new formal model had not yet completed volume m
 I started with Fluent 2D cases, minimal 3D cases, and reproduction of an existing paper before joining the existing Fluent–Mechanical project.
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/fluent-thermal-result.webp" alt="Fluent thermal result and energy-plan diagnostic" width="480" height="270" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/fluent-thermal-result.webp?v=20260903-2" alt="Fluent thermal result and energy-plan diagnostic" width="480" height="270" loading="lazy" decoding="async">
   <figcaption>An early thermal result and energy diagnostic: first make the chain run, then verify energy and boundaries.</figcaption>
 </figure>
 
 I could already complete modeling, meshing, boundary setup, and solver configuration, and independently checked a cooling-water flow of about 7.97 kg/s, a 0.98 °C temperature rise, and roughly 32.48 kW of heat transfer.
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/handover-status.webp" alt="Engineering handover status and key metrics" width="360" height="202" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/handover-status.webp?v=20260903-2" alt="Engineering handover status and key metrics" width="360" height="202" loading="lazy" decoding="async">
   <figcaption>In a complex project, the handover includes data provenance, interfaces, validation status, and unresolved boundaries—not just model files.</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ The lesson was simple: **units, regions, totals, spatial mapping, and conservati
 A new FLUKA grid should have contained 34,560,000 values, while `.30.lis` exposed only 14,786,930. Rather than immediately declaring the file corrupted, I parsed the raw `fort.30`, recovered the full 34.56M float32 values, and independently cross-checked count, sum, peak, and hash in Python and the Fluent UDF. At 5 mA normalization, the full-domain integrated power was 31.035 kW. Only after closing that evidence loop could we conclude that the ASCII file was a truncated prefix of the raw matrix.
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/cad-meshing-workstation.webp" alt="Inspecting CAD and meshing issues at a workstation" width="360" height="270" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/cad-meshing-workstation.webp?v=20260903-2" alt="Inspecting CAD and meshing issues at a workstation" width="360" height="270" loading="lazy" decoding="async">
   <figcaption>The fault appeared in Fluent, but its root cause was upstream in CAD design and delivery.</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ Late in the placement, we also tested the reliability of a DRPL-V flat-plate hea
 ## A responsibility node in a research chain
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/thermal-conductivity-experiment.webp" alt="DRPL-V thermal-conductivity experiment" width="360" height="480" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/thermal-conductivity-experiment.webp?v=20260903-2" alt="DRPL-V thermal-conductivity experiment" width="360" height="480" loading="lazy" decoding="async">
   <figcaption>Experimental work reinforced the need to treat equipment, environment, material state, and procedure as simultaneous sources of uncertainty.</figcaption>
 </figure>
 
@@ -75,6 +75,6 @@ The most important result of the eight weeks was therefore not a list of softwar
 > **Complete the task → verify the result → trace the fault to its cause → ask how to prevent the same class of failure and make the next handover easier.**
 
 <figure class="post-figure">
-  <img src="static/assets/posts/2026-08-28-imp-internship-complete/hiaf-control-center.webp" alt="Outside the HIAF Control Center" width="360" height="270" loading="lazy" decoding="async">
+  <img src="static/assets/posts/2026-08-28-imp-internship-complete/hiaf-control-center.webp?v=20260903-2" alt="Outside the HIAF Control Center" width="360" height="270" loading="lazy" decoding="async">
   <figcaption>Closing the eight-week work log at the HIAF Control Center.</figcaption>
 </figure>
