@@ -117,6 +117,7 @@
   let language = 'zh';
   let data = null;
   let selectedYear = CURRENT_YEAR;
+  const expandedTimelineYears = new Set();
 
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -451,6 +452,17 @@
     `;
   }
 
+  function timelineToggleLabel(count, expanded) {
+    if (language === 'en') {
+      return `${expanded ? 'Collapse' : 'Show'} ${count} ${count === 1 ? 'progress item' : 'progress items'}`;
+    }
+    const action = expanded
+      ? (language === 'zh' ? '收起' : '收起')
+      : (language === 'zh' ? '展开' : '展開');
+    const unit = language === 'zh' ? '条进展' : '條進展';
+    return `${action} ${count} ${unit}`;
+  }
+
   function renderTimeline() {
     const grouped = new Map();
     data.timeline.events.forEach((event) => {
@@ -458,24 +470,51 @@
       grouped.get(event.year).push(event);
     });
 
+    const mobile = window.matchMedia('(max-width: 760px)').matches;
     const years = [...grouped.keys()].sort((a, b) => a - b);
     $('#timeline-list').innerHTML = years.map((year, rowIndex) => {
       const events = grouped.get(year);
       const isRtl = rowIndex % 2 === 1;
+      const progressCount = events.filter((event) => event.type !== 'milestone').length;
+      const expanded = expandedTimelineYears.has(year);
+      const mobileClasses = mobile && progressCount
+        ? ` has-collapsible-progress${expanded ? ' is-expanded' : ''}`
+        : '';
       return `
-        <div class="timeline-row ${isRtl ? 'is-rtl' : 'is-ltr'}" data-timeline-year="${year}">
+        <div class="timeline-row ${isRtl ? 'is-rtl' : 'is-ltr'}${mobileClasses}" data-timeline-year="${year}">
           <strong class="timeline-year">${year}</strong>
           <span class="timeline-direction" aria-hidden="true">→</span>
           ${events.map((event, index) => timelineEventMarkup(event, index, events.length, isRtl)).join('')}
+          ${mobile && progressCount ? `
+            <button class="timeline-progress-toggle" type="button"
+              data-timeline-toggle-year="${year}" data-progress-count="${progressCount}"
+              aria-expanded="${expanded}">
+              ${escapeHtml(timelineToggleLabel(progressCount, expanded))}
+            </button>
+          ` : ''}
         </div>
       `;
     }).join('');
 
-    $$('.timeline-event').forEach((button) => {
+    $('.timeline-progress-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const year = Number(toggle.dataset.timelineToggleYear);
+        const row = toggle.closest('.timeline-row');
+        if (!row || !Number.isFinite(year)) return;
+        const expanded = !row.classList.contains('is-expanded');
+        row.classList.toggle('is-expanded', expanded);
+        if (expanded) expandedTimelineYears.add(year);
+        else expandedTimelineYears.delete(year);
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggle.textContent = timelineToggleLabel(Number(toggle.dataset.progressCount || 0), expanded);
+      });
+    });
+
+    $('.timeline-event').forEach((button) => {
       button.addEventListener('click', (event) => {
         if (event.target.closest('a')) return;
         const wasOpen = button.classList.contains('is-open');
-        $$('.timeline-event.is-open').forEach((item) => item.classList.remove('is-open'));
+        $('.timeline-event.is-open').forEach((item) => item.classList.remove('is-open'));
         button.classList.toggle('is-open', !wasOpen);
         if (!wasOpen) {
           const year = Number(button.dataset.year);
@@ -490,8 +529,8 @@
     });
 
     document.addEventListener('click', (event) => {
-      if (!event.target.closest('.timeline-event')) {
-        $$('.timeline-event.is-open').forEach((item) => item.classList.remove('is-open'));
+      if (!event.target.closest('.timeline-event') && !window.matchMedia('(max-width: 760px)').matches) {
+        $('.timeline-event.is-open').forEach((item) => item.classList.remove('is-open'));
       }
     });
   }
