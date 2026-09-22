@@ -16,33 +16,25 @@
 <body>
   <h1>有岐 1.0.0</h1>
   <p>版本：<strong>1.0.0</strong><br>
-  发布时间：2026-08-31T13:29:56Z<br>
+  发布时间：2026-09-22T12:33:53Z<br>
   GitHub Release：<a href="https://github.com/orange-lee-tech/video-editing-agent/releases/tag/v1.0.0">https://github.com/orange-lee-tech/video-editing-agent/releases/tag/v1.0.0</a></p>
   <h2>Release notes</h2>
   <pre># 有岐 1.0.0
 
-有岐（video-editing-agent）是一款面向 Windows 的 local-first AI Director + AI Video Editor，主要处理用户自行提供的本地视频素材。
+有岐是一款面向 Windows 的 local-first AI 视频创作与剪辑软件。
 
-本版本面向短视频、产品展示、电商/商业内容与 Vlog 等场景，核心产品能力包括：
+本次 **1.0.0 最终申报/发布基线于 2026-09-22 重新冻结**，取代此前 2026-08-31 的早期 1.0.0 发布快照。
 
-- **Planning** — 将参考内容、商业意图和创作需求整理为可检查的 ScriptPlan 与 ShootingPlan；
-- **Automatic Editing** — 对用户选择的本地素材进行媒体理解、镜头匹配、编辑决策、字幕/音频/图形处理、EDL 构建与最终 MP4 渲染；
-- 支持 Planning-only、Editing-only 和 Combined 工作流；
-- 本软件不会在素材缺失时静默使用网络下载素材或生成素材替代用户原始视频。
+## Final accepted baseline
 
-## Release status
-
-This is the final Human-accepted **有岐 1.0.0** release.
-
-Core Planning and Automatic Editing product gates passed.
-
-Final accepted product source:
-
-`fc6391b846432586a41311a295251e8860cdf9fa`
-
-Windows release-candidate and install / upgrade / repair / uninstall lifecycle verification passed before stable promotion.
-
-The stable release assets are byte-for-byte copies of the accepted release candidate.
+- Version: `1.0.0`
+- Final accepted source: `25b7eeb9ea59138d06ddb825d5b06b29c527d131`
+- Final Human Gate date: `2026-09-22`
+- Planning: **PASS**
+- Automatic Editing: **PASS**
+- Final MP4 playback: **PASS**
+- Windows install / launch / run / uninstall: **PASS**
+- Automated install / upgrade / repair / uninstall lifecycle: **PASS**
 
 Installer:
 
@@ -50,44 +42,29 @@ Installer:
 
 SHA-256:
 
-`dd47f88953d134dac522990db80fc719367a7abe627203b142fe681cb786e5a8`
+`ceb5f7f959a0aec2e7a16252572ef4fe24865182f4b2f77d4be685b01166847c`
 
-## Code signing policy
+## Core product capabilities
 
-The project maintains a public code signing policy:
+- **Planning** — 将创作意图、参考内容与需求整理为可检查的 ScriptPlan 与 ShootingPlan。
+- **Automatic Editing** — 对用户选择的本地视频素材进行媒体理解、镜头匹配、编辑决策、字幕/音频/图形处理、EDL 构建与最终 MP4 渲染。
+- 支持 Planning-only、Editing-only 和 Combined 工作流。
 
-https://github.com/orange-lee-tech/video-editing-agent/blob/main/CODE_SIGNING_POLICY.md
+## Governance
 
-Future production Windows releases, if accepted into the SignPath Foundation program, will use:
+Project-authored material is licensed under Apache License 2.0. See `LICENSE`, `NOTICE`, `PRIVACY.md` and the current user agreement in the repository.
 
-**Free code signing provided by SignPath.io, certificate by SignPath Foundation**
-
-The existing **v1.0.0 release predates the SignPath Foundation integration and is NOT represented as SignPath-signed.**
-
-Privacy policy:
-
-https://github.com/orange-lee-tech/video-editing-agent/blob/main/PRIVACY.md
-
-## License
-
-Project-authored material is licensed under the **Apache License 2.0**.
-
-License:
-
-https://github.com/orange-lee-tech/video-editing-agent/blob/main/LICENSE
-
-License status and third-party licensing boundary:
-
-https://github.com/orange-lee-tech/video-editing-agent/blob/main/LICENSE_STATUS.md</pre>
+The existing 1.0.0 release is not represented as SignPath-signed.
+</pre>
   <h2>更新组件</h2>
   <table>
     <thead><tr><th>Component</th><th>Version</th><th>Bytes</th><th>SHA-256</th></tr></thead>
-    <tbody><tr><td>app-core</td><td>1.0.0</td><td>173,210,427</td><td><code>3b1fb213975aacace68792b3fc2675c7926cc60a5c0ca9717b96573ba1692dfd</code></td></tr>
-<tr><td>media-runtime</td><td>n8.1.2-44-g7c533d0f86</td><td>59,943,136</td><td><code>5398de8c4f004cd1de6c155b83f9aa77fdd5c9caa2889ae7d8371029da8defc4</code></td></tr>
-<tr><td>transnet-runtime</td><td>transnetv2-pytorch==1.0.5;torch==2.13.0+cpu</td><td>196,717,439</td><td><code>2c619e53a1f94d12e0281f92f686eb0b224bff4677a918b50fe342e7f1af0aa1</code></td></tr></tbody>
+    <tbody><tr><td>app-core</td><td>1.0.0</td><td>173,216,642</td><td><code>9da5d91468cdf4b3bde48dd2b1b2ce6bbfed40998db57b04d5ac0f46796b33f7</code></td></tr>
+<tr><td>media-runtime</td><td>n8.1.2-50-g1a748fe2cd</td><td>59,943,765</td><td><code>0c9ce9dd97e919db8242cd0f6a19beed7b51b636608cf1a52e6ee3acf59c3552</code></td></tr>
+<tr><td>transnet-runtime</td><td>transnetv2-pytorch==1.0.5;torch==2.13.0+cpu</td><td>196,717,439</td><td><code>c8bc65011949c04ee82daaf04bdfdcd326fb29730eca7997d6d2bfa891579bc9</code></td></tr></tbody>
   </table>
   <h2>完整安装包</h2>
   <p><a href="https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Setup-1.0.0.exe">VideoEditingAgent-Setup-1.0.0.exe</a></p>
-  <p><code>dd47f88953d134dac522990db80fc719367a7abe627203b142fe681cb786e5a8</code></p>
+  <p><code>ceb5f7f959a0aec2e7a16252572ef4fe24865182f4b2f77d4be685b01166847c</code></p>
 </body>
 </html>

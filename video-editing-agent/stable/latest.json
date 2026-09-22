@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
-  "published_at": "2026-08-31T13:29:56Z",
+  "published_at": "2026-09-22T12:33:53Z",
   "release_notes_url": "https://orange-lee-tech.github.io/homepages/video-editing-agent/stable/1.0.0.html",
   "download_url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Setup-1.0.0.exe",
-  "installer_sha256": "dd47f88953d134dac522990db80fc719367a7abe627203b142fe681cb786e5a8",
+  "installer_sha256": "ceb5f7f959a0aec2e7a16252572ef4fe24865182f4b2f77d4be685b01166847c",
   "mandatory": false,
   "layout_version": 1,
   "minimum_updater_version": 1,
@@ -12,21 +12,21 @@
       "id": "app-core",
       "version": "1.0.0",
       "url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Update-app-core-1.0.0.zip",
-      "sha256": "3b1fb213975aacace68792b3fc2675c7926cc60a5c0ca9717b96573ba1692dfd",
-      "size_bytes": 173210427
+      "sha256": "9da5d91468cdf4b3bde48dd2b1b2ce6bbfed40998db57b04d5ac0f46796b33f7",
+      "size_bytes": 173216642
     },
     {
       "id": "media-runtime",
-      "version": "n8.1.2-44-g7c533d0f86",
+      "version": "n8.1.2-50-g1a748fe2cd",
       "url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Update-media-runtime-1.0.0.zip",
-      "sha256": "5398de8c4f004cd1de6c155b83f9aa77fdd5c9caa2889ae7d8371029da8defc4",
-      "size_bytes": 59943136
+      "sha256": "0c9ce9dd97e919db8242cd0f6a19beed7b51b636608cf1a52e6ee3acf59c3552",
+      "size_bytes": 59943765
     },
     {
       "id": "transnet-runtime",
       "version": "transnetv2-pytorch==1.0.5;torch==2.13.0+cpu",
       "url": "https://github.com/orange-lee-tech/video-editing-agent/releases/download/v1.0.0/VideoEditingAgent-Update-transnet-runtime-1.0.0.zip",
-      "sha256": "2c619e53a1f94d12e0281f92f686eb0b224bff4677a918b50fe342e7f1af0aa1",
+      "sha256": "c8bc65011949c04ee82daaf04bdfdcd326fb29730eca7997d6d2bfa891579bc9",
       "size_bytes": 196717439
     }
   ]
