@@ -27,7 +27,8 @@
 
 ## Scholarships, Service, English, and Sport
 - Sun Charity Public-welfare Scholarship｜Sun Charity Foundation｜RMB 3,000 × 3 (first, second, and third undergraduate years), totaling RMB 9,000.
-- Personal scholarships total RMB 14,000, combining two independent awards: RMB 5,000 from the Xishan District Breakthrough Scholarship and RMB 9,000 from the Sun Charity Public-welfare Scholarship.
+- Yueyang Lianchuang Thermal Energy Scholarship｜May 25, 2026｜RMB 2,000.
+- Personal scholarships total RMB 16,000, combining three independent awards: RMB 5,000 from the Xishan District Breakthrough Scholarship, RMB 9,000 from the Sun Charity Public-welfare Scholarship, and RMB 2,000 from the Yueyang Lianchuang Thermal Energy Scholarship.
 - Tongxing Partner second prize; outstanding volunteer in Sun Tree Hole and Forest Messenger; outstanding lead in Question Mark Weekend.
 - National third prize in the 2023 English Reading Competition.
 - Fourth place in CSU's 10th spring mountain-climbing competition.
